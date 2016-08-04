@@ -10,6 +10,8 @@
 		04019CE31D536E0800DAD42F /* base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04019CE01D536E0800DAD42F /* base.cpp */; };
 		04019CE41D536E0800DAD42F /* base.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE11D536E0800DAD42F /* base.hpp */; };
 		04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
+		04019CE81D536F0500DAD42F /* Base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04019CE61D536F0500DAD42F /* Base64.cpp */; };
+		04019CE91D536F0500DAD42F /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +19,8 @@
 		04019CE01D536E0800DAD42F /* base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base.cpp; path = base/base.cpp; sourceTree = SOURCE_ROOT; };
 		04019CE11D536E0800DAD42F /* base.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = base.hpp; path = base/base.hpp; sourceTree = SOURCE_ROOT; };
 		04019CE21D536E0800DAD42F /* ServerPriv.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ServerPriv.hpp; path = base/ServerPriv.hpp; sourceTree = SOURCE_ROOT; };
+		04019CE61D536F0500DAD42F /* Base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Base64.cpp; path = base/Base64.cpp; sourceTree = SOURCE_ROOT; };
+		04019CE71D536F0500DAD42F /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = base/Base64.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 				04019CE01D536E0800DAD42F /* base.cpp */,
 				04019CE11D536E0800DAD42F /* base.hpp */,
 				04019CE21D536E0800DAD42F /* ServerPriv.hpp */,
+				04019CE61D536F0500DAD42F /* Base64.cpp */,
+				04019CE71D536F0500DAD42F /* Base64.h */,
 			);
 			name = base;
 			path = Server;
@@ -65,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */,
+				04019CE91D536F0500DAD42F /* Base64.h in Headers */,
 				04019CE41D536E0800DAD42F /* base.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,6 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04019CE81D536F0500DAD42F /* Base64.cpp in Sources */,
 				04019CE31D536E0800DAD42F /* base.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
