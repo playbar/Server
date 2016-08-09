@@ -28,7 +28,7 @@
 		04019CE61D536F0500DAD42F /* Base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Base64.cpp; path = base/Base64.cpp; sourceTree = SOURCE_ROOT; };
 		04019CE71D536F0500DAD42F /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = base/Base64.h; sourceTree = SOURCE_ROOT; };
 		04DF6BA51D59DD4E0096A2AD /* login_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = login_server.cpp; path = login_server/login_server.cpp; sourceTree = "<group>"; };
-		04DF6BB41D59DDB80096A2AD /* login_server */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = login_server; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DF6BB41D59DDB80096A2AD /* login_server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = login_server; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +147,7 @@
 			name = login_server;
 			productName = Server;
 			productReference = 04DF6BB41D59DDB80096A2AD /* login_server */;
-			productType = "com.apple.product-type.library.static";
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
