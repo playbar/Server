@@ -20,18 +20,11 @@ public:
     void lock();
     void unlock();
     pthread_mutex_t& getMutex() { return m_lock; }
-#ifndef _WIN32
     virtual bool try_lock();
-#endif
 private:
-#ifdef _WIN32
-    CRITICAL_SECTION m_critical_section;
-#else
     pthread_mutex_t m_lock;
-#endif
 };
 
-#ifndef _WIN32
 class CRWLock
 {
 public:
@@ -55,7 +48,6 @@ private:
     CRWLock* m_pLock;
 };
 
-#endif
 
 class CAutoLock
 {
