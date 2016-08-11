@@ -37,24 +37,10 @@
 
 #define NOTUSED_ARG(v) ((void)v)		// used this to remove warning C4100, unreferenced parameter
 
-/// yunfan modify end
-
-class CRefObject
-{
-public:
-    CRefObject();
-    virtual ~CRefObject();
-    
-    void SetLock(CLock* lock) { m_lock = lock; }
-    void AddRef();
-    void ReleaseRef();
-private:
-    int         m_refCount;
-    CLock*	m_lock;
-};
-
 #define LOG_MODULE_IM         "IM"
 
+uint64_t get_tick_count();
+void util_sleep(uint32_t millisecond);
 
 extern CSLog g_imlog;
 
@@ -67,8 +53,21 @@ extern CSLog g_imlog;
 #endif
 //#define log(fmt, ...)  g_imlog.Info("<%s>\t<%d>\t<%s>,"+fmt, __FILENAME__, __LINE__, __FUNCTION__, ##__VA_ARGS__)
 
-uint64_t get_tick_count();
-void util_sleep(uint32_t millisecond);
+/// yunfan modify end
+
+class CRefObject
+{
+public:
+    CRefObject();
+    virtual ~CRefObject();
+    
+    void SetLock(CLock* lock) { m_lock = lock; }
+    void AddRef();
+    void ReleaseRef();
+private:
+    int    m_refCount;
+    CLock*	m_lock;
+};
 
 
 class CStrExplode
