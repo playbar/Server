@@ -19,6 +19,9 @@
 		04319D001D5C610A00BBCE26 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319CFE1D5C610A00BBCE26 /* util.h */; };
 		04319D031D5C61C600BBCE26 /* UtilPdu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04319D011D5C61C600BBCE26 /* UtilPdu.cpp */; };
 		04319D041D5C61C600BBCE26 /* UtilPdu.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D021D5C61C600BBCE26 /* UtilPdu.h */; };
+		04319D071D5C623700BBCE26 /* Lock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04319D051D5C623700BBCE26 /* Lock.cpp */; };
+		04319D081D5C623700BBCE26 /* Lock.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D061D5C623700BBCE26 /* Lock.h */; };
+		04319D0B1D5C62CF00BBCE26 /* slog_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D0A1D5C62CF00BBCE26 /* slog_api.h */; };
 		04DF6BA61D59DD4E0096A2AD /* login_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04DF6BA51D59DD4E0096A2AD /* login_server.cpp */; };
 		04DF6BAE1D59DDB80096A2AD /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
 		04DF6BAF1D59DDB80096A2AD /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
@@ -42,6 +45,9 @@
 		04319CFE1D5C610A00BBCE26 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = util.h; path = base/util.h; sourceTree = SOURCE_ROOT; };
 		04319D011D5C61C600BBCE26 /* UtilPdu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UtilPdu.cpp; path = base/UtilPdu.cpp; sourceTree = SOURCE_ROOT; };
 		04319D021D5C61C600BBCE26 /* UtilPdu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UtilPdu.h; path = base/UtilPdu.h; sourceTree = SOURCE_ROOT; };
+		04319D051D5C623700BBCE26 /* Lock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Lock.cpp; path = base/Lock.cpp; sourceTree = SOURCE_ROOT; };
+		04319D061D5C623700BBCE26 /* Lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lock.h; path = base/Lock.h; sourceTree = SOURCE_ROOT; };
+		04319D0A1D5C62CF00BBCE26 /* slog_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slog_api.h; path = base/slog/slog_api.h; sourceTree = SOURCE_ROOT; };
 		04DF6BA51D59DD4E0096A2AD /* login_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = login_server.cpp; path = login_server/login_server.cpp; sourceTree = "<group>"; };
 		04DF6BB41D59DDB80096A2AD /* login_server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = login_server; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,6 +92,7 @@
 		04019CC91D536C6B00DAD42F /* base */ = {
 			isa = PBXGroup;
 			children = (
+				04319D091D5C627600BBCE26 /* slog */,
 				04019CE01D536E0800DAD42F /* base.cpp */,
 				04019CE11D536E0800DAD42F /* base.hpp */,
 				04019CE21D536E0800DAD42F /* ServerPriv.hpp */,
@@ -99,9 +106,19 @@
 				04319CFE1D5C610A00BBCE26 /* util.h */,
 				04319D011D5C61C600BBCE26 /* UtilPdu.cpp */,
 				04319D021D5C61C600BBCE26 /* UtilPdu.h */,
+				04319D051D5C623700BBCE26 /* Lock.cpp */,
+				04319D061D5C623700BBCE26 /* Lock.h */,
 			);
 			name = base;
 			path = Server;
+			sourceTree = "<group>";
+		};
+		04319D091D5C627600BBCE26 /* slog */ = {
+			isa = PBXGroup;
+			children = (
+				04319D0A1D5C62CF00BBCE26 /* slog_api.h */,
+			);
+			name = slog;
 			sourceTree = "<group>";
 		};
 		04DF6BA41D59DD140096A2AD /* login_server */ = {
@@ -120,12 +137,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				04319D001D5C610A00BBCE26 /* util.h in Headers */,
+				04319D0B1D5C62CF00BBCE26 /* slog_api.h in Headers */,
 				04319CFC1D5C60B400BBCE26 /* ostype.h in Headers */,
 				04319CFA1D5C603600BBCE26 /* BaseSocket.h in Headers */,
 				04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */,
 				04019CE91D536F0500DAD42F /* Base64.h in Headers */,
 				04319D041D5C61C600BBCE26 /* UtilPdu.h in Headers */,
 				04019CE41D536E0800DAD42F /* base.hpp in Headers */,
+				04319D081D5C623700BBCE26 /* Lock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +238,7 @@
 				04019CE31D536E0800DAD42F /* base.cpp in Sources */,
 				04319CFF1D5C610A00BBCE26 /* util.cpp in Sources */,
 				04319CF91D5C603600BBCE26 /* BaseSocket.cpp in Sources */,
+				04319D071D5C623700BBCE26 /* Lock.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

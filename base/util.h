@@ -77,7 +77,7 @@ public:
     CStrExplode(char* str, char seperator);
     virtual ~CStrExplode();
     
-    uint32_t GetItemCnt() { return m_item_ct; }
+    uint32_t GetItemCnt() { return m_item_cnt; }
     char* GetItem(uint32_t idx) { return m_item_list[idx]; }
 private:
     uint32_t	m_item_cnt;
