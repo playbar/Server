@@ -12,6 +12,13 @@
 		04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
 		04019CE81D536F0500DAD42F /* Base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04019CE61D536F0500DAD42F /* Base64.cpp */; };
 		04019CE91D536F0500DAD42F /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
+		04319CF91D5C603600BBCE26 /* BaseSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04319CF71D5C603600BBCE26 /* BaseSocket.cpp */; };
+		04319CFA1D5C603600BBCE26 /* BaseSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319CF81D5C603600BBCE26 /* BaseSocket.h */; };
+		04319CFC1D5C60B400BBCE26 /* ostype.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319CFB1D5C60B400BBCE26 /* ostype.h */; };
+		04319CFF1D5C610A00BBCE26 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04319CFD1D5C610A00BBCE26 /* util.cpp */; };
+		04319D001D5C610A00BBCE26 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319CFE1D5C610A00BBCE26 /* util.h */; };
+		04319D031D5C61C600BBCE26 /* UtilPdu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04319D011D5C61C600BBCE26 /* UtilPdu.cpp */; };
+		04319D041D5C61C600BBCE26 /* UtilPdu.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D021D5C61C600BBCE26 /* UtilPdu.h */; };
 		04DF6BA61D59DD4E0096A2AD /* login_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04DF6BA51D59DD4E0096A2AD /* login_server.cpp */; };
 		04DF6BAE1D59DDB80096A2AD /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
 		04DF6BAF1D59DDB80096A2AD /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
@@ -27,6 +34,14 @@
 		04019CE21D536E0800DAD42F /* ServerPriv.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ServerPriv.hpp; path = base/ServerPriv.hpp; sourceTree = SOURCE_ROOT; };
 		04019CE61D536F0500DAD42F /* Base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Base64.cpp; path = base/Base64.cpp; sourceTree = SOURCE_ROOT; };
 		04019CE71D536F0500DAD42F /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = base/Base64.h; sourceTree = SOURCE_ROOT; };
+		04319CF61D5C5FD000BBCE26 /* atomic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = atomic.h; path = base/atomic.h; sourceTree = SOURCE_ROOT; };
+		04319CF71D5C603600BBCE26 /* BaseSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseSocket.cpp; path = base/BaseSocket.cpp; sourceTree = SOURCE_ROOT; };
+		04319CF81D5C603600BBCE26 /* BaseSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseSocket.h; path = base/BaseSocket.h; sourceTree = SOURCE_ROOT; };
+		04319CFB1D5C60B400BBCE26 /* ostype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ostype.h; path = base/ostype.h; sourceTree = SOURCE_ROOT; };
+		04319CFD1D5C610A00BBCE26 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = util.cpp; path = base/util.cpp; sourceTree = SOURCE_ROOT; };
+		04319CFE1D5C610A00BBCE26 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = util.h; path = base/util.h; sourceTree = SOURCE_ROOT; };
+		04319D011D5C61C600BBCE26 /* UtilPdu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UtilPdu.cpp; path = base/UtilPdu.cpp; sourceTree = SOURCE_ROOT; };
+		04319D021D5C61C600BBCE26 /* UtilPdu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UtilPdu.h; path = base/UtilPdu.h; sourceTree = SOURCE_ROOT; };
 		04DF6BA51D59DD4E0096A2AD /* login_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = login_server.cpp; path = login_server/login_server.cpp; sourceTree = "<group>"; };
 		04DF6BB41D59DDB80096A2AD /* login_server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = login_server; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -76,6 +91,14 @@
 				04019CE21D536E0800DAD42F /* ServerPriv.hpp */,
 				04019CE61D536F0500DAD42F /* Base64.cpp */,
 				04019CE71D536F0500DAD42F /* Base64.h */,
+				04319CF61D5C5FD000BBCE26 /* atomic.h */,
+				04319CF71D5C603600BBCE26 /* BaseSocket.cpp */,
+				04319CF81D5C603600BBCE26 /* BaseSocket.h */,
+				04319CFB1D5C60B400BBCE26 /* ostype.h */,
+				04319CFD1D5C610A00BBCE26 /* util.cpp */,
+				04319CFE1D5C610A00BBCE26 /* util.h */,
+				04319D011D5C61C600BBCE26 /* UtilPdu.cpp */,
+				04319D021D5C61C600BBCE26 /* UtilPdu.h */,
 			);
 			name = base;
 			path = Server;
@@ -96,8 +119,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04319D001D5C610A00BBCE26 /* util.h in Headers */,
+				04319CFC1D5C60B400BBCE26 /* ostype.h in Headers */,
+				04319CFA1D5C603600BBCE26 /* BaseSocket.h in Headers */,
 				04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */,
 				04019CE91D536F0500DAD42F /* Base64.h in Headers */,
+				04319D041D5C61C600BBCE26 /* UtilPdu.h in Headers */,
 				04019CE41D536E0800DAD42F /* base.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,8 +214,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DF6BA61D59DD4E0096A2AD /* login_server.cpp in Sources */,
+				04319D031D5C61C600BBCE26 /* UtilPdu.cpp in Sources */,
 				04019CE81D536F0500DAD42F /* Base64.cpp in Sources */,
 				04019CE31D536E0800DAD42F /* base.cpp in Sources */,
+				04319CFF1D5C610A00BBCE26 /* util.cpp in Sources */,
+				04319CF91D5C603600BBCE26 /* BaseSocket.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
