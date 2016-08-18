@@ -64,7 +64,7 @@ private:
     string		m_error_msg;
 };
 
-class DLL_MODIFIER CSimpleBuffer
+class CSimpleBuffer
 {
 public:
     CSimpleBuffer();
