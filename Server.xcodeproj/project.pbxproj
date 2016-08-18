@@ -12,6 +12,8 @@
 		04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
 		04019CE81D536F0500DAD42F /* Base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04019CE61D536F0500DAD42F /* Base64.cpp */; };
 		04019CE91D536F0500DAD42F /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
+		040D98011D65C030001BC84D /* EventDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 040D97FF1D65C02F001BC84D /* EventDispatch.cpp */; };
+		040D98021D65C030001BC84D /* EventDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D98001D65C02F001BC84D /* EventDispatch.h */; };
 		04319CF91D5C603600BBCE26 /* BaseSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04319CF71D5C603600BBCE26 /* BaseSocket.cpp */; };
 		04319CFA1D5C603600BBCE26 /* BaseSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319CF81D5C603600BBCE26 /* BaseSocket.h */; };
 		04319CFC1D5C60B400BBCE26 /* ostype.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319CFB1D5C60B400BBCE26 /* ostype.h */; };
@@ -37,6 +39,8 @@
 		04019CE21D536E0800DAD42F /* ServerPriv.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ServerPriv.hpp; path = base/ServerPriv.hpp; sourceTree = SOURCE_ROOT; };
 		04019CE61D536F0500DAD42F /* Base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Base64.cpp; path = base/Base64.cpp; sourceTree = SOURCE_ROOT; };
 		04019CE71D536F0500DAD42F /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = base/Base64.h; sourceTree = SOURCE_ROOT; };
+		040D97FF1D65C02F001BC84D /* EventDispatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventDispatch.cpp; path = base/EventDispatch.cpp; sourceTree = SOURCE_ROOT; };
+		040D98001D65C02F001BC84D /* EventDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventDispatch.h; path = base/EventDispatch.h; sourceTree = SOURCE_ROOT; };
 		04319CF61D5C5FD000BBCE26 /* atomic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = atomic.h; path = base/atomic.h; sourceTree = SOURCE_ROOT; };
 		04319CF71D5C603600BBCE26 /* BaseSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseSocket.cpp; path = base/BaseSocket.cpp; sourceTree = SOURCE_ROOT; };
 		04319CF81D5C603600BBCE26 /* BaseSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseSocket.h; path = base/BaseSocket.h; sourceTree = SOURCE_ROOT; };
@@ -108,6 +112,8 @@
 				04319D021D5C61C600BBCE26 /* UtilPdu.h */,
 				04319D051D5C623700BBCE26 /* Lock.cpp */,
 				04319D061D5C623700BBCE26 /* Lock.h */,
+				040D97FF1D65C02F001BC84D /* EventDispatch.cpp */,
+				040D98001D65C02F001BC84D /* EventDispatch.h */,
 			);
 			name = base;
 			path = Server;
@@ -143,6 +149,7 @@
 				04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */,
 				04019CE91D536F0500DAD42F /* Base64.h in Headers */,
 				04319D041D5C61C600BBCE26 /* UtilPdu.h in Headers */,
+				040D98021D65C030001BC84D /* EventDispatch.h in Headers */,
 				04019CE41D536E0800DAD42F /* base.hpp in Headers */,
 				04319D081D5C623700BBCE26 /* Lock.h in Headers */,
 			);
@@ -236,6 +243,7 @@
 				04319D031D5C61C600BBCE26 /* UtilPdu.cpp in Sources */,
 				04019CE81D536F0500DAD42F /* Base64.cpp in Sources */,
 				04019CE31D536E0800DAD42F /* base.cpp in Sources */,
+				040D98011D65C030001BC84D /* EventDispatch.cpp in Sources */,
 				04319CFF1D5C610A00BBCE26 /* util.cpp in Sources */,
 				04319CF91D5C603600BBCE26 /* BaseSocket.cpp in Sources */,
 				04319D071D5C623700BBCE26 /* Lock.cpp in Sources */,

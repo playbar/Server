@@ -223,9 +223,109 @@ void CByteStream::operator >> (uint32_t& data)
     data = (buf[0] << 24) | (buf[1] << 16) | (buf[2] << 8) | buf[3];
 }
 
+void CByteStream::WriteString(const char *str)
+{
+    uint32_t size = str ? (uint32_t)strlen(str) : 0;
+    *this << size;
+    _WriteByte((void*)str, size);
+}
+
+void CByteStream::WriteString(const char *str, uint32_t len)
+{
+    *this << len;
+    _WriteByte((void*)str, len );
+}
+
+char* CByteStream::ReadString(uint32_t &len)
+{
+    *this >> len;
+    char* pStr = (char*)GetBuf() + GetPos();
+    Skip(len);
+    return pStr;
+}
+
+void CByteStream::WriteData(uchar_t *data, uint32_t len)
+{
+    *this << len;
+    _WriteByte(data, len);
+}
+
+uchar_t* CByteStream::ReadData(uint32_t &len)
+{
+    *this >> len;
+    uchar_t* pData = (uchar_t*)GetBuf() + GetPos();
+    Skip(len);
+    return pData;
+}
+
+void CByteStream::_ReadByte(void *buf, uint32_t len )
+{
+    if( m_pos + len > m_len )
+    {
+        throw  CPduException(ERROR_CODE_PARSE_FAILED, "parase packet failed!");
+    }
+    if( m_pSimpBuf )
+        m_pSimpBuf->Read((char*)buf, len);
+    else
+        memcpy(buf, m_pBuf + m_pos, len);
+    
+    m_pos += len;
+    
+}
+
+void CByteStream::_WriteByte(void *buf, uint32_t len)
+{
+    if( m_pBuf && (m_pos + len > m_len))
+        return;
+    if( m_pSimpBuf )
+        m_pSimpBuf->Write((char*)buf, len);
+    else
+        memcpy(m_pBuf + m_pos, buf, len );
+    m_pos += len;
+}
 
 
+char* idtourl(uint32_t id)
+{
+    static char digits[] = "0123456789abcdefghijklmnopqrstuvwxyz";
+    static char buf[64];
+    char *ptr;
+    uint32_t value = id * 2 + 56;
+    
+    // convert to 36 number system
+    ptr = buf + sizeof(buf) - 1;
+    *ptr = '\0';
+    
+    do {
+        *--ptr = digits[value % 36];
+        value /= 36;
+    } while (ptr > buf && value);
+    
+    *--ptr = '1';	// add version number
+    
+    return ptr;
+}
 
-
-
-
+uint32_t urltoid(const char* url)
+{
+    uint32_t url_len = strlen(url);
+    char c;
+    uint32_t number = 0;
+    for (uint32_t i = 1; i < url_len; i++) {
+        c = url[i];
+        
+        if (c >= '0' && c <='9') {
+            c -= '0';
+        } else if (c >= 'a' && c <= 'z') {
+            c -= 'a' - 10;
+        } else if (c >= 'A' && c <= 'Z') {
+            c -= 'A' - 10;
+        } else {
+            continue;
+        }
+        
+        number = number * 36 + c;
+    }
+    
+    return (number - 56) >> 1;
+}
