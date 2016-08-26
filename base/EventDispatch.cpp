@@ -29,3 +29,36 @@ CEventDispatch::CEventDispatch(){
     return;
 }
 
+CEventDispatch::~CEventDispatch(){
+#ifdef __APPLE__
+    close( m_kqfd);
+#else
+    close(m_epfd);
+#endif
+    
+}
+
+void CEventDispatch::AddTimer(callback_t callback, void *user_data, uint64_t interval)
+{
+    list<TimerItem*>::iterator it;
+    for( it = m_timer_list.begin(); it != m_timer_list.end(); ++it )
+    {
+        TimerItem *pItem = *it;
+        if( pItem->callback == callback && pItem->user_data == user_data )
+        {
+            pItem->interval = interval;
+            pItem->next_tick = get_tick_count() + interval;
+            return;
+        }
+    }
+    
+    TimerItem *pItem = new TimerItem;
+    pItem->callback = callback;
+    pItem->user_data = user_data;
+    pItem->interval = interval;
+    pItem->next_tick = get_tick_count() + interval;
+    m_timer_list.push_back(pItem);
+    return;
+}
+
+

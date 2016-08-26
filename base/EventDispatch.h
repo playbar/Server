@@ -50,7 +50,7 @@ private:
     
     typedef struct{
         callback_t  callback;
-        void*       callback_data;
+        void*       user_data;
         uint64_t    interval;
         uint64_t    next_tick;
     }TimerItem;
