@@ -89,6 +89,41 @@ int CBaseSocket::Listen(const char *server_ip, uint16_t port, callback_t callbac
     
 }
 
+net_handle_t CBaseSocket::Connect(const char *server_ip, uint16_t port, callback_t callback, void *callback_data)
+{
+    log("CBaseSocket::Connect, server_ip=%s, port=%d", server_ip, port);
+    
+    m_remote_ip = server_ip;
+    m_remote_port = port;
+    m_callback = callback;
+    m_callback_data = callback_data;
+    
+    m_socket = socket( AF_INET, SOCK_STREAM, 0 );
+    if( m_socket == INVALID_SOCKET)
+    {
+        log("socket failed, err_code=%d", _GetErrorCode());
+        return NETLIB_INVALID_HANDLE;
+    }
+    
+    _SetNonblock(m_socket);
+    _SetNoDelay(m_socket );
+    sockaddr_in serv_addr;
+    _SetAddr( server_ip, port, &serv_addr );
+    int ret = connect( m_socket, (sockaddr*)&serv_addr, sizeof( serv_addr));
+    if((ret == SOCKET_ERROR) && (!_IsBlock(_GetErrorCode())))
+    {
+        log("connect failed, err_code=%d", _GetErrorCode());
+        closesocket(m_socket);
+        return NETLIB_INVALID_HANDLE;
+    }
+    
+    m_state = SOCKET_STATE_CONNECTING;
+    AddBaseSocket(this);
+    CEventDispatch::Instance()->AddEvent(m_socket, SOCKET_ALL);
+    
+    return (net_handle_t)m_socket;
+    
+}
 
 
 
