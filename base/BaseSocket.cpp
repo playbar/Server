@@ -125,5 +125,127 @@ net_handle_t CBaseSocket::Connect(const char *server_ip, uint16_t port, callback
     
 }
 
+int CBaseSocket::Send( void* buf, int len)
+{
+    if( m_state != SOCKET_STATE_CONNECTED)
+    {
+        return NETLIB_ERROR;
+    }
+    
+    int ret = send( m_socket, (char*)buf, len, 0);
+    if( ret == SOCKET_ERROR){
+        int err_code = _GetErrorCode();
+        if( _IsBlock( err_code ))
+        {
+            CEventDispatch::Instance()->AddEvent(m_socket, SOCKET_WRITE);
+            ret = 0;
+        }
+        else
+        {
+            log("!!!send failed, error code: %d", err_code);
+        }
+    }
+    
+    return ret;
+    
+}
+
+int CBaseSocket::Recv(void *buf, int len)
+{
+    return recv( m_socket, (char*)buf, len, 0);
+}
+
+int CBaseSocket::Close()
+{
+    CEventDispatch::Instance()->RemoveEvent(m_socket, SOCKET_ALL);
+    RemoveBaseSocket(this);
+    closesocket(m_socket);
+    ReleaseRef();
+    return 0;
+}
+
+void CBaseSocket::OnRead()
+{
+    if(m_state == SOCKET_STATE_LISTENING )
+    {
+        _AcceptNewSocket();
+    }
+    else
+    {
+        u_long avail = 0;
+        if((ioctlsocket( m_socket, FIONREAD, &avail) == SOCKET_ERROR) || (avail == 0))
+        {
+            m_callback( m_callback_data, NETLIB_MSG_CLOSE, (net_handle_t)m_socket, NULL);
+        }
+        else
+        {
+            m_callback( m_callback_data, NETLIB_MSG_READ, (net_handle_t)m_socket, NULL);
+        }
+    }
+}
+
+void CBaseSocket::OnWrite()
+{
+    CEventDispatch::Instance()->RemoveEvent(m_socket, SOCKET_WRITE);
+    if( m_state == SOCKET_STATE_CONNECTING )
+    {
+        int error = 0;
+        socklen_t len = sizeof( error);
+        getsockopt( m_socket, SOL_SOCKET, SO_ERROR, (void*)&error, &len);
+        if( error)
+        {
+            m_callback( m_callback_data, NETLIB_MSG_CLOSE, (net_handle_t)m_socket, NULL);
+        }
+        else
+        {
+            m_state = SOCKET_STATE_CONNECTED;
+            m_callback( m_callback_data, NETLIB_MSG_CONFIRM, (net_handle_t)m_socket, NULL);
+        }
+    }
+    else
+    {
+        m_callback( m_callback_data, NETLIB_MSG_WRITE, (net_handle_t)m_socket, NULL);
+    }
+    
+    return;
+}
+
+void CBaseSocket::OnClose()
+{
+    m_state = SOCKET_STATE_CLOSING;
+    m_callback( m_callback_data, NETLIB_MSG_CLOSE, (net_handle_t)m_socket, NULL);
+}
+
+void CBaseSocket::SetSendBufSize(uint32_t send_size)
+{
+    int ret = setsockopt( m_socket, SOL_SOCKET, SO_SNDBUF, &send_size, 4 );
+    if( ret == SOCKET_ERROR )
+    {
+        log("set SO_SNDBUF failed for fd=%d", m_socket);
+    }
+    
+    socklen_t len = 4;
+    int size = 0;
+    getsockopt( m_socket, SOL_SOCKET, SO_SNDBUF, &size, &len);
+    log("socket=%d send_buf_size=%d", m_socket, size);
+    return;
+}
+
+void CBaseSocket::SetRecvBufSize(uint32_t recv_size)
+{
+    int ret = setsockopt(m_socket, SOL_SOCKET, SO_RCVBUF, &recv_size, 4);
+    if( ret == SOCKET_ERROR)
+    {
+        log("set SO_RCVBUF failed for fd=%d", m_socket);
+    }
+    
+    socklen_t len = 4;
+    int size = 0;
+    getsockopt(m_socket, SOL_SOCKET, SO_RCVBUF, &size, &len);
+    log("socket=%d recv_buf_size=%d", m_socket, size);
+    return;
+}
+
+
 
 
