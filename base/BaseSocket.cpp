@@ -246,6 +246,50 @@ void CBaseSocket::SetRecvBufSize(uint32_t recv_size)
     return;
 }
 
+int CBaseSocket::_GetErrorCode()
+{
+    return errno;
+}
+
+bool CBaseSocket::_IsBlock(int error_code)
+{
+    return ((error_code == EINPROGRESS) || (error_code == EWOULDBLOCK));
+}
+
+void CBaseSocket::_SetNonblock(SOCKET fd )
+{
+    int ret = fcntl(fd, F_SETFL, O_NONBLOCK | fcntl(fd, F_GETFL));
+    if( ret == SOCKET_ERROR )
+    {
+        log("_SetNonblock failed, err_code=%d", _GetErrorCode());
+    }
+}
+
+void CBaseSocket::_SetReuseAddr(SOCKET fd)
+{
+    int reuse = -1;
+    int ret = setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, (char*)&reuse, sizeof( reuse));
+    if( ret == SOCKET_ERROR )
+    {
+        log("_SetReuseAddr failed, err_code=%d", _GetErrorCode());
+    }
+}
+
+void CBaseSocket::_SetNoDelay(SOCKET fd )
+{
+    int nodelay = 1;
+    int ret = setsockopt(fd, IPPROTO_TCP, TCP_NODELAY, (char*)&nodelay, sizeof(nodelay));
+    if( ret == SOCKET_ERROR)
+    {
+        log("_SetNoDelay failed, err_code=%d", _GetErrorCode());
+    }
+}
 
 
-
+void CBaseSocket::_SetAddr(const char *ip, const uint16_t port, sockaddr_in *pAddr)
+{
+    memset( pAddr, 0, sizeof( sockaddr_in));
+    pAddr->sin_family = AF_INET;
+    pAddr->sin_port = htons( port);
+    
+}
