@@ -291,5 +291,53 @@ void CBaseSocket::_SetAddr(const char *ip, const uint16_t port, sockaddr_in *pAd
     memset( pAddr, 0, sizeof( sockaddr_in));
     pAddr->sin_family = AF_INET;
     pAddr->sin_port = htons( port);
+    pAddr->sin_addr.s_addr = inet_addr( ip);
+    if( pAddr->sin_addr.s_addr == INADDR_NONE )
+    {
+        hostent *host = gethostbyname( ip);
+        if( host == NULL )
+        {
+            log("gethostbyname failed, ip = %s", ip);
+            return;
+        }
+        pAddr->sin_addr.s_addr = *(uint32_t*)host->h_addr;
+    }
+    return;
+}
+
+void CBaseSocket::_AcceptNewSocket()
+{
+    SOCKET fd = 0;
+    sockaddr_in peer_addr;
+    socklen_t addr_len = sizeof( sockaddr_in);
+    char ip_str[64];
+    while( (fd = accept(m_socket, (sockaddr*)&peer_addr, &addr_len)) != INVALID_SOCKET)
+    {
+        CBaseSocket *pSocket = new CBaseSocket();
+        uint32_t ip = ntohl(peer_addr.sin_addr.s_addr);
+        uint16_t port = ntohs( peer_addr.sin_port);
+        
+        snprintf(ip_str, sizeof(ip_str), "%d.%d.%d.%d", ip>>24, (ip>>16)&&0xFF, (ip>>8)& 0xFF, ip & 0xFF);
+        log("AcceptNewSocket, socket=%d from %s:%d\n", fd, ip_str, port );
+        
+        pSocket->SetSocket(fd);
+        pSocket->SetCallback(m_callback);
+        pSocket->SetCallbackData(m_callback_data);
+        pSocket->SetState(SOCKET_STATE_CONNECTED);
+        pSocket->SetRemoteIP( ip_str);
+        pSocket->SetRemotePort(port);
+        
+        _SetNoDelay(fd);
+        _SetNonblock(fd);
+        AddBaseSocket(pSocket);
+        CEventDispatch::Instance()->AddEvent(fd, SOCKET_READ | SOCKET_EXCEP );
+        m_callback( m_callback_data, NETLIB_MSG_CONNECT, (net_handle_t)fd, NULL);
+    }
+    return;
     
 }
+
+
+
+
+

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040085601D7517D700FFB559 /* Condition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0400855E1D7517D700FFB559 /* Condition.cpp */; };
+		040085611D7517D700FFB559 /* Condition.h in Headers */ = {isa = PBXBuildFile; fileRef = 0400855F1D7517D700FFB559 /* Condition.h */; };
 		04019CE31D536E0800DAD42F /* base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04019CE01D536E0800DAD42F /* base.cpp */; };
 		04019CE41D536E0800DAD42F /* base.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE11D536E0800DAD42F /* base.hpp */; };
 		04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0400855E1D7517D700FFB559 /* Condition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Condition.cpp; path = base/Condition.cpp; sourceTree = SOURCE_ROOT; };
+		0400855F1D7517D700FFB559 /* Condition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Condition.h; path = base/Condition.h; sourceTree = SOURCE_ROOT; };
 		04019CC71D536C6B00DAD42F /* libbase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libbase.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		04019CE01D536E0800DAD42F /* base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base.cpp; path = base/base.cpp; sourceTree = SOURCE_ROOT; };
 		04019CE11D536E0800DAD42F /* base.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = base.hpp; path = base/base.hpp; sourceTree = SOURCE_ROOT; };
@@ -114,6 +118,8 @@
 				04319D061D5C623700BBCE26 /* Lock.h */,
 				040D97FF1D65C02F001BC84D /* EventDispatch.cpp */,
 				040D98001D65C02F001BC84D /* EventDispatch.h */,
+				0400855E1D7517D700FFB559 /* Condition.cpp */,
+				0400855F1D7517D700FFB559 /* Condition.h */,
 			);
 			name = base;
 			path = Server;
@@ -146,6 +152,7 @@
 				04319D0B1D5C62CF00BBCE26 /* slog_api.h in Headers */,
 				04319CFC1D5C60B400BBCE26 /* ostype.h in Headers */,
 				04319CFA1D5C603600BBCE26 /* BaseSocket.h in Headers */,
+				040085611D7517D700FFB559 /* Condition.h in Headers */,
 				04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */,
 				04019CE91D536F0500DAD42F /* Base64.h in Headers */,
 				04319D041D5C61C600BBCE26 /* UtilPdu.h in Headers */,
@@ -240,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DF6BA61D59DD4E0096A2AD /* login_server.cpp in Sources */,
+				040085601D7517D700FFB559 /* Condition.cpp in Sources */,
 				04319D031D5C61C600BBCE26 /* UtilPdu.cpp in Sources */,
 				04019CE81D536F0500DAD42F /* Base64.cpp in Sources */,
 				04019CE31D536E0800DAD42F /* base.cpp in Sources */,
