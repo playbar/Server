@@ -26,6 +26,8 @@
 		04319D071D5C623700BBCE26 /* Lock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04319D051D5C623700BBCE26 /* Lock.cpp */; };
 		04319D081D5C623700BBCE26 /* Lock.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D061D5C623700BBCE26 /* Lock.h */; };
 		04319D0B1D5C62CF00BBCE26 /* slog_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D0A1D5C62CF00BBCE26 /* slog_api.h */; };
+		04BD89611D7901BB00B523FC /* EncDec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BD895F1D7901BB00B523FC /* EncDec.cpp */; };
+		04BD89621D7901BB00B523FC /* EncDec.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD89601D7901BB00B523FC /* EncDec.h */; };
 		04D0803E1D765F9900BAC540 /* ConfigFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D0803C1D765F9900BAC540 /* ConfigFileReader.cpp */; };
 		04D0803F1D765F9900BAC540 /* ConfigFileReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D0803D1D765F9900BAC540 /* ConfigFileReader.h */; };
 		04DF6BA61D59DD4E0096A2AD /* login_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04DF6BA51D59DD4E0096A2AD /* login_server.cpp */; };
@@ -58,6 +60,8 @@
 		04319D051D5C623700BBCE26 /* Lock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Lock.cpp; path = base/Lock.cpp; sourceTree = SOURCE_ROOT; };
 		04319D061D5C623700BBCE26 /* Lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lock.h; path = base/Lock.h; sourceTree = SOURCE_ROOT; };
 		04319D0A1D5C62CF00BBCE26 /* slog_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slog_api.h; path = base/slog/slog_api.h; sourceTree = SOURCE_ROOT; };
+		04BD895F1D7901BB00B523FC /* EncDec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EncDec.cpp; path = base/EncDec.cpp; sourceTree = SOURCE_ROOT; };
+		04BD89601D7901BB00B523FC /* EncDec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EncDec.h; path = base/EncDec.h; sourceTree = SOURCE_ROOT; };
 		04D0803C1D765F9900BAC540 /* ConfigFileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConfigFileReader.cpp; path = base/ConfigFileReader.cpp; sourceTree = SOURCE_ROOT; };
 		04D0803D1D765F9900BAC540 /* ConfigFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigFileReader.h; path = base/ConfigFileReader.h; sourceTree = SOURCE_ROOT; };
 		04DF6BA51D59DD4E0096A2AD /* login_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = login_server.cpp; path = login_server/login_server.cpp; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				0400855F1D7517D700FFB559 /* Condition.h */,
 				04D0803C1D765F9900BAC540 /* ConfigFileReader.cpp */,
 				04D0803D1D765F9900BAC540 /* ConfigFileReader.h */,
+				04BD895F1D7901BB00B523FC /* EncDec.cpp */,
+				04BD89601D7901BB00B523FC /* EncDec.h */,
 			);
 			name = base;
 			path = Server;
@@ -163,6 +169,7 @@
 				04019CE91D536F0500DAD42F /* Base64.h in Headers */,
 				04D0803F1D765F9900BAC540 /* ConfigFileReader.h in Headers */,
 				04319D041D5C61C600BBCE26 /* UtilPdu.h in Headers */,
+				04BD89621D7901BB00B523FC /* EncDec.h in Headers */,
 				040D98021D65C030001BC84D /* EventDispatch.h in Headers */,
 				04019CE41D536E0800DAD42F /* base.hpp in Headers */,
 				04319D081D5C623700BBCE26 /* Lock.h in Headers */,
@@ -258,6 +265,7 @@
 				04319D031D5C61C600BBCE26 /* UtilPdu.cpp in Sources */,
 				04019CE81D536F0500DAD42F /* Base64.cpp in Sources */,
 				04019CE31D536E0800DAD42F /* base.cpp in Sources */,
+				04BD89611D7901BB00B523FC /* EncDec.cpp in Sources */,
 				040D98011D65C030001BC84D /* EventDispatch.cpp in Sources */,
 				04D0803E1D765F9900BAC540 /* ConfigFileReader.cpp in Sources */,
 				04319CFF1D5C610A00BBCE26 /* util.cpp in Sources */,
