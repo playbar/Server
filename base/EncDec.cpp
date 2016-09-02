@@ -54,3 +54,68 @@ int CAes::Encrypt(const char *pInData, uint32_t nInLen, char **ppOutData, uint32
     return 0;
 }
 
+int CAes::Decrypt(const char *pInData, uint32_t nInLen, char **ppOutData, uint32_t &nOutLen)
+{
+    if( pInData == NULL || nInLen <= 0)
+    {
+        return -1;
+    }
+    string strInData(pInData, nInLen);
+    std::string strResult = base64_encode(strInData);
+    uint32_t nLen = (uint32_t)strResult.length();
+    if( nLen == 0 )
+    {
+        return -2;
+    }
+    
+    const unsigned char *pData = (const unsigned char *)strResult.c_str();
+    if( nLen % 16 != 0)
+    {
+        return -3;
+    }
+    
+    char *pTmp = (char*)malloc(nLen + 1);
+    uint32_t nBlocks = nLen / 16;
+    for( uint32_t i = 0; i < nBlocks; ++i )
+    {
+        AES_decrypt(pData + i * 16, (unsigned char*)pTmp + i * 16, &m_cDecKey );
+    }
+    
+    uchar_t *pStart = (uchar_t*)pTmp + nLen - 4;
+    nOutLen = CByteStream::ReadUint32(pStart);
+    if( nOutLen > nLen)
+    {
+        free( pTmp);
+        return -4;
+    }
+    
+    pTmp[nOutLen] = 0;
+    *ppOutData = pTmp;
+    return 0;
+    
+}
+
+void CAes::Free(char *pOutData)
+{
+    if( pOutData != NULL )
+    {
+        free(pOutData);
+        pOutData = NULL;
+    }
+}
+
+void CMd5::MD5_Calculate(const char *pContent, unsigned int nLen, char *md5)
+{
+    uchar_t d[16];
+    MD5_CTX ctx;
+    MD5_Init(&ctx);
+    MD5_Update(&ctx, pContent, nLen);
+    MD5_Final(d, &ctx);
+    for (int i = 0; i < 16; ++i) {
+        snprintf(md5 + (i*2), 32, "%02x", d[i]);
+    }
+    md5[32]=0;
+    return;
+}
+
+
