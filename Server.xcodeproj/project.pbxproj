@@ -28,6 +28,27 @@
 		04319D0B1D5C62CF00BBCE26 /* slog_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D0A1D5C62CF00BBCE26 /* slog_api.h */; };
 		0480EC291D797D040007D67A /* http_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC271D797D040007D67A /* http_parser.cpp */; };
 		0480EC2A1D797D040007D67A /* http_parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC281D797D040007D67A /* http_parser.h */; };
+		0480EC2D1D797D8C0007D67A /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC2B1D797D8C0007D67A /* HttpClient.cpp */; };
+		0480EC2E1D797D8C0007D67A /* HttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC2C1D797D8C0007D67A /* HttpClient.h */; };
+		0480EC301D797E440007D67A /* public_define.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC2F1D797E440007D67A /* public_define.h */; };
+		0480EC451D797F2E0007D67A /* IM.BaseDefine.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC331D797F2E0007D67A /* IM.BaseDefine.pb.cc */; };
+		0480EC461D797F2E0007D67A /* IM.BaseDefine.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC341D797F2E0007D67A /* IM.BaseDefine.pb.h */; };
+		0480EC471D797F2E0007D67A /* IM.Buddy.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC351D797F2E0007D67A /* IM.Buddy.pb.cc */; };
+		0480EC481D797F2E0007D67A /* IM.Buddy.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC361D797F2E0007D67A /* IM.Buddy.pb.h */; };
+		0480EC491D797F2E0007D67A /* IM.File.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC371D797F2E0007D67A /* IM.File.pb.cc */; };
+		0480EC4A1D797F2E0007D67A /* IM.File.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC381D797F2E0007D67A /* IM.File.pb.h */; };
+		0480EC4B1D797F2E0007D67A /* IM.Group.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC391D797F2E0007D67A /* IM.Group.pb.cc */; };
+		0480EC4C1D797F2E0007D67A /* IM.Group.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC3A1D797F2E0007D67A /* IM.Group.pb.h */; };
+		0480EC4D1D797F2E0007D67A /* IM.Login.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC3B1D797F2E0007D67A /* IM.Login.pb.cc */; };
+		0480EC4E1D797F2E0007D67A /* IM.Login.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC3C1D797F2E0007D67A /* IM.Login.pb.h */; };
+		0480EC4F1D797F2E0007D67A /* IM.Message.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC3D1D797F2E0007D67A /* IM.Message.pb.cc */; };
+		0480EC501D797F2E0007D67A /* IM.Message.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC3E1D797F2E0007D67A /* IM.Message.pb.h */; };
+		0480EC511D797F2E0007D67A /* IM.Other.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC3F1D797F2E0007D67A /* IM.Other.pb.cc */; };
+		0480EC521D797F2E0007D67A /* IM.Other.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC401D797F2E0007D67A /* IM.Other.pb.h */; };
+		0480EC531D797F2E0007D67A /* IM.Server.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC411D797F2E0007D67A /* IM.Server.pb.cc */; };
+		0480EC541D797F2E0007D67A /* IM.Server.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC421D797F2E0007D67A /* IM.Server.pb.h */; };
+		0480EC551D797F2E0007D67A /* IM.SwitchService.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC431D797F2E0007D67A /* IM.SwitchService.pb.cc */; };
+		0480EC561D797F2E0007D67A /* IM.SwitchService.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC441D797F2E0007D67A /* IM.SwitchService.pb.h */; };
 		04BD89611D7901BB00B523FC /* EncDec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BD895F1D7901BB00B523FC /* EncDec.cpp */; };
 		04BD89621D7901BB00B523FC /* EncDec.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD89601D7901BB00B523FC /* EncDec.h */; };
 		04D0803E1D765F9900BAC540 /* ConfigFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D0803C1D765F9900BAC540 /* ConfigFileReader.cpp */; };
@@ -64,6 +85,27 @@
 		04319D0A1D5C62CF00BBCE26 /* slog_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slog_api.h; path = base/slog/slog_api.h; sourceTree = SOURCE_ROOT; };
 		0480EC271D797D040007D67A /* http_parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = http_parser.cpp; path = base/http_parser.cpp; sourceTree = SOURCE_ROOT; };
 		0480EC281D797D040007D67A /* http_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = http_parser.h; path = base/http_parser.h; sourceTree = SOURCE_ROOT; };
+		0480EC2B1D797D8C0007D67A /* HttpClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HttpClient.cpp; path = base/HttpClient.cpp; sourceTree = SOURCE_ROOT; };
+		0480EC2C1D797D8C0007D67A /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpClient.h; path = base/HttpClient.h; sourceTree = SOURCE_ROOT; };
+		0480EC2F1D797E440007D67A /* public_define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = public_define.h; path = base/public_define.h; sourceTree = SOURCE_ROOT; };
+		0480EC331D797F2E0007D67A /* IM.BaseDefine.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IM.BaseDefine.pb.cc; sourceTree = "<group>"; };
+		0480EC341D797F2E0007D67A /* IM.BaseDefine.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.BaseDefine.pb.h; sourceTree = "<group>"; };
+		0480EC351D797F2E0007D67A /* IM.Buddy.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IM.Buddy.pb.cc; sourceTree = "<group>"; };
+		0480EC361D797F2E0007D67A /* IM.Buddy.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.Buddy.pb.h; sourceTree = "<group>"; };
+		0480EC371D797F2E0007D67A /* IM.File.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IM.File.pb.cc; sourceTree = "<group>"; };
+		0480EC381D797F2E0007D67A /* IM.File.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.File.pb.h; sourceTree = "<group>"; };
+		0480EC391D797F2E0007D67A /* IM.Group.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IM.Group.pb.cc; sourceTree = "<group>"; };
+		0480EC3A1D797F2E0007D67A /* IM.Group.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.Group.pb.h; sourceTree = "<group>"; };
+		0480EC3B1D797F2E0007D67A /* IM.Login.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IM.Login.pb.cc; sourceTree = "<group>"; };
+		0480EC3C1D797F2E0007D67A /* IM.Login.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.Login.pb.h; sourceTree = "<group>"; };
+		0480EC3D1D797F2E0007D67A /* IM.Message.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IM.Message.pb.cc; sourceTree = "<group>"; };
+		0480EC3E1D797F2E0007D67A /* IM.Message.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.Message.pb.h; sourceTree = "<group>"; };
+		0480EC3F1D797F2E0007D67A /* IM.Other.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IM.Other.pb.cc; sourceTree = "<group>"; };
+		0480EC401D797F2E0007D67A /* IM.Other.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.Other.pb.h; sourceTree = "<group>"; };
+		0480EC411D797F2E0007D67A /* IM.Server.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IM.Server.pb.cc; sourceTree = "<group>"; };
+		0480EC421D797F2E0007D67A /* IM.Server.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.Server.pb.h; sourceTree = "<group>"; };
+		0480EC431D797F2E0007D67A /* IM.SwitchService.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IM.SwitchService.pb.cc; sourceTree = "<group>"; };
+		0480EC441D797F2E0007D67A /* IM.SwitchService.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.SwitchService.pb.h; sourceTree = "<group>"; };
 		04BD895F1D7901BB00B523FC /* EncDec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EncDec.cpp; path = base/EncDec.cpp; sourceTree = SOURCE_ROOT; };
 		04BD89601D7901BB00B523FC /* EncDec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EncDec.h; path = base/EncDec.h; sourceTree = SOURCE_ROOT; };
 		04D0803C1D765F9900BAC540 /* ConfigFileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConfigFileReader.cpp; path = base/ConfigFileReader.cpp; sourceTree = SOURCE_ROOT; };
@@ -112,6 +154,7 @@
 		04019CC91D536C6B00DAD42F /* base */ = {
 			isa = PBXGroup;
 			children = (
+				0480EC311D797F2E0007D67A /* pb */,
 				04319D091D5C627600BBCE26 /* slog */,
 				0480EC271D797D040007D67A /* http_parser.cpp */,
 				0480EC281D797D040007D67A /* http_parser.h */,
@@ -138,6 +181,9 @@
 				04D0803D1D765F9900BAC540 /* ConfigFileReader.h */,
 				04BD895F1D7901BB00B523FC /* EncDec.cpp */,
 				04BD89601D7901BB00B523FC /* EncDec.h */,
+				0480EC2F1D797E440007D67A /* public_define.h */,
+				0480EC2B1D797D8C0007D67A /* HttpClient.cpp */,
+				0480EC2C1D797D8C0007D67A /* HttpClient.h */,
 			);
 			name = base;
 			path = Server;
@@ -149,6 +195,40 @@
 				04319D0A1D5C62CF00BBCE26 /* slog_api.h */,
 			);
 			name = slog;
+			sourceTree = "<group>";
+		};
+		0480EC311D797F2E0007D67A /* pb */ = {
+			isa = PBXGroup;
+			children = (
+				0480EC321D797F2E0007D67A /* protocol */,
+			);
+			name = pb;
+			path = base/pb;
+			sourceTree = SOURCE_ROOT;
+		};
+		0480EC321D797F2E0007D67A /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				0480EC331D797F2E0007D67A /* IM.BaseDefine.pb.cc */,
+				0480EC341D797F2E0007D67A /* IM.BaseDefine.pb.h */,
+				0480EC351D797F2E0007D67A /* IM.Buddy.pb.cc */,
+				0480EC361D797F2E0007D67A /* IM.Buddy.pb.h */,
+				0480EC371D797F2E0007D67A /* IM.File.pb.cc */,
+				0480EC381D797F2E0007D67A /* IM.File.pb.h */,
+				0480EC391D797F2E0007D67A /* IM.Group.pb.cc */,
+				0480EC3A1D797F2E0007D67A /* IM.Group.pb.h */,
+				0480EC3B1D797F2E0007D67A /* IM.Login.pb.cc */,
+				0480EC3C1D797F2E0007D67A /* IM.Login.pb.h */,
+				0480EC3D1D797F2E0007D67A /* IM.Message.pb.cc */,
+				0480EC3E1D797F2E0007D67A /* IM.Message.pb.h */,
+				0480EC3F1D797F2E0007D67A /* IM.Other.pb.cc */,
+				0480EC401D797F2E0007D67A /* IM.Other.pb.h */,
+				0480EC411D797F2E0007D67A /* IM.Server.pb.cc */,
+				0480EC421D797F2E0007D67A /* IM.Server.pb.h */,
+				0480EC431D797F2E0007D67A /* IM.SwitchService.pb.cc */,
+				0480EC441D797F2E0007D67A /* IM.SwitchService.pb.h */,
+			);
+			path = protocol;
 			sourceTree = "<group>";
 		};
 		04DF6BA41D59DD140096A2AD /* login_server */ = {
@@ -166,11 +246,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0480EC4A1D797F2E0007D67A /* IM.File.pb.h in Headers */,
 				04319D001D5C610A00BBCE26 /* util.h in Headers */,
 				04319D0B1D5C62CF00BBCE26 /* slog_api.h in Headers */,
 				04319CFC1D5C60B400BBCE26 /* ostype.h in Headers */,
 				04319CFA1D5C603600BBCE26 /* BaseSocket.h in Headers */,
+				0480EC4E1D797F2E0007D67A /* IM.Login.pb.h in Headers */,
 				040085611D7517D700FFB559 /* Condition.h in Headers */,
+				0480EC541D797F2E0007D67A /* IM.Server.pb.h in Headers */,
 				04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */,
 				04019CE91D536F0500DAD42F /* Base64.h in Headers */,
 				04D0803F1D765F9900BAC540 /* ConfigFileReader.h in Headers */,
@@ -178,7 +261,15 @@
 				04BD89621D7901BB00B523FC /* EncDec.h in Headers */,
 				040D98021D65C030001BC84D /* EventDispatch.h in Headers */,
 				0480EC2A1D797D040007D67A /* http_parser.h in Headers */,
+				0480EC561D797F2E0007D67A /* IM.SwitchService.pb.h in Headers */,
+				0480EC2E1D797D8C0007D67A /* HttpClient.h in Headers */,
+				0480EC481D797F2E0007D67A /* IM.Buddy.pb.h in Headers */,
 				04019CE41D536E0800DAD42F /* base.hpp in Headers */,
+				0480EC4C1D797F2E0007D67A /* IM.Group.pb.h in Headers */,
+				0480EC521D797F2E0007D67A /* IM.Other.pb.h in Headers */,
+				0480EC461D797F2E0007D67A /* IM.BaseDefine.pb.h in Headers */,
+				0480EC301D797E440007D67A /* public_define.h in Headers */,
+				0480EC501D797F2E0007D67A /* IM.Message.pb.h in Headers */,
 				04319D081D5C623700BBCE26 /* Lock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,17 +359,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DF6BA61D59DD4E0096A2AD /* login_server.cpp in Sources */,
+				0480EC4F1D797F2E0007D67A /* IM.Message.pb.cc in Sources */,
 				040085601D7517D700FFB559 /* Condition.cpp in Sources */,
 				04319D031D5C61C600BBCE26 /* UtilPdu.cpp in Sources */,
+				0480EC4D1D797F2E0007D67A /* IM.Login.pb.cc in Sources */,
+				0480EC471D797F2E0007D67A /* IM.Buddy.pb.cc in Sources */,
 				04019CE81D536F0500DAD42F /* Base64.cpp in Sources */,
+				0480EC491D797F2E0007D67A /* IM.File.pb.cc in Sources */,
 				0480EC291D797D040007D67A /* http_parser.cpp in Sources */,
 				04019CE31D536E0800DAD42F /* base.cpp in Sources */,
 				04BD89611D7901BB00B523FC /* EncDec.cpp in Sources */,
 				040D98011D65C030001BC84D /* EventDispatch.cpp in Sources */,
+				0480EC531D797F2E0007D67A /* IM.Server.pb.cc in Sources */,
 				04D0803E1D765F9900BAC540 /* ConfigFileReader.cpp in Sources */,
 				04319CFF1D5C610A00BBCE26 /* util.cpp in Sources */,
 				04319CF91D5C603600BBCE26 /* BaseSocket.cpp in Sources */,
 				04319D071D5C623700BBCE26 /* Lock.cpp in Sources */,
+				0480EC551D797F2E0007D67A /* IM.SwitchService.pb.cc in Sources */,
+				0480EC511D797F2E0007D67A /* IM.Other.pb.cc in Sources */,
+				0480EC2D1D797D8C0007D67A /* HttpClient.cpp in Sources */,
+				0480EC4B1D797F2E0007D67A /* IM.Group.pb.cc in Sources */,
+				0480EC451D797F2E0007D67A /* IM.BaseDefine.pb.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
