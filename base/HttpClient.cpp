@@ -6,11 +6,12 @@
 //  Copyright © 2016年 mac. All rights reserved.
 //
 
+#include <string>
 #include "HttpClient.h"
-#include <curl/curl.h>
-#include "public_define.h"
+#include "json/json.h"
+#include "util.h"
+using namespace std;
 
-class CHttpClient
-{
-    
-};
+
+
+

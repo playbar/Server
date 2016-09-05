@@ -59,6 +59,20 @@
 		04DF6BB01D59DDB80096A2AD /* base.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE11D536E0800DAD42F /* base.hpp */; };
 		04DF6BB51D59DDE20096A2AD /* login_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04DF6BA51D59DD4E0096A2AD /* login_server.cpp */; };
 		04DF6BB61D59DE400096A2AD /* libbase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04019CC71D536C6B00DAD42F /* libbase.a */; };
+		04E9C0251D7CF86200A841ED /* assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0141D7CF86200A841ED /* assertions.h */; };
+		04E9C0261D7CF86200A841ED /* autolink.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0151D7CF86200A841ED /* autolink.h */; };
+		04E9C0271D7CF86200A841ED /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0161D7CF86200A841ED /* config.h */; };
+		04E9C0281D7CF86200A841ED /* features.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0171D7CF86200A841ED /* features.h */; };
+		04E9C0291D7CF86200A841ED /* forwards.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0181D7CF86200A841ED /* forwards.h */; };
+		04E9C02A1D7CF86200A841ED /* json.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0191D7CF86200A841ED /* json.h */; };
+		04E9C02B1D7CF86200A841ED /* reader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C01A1D7CF86200A841ED /* reader.h */; };
+		04E9C02C1D7CF86200A841ED /* value.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C01B1D7CF86200A841ED /* value.h */; };
+		04E9C02D1D7CF86200A841ED /* writer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C01C1D7CF86200A841ED /* writer.h */; };
+		04E9C02E1D7CF86200A841ED /* json_batchallocator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C01D1D7CF86200A841ED /* json_batchallocator.h */; };
+		04E9C02F1D7CF86200A841ED /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04E9C0201D7CF86200A841ED /* json_reader.cpp */; };
+		04E9C0301D7CF86200A841ED /* json_tool.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0211D7CF86200A841ED /* json_tool.h */; };
+		04E9C0311D7CF86200A841ED /* json_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04E9C0221D7CF86200A841ED /* json_value.cpp */; };
+		04E9C0321D7CF86200A841ED /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04E9C0241D7CF86200A841ED /* json_writer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +126,23 @@
 		04D0803D1D765F9900BAC540 /* ConfigFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigFileReader.h; path = base/ConfigFileReader.h; sourceTree = SOURCE_ROOT; };
 		04DF6BA51D59DD4E0096A2AD /* login_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = login_server.cpp; path = login_server/login_server.cpp; sourceTree = "<group>"; };
 		04DF6BB41D59DDB80096A2AD /* login_server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = login_server; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E9C0141D7CF86200A841ED /* assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assertions.h; sourceTree = "<group>"; };
+		04E9C0151D7CF86200A841ED /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
+		04E9C0161D7CF86200A841ED /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		04E9C0171D7CF86200A841ED /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
+		04E9C0181D7CF86200A841ED /* forwards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = forwards.h; sourceTree = "<group>"; };
+		04E9C0191D7CF86200A841ED /* json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
+		04E9C01A1D7CF86200A841ED /* reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		04E9C01B1D7CF86200A841ED /* value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = value.h; sourceTree = "<group>"; };
+		04E9C01C1D7CF86200A841ED /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
+		04E9C01D1D7CF86200A841ED /* json_batchallocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_batchallocator.h; sourceTree = "<group>"; };
+		04E9C01E1D7CF86200A841ED /* json_internalarray.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_internalarray.inl; sourceTree = "<group>"; };
+		04E9C01F1D7CF86200A841ED /* json_internalmap.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_internalmap.inl; sourceTree = "<group>"; };
+		04E9C0201D7CF86200A841ED /* json_reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_reader.cpp; sourceTree = "<group>"; };
+		04E9C0211D7CF86200A841ED /* json_tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_tool.h; sourceTree = "<group>"; };
+		04E9C0221D7CF86200A841ED /* json_value.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_value.cpp; sourceTree = "<group>"; };
+		04E9C0231D7CF86200A841ED /* json_valueiterator.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_valueiterator.inl; sourceTree = "<group>"; };
+		04E9C0241D7CF86200A841ED /* json_writer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_writer.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +185,7 @@
 		04019CC91D536C6B00DAD42F /* base */ = {
 			isa = PBXGroup;
 			children = (
+				04E9C0121D7CF86200A841ED /* jsoncpp */,
 				0480EC311D797F2E0007D67A /* pb */,
 				04319D091D5C627600BBCE26 /* slog */,
 				0480EC271D797D040007D67A /* http_parser.cpp */,
@@ -239,6 +271,39 @@
 			name = login_server;
 			sourceTree = "<group>";
 		};
+		04E9C0121D7CF86200A841ED /* jsoncpp */ = {
+			isa = PBXGroup;
+			children = (
+				04E9C0131D7CF86200A841ED /* json */,
+				04E9C01D1D7CF86200A841ED /* json_batchallocator.h */,
+				04E9C01E1D7CF86200A841ED /* json_internalarray.inl */,
+				04E9C01F1D7CF86200A841ED /* json_internalmap.inl */,
+				04E9C0201D7CF86200A841ED /* json_reader.cpp */,
+				04E9C0211D7CF86200A841ED /* json_tool.h */,
+				04E9C0221D7CF86200A841ED /* json_value.cpp */,
+				04E9C0231D7CF86200A841ED /* json_valueiterator.inl */,
+				04E9C0241D7CF86200A841ED /* json_writer.cpp */,
+			);
+			name = jsoncpp;
+			path = base/jsoncpp;
+			sourceTree = SOURCE_ROOT;
+		};
+		04E9C0131D7CF86200A841ED /* json */ = {
+			isa = PBXGroup;
+			children = (
+				04E9C0141D7CF86200A841ED /* assertions.h */,
+				04E9C0151D7CF86200A841ED /* autolink.h */,
+				04E9C0161D7CF86200A841ED /* config.h */,
+				04E9C0171D7CF86200A841ED /* features.h */,
+				04E9C0181D7CF86200A841ED /* forwards.h */,
+				04E9C0191D7CF86200A841ED /* json.h */,
+				04E9C01A1D7CF86200A841ED /* reader.h */,
+				04E9C01B1D7CF86200A841ED /* value.h */,
+				04E9C01C1D7CF86200A841ED /* writer.h */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -252,24 +317,35 @@
 				04319CFC1D5C60B400BBCE26 /* ostype.h in Headers */,
 				04319CFA1D5C603600BBCE26 /* BaseSocket.h in Headers */,
 				0480EC4E1D797F2E0007D67A /* IM.Login.pb.h in Headers */,
+				04E9C0261D7CF86200A841ED /* autolink.h in Headers */,
+				04E9C02D1D7CF86200A841ED /* writer.h in Headers */,
 				040085611D7517D700FFB559 /* Condition.h in Headers */,
 				0480EC541D797F2E0007D67A /* IM.Server.pb.h in Headers */,
 				04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */,
 				04019CE91D536F0500DAD42F /* Base64.h in Headers */,
+				04E9C0301D7CF86200A841ED /* json_tool.h in Headers */,
 				04D0803F1D765F9900BAC540 /* ConfigFileReader.h in Headers */,
 				04319D041D5C61C600BBCE26 /* UtilPdu.h in Headers */,
 				04BD89621D7901BB00B523FC /* EncDec.h in Headers */,
 				040D98021D65C030001BC84D /* EventDispatch.h in Headers */,
 				0480EC2A1D797D040007D67A /* http_parser.h in Headers */,
 				0480EC561D797F2E0007D67A /* IM.SwitchService.pb.h in Headers */,
+				04E9C02B1D7CF86200A841ED /* reader.h in Headers */,
 				0480EC2E1D797D8C0007D67A /* HttpClient.h in Headers */,
 				0480EC481D797F2E0007D67A /* IM.Buddy.pb.h in Headers */,
 				04019CE41D536E0800DAD42F /* base.hpp in Headers */,
+				04E9C0271D7CF86200A841ED /* config.h in Headers */,
 				0480EC4C1D797F2E0007D67A /* IM.Group.pb.h in Headers */,
 				0480EC521D797F2E0007D67A /* IM.Other.pb.h in Headers */,
+				04E9C02C1D7CF86200A841ED /* value.h in Headers */,
 				0480EC461D797F2E0007D67A /* IM.BaseDefine.pb.h in Headers */,
 				0480EC301D797E440007D67A /* public_define.h in Headers */,
+				04E9C02A1D7CF86200A841ED /* json.h in Headers */,
+				04E9C0251D7CF86200A841ED /* assertions.h in Headers */,
+				04E9C02E1D7CF86200A841ED /* json_batchallocator.h in Headers */,
+				04E9C0281D7CF86200A841ED /* features.h in Headers */,
 				0480EC501D797F2E0007D67A /* IM.Message.pb.h in Headers */,
+				04E9C0291D7CF86200A841ED /* forwards.h in Headers */,
 				04319D081D5C623700BBCE26 /* Lock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +437,7 @@
 				04DF6BA61D59DD4E0096A2AD /* login_server.cpp in Sources */,
 				0480EC4F1D797F2E0007D67A /* IM.Message.pb.cc in Sources */,
 				040085601D7517D700FFB559 /* Condition.cpp in Sources */,
+				04E9C02F1D7CF86200A841ED /* json_reader.cpp in Sources */,
 				04319D031D5C61C600BBCE26 /* UtilPdu.cpp in Sources */,
 				0480EC4D1D797F2E0007D67A /* IM.Login.pb.cc in Sources */,
 				0480EC471D797F2E0007D67A /* IM.Buddy.pb.cc in Sources */,
@@ -370,6 +447,7 @@
 				04019CE31D536E0800DAD42F /* base.cpp in Sources */,
 				04BD89611D7901BB00B523FC /* EncDec.cpp in Sources */,
 				040D98011D65C030001BC84D /* EventDispatch.cpp in Sources */,
+				04E9C0311D7CF86200A841ED /* json_value.cpp in Sources */,
 				0480EC531D797F2E0007D67A /* IM.Server.pb.cc in Sources */,
 				04D0803E1D765F9900BAC540 /* ConfigFileReader.cpp in Sources */,
 				04319CFF1D5C610A00BBCE26 /* util.cpp in Sources */,
@@ -380,6 +458,7 @@
 				0480EC2D1D797D8C0007D67A /* HttpClient.cpp in Sources */,
 				0480EC4B1D797F2E0007D67A /* IM.Group.pb.cc in Sources */,
 				0480EC451D797F2E0007D67A /* IM.BaseDefine.pb.cc in Sources */,
+				04E9C0321D7CF86200A841ED /* json_writer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,7 +560,10 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					base/jsoncpp,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -492,7 +574,10 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					base/jsoncpp,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
