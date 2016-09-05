@@ -101,4 +101,98 @@ CURLcode CHttpClient::Get(const string &strUrl, string &strResponse)
     
 }
 
+string CHttpClient::UploadByteFile(const string &strUrl, void *pData, int nSize)
+{
+    if( strUrl.empty())
+    {
+        return "";
+    }
+    
+    CURL * curl = curl_easy_init();
+    if( !curl)
+    {
+        return "";
+    }
+    
+    struct curl_slist *headerList = NULL;
+    headerList = curl_slist_append(headerList, "Content-Type: multipart/form-data; boundary=WebKitFormBoundary8riBH6S4ZsoT69so");
+    curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headerList);
+    curl_easy_setopt(curl, CURLOPT_URL, strUrl.c_str());
+    curl_easy_setopt(curl, CURLOPT_VERBOSE, 1L);
+    string body = "--WebKitFormBoundary8riBH6S4ZsoT69so\r\nContent-Disposition: form-data; name=\"file\"; filename=\"1.audio\"\r\nContent-Type:image/jpg\r\n\r\n";
+    body.append((char *)pData, nSize);
+    string str = "\r\n--WebKitFormBoundary8riBH6S4ZsoT69so--\r\n\r\n";
+    body.append(str.c_str(), str.size());
+    
+    curl_easy_setopt(curl, CURLOPT_POSTFIELDS, body.c_str());
+    curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE, body.size());
+    string strResp;
+    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data_string);
+    curl_easy_setopt(curl, CURLOPT_WRITEDATA, &strResp);
+    curl_easy_setopt(curl, CURLOPT_NOPROGRESS, 1L);
+    
+    CURLcode res = curl_easy_perform(curl);
+    curl_easy_cleanup(curl);
+    
+    if( CURLE_OK != res)
+    {
+        log("curl_easy_perform failed, res=%d", res );
+        return "";
+    }
+    
+    Json::Reader reader;
+    Json::Value value;
+    
+    if( !reader.parse(strResp, value))
+    {
+        log("json parse failed: %s", strResp.c_str());
+        return "";
+    }
+    
+    if( value["error_code"].isNull())
+    {
+        log("no code in response %s", strResp.c_str());
+        return "";
+    }
+    
+    uint32_t nRet = value["error_code"].asUInt();
+    if( nRet != 0 )
+    {
+        log("upload failed:%u", nRet);
+        return "";
+    }
+    
+    return value["url"].asString();
+}
+
+bool CHttpClient::DownloadByteFile(const string &url, AudioMsgInfo *pAudioMsg)
+{
+    CURL *curl = curl_easy_init();
+    if( !curl ){
+        return false;
+    }
+    
+    curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 2);
+    curl_easy_setopt(curl, CURLOPT_NOSIGNAL, 1L);
+    curl_easy_setopt(curl, CURLOPT_FORBID_REUSE, 1);
+    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data_binary);
+    curl_easy_setopt(curl, CURLOPT_WRITEDATA, pAudioMsg);
+    
+    CURLcode res = curl_easy_perform(curl);
+    int retcode = 0;
+    res = curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &retcode);
+    if( CURLE_OK != res || retcode != 200)
+    {
+        log("curl_easy_perform failed, res=%d, ret=%u", res, retcode);
+    }
+    double nLen = 0;
+    res = curl_easy_getinfo(curl, CURLINFO_CONTENT_LENGTH_DOWNLOAD, &nLen);
+    curl_easy_cleanup(curl);
+    if( nLen != pAudioMsg->fileSize)
+    {
+        return  false;
+    }
+    return true;
+}
 
