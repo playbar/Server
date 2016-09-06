@@ -49,6 +49,8 @@
 		0480EC541D797F2E0007D67A /* IM.Server.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC421D797F2E0007D67A /* IM.Server.pb.h */; };
 		0480EC551D797F2E0007D67A /* IM.SwitchService.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC431D797F2E0007D67A /* IM.SwitchService.pb.cc */; };
 		0480EC561D797F2E0007D67A /* IM.SwitchService.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC441D797F2E0007D67A /* IM.SwitchService.pb.h */; };
+		04BD605A1D7E470900566DDD /* HttpParserWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BD60581D7E470900566DDD /* HttpParserWrapper.cpp */; };
+		04BD605B1D7E470900566DDD /* HttpParserWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD60591D7E470900566DDD /* HttpParserWrapper.h */; };
 		04BD89611D7901BB00B523FC /* EncDec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BD895F1D7901BB00B523FC /* EncDec.cpp */; };
 		04BD89621D7901BB00B523FC /* EncDec.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD89601D7901BB00B523FC /* EncDec.h */; };
 		04D0803E1D765F9900BAC540 /* ConfigFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D0803C1D765F9900BAC540 /* ConfigFileReader.cpp */; };
@@ -120,6 +122,8 @@
 		0480EC421D797F2E0007D67A /* IM.Server.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.Server.pb.h; sourceTree = "<group>"; };
 		0480EC431D797F2E0007D67A /* IM.SwitchService.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IM.SwitchService.pb.cc; sourceTree = "<group>"; };
 		0480EC441D797F2E0007D67A /* IM.SwitchService.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.SwitchService.pb.h; sourceTree = "<group>"; };
+		04BD60581D7E470900566DDD /* HttpParserWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HttpParserWrapper.cpp; path = base/HttpParserWrapper.cpp; sourceTree = SOURCE_ROOT; };
+		04BD60591D7E470900566DDD /* HttpParserWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpParserWrapper.h; path = base/HttpParserWrapper.h; sourceTree = SOURCE_ROOT; };
 		04BD895F1D7901BB00B523FC /* EncDec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EncDec.cpp; path = base/EncDec.cpp; sourceTree = SOURCE_ROOT; };
 		04BD89601D7901BB00B523FC /* EncDec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EncDec.h; path = base/EncDec.h; sourceTree = SOURCE_ROOT; };
 		04D0803C1D765F9900BAC540 /* ConfigFileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConfigFileReader.cpp; path = base/ConfigFileReader.cpp; sourceTree = SOURCE_ROOT; };
@@ -216,6 +220,8 @@
 				0480EC2F1D797E440007D67A /* public_define.h */,
 				0480EC2B1D797D8C0007D67A /* HttpClient.cpp */,
 				0480EC2C1D797D8C0007D67A /* HttpClient.h */,
+				04BD60581D7E470900566DDD /* HttpParserWrapper.cpp */,
+				04BD60591D7E470900566DDD /* HttpParserWrapper.h */,
 			);
 			name = base;
 			path = Server;
@@ -329,6 +335,7 @@
 				04BD89621D7901BB00B523FC /* EncDec.h in Headers */,
 				040D98021D65C030001BC84D /* EventDispatch.h in Headers */,
 				0480EC2A1D797D040007D67A /* http_parser.h in Headers */,
+				04BD605B1D7E470900566DDD /* HttpParserWrapper.h in Headers */,
 				0480EC561D797F2E0007D67A /* IM.SwitchService.pb.h in Headers */,
 				04E9C02B1D7CF86200A841ED /* reader.h in Headers */,
 				0480EC2E1D797D8C0007D67A /* HttpClient.h in Headers */,
@@ -452,6 +459,7 @@
 				04D0803E1D765F9900BAC540 /* ConfigFileReader.cpp in Sources */,
 				04319CFF1D5C610A00BBCE26 /* util.cpp in Sources */,
 				04319CF91D5C603600BBCE26 /* BaseSocket.cpp in Sources */,
+				04BD605A1D7E470900566DDD /* HttpParserWrapper.cpp in Sources */,
 				04319D071D5C623700BBCE26 /* Lock.cpp in Sources */,
 				0480EC551D797F2E0007D67A /* IM.SwitchService.pb.cc in Sources */,
 				0480EC511D797F2E0007D67A /* IM.Other.pb.cc in Sources */,
