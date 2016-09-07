@@ -53,6 +53,12 @@
 		04BD605B1D7E470900566DDD /* HttpParserWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD60591D7E470900566DDD /* HttpParserWrapper.h */; };
 		04BD89611D7901BB00B523FC /* EncDec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BD895F1D7901BB00B523FC /* EncDec.cpp */; };
 		04BD89621D7901BB00B523FC /* EncDec.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD89601D7901BB00B523FC /* EncDec.h */; };
+		04C8CA0A1D7F9B01005DA7A3 /* im_conn_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C8CA081D7F9B01005DA7A3 /* im_conn_util.cpp */; };
+		04C8CA0B1D7F9B01005DA7A3 /* im_conn_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C8CA091D7F9B01005DA7A3 /* im_conn_util.h */; };
+		04C8CA0E1D7F9BF3005DA7A3 /* ImPduBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C8CA0C1D7F9BF3005DA7A3 /* ImPduBase.cpp */; };
+		04C8CA0F1D7F9BF3005DA7A3 /* ImPduBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C8CA0D1D7F9BF3005DA7A3 /* ImPduBase.h */; };
+		04C8CA121D7F9C2B005DA7A3 /* imconn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C8CA101D7F9C2B005DA7A3 /* imconn.cpp */; };
+		04C8CA131D7F9C2B005DA7A3 /* imconn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C8CA111D7F9C2B005DA7A3 /* imconn.h */; };
 		04D0803E1D765F9900BAC540 /* ConfigFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D0803C1D765F9900BAC540 /* ConfigFileReader.cpp */; };
 		04D0803F1D765F9900BAC540 /* ConfigFileReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D0803D1D765F9900BAC540 /* ConfigFileReader.h */; };
 		04DF6BA61D59DD4E0096A2AD /* login_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04DF6BA51D59DD4E0096A2AD /* login_server.cpp */; };
@@ -126,6 +132,12 @@
 		04BD60591D7E470900566DDD /* HttpParserWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpParserWrapper.h; path = base/HttpParserWrapper.h; sourceTree = SOURCE_ROOT; };
 		04BD895F1D7901BB00B523FC /* EncDec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EncDec.cpp; path = base/EncDec.cpp; sourceTree = SOURCE_ROOT; };
 		04BD89601D7901BB00B523FC /* EncDec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EncDec.h; path = base/EncDec.h; sourceTree = SOURCE_ROOT; };
+		04C8CA081D7F9B01005DA7A3 /* im_conn_util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = im_conn_util.cpp; path = base/im_conn_util.cpp; sourceTree = SOURCE_ROOT; };
+		04C8CA091D7F9B01005DA7A3 /* im_conn_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = im_conn_util.h; path = base/im_conn_util.h; sourceTree = SOURCE_ROOT; };
+		04C8CA0C1D7F9BF3005DA7A3 /* ImPduBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImPduBase.cpp; path = base/ImPduBase.cpp; sourceTree = SOURCE_ROOT; };
+		04C8CA0D1D7F9BF3005DA7A3 /* ImPduBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImPduBase.h; path = base/ImPduBase.h; sourceTree = SOURCE_ROOT; };
+		04C8CA101D7F9C2B005DA7A3 /* imconn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imconn.cpp; path = base/imconn.cpp; sourceTree = SOURCE_ROOT; };
+		04C8CA111D7F9C2B005DA7A3 /* imconn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imconn.h; path = base/imconn.h; sourceTree = SOURCE_ROOT; };
 		04D0803C1D765F9900BAC540 /* ConfigFileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConfigFileReader.cpp; path = base/ConfigFileReader.cpp; sourceTree = SOURCE_ROOT; };
 		04D0803D1D765F9900BAC540 /* ConfigFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigFileReader.h; path = base/ConfigFileReader.h; sourceTree = SOURCE_ROOT; };
 		04DF6BA51D59DD4E0096A2AD /* login_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = login_server.cpp; path = login_server/login_server.cpp; sourceTree = "<group>"; };
@@ -222,6 +234,12 @@
 				0480EC2C1D797D8C0007D67A /* HttpClient.h */,
 				04BD60581D7E470900566DDD /* HttpParserWrapper.cpp */,
 				04BD60591D7E470900566DDD /* HttpParserWrapper.h */,
+				04C8CA081D7F9B01005DA7A3 /* im_conn_util.cpp */,
+				04C8CA091D7F9B01005DA7A3 /* im_conn_util.h */,
+				04C8CA0C1D7F9BF3005DA7A3 /* ImPduBase.cpp */,
+				04C8CA0D1D7F9BF3005DA7A3 /* ImPduBase.h */,
+				04C8CA101D7F9C2B005DA7A3 /* imconn.cpp */,
+				04C8CA111D7F9C2B005DA7A3 /* imconn.h */,
 			);
 			name = base;
 			path = Server;
@@ -327,6 +345,7 @@
 				04E9C02D1D7CF86200A841ED /* writer.h in Headers */,
 				040085611D7517D700FFB559 /* Condition.h in Headers */,
 				0480EC541D797F2E0007D67A /* IM.Server.pb.h in Headers */,
+				04C8CA0B1D7F9B01005DA7A3 /* im_conn_util.h in Headers */,
 				04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */,
 				04019CE91D536F0500DAD42F /* Base64.h in Headers */,
 				04E9C0301D7CF86200A841ED /* json_tool.h in Headers */,
@@ -338,6 +357,7 @@
 				04BD605B1D7E470900566DDD /* HttpParserWrapper.h in Headers */,
 				0480EC561D797F2E0007D67A /* IM.SwitchService.pb.h in Headers */,
 				04E9C02B1D7CF86200A841ED /* reader.h in Headers */,
+				04C8CA0F1D7F9BF3005DA7A3 /* ImPduBase.h in Headers */,
 				0480EC2E1D797D8C0007D67A /* HttpClient.h in Headers */,
 				0480EC481D797F2E0007D67A /* IM.Buddy.pb.h in Headers */,
 				04019CE41D536E0800DAD42F /* base.hpp in Headers */,
@@ -351,6 +371,7 @@
 				04E9C0251D7CF86200A841ED /* assertions.h in Headers */,
 				04E9C02E1D7CF86200A841ED /* json_batchallocator.h in Headers */,
 				04E9C0281D7CF86200A841ED /* features.h in Headers */,
+				04C8CA131D7F9C2B005DA7A3 /* imconn.h in Headers */,
 				0480EC501D797F2E0007D67A /* IM.Message.pb.h in Headers */,
 				04E9C0291D7CF86200A841ED /* forwards.h in Headers */,
 				04319D081D5C623700BBCE26 /* Lock.h in Headers */,
@@ -443,6 +464,7 @@
 			files = (
 				04DF6BA61D59DD4E0096A2AD /* login_server.cpp in Sources */,
 				0480EC4F1D797F2E0007D67A /* IM.Message.pb.cc in Sources */,
+				04C8CA0A1D7F9B01005DA7A3 /* im_conn_util.cpp in Sources */,
 				040085601D7517D700FFB559 /* Condition.cpp in Sources */,
 				04E9C02F1D7CF86200A841ED /* json_reader.cpp in Sources */,
 				04319D031D5C61C600BBCE26 /* UtilPdu.cpp in Sources */,
@@ -456,6 +478,7 @@
 				040D98011D65C030001BC84D /* EventDispatch.cpp in Sources */,
 				04E9C0311D7CF86200A841ED /* json_value.cpp in Sources */,
 				0480EC531D797F2E0007D67A /* IM.Server.pb.cc in Sources */,
+				04C8CA0E1D7F9BF3005DA7A3 /* ImPduBase.cpp in Sources */,
 				04D0803E1D765F9900BAC540 /* ConfigFileReader.cpp in Sources */,
 				04319CFF1D5C610A00BBCE26 /* util.cpp in Sources */,
 				04319CF91D5C603600BBCE26 /* BaseSocket.cpp in Sources */,
@@ -465,6 +488,7 @@
 				0480EC511D797F2E0007D67A /* IM.Other.pb.cc in Sources */,
 				0480EC2D1D797D8C0007D67A /* HttpClient.cpp in Sources */,
 				0480EC4B1D797F2E0007D67A /* IM.Group.pb.cc in Sources */,
+				04C8CA121D7F9C2B005DA7A3 /* imconn.cpp in Sources */,
 				0480EC451D797F2E0007D67A /* IM.BaseDefine.pb.cc in Sources */,
 				04E9C0321D7CF86200A841ED /* json_writer.cpp in Sources */,
 			);
