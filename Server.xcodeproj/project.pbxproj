@@ -26,6 +26,8 @@
 		04319D071D5C623700BBCE26 /* Lock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04319D051D5C623700BBCE26 /* Lock.cpp */; };
 		04319D081D5C623700BBCE26 /* Lock.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D061D5C623700BBCE26 /* Lock.h */; };
 		04319D0B1D5C62CF00BBCE26 /* slog_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D0A1D5C62CF00BBCE26 /* slog_api.h */; };
+		04350DCC1D823F96000E886A /* netlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04350DCA1D823F96000E886A /* netlib.cpp */; };
+		04350DCD1D823F96000E886A /* netlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 04350DCB1D823F96000E886A /* netlib.h */; };
 		0480EC291D797D040007D67A /* http_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC271D797D040007D67A /* http_parser.cpp */; };
 		0480EC2A1D797D040007D67A /* http_parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC281D797D040007D67A /* http_parser.h */; };
 		0480EC2D1D797D8C0007D67A /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC2B1D797D8C0007D67A /* HttpClient.cpp */; };
@@ -105,6 +107,8 @@
 		04319D051D5C623700BBCE26 /* Lock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Lock.cpp; path = base/Lock.cpp; sourceTree = SOURCE_ROOT; };
 		04319D061D5C623700BBCE26 /* Lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lock.h; path = base/Lock.h; sourceTree = SOURCE_ROOT; };
 		04319D0A1D5C62CF00BBCE26 /* slog_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slog_api.h; path = base/slog/slog_api.h; sourceTree = SOURCE_ROOT; };
+		04350DCA1D823F96000E886A /* netlib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = netlib.cpp; path = base/netlib.cpp; sourceTree = SOURCE_ROOT; };
+		04350DCB1D823F96000E886A /* netlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = netlib.h; path = base/netlib.h; sourceTree = SOURCE_ROOT; };
 		0480EC271D797D040007D67A /* http_parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = http_parser.cpp; path = base/http_parser.cpp; sourceTree = SOURCE_ROOT; };
 		0480EC281D797D040007D67A /* http_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = http_parser.h; path = base/http_parser.h; sourceTree = SOURCE_ROOT; };
 		0480EC2B1D797D8C0007D67A /* HttpClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HttpClient.cpp; path = base/HttpClient.cpp; sourceTree = SOURCE_ROOT; };
@@ -240,6 +244,8 @@
 				04C8CA0D1D7F9BF3005DA7A3 /* ImPduBase.h */,
 				04C8CA101D7F9C2B005DA7A3 /* imconn.cpp */,
 				04C8CA111D7F9C2B005DA7A3 /* imconn.h */,
+				04350DCA1D823F96000E886A /* netlib.cpp */,
+				04350DCB1D823F96000E886A /* netlib.h */,
 			);
 			name = base;
 			path = Server;
@@ -363,6 +369,7 @@
 				04019CE41D536E0800DAD42F /* base.hpp in Headers */,
 				04E9C0271D7CF86200A841ED /* config.h in Headers */,
 				0480EC4C1D797F2E0007D67A /* IM.Group.pb.h in Headers */,
+				04350DCD1D823F96000E886A /* netlib.h in Headers */,
 				0480EC521D797F2E0007D67A /* IM.Other.pb.h in Headers */,
 				04E9C02C1D7CF86200A841ED /* value.h in Headers */,
 				0480EC461D797F2E0007D67A /* IM.BaseDefine.pb.h in Headers */,
@@ -467,6 +474,7 @@
 				04C8CA0A1D7F9B01005DA7A3 /* im_conn_util.cpp in Sources */,
 				040085601D7517D700FFB559 /* Condition.cpp in Sources */,
 				04E9C02F1D7CF86200A841ED /* json_reader.cpp in Sources */,
+				04350DCC1D823F96000E886A /* netlib.cpp in Sources */,
 				04319D031D5C61C600BBCE26 /* UtilPdu.cpp in Sources */,
 				0480EC4D1D797F2E0007D67A /* IM.Login.pb.cc in Sources */,
 				0480EC471D797F2E0007D67A /* IM.Buddy.pb.cc in Sources */,
