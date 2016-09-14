@@ -28,7 +28,18 @@ public:
     virtual ~CImConn();
     
     bool IsBusy() { return m_busy;}
+    int SendPdu( CImPdu *pPdu);
+    int Send( void *data, int len);
     
+    virtual void OnConnect( net_handle_t handle){ m_handle = handle;}
+    virtual void OnConfirm(){}
+    virtual void OnRead();
+    virtual void OnWrite();
+    virtual void OnClose(){}
+    virtual void OnTimer(uint64_t curr_tick){}
+    virtual void OnWriteCompelete(){};
+    
+    virtual void HandlePdu(CImPdu *pPdu){}
     
 protected:
     net_handle_t    m_handle;
@@ -45,6 +56,10 @@ protected:
     uint64_t        m_last_all_user_tick;
 };
 
+typedef hash_map<net_handle_t, CImConn*> ConnMap_t;
+typedef hash_map<uint32_t, CImConn*> UserMap_t;
 
+void imconn_callback(void *callback_data, uint8_t msg, uint32_t handle, void *pParam);
+void ReadPolicyFile();
 
 #endif /* imconn_hpp */
