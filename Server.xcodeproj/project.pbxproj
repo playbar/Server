@@ -14,6 +14,10 @@
 		04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
 		04019CE81D536F0500DAD42F /* Base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04019CE61D536F0500DAD42F /* Base64.cpp */; };
 		04019CE91D536F0500DAD42F /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
+		040D5BBA1D8E9BD400FA8392 /* singleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D5BB91D8E9BD400FA8392 /* singleton.h */; };
+		040D5BBC1D8E9E5D00FA8392 /* Task.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D5BBB1D8E9E5D00FA8392 /* Task.h */; };
+		040D5BBF1D8E9ECA00FA8392 /* Thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 040D5BBD1D8E9ECA00FA8392 /* Thread.cpp */; };
+		040D5BC01D8E9ECA00FA8392 /* Thread.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D5BBE1D8E9ECA00FA8392 /* Thread.h */; };
 		040D98011D65C030001BC84D /* EventDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 040D97FF1D65C02F001BC84D /* EventDispatch.cpp */; };
 		040D98021D65C030001BC84D /* EventDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D98001D65C02F001BC84D /* EventDispatch.h */; };
 		04319CF91D5C603600BBCE26 /* BaseSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04319CF71D5C603600BBCE26 /* BaseSocket.cpp */; };
@@ -98,6 +102,10 @@
 		04019CE21D536E0800DAD42F /* ServerPriv.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ServerPriv.hpp; path = base/ServerPriv.hpp; sourceTree = SOURCE_ROOT; };
 		04019CE61D536F0500DAD42F /* Base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Base64.cpp; path = base/Base64.cpp; sourceTree = SOURCE_ROOT; };
 		04019CE71D536F0500DAD42F /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = base/Base64.h; sourceTree = SOURCE_ROOT; };
+		040D5BB91D8E9BD400FA8392 /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = singleton.h; path = base/singleton.h; sourceTree = SOURCE_ROOT; };
+		040D5BBB1D8E9E5D00FA8392 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = base/Task.h; sourceTree = SOURCE_ROOT; };
+		040D5BBD1D8E9ECA00FA8392 /* Thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Thread.cpp; path = base/Thread.cpp; sourceTree = SOURCE_ROOT; };
+		040D5BBE1D8E9ECA00FA8392 /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thread.h; path = base/Thread.h; sourceTree = SOURCE_ROOT; };
 		040D97FF1D65C02F001BC84D /* EventDispatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventDispatch.cpp; path = base/EventDispatch.cpp; sourceTree = SOURCE_ROOT; };
 		040D98001D65C02F001BC84D /* EventDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventDispatch.h; path = base/EventDispatch.h; sourceTree = SOURCE_ROOT; };
 		04319CF61D5C5FD000BBCE26 /* atomic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = atomic.h; path = base/atomic.h; sourceTree = SOURCE_ROOT; };
@@ -258,6 +266,10 @@
 				04350DCB1D823F96000E886A /* netlib.h */,
 				04ED179C1D8E1BAE00E980F2 /* ServInfo.cpp */,
 				04ED179D1D8E1BAE00E980F2 /* ServInfo.h */,
+				040D5BB91D8E9BD400FA8392 /* singleton.h */,
+				040D5BBB1D8E9E5D00FA8392 /* Task.h */,
+				040D5BBD1D8E9ECA00FA8392 /* Thread.cpp */,
+				040D5BBE1D8E9ECA00FA8392 /* Thread.h */,
 			);
 			name = base;
 			path = Server;
@@ -357,6 +369,7 @@
 				04319D001D5C610A00BBCE26 /* util.h in Headers */,
 				04319D0B1D5C62CF00BBCE26 /* slog_api.h in Headers */,
 				04319CFC1D5C60B400BBCE26 /* ostype.h in Headers */,
+				040D5BBA1D8E9BD400FA8392 /* singleton.h in Headers */,
 				04319CFA1D5C603600BBCE26 /* BaseSocket.h in Headers */,
 				0480EC4E1D797F2E0007D67A /* IM.Login.pb.h in Headers */,
 				04E9C0261D7CF86200A841ED /* autolink.h in Headers */,
@@ -366,7 +379,9 @@
 				0480EC541D797F2E0007D67A /* IM.Server.pb.h in Headers */,
 				04C8CA0B1D7F9B01005DA7A3 /* im_conn_util.h in Headers */,
 				04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */,
+				040D5BC01D8E9ECA00FA8392 /* Thread.h in Headers */,
 				04019CE91D536F0500DAD42F /* Base64.h in Headers */,
+				040D5BBC1D8E9E5D00FA8392 /* Task.h in Headers */,
 				04E9C0301D7CF86200A841ED /* json_tool.h in Headers */,
 				04D0803F1D765F9900BAC540 /* ConfigFileReader.h in Headers */,
 				04319D041D5C61C600BBCE26 /* UtilPdu.h in Headers */,
@@ -500,6 +515,7 @@
 				04BD89611D7901BB00B523FC /* EncDec.cpp in Sources */,
 				040D98011D65C030001BC84D /* EventDispatch.cpp in Sources */,
 				04E9C0311D7CF86200A841ED /* json_value.cpp in Sources */,
+				040D5BBF1D8E9ECA00FA8392 /* Thread.cpp in Sources */,
 				0480EC531D797F2E0007D67A /* IM.Server.pb.cc in Sources */,
 				04C8CA0E1D7F9BF3005DA7A3 /* ImPduBase.cpp in Sources */,
 				04D0803E1D765F9900BAC540 /* ConfigFileReader.cpp in Sources */,
