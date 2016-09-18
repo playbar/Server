@@ -83,6 +83,8 @@
 		04E9C0301D7CF86200A841ED /* json_tool.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0211D7CF86200A841ED /* json_tool.h */; };
 		04E9C0311D7CF86200A841ED /* json_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04E9C0221D7CF86200A841ED /* json_value.cpp */; };
 		04E9C0321D7CF86200A841ED /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04E9C0241D7CF86200A841ED /* json_writer.cpp */; };
+		04ED179A1D8E1A3C00E980F2 /* log4z.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04ED17981D8E1A3C00E980F2 /* log4z.cpp */; };
+		04ED179B1D8E1A3C00E980F2 /* log4z.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ED17991D8E1A3C00E980F2 /* log4z.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,6 +165,8 @@
 		04E9C0221D7CF86200A841ED /* json_value.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_value.cpp; sourceTree = "<group>"; };
 		04E9C0231D7CF86200A841ED /* json_valueiterator.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_valueiterator.inl; sourceTree = "<group>"; };
 		04E9C0241D7CF86200A841ED /* json_writer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_writer.cpp; sourceTree = "<group>"; };
+		04ED17981D8E1A3C00E980F2 /* log4z.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = log4z.cpp; path = base/log4z.cpp; sourceTree = SOURCE_ROOT; };
+		04ED17991D8E1A3C00E980F2 /* log4z.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = log4z.h; path = base/log4z.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +248,8 @@
 				04C8CA0D1D7F9BF3005DA7A3 /* ImPduBase.h */,
 				04C8CA101D7F9C2B005DA7A3 /* imconn.cpp */,
 				04C8CA111D7F9C2B005DA7A3 /* imconn.h */,
+				04ED17981D8E1A3C00E980F2 /* log4z.cpp */,
+				04ED17991D8E1A3C00E980F2 /* log4z.h */,
 				04350DCA1D823F96000E886A /* netlib.cpp */,
 				04350DCB1D823F96000E886A /* netlib.h */,
 			);
@@ -350,6 +356,7 @@
 				04E9C0261D7CF86200A841ED /* autolink.h in Headers */,
 				04E9C02D1D7CF86200A841ED /* writer.h in Headers */,
 				040085611D7517D700FFB559 /* Condition.h in Headers */,
+				04ED179B1D8E1A3C00E980F2 /* log4z.h in Headers */,
 				0480EC541D797F2E0007D67A /* IM.Server.pb.h in Headers */,
 				04C8CA0B1D7F9B01005DA7A3 /* im_conn_util.h in Headers */,
 				04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */,
@@ -495,6 +502,7 @@
 				0480EC551D797F2E0007D67A /* IM.SwitchService.pb.cc in Sources */,
 				0480EC511D797F2E0007D67A /* IM.Other.pb.cc in Sources */,
 				0480EC2D1D797D8C0007D67A /* HttpClient.cpp in Sources */,
+				04ED179A1D8E1A3C00E980F2 /* log4z.cpp in Sources */,
 				0480EC4B1D797F2E0007D67A /* IM.Group.pb.cc in Sources */,
 				04C8CA121D7F9C2B005DA7A3 /* imconn.cpp in Sources */,
 				0480EC451D797F2E0007D67A /* IM.BaseDefine.pb.cc in Sources */,
