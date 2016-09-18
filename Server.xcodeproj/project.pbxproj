@@ -85,6 +85,8 @@
 		04E9C0321D7CF86200A841ED /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04E9C0241D7CF86200A841ED /* json_writer.cpp */; };
 		04ED179A1D8E1A3C00E980F2 /* log4z.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04ED17981D8E1A3C00E980F2 /* log4z.cpp */; };
 		04ED179B1D8E1A3C00E980F2 /* log4z.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ED17991D8E1A3C00E980F2 /* log4z.h */; };
+		04ED179E1D8E1BAE00E980F2 /* ServInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04ED179C1D8E1BAE00E980F2 /* ServInfo.cpp */; };
+		04ED179F1D8E1BAE00E980F2 /* ServInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ED179D1D8E1BAE00E980F2 /* ServInfo.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,6 +169,8 @@
 		04E9C0241D7CF86200A841ED /* json_writer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_writer.cpp; sourceTree = "<group>"; };
 		04ED17981D8E1A3C00E980F2 /* log4z.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = log4z.cpp; path = base/log4z.cpp; sourceTree = SOURCE_ROOT; };
 		04ED17991D8E1A3C00E980F2 /* log4z.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = log4z.h; path = base/log4z.h; sourceTree = SOURCE_ROOT; };
+		04ED179C1D8E1BAE00E980F2 /* ServInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ServInfo.cpp; path = base/ServInfo.cpp; sourceTree = SOURCE_ROOT; };
+		04ED179D1D8E1BAE00E980F2 /* ServInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServInfo.h; path = base/ServInfo.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +256,8 @@
 				04ED17991D8E1A3C00E980F2 /* log4z.h */,
 				04350DCA1D823F96000E886A /* netlib.cpp */,
 				04350DCB1D823F96000E886A /* netlib.h */,
+				04ED179C1D8E1BAE00E980F2 /* ServInfo.cpp */,
+				04ED179D1D8E1BAE00E980F2 /* ServInfo.h */,
 			);
 			name = base;
 			path = Server;
@@ -377,6 +383,7 @@
 				04E9C0271D7CF86200A841ED /* config.h in Headers */,
 				0480EC4C1D797F2E0007D67A /* IM.Group.pb.h in Headers */,
 				04350DCD1D823F96000E886A /* netlib.h in Headers */,
+				04ED179F1D8E1BAE00E980F2 /* ServInfo.h in Headers */,
 				0480EC521D797F2E0007D67A /* IM.Other.pb.h in Headers */,
 				04E9C02C1D7CF86200A841ED /* value.h in Headers */,
 				0480EC461D797F2E0007D67A /* IM.BaseDefine.pb.h in Headers */,
@@ -485,6 +492,7 @@
 				04319D031D5C61C600BBCE26 /* UtilPdu.cpp in Sources */,
 				0480EC4D1D797F2E0007D67A /* IM.Login.pb.cc in Sources */,
 				0480EC471D797F2E0007D67A /* IM.Buddy.pb.cc in Sources */,
+				04ED179E1D8E1BAE00E980F2 /* ServInfo.cpp in Sources */,
 				04019CE81D536F0500DAD42F /* Base64.cpp in Sources */,
 				0480EC491D797F2E0007D67A /* IM.File.pb.cc in Sources */,
 				0480EC291D797D040007D67A /* http_parser.cpp in Sources */,
