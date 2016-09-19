@@ -98,6 +98,10 @@
 		04ED179B1D8E1A3C00E980F2 /* log4z.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ED17991D8E1A3C00E980F2 /* log4z.h */; };
 		04ED179E1D8E1BAE00E980F2 /* ServInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04ED179C1D8E1BAE00E980F2 /* ServInfo.cpp */; };
 		04ED179F1D8E1BAE00E980F2 /* ServInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ED179D1D8E1BAE00E980F2 /* ServInfo.h */; };
+		04F864F01D8FD32100A3A3D4 /* LoginConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04F864EE1D8FD32100A3A3D4 /* LoginConn.cpp */; };
+		04F864F11D8FD32100A3A3D4 /* LoginConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864EF1D8FD32100A3A3D4 /* LoginConn.h */; };
+		04F864F41D8FD36900A3A3D4 /* ipparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04F864F21D8FD36900A3A3D4 /* ipparser.cpp */; };
+		04F864F51D8FD36900A3A3D4 /* ipparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864F31D8FD36900A3A3D4 /* ipparser.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -193,6 +197,10 @@
 		04ED17991D8E1A3C00E980F2 /* log4z.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = log4z.h; path = base/log4z.h; sourceTree = SOURCE_ROOT; };
 		04ED179C1D8E1BAE00E980F2 /* ServInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ServInfo.cpp; path = base/ServInfo.cpp; sourceTree = SOURCE_ROOT; };
 		04ED179D1D8E1BAE00E980F2 /* ServInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServInfo.h; path = base/ServInfo.h; sourceTree = SOURCE_ROOT; };
+		04F864EE1D8FD32100A3A3D4 /* LoginConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LoginConn.cpp; path = login_server/LoginConn.cpp; sourceTree = "<group>"; };
+		04F864EF1D8FD32100A3A3D4 /* LoginConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginConn.h; path = login_server/LoginConn.h; sourceTree = "<group>"; };
+		04F864F21D8FD36900A3A3D4 /* ipparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ipparser.cpp; path = login_server/ipparser.cpp; sourceTree = "<group>"; };
+		04F864F31D8FD36900A3A3D4 /* ipparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ipparser.h; path = login_server/ipparser.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +350,10 @@
 				04DF6BA51D59DD4E0096A2AD /* login_server.cpp */,
 				047C74F91D8F7010009F7A93 /* HttpConn.cpp */,
 				047C74FA1D8F7010009F7A93 /* HttpConn.h */,
+				04F864EE1D8FD32100A3A3D4 /* LoginConn.cpp */,
+				04F864EF1D8FD32100A3A3D4 /* LoginConn.h */,
+				04F864F21D8FD36900A3A3D4 /* ipparser.cpp */,
+				04F864F31D8FD36900A3A3D4 /* ipparser.h */,
 			);
 			name = login_server;
 			sourceTree = "<group>";
@@ -442,9 +454,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F864F51D8FD36900A3A3D4 /* ipparser.h in Headers */,
 				047C74FC1D8F7010009F7A93 /* HttpConn.h in Headers */,
 				04DF6BAE1D59DDB80096A2AD /* ServerPriv.hpp in Headers */,
 				04DF6BAF1D59DDB80096A2AD /* Base64.h in Headers */,
+				04F864F11D8FD32100A3A3D4 /* LoginConn.h in Headers */,
 				04DF6BB01D59DDB80096A2AD /* base.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,8 +579,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F864F01D8FD32100A3A3D4 /* LoginConn.cpp in Sources */,
 				04DF6BB51D59DDE20096A2AD /* login_server.cpp in Sources */,
 				047C74FB1D8F7010009F7A93 /* HttpConn.cpp in Sources */,
+				04F864F41D8FD36900A3A3D4 /* ipparser.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,7 +709,10 @@
 				EXECUTABLE_PREFIX = "";
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
-				HEADER_SEARCH_PATHS = base;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+				);
 				INSTALL_PATH = "";
 				MACH_O_TYPE = mh_execute;
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -716,7 +735,10 @@
 				EXECUTABLE_PREFIX = "";
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
-				HEADER_SEARCH_PATHS = base;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+				);
 				INSTALL_PATH = "";
 				MACH_O_TYPE = mh_execute;
 				PRIVATE_HEADERS_FOLDER_PATH = "";
