@@ -34,6 +34,9 @@
 		04350DCD1D823F96000E886A /* netlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 04350DCB1D823F96000E886A /* netlib.h */; };
 		047C74F11D8F697D009F7A93 /* ThreadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 047C74EF1D8F697D009F7A93 /* ThreadPool.cpp */; };
 		047C74F21D8F697D009F7A93 /* ThreadPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74F01D8F697D009F7A93 /* ThreadPool.h */; };
+		047C74F51D8F6EC2009F7A93 /* TokenValidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 047C74F31D8F6EC2009F7A93 /* TokenValidator.cpp */; };
+		047C74F61D8F6EC2009F7A93 /* TokenValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74F41D8F6EC2009F7A93 /* TokenValidator.h */; };
+		047C74F81D8F6F60009F7A93 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74F71D8F6F60009F7A93 /* version.h */; };
 		0480EC291D797D040007D67A /* http_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC271D797D040007D67A /* http_parser.cpp */; };
 		0480EC2A1D797D040007D67A /* http_parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC281D797D040007D67A /* http_parser.h */; };
 		0480EC2D1D797D8C0007D67A /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC2B1D797D8C0007D67A /* HttpClient.cpp */; };
@@ -125,6 +128,9 @@
 		04350DCB1D823F96000E886A /* netlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = netlib.h; path = base/netlib.h; sourceTree = SOURCE_ROOT; };
 		047C74EF1D8F697D009F7A93 /* ThreadPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadPool.cpp; path = base/ThreadPool.cpp; sourceTree = SOURCE_ROOT; };
 		047C74F01D8F697D009F7A93 /* ThreadPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadPool.h; path = base/ThreadPool.h; sourceTree = SOURCE_ROOT; };
+		047C74F31D8F6EC2009F7A93 /* TokenValidator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TokenValidator.cpp; path = base/TokenValidator.cpp; sourceTree = SOURCE_ROOT; };
+		047C74F41D8F6EC2009F7A93 /* TokenValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TokenValidator.h; path = base/TokenValidator.h; sourceTree = SOURCE_ROOT; };
+		047C74F71D8F6F60009F7A93 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = base/version.h; sourceTree = SOURCE_ROOT; };
 		0480EC271D797D040007D67A /* http_parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = http_parser.cpp; path = base/http_parser.cpp; sourceTree = SOURCE_ROOT; };
 		0480EC281D797D040007D67A /* http_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = http_parser.h; path = base/http_parser.h; sourceTree = SOURCE_ROOT; };
 		0480EC2B1D797D8C0007D67A /* HttpClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HttpClient.cpp; path = base/HttpClient.cpp; sourceTree = SOURCE_ROOT; };
@@ -276,6 +282,9 @@
 				040D5BBE1D8E9ECA00FA8392 /* Thread.h */,
 				047C74EF1D8F697D009F7A93 /* ThreadPool.cpp */,
 				047C74F01D8F697D009F7A93 /* ThreadPool.h */,
+				047C74F31D8F6EC2009F7A93 /* TokenValidator.cpp */,
+				047C74F41D8F6EC2009F7A93 /* TokenValidator.h */,
+				047C74F71D8F6F60009F7A93 /* version.h */,
 			);
 			name = base;
 			path = Server;
@@ -384,6 +393,8 @@
 				04ED179B1D8E1A3C00E980F2 /* log4z.h in Headers */,
 				0480EC541D797F2E0007D67A /* IM.Server.pb.h in Headers */,
 				04C8CA0B1D7F9B01005DA7A3 /* im_conn_util.h in Headers */,
+				047C74F61D8F6EC2009F7A93 /* TokenValidator.h in Headers */,
+				047C74F81D8F6F60009F7A93 /* version.h in Headers */,
 				04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */,
 				040D5BC01D8E9ECA00FA8392 /* Thread.h in Headers */,
 				04019CE91D536F0500DAD42F /* Base64.h in Headers */,
@@ -506,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DF6BA61D59DD4E0096A2AD /* login_server.cpp in Sources */,
+				047C74F51D8F6EC2009F7A93 /* TokenValidator.cpp in Sources */,
 				0480EC4F1D797F2E0007D67A /* IM.Message.pb.cc in Sources */,
 				04C8CA0A1D7F9B01005DA7A3 /* im_conn_util.cpp in Sources */,
 				040085601D7517D700FFB559 /* Condition.cpp in Sources */,
