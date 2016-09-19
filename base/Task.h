@@ -13,7 +13,7 @@ class CTask
 {
 public:
     CTask(){}
-    virtual ~Task(){};
+    virtual ~CTask(){};
     virtual void run() = 0;
 private:
 };
