@@ -37,6 +37,8 @@
 		047C74F51D8F6EC2009F7A93 /* TokenValidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 047C74F31D8F6EC2009F7A93 /* TokenValidator.cpp */; };
 		047C74F61D8F6EC2009F7A93 /* TokenValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74F41D8F6EC2009F7A93 /* TokenValidator.h */; };
 		047C74F81D8F6F60009F7A93 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74F71D8F6F60009F7A93 /* version.h */; };
+		047C74FB1D8F7010009F7A93 /* HttpConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 047C74F91D8F7010009F7A93 /* HttpConn.cpp */; };
+		047C74FC1D8F7010009F7A93 /* HttpConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74FA1D8F7010009F7A93 /* HttpConn.h */; };
 		0480EC291D797D040007D67A /* http_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC271D797D040007D67A /* http_parser.cpp */; };
 		0480EC2A1D797D040007D67A /* http_parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC281D797D040007D67A /* http_parser.h */; };
 		0480EC2D1D797D8C0007D67A /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC2B1D797D8C0007D67A /* HttpClient.cpp */; };
@@ -131,6 +133,8 @@
 		047C74F31D8F6EC2009F7A93 /* TokenValidator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TokenValidator.cpp; path = base/TokenValidator.cpp; sourceTree = SOURCE_ROOT; };
 		047C74F41D8F6EC2009F7A93 /* TokenValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TokenValidator.h; path = base/TokenValidator.h; sourceTree = SOURCE_ROOT; };
 		047C74F71D8F6F60009F7A93 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = base/version.h; sourceTree = SOURCE_ROOT; };
+		047C74F91D8F7010009F7A93 /* HttpConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HttpConn.cpp; path = login_server/HttpConn.cpp; sourceTree = "<group>"; };
+		047C74FA1D8F7010009F7A93 /* HttpConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpConn.h; path = login_server/HttpConn.h; sourceTree = "<group>"; };
 		0480EC271D797D040007D67A /* http_parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = http_parser.cpp; path = base/http_parser.cpp; sourceTree = SOURCE_ROOT; };
 		0480EC281D797D040007D67A /* http_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = http_parser.h; path = base/http_parser.h; sourceTree = SOURCE_ROOT; };
 		0480EC2B1D797D8C0007D67A /* HttpClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HttpClient.cpp; path = base/HttpClient.cpp; sourceTree = SOURCE_ROOT; };
@@ -336,6 +340,8 @@
 			isa = PBXGroup;
 			children = (
 				04DF6BA51D59DD4E0096A2AD /* login_server.cpp */,
+				047C74F91D8F7010009F7A93 /* HttpConn.cpp */,
+				047C74FA1D8F7010009F7A93 /* HttpConn.h */,
 			);
 			name = login_server;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047C74FC1D8F7010009F7A93 /* HttpConn.h in Headers */,
 				04DF6BAE1D59DDB80096A2AD /* ServerPriv.hpp in Headers */,
 				04DF6BAF1D59DDB80096A2AD /* Base64.h in Headers */,
 				04DF6BB01D59DDB80096A2AD /* base.hpp in Headers */,
@@ -559,6 +566,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DF6BB51D59DDE20096A2AD /* login_server.cpp in Sources */,
+				047C74FB1D8F7010009F7A93 /* HttpConn.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +693,7 @@
 				EXECUTABLE_PREFIX = "";
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = base;
 				INSTALL_PATH = "";
 				MACH_O_TYPE = mh_execute;
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -707,6 +716,7 @@
 				EXECUTABLE_PREFIX = "";
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = base;
 				INSTALL_PATH = "";
 				MACH_O_TYPE = mh_execute;
 				PRIVATE_HEADERS_FOLDER_PATH = "";
