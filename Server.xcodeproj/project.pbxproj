@@ -712,6 +712,8 @@
 				HEADER_SEARCH_PATHS = (
 					base,
 					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
 				);
 				INSTALL_PATH = "";
 				MACH_O_TYPE = mh_execute;
@@ -738,6 +740,8 @@
 				HEADER_SEARCH_PATHS = (
 					base,
 					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
 				);
 				INSTALL_PATH = "";
 				MACH_O_TYPE = mh_execute;

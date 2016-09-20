@@ -10,5 +10,14 @@
 #define ipparser_hpp
 
 #include <stdio.h>
+#include "util.h"
+
+class IpParser
+{
+public:
+    IpParser();
+    virtual ~IpParser();
+    bool isTelcome(const char *ip);
+};
 
 #endif /* ipparser_hpp */
