@@ -22,6 +22,11 @@ CImPdu::CImPdu()
     m_pdu_header.reversed = 0;
 }
 
+CImPdu::~CImPdu()
+{
+    
+}
+
 uchar_t *CImPdu::GetBuffer()
 {
     return m_buf.GetBuffer();

@@ -32,6 +32,9 @@
 		04319D0B1D5C62CF00BBCE26 /* slog_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D0A1D5C62CF00BBCE26 /* slog_api.h */; };
 		04350DCC1D823F96000E886A /* netlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04350DCA1D823F96000E886A /* netlib.cpp */; };
 		04350DCD1D823F96000E886A /* netlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 04350DCB1D823F96000E886A /* netlib.h */; };
+		046054701D925B8200C84153 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0460546F1D925B8200C84153 /* libprotobuf.a */; };
+		046054721D925BBB00C84153 /* libapr-1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 046054711D925BBB00C84153 /* libapr-1.a */; };
+		046054741D925BEB00C84153 /* libaprutil-1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 046054731D925BEB00C84153 /* libaprutil-1.a */; };
 		047C74F11D8F697D009F7A93 /* ThreadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 047C74EF1D8F697D009F7A93 /* ThreadPool.cpp */; };
 		047C74F21D8F697D009F7A93 /* ThreadPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74F01D8F697D009F7A93 /* ThreadPool.h */; };
 		047C74F51D8F6EC2009F7A93 /* TokenValidator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 047C74F31D8F6EC2009F7A93 /* TokenValidator.cpp */; };
@@ -469,6 +472,9 @@
 		04319D0A1D5C62CF00BBCE26 /* slog_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slog_api.h; path = base/slog/slog_api.h; sourceTree = SOURCE_ROOT; };
 		04350DCA1D823F96000E886A /* netlib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = netlib.cpp; path = base/netlib.cpp; sourceTree = SOURCE_ROOT; };
 		04350DCB1D823F96000E886A /* netlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = netlib.h; path = base/netlib.h; sourceTree = SOURCE_ROOT; };
+		0460546F1D925B8200C84153 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = lib/libprotobuf.a; sourceTree = "<group>"; };
+		046054711D925BBB00C84153 /* libapr-1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libapr-1.a"; path = "lib/libapr-1.a"; sourceTree = "<group>"; };
+		046054731D925BEB00C84153 /* libaprutil-1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libaprutil-1.a"; path = "lib/libaprutil-1.a"; sourceTree = "<group>"; };
 		047C74EF1D8F697D009F7A93 /* ThreadPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadPool.cpp; path = base/ThreadPool.cpp; sourceTree = SOURCE_ROOT; };
 		047C74F01D8F697D009F7A93 /* ThreadPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadPool.h; path = base/ThreadPool.h; sourceTree = SOURCE_ROOT; };
 		047C74F31D8F6EC2009F7A93 /* TokenValidator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TokenValidator.cpp; path = base/TokenValidator.cpp; sourceTree = SOURCE_ROOT; };
@@ -929,6 +935,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046054741D925BEB00C84153 /* libaprutil-1.a in Frameworks */,
+				046054721D925BBB00C84153 /* libapr-1.a in Frameworks */,
+				046054701D925B8200C84153 /* libprotobuf.a in Frameworks */,
 				04D176841D90C36500D31823 /* libbase.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -939,6 +948,7 @@
 		04019CBE1D536C6B00DAD42F = {
 			isa = PBXGroup;
 			children = (
+				046054751D925D7300C84153 /* lib */,
 				04D176871D90C80800D31823 /* log4cxx */,
 				04DF6BA41D59DD140096A2AD /* login_server */,
 				04019CC91D536C6B00DAD42F /* base */,
@@ -1024,6 +1034,16 @@
 				04D176851D90C5AD00D31823 /* slog_api.cpp */,
 			);
 			name = slog;
+			sourceTree = "<group>";
+		};
+		046054751D925D7300C84153 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				046054731D925BEB00C84153 /* libaprutil-1.a */,
+				046054711D925BBB00C84153 /* libapr-1.a */,
+				0460546F1D925B8200C84153 /* libprotobuf.a */,
+			);
+			name = lib;
 			sourceTree = "<group>";
 		};
 		0480EC311D797F2E0007D67A /* pb */ = {
@@ -2284,6 +2304,10 @@
 					base/pb/protocol,
 				);
 				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
 				MACH_O_TYPE = mh_execute;
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2312,6 +2336,10 @@
 					base/pb/protocol,
 				);
 				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
 				MACH_O_TYPE = mh_execute;
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
