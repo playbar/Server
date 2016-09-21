@@ -148,7 +148,6 @@
 		04D178581D90C80800D31823 /* loglog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D176CE1D90C80800D31823 /* loglog.cpp */; };
 		04D178591D90C80800D31823 /* logmanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D176CF1D90C80800D31823 /* logmanager.cpp */; };
 		04D1785A1D90C80800D31823 /* logstream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D176D01D90C80800D31823 /* logstream.cpp */; };
-		04D1785B1D90C80800D31823 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 04D176D11D90C80800D31823 /* Makefile */; };
 		04D1785C1D90C80800D31823 /* manualtriggeringpolicy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D176D41D90C80800D31823 /* manualtriggeringpolicy.cpp */; };
 		04D1785D1D90C80800D31823 /* mdc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D176D51D90C80800D31823 /* mdc.cpp */; };
 		04D1785E1D90C80800D31823 /* messagebuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D176D61D90C80800D31823 /* messagebuffer.cpp */; };
@@ -229,7 +228,6 @@
 		04D178A91D90C80800D31823 /* appenderskeleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177231D90C80800D31823 /* appenderskeleton.h */; };
 		04D178AA1D90C80800D31823 /* asyncappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177241D90C80800D31823 /* asyncappender.h */; };
 		04D178AB1D90C80800D31823 /* basicconfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177251D90C80800D31823 /* basicconfigurator.h */; };
-		04D178AC1D90C80800D31823 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 04D177271D90C80800D31823 /* Makefile */; };
 		04D178AD1D90C80800D31823 /* propertysetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1772A1D90C80800D31823 /* propertysetter.h */; };
 		04D178AE1D90C80800D31823 /* consoleappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1772C1D90C80800D31823 /* consoleappender.h */; };
 		04D178AF1D90C80800D31823 /* dailyrollingfileappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1772D1D90C80800D31823 /* dailyrollingfileappender.h */; };
@@ -245,7 +243,6 @@
 		04D178B91D90C80800D31823 /* levelmatchfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1773B1D90C80800D31823 /* levelmatchfilter.h */; };
 		04D178BA1D90C80800D31823 /* levelrangefilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1773C1D90C80800D31823 /* levelrangefilter.h */; };
 		04D178BB1D90C80800D31823 /* locationinfofilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1773D1D90C80800D31823 /* locationinfofilter.h */; };
-		04D178BC1D90C80800D31823 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 04D1773E1D90C80800D31823 /* Makefile */; };
 		04D178BD1D90C80800D31823 /* mapfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177411D90C80800D31823 /* mapfilter.h */; };
 		04D178BE1D90C80800D31823 /* propertyfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177421D90C80800D31823 /* propertyfilter.h */; };
 		04D178BF1D90C80800D31823 /* stringmatchfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177431D90C80800D31823 /* stringmatchfilter.h */; };
@@ -282,7 +279,6 @@
 		04D178DE1D90C80800D31823 /* loader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177631D90C80800D31823 /* loader.h */; };
 		04D178DF1D90C80800D31823 /* locale.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177641D90C80800D31823 /* locale.h */; };
 		04D178E01D90C80800D31823 /* loglog.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177651D90C80800D31823 /* loglog.h */; };
-		04D178E11D90C80800D31823 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 04D177661D90C80800D31823 /* Makefile */; };
 		04D178E21D90C80800D31823 /* messagebuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177691D90C80800D31823 /* messagebuffer.h */; };
 		04D178E31D90C80800D31823 /* mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1776A1D90C80800D31823 /* mutex.h */; };
 		04D178E41D90C80800D31823 /* object.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1776B1D90C80800D31823 /* object.h */; };
@@ -1990,7 +1986,6 @@
 				04D178A61D90C80800D31823 /* xmlsocketappender.cpp in Sources */,
 				04D178941D90C80800D31823 /* system.cpp in Sources */,
 				04D178831D90C80800D31823 /* serversocket.cpp in Sources */,
-				04D1785B1D90C80800D31823 /* Makefile in Sources */,
 				0480EC471D797F2E0007D67A /* IM.Buddy.pb.cc in Sources */,
 				04D178471D90C80800D31823 /* integer.cpp in Sources */,
 				04D178521D90C80800D31823 /* locale.cpp in Sources */,
@@ -2042,7 +2037,6 @@
 				04E9C0311D7CF86200A841ED /* json_value.cpp in Sources */,
 				04D178491D90C80800D31823 /* layout.cpp in Sources */,
 				04D178511D90C80800D31823 /* loader.cpp in Sources */,
-				04D178AC1D90C80800D31823 /* Makefile in Sources */,
 				04D1781D1D90C80800D31823 /* cacheddateformat.cpp in Sources */,
 				04D178881D90C80800D31823 /* socket.cpp in Sources */,
 				04D178181D90C80800D31823 /* basicconfigurator.cpp in Sources */,
@@ -2101,7 +2095,6 @@
 				04D178191D90C80800D31823 /* bufferedwriter.cpp in Sources */,
 				04D1783A1D90C80800D31823 /* filerenameaction.cpp in Sources */,
 				04D178641D90C80800D31823 /* ndc.cpp in Sources */,
-				04D178BC1D90C80800D31823 /* Makefile in Sources */,
 				04319D071D5C623700BBCE26 /* Lock.cpp in Sources */,
 				047C74F11D8F697D009F7A93 /* ThreadPool.cpp in Sources */,
 				04D178541D90C80800D31823 /* logger.cpp in Sources */,
@@ -2135,7 +2128,6 @@
 				04D1784B1D90C80800D31823 /* levelmatchfilter.cpp in Sources */,
 				04D1783E1D90C80800D31823 /* fixedwindowrollingpolicy.cpp in Sources */,
 				04D178561D90C80800D31823 /* loggingevent.cpp in Sources */,
-				04D178E11D90C80800D31823 /* Makefile in Sources */,
 				04E9C0321D7CF86200A841ED /* json_writer.cpp in Sources */,
 				04D178351D90C80800D31823 /* fileappender.cpp in Sources */,
 				04D1782B1D90C80800D31823 /* dateformat.cpp in Sources */,
@@ -2252,6 +2244,7 @@
 					/usr/local/include,
 					base/jsoncpp,
 					log4cxx/include,
+					"/usr/local/include/apr-1",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -2267,6 +2260,7 @@
 					/usr/local/include,
 					base/jsoncpp,
 					log4cxx/include,
+					"/usr/local/include/apr-1",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

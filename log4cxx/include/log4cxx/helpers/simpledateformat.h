@@ -28,8 +28,9 @@
 #include <log4cxx/helpers/dateformat.h>
 #include <vector>
 #include <time.h>
+#include <locale>
 
-namespace std { class locale; }
+//namespace std { class locale; }
 
 namespace log4cxx
 {
