@@ -63,10 +63,39 @@ void httpconn_callback(void *callback_data, uint8_t msg, uint32_t handle, uint32
     return;
 }
 
+void http_conn_timer_callback(void *callback_data, uint8_t msg, uint32_t handle, void *pParam)
+{
+    CHttpConn *pConn = NULL;
+    HttpConnMap_t::iterator it, it_old;
+    uint64_t cur_time = get_tick_count();
+    for (it = g_http_conn_map.begin(); it != g_http_conn_map.end(); )
+    {
+        it_old = it;
+        ++it;
+        pConn = it_old->second;
+        pConn->OnTime(cur_time);
+    }
+    return;
+}
+
+void init_http_conn()
+{
+    netlib_register_timer(http_conn_timer_callback, NULL, 1000);
+}
+
 CHttpConn::CHttpConn()
 {
-    
+    m_busy = false;
+    m_sock_handle = NETLIB_INVALID_HANDLE;
+    m_state = CONN_STATE_IDLE;
+    m_last_send_tick = m_last_send_tick = get_tick_count();
+    m_conn_handle = ++g_conn_handle_generator;
+    if(m_conn_handle == 0)
+    {
+        m_conn_handle = ++g_conn_handle_generator;
+    }
 }
+
 
 CHttpConn::~CHttpConn()
 {
@@ -75,12 +104,39 @@ CHttpConn::~CHttpConn()
 
 int CHttpConn::Send(void *data, int len)
 {
-    return 0;
+    m_last_send_tick = get_tick_count();
+    if( m_busy)
+    {
+        m_out_buf.Write(data, len);
+        return len;
+    }
+    
+    int ret = netlib_send(m_sock_handle, data, len);
+    if( ret < 0)
+    {
+        ret = 0;
+    }
+    
+    if (ret < len)
+    {
+        m_out_buf.Write((char*)data + ret, len - ret);
+        m_busy = true;
+    }
+    else
+    {
+        OnWriteComplete();
+    }
+    return len;
 }
 
 void CHttpConn::Close()
 {
+    m_state = CONN_STATE_CLOSED;
     
+    g_http_conn_map.erase(m_conn_handle);
+    netlib_close(m_sock_handle);
+    ReleaseRef();
+    return;
 }
 
 void CHttpConn::OnConnect(net_handle_t handle)
