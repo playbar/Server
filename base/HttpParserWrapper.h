@@ -37,7 +37,7 @@ public:
     
     uint32_t GetTotalLength() { return m_total_length;}
     char *GetUrl(){ return (char*)m_url.c_str();}
-    char *GEtBodyContent() { return (char*)m_body_content.c_str();}
+    char *GetBodyContent() { return (char*)m_body_content.c_str();}
     uint32_t GetBodyContentLen(){ return (uint32_t)m_body_content.length();}
     char *GetReferer() { return (char*)m_referer.c_str();}
     char *GetForwardIP() { return (char*)m_forward_ip.c_str();}
