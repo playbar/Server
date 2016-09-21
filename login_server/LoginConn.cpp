@@ -86,17 +86,53 @@ void CLoginConn::Close()
 
 void CLoginConn::OnConnect2(net_handle_t handle, int conn_type)
 {
+    m_handle = handle;
+    m_conn_type = conn_type;
+    ConnMap_t *conn_map = &g_msg_serv_conn_map;
+    if( conn_type == LOGIN_CONN_TYPE_CLIENT)
+    {
+        conn_map = &g_client_conn_map;
+    }
+    else
+    {
+        conn_map->insert(make_pair(handle, this));
+    }
     
+    netlib_option(handle, NETLIB_OPT_SET_CALLBACK, (void*)imconn_callback);
+    netlib_option(handle, NETLIB_OPT_SET_CALLBACK_DATA, (void*)conn_map);
+    return;
 }
 
 void CLoginConn::OnClose()
 {
-    
+    Close();
 }
 
 void CLoginConn::OnTimer(uint64_t curr_tick)
 {
-    
+    if( m_conn_type == LOGIN_CONN_TYPE_CLIENT)
+    {
+        if( curr_tick > m_last_recv_tick + CLIENT_TIMEOUT)
+        {
+            Close();
+        }
+    }else{
+        if( curr_tick > m_last_send_tick + SERVER_HEARTBEAT_INTERVAL )
+        {
+            IM::Other::IMHeartBeat msg;
+            CImPdu pdu;
+            pdu.SetPBMsg(&msg);
+            pdu.SetServiceId(SID_OTHER);
+            pdu.SetCommandId(CID_OTHER_HEARTBEAT);
+            SendPdu(&pdu);
+        }
+        if( curr_tick > m_last_recv_tick + SERVER_TIMEOUT)
+        {
+            log("connection to MsgServer timeout ");
+            Close();
+        }
+    }
+    return;
 }
 
 void CLoginConn::HandlePdu(CImPdu *pPdu)

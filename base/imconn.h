@@ -17,7 +17,7 @@
 #define SERVER_HEARTBEAT_INTERVAL   5000
 #define SERVER_TIMEOUT              30000
 #define CLIENT_HEARTBEAT_INTERVAL   30000
-#define CLIETN_TIMEOUT              120000
+#define CLIENT_TIMEOUT              120000
 #define MOBILE_CLIENT_TIMEOUT       60000 * 5
 #define READ_BUF_SIZE               2048
 
