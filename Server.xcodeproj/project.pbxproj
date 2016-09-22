@@ -897,6 +897,7 @@
 		04DF6BA51D59DD4E0096A2AD /* login_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = login_server.cpp; path = login_server/login_server.cpp; sourceTree = "<group>"; };
 		04DF6BB41D59DDB80096A2AD /* login_server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = login_server; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E1F0DB1D9380DF00C5C9E7 /* loginserver.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = loginserver.conf; path = login_server/loginserver.conf; sourceTree = "<group>"; };
+		04E1F0DC1D93AB5700C5C9E7 /* log4cxx.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = log4cxx.properties; path = login_server/log4cxx.properties; sourceTree = "<group>"; };
 		04E9C0141D7CF86200A841ED /* assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assertions.h; sourceTree = "<group>"; };
 		04E9C0151D7CF86200A841ED /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
 		04E9C0161D7CF86200A841ED /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
@@ -1596,6 +1597,7 @@
 			isa = PBXGroup;
 			children = (
 				04E1F0DB1D9380DF00C5C9E7 /* loginserver.conf */,
+				04E1F0DC1D93AB5700C5C9E7 /* log4cxx.properties */,
 				04DF6BA51D59DD4E0096A2AD /* login_server.cpp */,
 				047C74F91D8F7010009F7A93 /* HttpConn.cpp */,
 				047C74FA1D8F7010009F7A93 /* HttpConn.h */,

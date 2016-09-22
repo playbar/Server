@@ -79,6 +79,8 @@ void CConfigFileReader::_LoadFile(const char *filename)
         }
         _ParseLine(buf);
     }
+    fclose(fp);
+    m_load_ok = true;
 }
 
 int CConfigFileReader::_WriteFile(const char *filename)
