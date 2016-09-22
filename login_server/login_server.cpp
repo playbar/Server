@@ -7,6 +7,24 @@
 //
 
 #include <stdio.h>
+#include "LoginConn.h"
+#include "netlib.h"
+#include "ConfigFileReader.h"
+#include "version.h"
+#include "HttpConn.h"
+#include "ipparser.h"
+
+IpParser *pIpParser = NULL;
+string strMsfsUrl;
+string strDiscovery;
+
+void client_callback(void *callback_data, uint8_t msg, uint32_t handle, void *pParam)
+{
+    if( NETLIB_MSG_CONNECT == msg )
+    {
+        CLoginConn *pConn = new CLoginConn();
+    }
+}
 
 void test()
 {

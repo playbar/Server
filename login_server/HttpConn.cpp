@@ -200,25 +200,119 @@ void CHttpConn::OnRead()
 
 void CHttpConn::OnWrite()
 {
+    if( !m_busy)
+    {
+        return;
+    }
+    int ret = netlib_send(m_sock_handle, m_out_buf.GetBuffer(), m_out_buf.GetWriteOffset());
+    if( ret < 0)
+    {
+        ret = 0;
+    }
+    int out_buf_size = (int)m_out_buf.GetWriteOffset();
     
+    m_out_buf.Read(NULL, ret);
+    if( ret < out_buf_size)
+    {
+        m_busy = true;
+        log("not send all, remain=%d ", m_out_buf.GetWriteOffset());
+    }
+    else
+    {
+        OnWriteComplete();
+        m_busy = false;
+    }
 }
+
 
 void CHttpConn::OnClose()
 {
-    
+    Close();
 }
 
 void CHttpConn::OnTime(uint64_t curr_tick)
 {
-    
+    if( curr_tick > m_last_recv_tick + HTTP_CONN_TIMEOUT)
+    {
+        log("HttpConn timeout, handle=%d ", m_conn_handle);
+        Close();
+    }
 }
 
 void CHttpConn::_HandleMsgServRequest(string &url, string &post_data)
 {
+    msg_serv_info_t *pMsgServInfo;
+    uint32_t min_user_cnt = (uint32_t)-1;
+    map<uint32_t, msg_serv_info_t*>::iterator it_min_conn = g_msg_serv_info.end();
+    map<uint32_t, msg_serv_info_t*>::iterator it;
+    if( g_msg_serv_info.size() <= 0)
+    {
+        Json::Value value;
+        value["code"] = 1;
+        value["msg"] = "no msg_server";
+        string strContent = value.toStyledString();
+        char *szContent = new char[HTTP_RESPONSE_HTML_MAX];
+        snprintf(szContent, HTTP_RESPONSE_HTML_MAX, HTTP_RESPONSE_HTML, strContent.length(), strContent.c_str());
+        Send((void*)szContent, strlen(szContent));
+        delete []szContent;
+        return;
+    }
+    
+    for( it = g_msg_serv_info.begin(); it != g_msg_serv_info.end(); ++it)
+    {
+        pMsgServInfo = it->second;
+        if((pMsgServInfo->cur_conn_cnt < pMsgServInfo->max_conn_cnt) &&
+           (pMsgServInfo->cur_conn_cnt < min_user_cnt)){
+            it_min_conn = it;
+            min_user_cnt = pMsgServInfo->cur_conn_cnt;
+        }
+    }
+    
+    if( it_min_conn == g_msg_serv_info.end())
+    {
+        log("All TCP MsgServer are full ");
+        Json::Value value;
+        value["code"] = 2;
+        value["msg"]="负载过高";
+        string strContent = value.toStyledString();
+        char *szContent = new char[HTTP_RESPONSE_HTML_MAX];
+        snprintf(szContent, HTTP_RESPONSE_HTML_MAX, HTTP_RESPONSE_HTML, strContent.length(), strContent.c_str());
+        Send((void*)szContent, strlen(szContent));
+        delete []szContent;
+        return;
+    }else{
+        Json::Value value;
+        value["code"] = 0;
+        value["msg"] = "";
+        if(pIpParser->isTelcome(GetPeerIP()))
+        {
+            value["priorIP"] = string(it_min_conn->second->ip_addr1);
+            value["backupIP"] = string(it_min_conn->second->ip_addr2);
+            value["msfsPrior"] = strMsfsUrl;
+            value["msfsBackup"] = strMsfsUrl;
+        }
+        else
+        {
+            value["priorIP"] = string(it_min_conn->second->ip_addr2);
+            value["backupIP"] = string(it_min_conn->second->ip_addr1);
+            value["msfsPrior"] = strMsfsUrl;
+            value["msfsBackup"] = strMsfsUrl;
+        }
+        value["discovery"] = strDiscovery;
+        value["port"] = int2string(it_min_conn->second->port);
+        string strContent = value.toStyledString();
+        char* szContent = new char[HTTP_RESPONSE_HTML_MAX];
+        uint32_t nLen = strContent.length();
+        snprintf(szContent, HTTP_RESPONSE_HTML_MAX, HTTP_RESPONSE_HTML, nLen, strContent.c_str());
+        Send((void*)szContent, strlen(szContent));
+        delete [] szContent;
+        return;
+    }
     
 }
 
 void CHttpConn::OnWriteComplete()
 {
-    
+    log("write complete ");
+    Close();
 }

@@ -124,4 +124,129 @@ char *replaceStr( char *pSrc, char oldChar, char newChar ){
     return pSrc;
 }
 
+string int2string(uint32_t user_id)
+{
+    stringstream ss;
+    ss << user_id;
+    return ss.str();
+}
+
+uint32_t string2int(const string &value)
+{
+    return (uint32_t)atoi(value.c_str());
+}
+
+void replace_mark(string &str, string &new_value, uint32_t &begin_pos)
+{
+    string::size_type pos = str.find('?', begin_pos);
+    if( pos == string::npos)
+    {
+        return;
+    }
+    
+    string prime_new_value = "'" + new_value + "'";
+    str.replace(pos, 1, prime_new_value);
+    begin_pos = pos + prime_new_value.size();
+    return;
+}
+
+void replace_mark(string &str, uint32_t new_value, uint32_t &begin_pos)
+{
+    stringstream ss;
+    ss << new_value;
+    
+    string str_value = ss.str();
+    string::size_type pos = str.find('?', begin_pos);
+    if( string::npos == pos )
+    {
+        return;
+    }
+    str.replace(pos, 1, str_value);
+    begin_pos = pos + str_value.size();
+    return;
+}
+
+void writePid()
+{
+    uint32_t curPid;
+    curPid = (uint32_t)getpid();
+    FILE *f = fopen("server.pid", "w");
+    char szPid[32];
+    snprintf(szPid, sizeof(szPid), "%d", curPid);
+    fwrite(szPid, strlen(szPid), 1, f);
+    fclose(f);
+    return;
+}
+
+inline unsigned char toHex(const unsigned char &x)
+{
+    return x > 9 ? x - 10 + 'A' : x + '0';
+}
+
+inline unsigned char fromHex(const unsigned char &x)
+{
+    return isdigit(x) ? x - '0' : x - 'A' + 10;
+}
+
+string URLEncode(const string &sIn)
+{
+    string sOut;
+    for( size_t ix = 0; ix < sIn.size(); ++ix)
+    {
+        unsigned char buf[4];
+        memset(buf, 0, 4);
+        if( isalnum((unsigned char)sIn[ix]))
+        {
+            buf[0] = sIn[ix];
+        }
+        else
+        {
+            buf[0] = '%';
+            buf[1] = toHex((unsigned char)sIn[ix] >> 4);
+            buf[2] = toHex((unsigned char)sIn[ix] % 16);
+        }
+        sOut += (char *)buf;
+    }
+    return sOut;
+}
+
+string URLDecode(const string &sIn)
+{
+    string sOut;
+    for( size_t ix = 0; ix < sIn.size(); ++ix)
+    {
+        unsigned char ch = 0;
+        if( sIn[ix] == '%')
+        {
+            ch = (fromHex(sIn[ix+1]) <<4);
+            ch |= fromHex(sIn[ix+2]);
+            ix += 2;
+        }
+        else if( sIn[ix] == '+')
+        {
+            ch = ' ';
+        }
+        else
+        {
+            ch = sIn[ix];
+        }
+        sOut += (char)ch;
+    }
+    return sOut;
+}
+
+int64_t get_file_size(const char *path)
+{
+    int64_t filesize = -1;
+    struct stat statbuff;
+    if( stat(path, &statbuff) < 0)
+    {
+        return filesize;
+    }
+    else
+    {
+        filesize = statbuff.st_size;
+    }
+    return filesize;
+}
 
