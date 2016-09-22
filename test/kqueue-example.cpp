@@ -102,7 +102,7 @@ void loop_once(int efd, int lfd, int waitms) {
 
 int main()
 {
-    short port = 99;
+    short port = 8888;
     int epollfd = kqueue();
     exit_if(epollfd < 0, "epoll_create failed");
     int listenfd = socket(AF_INET, SOCK_STREAM, 0);
