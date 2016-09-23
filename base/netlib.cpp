@@ -114,7 +114,7 @@ int netlib_option( net_handle_t handel, int opt, void *optval)
         case NETLIB_OPT_GET_REMOTE_IP:
             *(string*)optval = pSocket->GetRemoteIP();
             break;
-        case NETLIB_OPT_GET_REMOTE_PROT:
+        case NETLIB_OPT_GET_REMOTE_PORT:
             *(string*)optval = pSocket->GetRemotePort();
             break;
         case NETLIB_OPT_GET_LOCAL_IP:

@@ -65,17 +65,33 @@
 		0480EC541D797F2E0007D67A /* IM.Server.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC421D797F2E0007D67A /* IM.Server.pb.h */; };
 		0480EC551D797F2E0007D67A /* IM.SwitchService.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC431D797F2E0007D67A /* IM.SwitchService.pb.cc */; };
 		0480EC561D797F2E0007D67A /* IM.SwitchService.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC441D797F2E0007D67A /* IM.SwitchService.pb.h */; };
-		04A91C7C1D93D6A6005CEDB4 /* RouteServConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A91C7A1D93D6A6005CEDB4 /* RouteServConn.cpp */; };
-		04A91C7D1D93D6A6005CEDB4 /* RouteServConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A91C7B1D93D6A6005CEDB4 /* RouteServConn.h */; };
-		04A91C801D93DA72005CEDB4 /* MsgConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A91C7E1D93DA72005CEDB4 /* MsgConn.cpp */; };
-		04A91C811D93DA72005CEDB4 /* MsgConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A91C7F1D93DA72005CEDB4 /* MsgConn.h */; };
 		04BD605A1D7E470900566DDD /* HttpParserWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BD60581D7E470900566DDD /* HttpParserWrapper.cpp */; };
 		04BD605B1D7E470900566DDD /* HttpParserWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD60591D7E470900566DDD /* HttpParserWrapper.h */; };
 		04BD89611D7901BB00B523FC /* EncDec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BD895F1D7901BB00B523FC /* EncDec.cpp */; };
 		04BD89621D7901BB00B523FC /* EncDec.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD89601D7901BB00B523FC /* EncDec.h */; };
-		04C6A6371D93D425009CA7E7 /* DBServConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C6A6351D93D425009CA7E7 /* DBServConn.cpp */; };
-		04C6A6381D93D425009CA7E7 /* DBServConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C6A6361D93D425009CA7E7 /* DBServConn.h */; };
-		04C6A6391D93D47D009CA7E7 /* AttachData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04E866761D93C68600C9C903 /* AttachData.cpp */; };
+		04C4AAB51D94B78100E4F053 /* AttachData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AA9A1D94B78100E4F053 /* AttachData.cpp */; };
+		04C4AAB61D94B78100E4F053 /* AttachData.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AA9B1D94B78100E4F053 /* AttachData.h */; };
+		04C4AAB71D94B78100E4F053 /* DBServConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AA9D1D94B78100E4F053 /* DBServConn.cpp */; };
+		04C4AAB81D94B78100E4F053 /* DBServConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AA9E1D94B78100E4F053 /* DBServConn.h */; };
+		04C4AAB91D94B78100E4F053 /* FileHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AA9F1D94B78100E4F053 /* FileHandler.cpp */; };
+		04C4AABA1D94B78100E4F053 /* FileHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAA01D94B78100E4F053 /* FileHandler.h */; };
+		04C4AABB1D94B78100E4F053 /* FileServConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AAA11D94B78100E4F053 /* FileServConn.cpp */; };
+		04C4AABC1D94B78100E4F053 /* FileServConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAA21D94B78100E4F053 /* FileServConn.h */; };
+		04C4AABD1D94B78100E4F053 /* GroupChat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AAA31D94B78100E4F053 /* GroupChat.cpp */; };
+		04C4AABE1D94B78100E4F053 /* GroupChat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAA41D94B78100E4F053 /* GroupChat.h */; };
+		04C4AABF1D94B78100E4F053 /* ImUser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AAA51D94B78100E4F053 /* ImUser.cpp */; };
+		04C4AAC01D94B78100E4F053 /* ImUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAA61D94B78100E4F053 /* ImUser.h */; };
+		04C4AAC11D94B78100E4F053 /* jsonxx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AAA71D94B78100E4F053 /* jsonxx.cpp */; };
+		04C4AAC21D94B78100E4F053 /* jsonxx.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAA81D94B78100E4F053 /* jsonxx.h */; };
+		04C4AAC31D94B78100E4F053 /* LoginServConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AAAA1D94B78100E4F053 /* LoginServConn.cpp */; };
+		04C4AAC41D94B78100E4F053 /* LoginServConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAAB1D94B78100E4F053 /* LoginServConn.h */; };
+		04C4AAC51D94B78100E4F053 /* msg_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AAAC1D94B78100E4F053 /* msg_server.cpp */; };
+		04C4AAC61D94B78100E4F053 /* MsgConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AAAD1D94B78100E4F053 /* MsgConn.cpp */; };
+		04C4AAC71D94B78100E4F053 /* MsgConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAAE1D94B78100E4F053 /* MsgConn.h */; };
+		04C4AAC81D94B78100E4F053 /* PushServConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AAB11D94B78100E4F053 /* PushServConn.cpp */; };
+		04C4AAC91D94B78100E4F053 /* PushServConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAB21D94B78100E4F053 /* PushServConn.h */; };
+		04C4AACA1D94B78100E4F053 /* RouteServConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AAB31D94B78100E4F053 /* RouteServConn.cpp */; };
+		04C4AACB1D94B78100E4F053 /* RouteServConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAB41D94B78100E4F053 /* RouteServConn.h */; };
 		04C8CA0A1D7F9B01005DA7A3 /* im_conn_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C8CA081D7F9B01005DA7A3 /* im_conn_util.cpp */; };
 		04C8CA0B1D7F9B01005DA7A3 /* im_conn_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C8CA091D7F9B01005DA7A3 /* im_conn_util.h */; };
 		04C8CA0E1D7F9BF3005DA7A3 /* ImPduBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C8CA0C1D7F9BF3005DA7A3 /* ImPduBase.cpp */; };
@@ -444,8 +460,6 @@
 		04E8666A1D93C1AD00C9C903 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
 		04E8666B1D93C1AD00C9C903 /* LoginConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864EF1D8FD32100A3A3D4 /* LoginConn.h */; };
 		04E8666C1D93C1AD00C9C903 /* base.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE11D536E0800DAD42F /* base.hpp */; };
-		04E866751D93C2AB00C9C903 /* msg_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04E866721D93C21B00C9C903 /* msg_server.cpp */; };
-		04E866791D93C68600C9C903 /* AttachData.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E866771D93C68600C9C903 /* AttachData.h */; };
 		04E9C0251D7CF86200A841ED /* assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0141D7CF86200A841ED /* assertions.h */; };
 		04E9C0261D7CF86200A841ED /* autolink.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0151D7CF86200A841ED /* autolink.h */; };
 		04E9C0271D7CF86200A841ED /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0161D7CF86200A841ED /* config.h */; };
@@ -531,16 +545,37 @@
 		0480EC421D797F2E0007D67A /* IM.Server.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.Server.pb.h; sourceTree = "<group>"; };
 		0480EC431D797F2E0007D67A /* IM.SwitchService.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IM.SwitchService.pb.cc; sourceTree = "<group>"; };
 		0480EC441D797F2E0007D67A /* IM.SwitchService.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.SwitchService.pb.h; sourceTree = "<group>"; };
-		04A91C7A1D93D6A6005CEDB4 /* RouteServConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RouteServConn.cpp; path = msg_server/RouteServConn.cpp; sourceTree = "<group>"; };
-		04A91C7B1D93D6A6005CEDB4 /* RouteServConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RouteServConn.h; path = msg_server/RouteServConn.h; sourceTree = "<group>"; };
-		04A91C7E1D93DA72005CEDB4 /* MsgConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MsgConn.cpp; path = msg_server/MsgConn.cpp; sourceTree = "<group>"; };
-		04A91C7F1D93DA72005CEDB4 /* MsgConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgConn.h; path = msg_server/MsgConn.h; sourceTree = "<group>"; };
 		04BD60581D7E470900566DDD /* HttpParserWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HttpParserWrapper.cpp; path = base/HttpParserWrapper.cpp; sourceTree = SOURCE_ROOT; };
 		04BD60591D7E470900566DDD /* HttpParserWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpParserWrapper.h; path = base/HttpParserWrapper.h; sourceTree = SOURCE_ROOT; };
 		04BD895F1D7901BB00B523FC /* EncDec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EncDec.cpp; path = base/EncDec.cpp; sourceTree = SOURCE_ROOT; };
 		04BD89601D7901BB00B523FC /* EncDec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EncDec.h; path = base/EncDec.h; sourceTree = SOURCE_ROOT; };
-		04C6A6351D93D425009CA7E7 /* DBServConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DBServConn.cpp; path = msg_server/DBServConn.cpp; sourceTree = "<group>"; };
-		04C6A6361D93D425009CA7E7 /* DBServConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBServConn.h; path = msg_server/DBServConn.h; sourceTree = "<group>"; };
+		04C4AA9A1D94B78100E4F053 /* AttachData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AttachData.cpp; path = msg_server/AttachData.cpp; sourceTree = "<group>"; };
+		04C4AA9B1D94B78100E4F053 /* AttachData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttachData.h; path = msg_server/AttachData.h; sourceTree = "<group>"; };
+		04C4AA9C1D94B78100E4F053 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = msg_server/CMakeLists.txt; sourceTree = "<group>"; };
+		04C4AA9D1D94B78100E4F053 /* DBServConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DBServConn.cpp; path = msg_server/DBServConn.cpp; sourceTree = "<group>"; };
+		04C4AA9E1D94B78100E4F053 /* DBServConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBServConn.h; path = msg_server/DBServConn.h; sourceTree = "<group>"; };
+		04C4AA9F1D94B78100E4F053 /* FileHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileHandler.cpp; path = msg_server/FileHandler.cpp; sourceTree = "<group>"; };
+		04C4AAA01D94B78100E4F053 /* FileHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileHandler.h; path = msg_server/FileHandler.h; sourceTree = "<group>"; };
+		04C4AAA11D94B78100E4F053 /* FileServConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileServConn.cpp; path = msg_server/FileServConn.cpp; sourceTree = "<group>"; };
+		04C4AAA21D94B78100E4F053 /* FileServConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileServConn.h; path = msg_server/FileServConn.h; sourceTree = "<group>"; };
+		04C4AAA31D94B78100E4F053 /* GroupChat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GroupChat.cpp; path = msg_server/GroupChat.cpp; sourceTree = "<group>"; };
+		04C4AAA41D94B78100E4F053 /* GroupChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupChat.h; path = msg_server/GroupChat.h; sourceTree = "<group>"; };
+		04C4AAA51D94B78100E4F053 /* ImUser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImUser.cpp; path = msg_server/ImUser.cpp; sourceTree = "<group>"; };
+		04C4AAA61D94B78100E4F053 /* ImUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImUser.h; path = msg_server/ImUser.h; sourceTree = "<group>"; };
+		04C4AAA71D94B78100E4F053 /* jsonxx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = jsonxx.cpp; path = msg_server/jsonxx.cpp; sourceTree = "<group>"; };
+		04C4AAA81D94B78100E4F053 /* jsonxx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsonxx.h; path = msg_server/jsonxx.h; sourceTree = "<group>"; };
+		04C4AAA91D94B78100E4F053 /* log4cxx.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = log4cxx.properties; path = msg_server/log4cxx.properties; sourceTree = "<group>"; };
+		04C4AAAA1D94B78100E4F053 /* LoginServConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LoginServConn.cpp; path = msg_server/LoginServConn.cpp; sourceTree = "<group>"; };
+		04C4AAAB1D94B78100E4F053 /* LoginServConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginServConn.h; path = msg_server/LoginServConn.h; sourceTree = "<group>"; };
+		04C4AAAC1D94B78100E4F053 /* msg_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = msg_server.cpp; path = msg_server/msg_server.cpp; sourceTree = "<group>"; };
+		04C4AAAD1D94B78100E4F053 /* MsgConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MsgConn.cpp; path = msg_server/MsgConn.cpp; sourceTree = "<group>"; };
+		04C4AAAE1D94B78100E4F053 /* MsgConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgConn.h; path = msg_server/MsgConn.h; sourceTree = "<group>"; };
+		04C4AAAF1D94B78100E4F053 /* msgserver.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = msgserver.conf; path = msg_server/msgserver.conf; sourceTree = "<group>"; };
+		04C4AAB01D94B78100E4F053 /* policy.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = policy.xml; path = msg_server/policy.xml; sourceTree = "<group>"; };
+		04C4AAB11D94B78100E4F053 /* PushServConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PushServConn.cpp; path = msg_server/PushServConn.cpp; sourceTree = "<group>"; };
+		04C4AAB21D94B78100E4F053 /* PushServConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushServConn.h; path = msg_server/PushServConn.h; sourceTree = "<group>"; };
+		04C4AAB31D94B78100E4F053 /* RouteServConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RouteServConn.cpp; path = msg_server/RouteServConn.cpp; sourceTree = "<group>"; };
+		04C4AAB41D94B78100E4F053 /* RouteServConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RouteServConn.h; path = msg_server/RouteServConn.h; sourceTree = "<group>"; };
 		04C8CA081D7F9B01005DA7A3 /* im_conn_util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = im_conn_util.cpp; path = base/im_conn_util.cpp; sourceTree = SOURCE_ROOT; };
 		04C8CA091D7F9B01005DA7A3 /* im_conn_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = im_conn_util.h; path = base/im_conn_util.h; sourceTree = SOURCE_ROOT; };
 		04C8CA0C1D7F9BF3005DA7A3 /* ImPduBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImPduBase.cpp; path = base/ImPduBase.cpp; sourceTree = SOURCE_ROOT; };
@@ -933,9 +968,6 @@
 		04E866571D93B4AF00C9C903 /* kqueue-example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "kqueue-example"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E866591D93B51400C9C903 /* kqueue-example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "kqueue-example.cpp"; path = "test/kqueue-example.cpp"; sourceTree = "<group>"; };
 		04E866701D93C1AD00C9C903 /* msg_server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = msg_server; sourceTree = BUILT_PRODUCTS_DIR; };
-		04E866721D93C21B00C9C903 /* msg_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = msg_server.cpp; path = msg_server/msg_server.cpp; sourceTree = "<group>"; };
-		04E866761D93C68600C9C903 /* AttachData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AttachData.cpp; path = msg_server/AttachData.cpp; sourceTree = "<group>"; };
-		04E866771D93C68600C9C903 /* AttachData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttachData.h; path = msg_server/AttachData.h; sourceTree = "<group>"; };
 		04E9C0141D7CF86200A841ED /* assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assertions.h; sourceTree = "<group>"; };
 		04E9C0151D7CF86200A841ED /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
 		04E9C0161D7CF86200A841ED /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
@@ -1680,15 +1712,33 @@
 		04E866711D93C1DC00C9C903 /* msg_server */ = {
 			isa = PBXGroup;
 			children = (
-				04E866721D93C21B00C9C903 /* msg_server.cpp */,
-				04E866761D93C68600C9C903 /* AttachData.cpp */,
-				04E866771D93C68600C9C903 /* AttachData.h */,
-				04C6A6351D93D425009CA7E7 /* DBServConn.cpp */,
-				04C6A6361D93D425009CA7E7 /* DBServConn.h */,
-				04A91C7A1D93D6A6005CEDB4 /* RouteServConn.cpp */,
-				04A91C7B1D93D6A6005CEDB4 /* RouteServConn.h */,
-				04A91C7E1D93DA72005CEDB4 /* MsgConn.cpp */,
-				04A91C7F1D93DA72005CEDB4 /* MsgConn.h */,
+				04C4AA9A1D94B78100E4F053 /* AttachData.cpp */,
+				04C4AA9B1D94B78100E4F053 /* AttachData.h */,
+				04C4AA9C1D94B78100E4F053 /* CMakeLists.txt */,
+				04C4AA9D1D94B78100E4F053 /* DBServConn.cpp */,
+				04C4AA9E1D94B78100E4F053 /* DBServConn.h */,
+				04C4AA9F1D94B78100E4F053 /* FileHandler.cpp */,
+				04C4AAA01D94B78100E4F053 /* FileHandler.h */,
+				04C4AAA11D94B78100E4F053 /* FileServConn.cpp */,
+				04C4AAA21D94B78100E4F053 /* FileServConn.h */,
+				04C4AAA31D94B78100E4F053 /* GroupChat.cpp */,
+				04C4AAA41D94B78100E4F053 /* GroupChat.h */,
+				04C4AAA51D94B78100E4F053 /* ImUser.cpp */,
+				04C4AAA61D94B78100E4F053 /* ImUser.h */,
+				04C4AAA71D94B78100E4F053 /* jsonxx.cpp */,
+				04C4AAA81D94B78100E4F053 /* jsonxx.h */,
+				04C4AAA91D94B78100E4F053 /* log4cxx.properties */,
+				04C4AAAA1D94B78100E4F053 /* LoginServConn.cpp */,
+				04C4AAAB1D94B78100E4F053 /* LoginServConn.h */,
+				04C4AAAC1D94B78100E4F053 /* msg_server.cpp */,
+				04C4AAAD1D94B78100E4F053 /* MsgConn.cpp */,
+				04C4AAAE1D94B78100E4F053 /* MsgConn.h */,
+				04C4AAAF1D94B78100E4F053 /* msgserver.conf */,
+				04C4AAB01D94B78100E4F053 /* policy.xml */,
+				04C4AAB11D94B78100E4F053 /* PushServConn.cpp */,
+				04C4AAB21D94B78100E4F053 /* PushServConn.h */,
+				04C4AAB31D94B78100E4F053 /* RouteServConn.cpp */,
+				04C4AAB41D94B78100E4F053 /* RouteServConn.h */,
 			);
 			name = msg_server;
 			sourceTree = "<group>";
@@ -1979,7 +2029,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E866791D93C68600C9C903 /* AttachData.h in Headers */,
 				04E8664E1D93B4AF00C9C903 /* ipparser.h in Headers */,
 				04E8664F1D93B4AF00C9C903 /* HttpConn.h in Headers */,
 				04E866501D93B4AF00C9C903 /* ServerPriv.hpp in Headers */,
@@ -1993,15 +2042,23 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C4AACB1D94B78100E4F053 /* RouteServConn.h in Headers */,
+				04C4AAB61D94B78100E4F053 /* AttachData.h in Headers */,
 				04E866671D93C1AD00C9C903 /* ipparser.h in Headers */,
-				04C6A6381D93D425009CA7E7 /* DBServConn.h in Headers */,
+				04C4AAC91D94B78100E4F053 /* PushServConn.h in Headers */,
 				04E866681D93C1AD00C9C903 /* HttpConn.h in Headers */,
+				04C4AAC01D94B78100E4F053 /* ImUser.h in Headers */,
+				04C4AAC41D94B78100E4F053 /* LoginServConn.h in Headers */,
 				04E866691D93C1AD00C9C903 /* ServerPriv.hpp in Headers */,
-				04A91C7D1D93D6A6005CEDB4 /* RouteServConn.h in Headers */,
+				04C4AABE1D94B78100E4F053 /* GroupChat.h in Headers */,
+				04C4AABC1D94B78100E4F053 /* FileServConn.h in Headers */,
 				04E8666A1D93C1AD00C9C903 /* Base64.h in Headers */,
+				04C4AAC71D94B78100E4F053 /* MsgConn.h in Headers */,
+				04C4AABA1D94B78100E4F053 /* FileHandler.h in Headers */,
 				04E8666B1D93C1AD00C9C903 /* LoginConn.h in Headers */,
-				04A91C811D93DA72005CEDB4 /* MsgConn.h in Headers */,
+				04C4AAB81D94B78100E4F053 /* DBServConn.h in Headers */,
 				04E8666C1D93C1AD00C9C903 /* base.hpp in Headers */,
+				04C4AAC21D94B78100E4F053 /* jsonxx.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2336,11 +2393,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04C6A6391D93D47D009CA7E7 /* AttachData.cpp in Sources */,
-				04E866751D93C2AB00C9C903 /* msg_server.cpp in Sources */,
-				04C6A6371D93D425009CA7E7 /* DBServConn.cpp in Sources */,
-				04A91C801D93DA72005CEDB4 /* MsgConn.cpp in Sources */,
-				04A91C7C1D93D6A6005CEDB4 /* RouteServConn.cpp in Sources */,
+				04C4AABF1D94B78100E4F053 /* ImUser.cpp in Sources */,
+				04C4AAC81D94B78100E4F053 /* PushServConn.cpp in Sources */,
+				04C4AAC31D94B78100E4F053 /* LoginServConn.cpp in Sources */,
+				04C4AAC51D94B78100E4F053 /* msg_server.cpp in Sources */,
+				04C4AAC61D94B78100E4F053 /* MsgConn.cpp in Sources */,
+				04C4AAB51D94B78100E4F053 /* AttachData.cpp in Sources */,
+				04C4AAB91D94B78100E4F053 /* FileHandler.cpp in Sources */,
+				04C4AACA1D94B78100E4F053 /* RouteServConn.cpp in Sources */,
+				04C4AAB71D94B78100E4F053 /* DBServConn.cpp in Sources */,
+				04C4AAC11D94B78100E4F053 /* jsonxx.cpp in Sources */,
+				04C4AABB1D94B78100E4F053 /* FileServConn.cpp in Sources */,
+				04C4AABD1D94B78100E4F053 /* GroupChat.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
