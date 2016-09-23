@@ -1,10 +1,3 @@
-/*
- * AttachData.h
- *
- *  Created on: 2014年4月16日
- *      Author: ziteng
- */
-
 #ifndef ATTACHDATA_H_
 #define ATTACHDATA_H_
 
@@ -21,8 +14,8 @@ enum {
 class CDbAttachData
 {
 public:
-	CDbAttachData(uint32_t type, uint32_t handle, uint32_t service_type = 0);				// 序列化
-	CDbAttachData(uchar_t* attach_data, uint32_t attach_len);	// 反序列化
+	CDbAttachData(uint32_t type, uint32_t handle, uint32_t service_type = 0);
+    CDbAttachData(uchar_t* attach_data, uint32_t attach_len);
 	virtual ~CDbAttachData() {}
 
 	uchar_t* GetBuffer() {return m_buf.GetBuffer(); }
@@ -40,8 +33,8 @@ private:
 class CPduAttachData
 {
 public:
-	CPduAttachData(uint32_t type, uint32_t handle, uint32_t pduLength, uchar_t* pdu, uint32_t service_type = 0);				// 序列化
-	CPduAttachData(uchar_t* attach_data, uint32_t attach_len);	// 反序列化
+	CPduAttachData(uint32_t type, uint32_t handle, uint32_t pduLength, uchar_t* pdu, uint32_t service_type = 0);
+	CPduAttachData(uchar_t* attach_data, uint32_t attach_len);
 	virtual ~CPduAttachData() {}
     
 	uchar_t* GetBuffer() {return m_buf.GetBuffer(); }

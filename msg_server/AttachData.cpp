@@ -1,14 +1,6 @@
-/*
- * AttachData.cpp
- *
- *  Created on: 2014年4月16日
- *      Author: ziteng
- */
-
-
 #include "AttachData.h"
 
-CDbAttachData::CDbAttachData(uint32_t type, uint32_t handle, uint32_t service_type /* = 0 */)			// 序列化
+CDbAttachData::CDbAttachData(uint32_t type, uint32_t handle, uint32_t service_type)
 {
 	CByteStream os(&m_buf, 0);
 
@@ -18,7 +10,7 @@ CDbAttachData::CDbAttachData(uint32_t type, uint32_t handle, uint32_t service_ty
     wstring wstrIn;
 }
 
-CDbAttachData::CDbAttachData(uchar_t* attach_data, uint32_t attach_len)	// 反序列化
+CDbAttachData::CDbAttachData(uchar_t* attach_data, uint32_t attach_len)
 {
 	CByteStream is(attach_data, attach_len);
 
@@ -27,7 +19,7 @@ CDbAttachData::CDbAttachData(uchar_t* attach_data, uint32_t attach_len)	// 反�
     is >> m_service_type;
 }
 
-CPduAttachData::CPduAttachData(uint32_t type, uint32_t handle, uint32_t pduLength, uchar_t* pdu, uint32_t service_type) // 序列化
+CPduAttachData::CPduAttachData(uint32_t type, uint32_t handle, uint32_t pduLength, uchar_t* pdu, uint32_t service_type)
 {
     CByteStream os(&m_buf, 0);
     
@@ -37,7 +29,7 @@ CPduAttachData::CPduAttachData(uint32_t type, uint32_t handle, uint32_t pduLengt
     os.WriteData(pdu, pduLength);
 }
 
-CPduAttachData::CPduAttachData(uchar_t* attach_data, uint32_t attach_len) // 反序列化
+CPduAttachData::CPduAttachData(uchar_t* attach_data, uint32_t attach_len)
 {
     CByteStream is(attach_data, attach_len);
     

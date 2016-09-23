@@ -1,10 +1,3 @@
-/*
- * DBServConn.cpp
- *
- *  Created on: 2013-7-8
- *      Author: ziteng@mogujie.com
- */
-
 #include "EncDec.h"
 #include "DBServConn.h"
 #include "MsgConn.h"
@@ -37,13 +30,15 @@ static CFileHandler* s_file_handler = NULL;
 
 extern CAes *pAes;
 
-static void db_server_conn_timer_callback(void* callback_data, uint8_t msg, uint32_t handle, void* pParam)
+static void db_server_conn_timer_callback(void* callback_data, uint8_t msg,
+                                          uint32_t handle, void* pParam)
 {
 	ConnMap_t::iterator it_old;
 	CDBServConn* pConn = NULL;
 	uint64_t cur_time = get_tick_count();
 
-	for (ConnMap_t::iterator it = g_db_server_conn_map.begin(); it != g_db_server_conn_map.end(); ) {
+	for (ConnMap_t::iterator it = g_db_server_conn_map.begin(); it != g_db_server_conn_map.end(); )
+    {
 		it_old = it;
 		it++;
 
