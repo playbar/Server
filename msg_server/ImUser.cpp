@@ -1,12 +1,3 @@
-/*
- * ImUser.cpp
- *
- *  Created on: 2014年4月16日
- *      Author: ziteng
- *  Brief:
- *  	a map from user_id to userInfo and connection list
- */
-
 #include "ImUser.h"
 #include "MsgConn.h"
 #include "RouteServConn.h"
@@ -31,7 +22,8 @@ CImUser::~CImUser()
 
 CMsgConn* CImUser::GetUnValidateMsgConn(uint32_t handle)
 {
-    for (set<CMsgConn*>::iterator it = m_unvalidate_conn_set.begin(); it != m_unvalidate_conn_set.end(); it++)
+    for (set<CMsgConn*>::iterator it = m_unvalidate_conn_set.begin();
+         it != m_unvalidate_conn_set.end(); it++)
     {
         CMsgConn* pConn = *it;
         if (pConn->GetHandle() == handle) {
@@ -83,6 +75,7 @@ void CImUser::BroadcastPdu(CImPdu* pPdu, CMsgConn* pFromConn)
             pConn->SendPdu(pPdu);
         }
     }
+    return;
 }
 
 void CImUser::BroadcastPduWithOutMobile(CImPdu *pPdu, CMsgConn* pFromConn)
@@ -94,6 +87,7 @@ void CImUser::BroadcastPduWithOutMobile(CImPdu *pPdu, CMsgConn* pFromConn)
             pConn->SendPdu(pPdu);
         }
     }
+    return;
 }
 
 void CImUser::BroadcastPduToMobile(CImPdu* pPdu, CMsgConn* pFromConn)
@@ -105,10 +99,12 @@ void CImUser::BroadcastPduToMobile(CImPdu* pPdu, CMsgConn* pFromConn)
             pConn->SendPdu(pPdu);
         }
     }
+    return;
 }
 
 
-void CImUser::BroadcastClientMsgData(CImPdu* pPdu, uint32_t msg_id, CMsgConn* pFromConn, uint32_t from_id)
+void CImUser::BroadcastClientMsgData(CImPdu* pPdu, uint32_t msg_id, CMsgConn* pFromConn,
+                                     uint32_t from_id)
 {
     for (map<uint32_t, CMsgConn*>::iterator it = m_conn_map.begin(); it != m_conn_map.end(); it++)
     {
@@ -118,6 +114,7 @@ void CImUser::BroadcastClientMsgData(CImPdu* pPdu, uint32_t msg_id, CMsgConn* pF
             pConn->AddToSendList(msg_id, from_id);
         }
     }
+    return;
 }
 
 void CImUser::BroadcastData(void *buff, uint32_t len, CMsgConn* pFromConn)
@@ -135,12 +132,14 @@ void CImUser::BroadcastData(void *buff, uint32_t len, CMsgConn* pFromConn)
             pConn->Send(buff, len);
         }
     }
+    return;
 }
 
 void CImUser::HandleKickUser(CMsgConn* pConn, uint32_t reason)
 {
     map<uint32_t, CMsgConn*>::iterator it = m_conn_map.find(pConn->GetHandle());
-    if (it != m_conn_map.end()) {
+    if (it != m_conn_map.end())
+    {
         CMsgConn* pConn = it->second;
         if(pConn) {
             log("kick service user, user_id=%u.", m_user_id);
@@ -279,8 +278,8 @@ void CImUserManager::RemoveImUser(CImUser *pUser)
 
 void CImUserManager::RemoveAll()
 {
-    for (ImUserMapByName_t::iterator it = m_im_user_map_by_name.begin(); it != m_im_user_map_by_name.end();
-         it++)
+    for (ImUserMapByName_t::iterator it = m_im_user_map_by_name.begin();
+         it != m_im_user_map_by_name.end(); it++)
     {
         CImUser* pUser = it->second;
         if (pUser != NULL) {
@@ -290,15 +289,18 @@ void CImUserManager::RemoveAll()
     }
     m_im_user_map_by_name.clear();
     m_im_user_map.clear();
+    return;
 }
 
 void CImUserManager::GetOnlineUserInfo(list<user_stat_t>* online_user_info)
 {
     user_stat_t status;
     CImUser* pImUser = NULL;
-    for (ImUserMap_t::iterator it = m_im_user_map.begin(); it != m_im_user_map.end(); it++) {
+    for (ImUserMap_t::iterator it = m_im_user_map.begin(); it != m_im_user_map.end(); it++)
+    {
         pImUser = (CImUser*)it->second;
-        if (pImUser->IsValidate()) {
+        if (pImUser->IsValidate())
+        {
             map<uint32_t, CMsgConn*>& ConnMap = pImUser->GetMsgConnMap();
             for (map<uint32_t, CMsgConn*>::iterator it = ConnMap.begin(); it != ConnMap.end(); it++)
             {
@@ -313,6 +315,7 @@ void CImUserManager::GetOnlineUserInfo(list<user_stat_t>* online_user_info)
             }
         }
     }
+    return;
 }
 
 void CImUserManager::GetUserConnCnt(list<user_conn_t>* user_conn_list, uint32_t& total_conn_cnt)
@@ -329,6 +332,7 @@ void CImUserManager::GetUserConnCnt(list<user_conn_t>* user_conn_list, uint32_t&
             total_conn_cnt += user_conn_cnt.conn_cnt;
         }
     }
+    return;
 }
 
 void CImUserManager::BroadcastPdu(CImPdu* pdu, uint32_t client_type_flag)
@@ -354,5 +358,6 @@ void CImUserManager::BroadcastPdu(CImPdu* pdu, uint32_t client_type_flag)
             }
         }
     }
+    return;
 }
 
