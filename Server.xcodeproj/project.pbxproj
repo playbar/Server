@@ -67,6 +67,8 @@
 		0480EC561D797F2E0007D67A /* IM.SwitchService.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC441D797F2E0007D67A /* IM.SwitchService.pb.h */; };
 		04A91C7C1D93D6A6005CEDB4 /* RouteServConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A91C7A1D93D6A6005CEDB4 /* RouteServConn.cpp */; };
 		04A91C7D1D93D6A6005CEDB4 /* RouteServConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A91C7B1D93D6A6005CEDB4 /* RouteServConn.h */; };
+		04A91C801D93DA72005CEDB4 /* MsgConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A91C7E1D93DA72005CEDB4 /* MsgConn.cpp */; };
+		04A91C811D93DA72005CEDB4 /* MsgConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A91C7F1D93DA72005CEDB4 /* MsgConn.h */; };
 		04BD605A1D7E470900566DDD /* HttpParserWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BD60581D7E470900566DDD /* HttpParserWrapper.cpp */; };
 		04BD605B1D7E470900566DDD /* HttpParserWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD60591D7E470900566DDD /* HttpParserWrapper.h */; };
 		04BD89611D7901BB00B523FC /* EncDec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BD895F1D7901BB00B523FC /* EncDec.cpp */; };
@@ -531,6 +533,8 @@
 		0480EC441D797F2E0007D67A /* IM.SwitchService.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.SwitchService.pb.h; sourceTree = "<group>"; };
 		04A91C7A1D93D6A6005CEDB4 /* RouteServConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RouteServConn.cpp; path = msg_server/RouteServConn.cpp; sourceTree = "<group>"; };
 		04A91C7B1D93D6A6005CEDB4 /* RouteServConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RouteServConn.h; path = msg_server/RouteServConn.h; sourceTree = "<group>"; };
+		04A91C7E1D93DA72005CEDB4 /* MsgConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MsgConn.cpp; path = msg_server/MsgConn.cpp; sourceTree = "<group>"; };
+		04A91C7F1D93DA72005CEDB4 /* MsgConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgConn.h; path = msg_server/MsgConn.h; sourceTree = "<group>"; };
 		04BD60581D7E470900566DDD /* HttpParserWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HttpParserWrapper.cpp; path = base/HttpParserWrapper.cpp; sourceTree = SOURCE_ROOT; };
 		04BD60591D7E470900566DDD /* HttpParserWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpParserWrapper.h; path = base/HttpParserWrapper.h; sourceTree = SOURCE_ROOT; };
 		04BD895F1D7901BB00B523FC /* EncDec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EncDec.cpp; path = base/EncDec.cpp; sourceTree = SOURCE_ROOT; };
@@ -1683,6 +1687,8 @@
 				04C6A6361D93D425009CA7E7 /* DBServConn.h */,
 				04A91C7A1D93D6A6005CEDB4 /* RouteServConn.cpp */,
 				04A91C7B1D93D6A6005CEDB4 /* RouteServConn.h */,
+				04A91C7E1D93DA72005CEDB4 /* MsgConn.cpp */,
+				04A91C7F1D93DA72005CEDB4 /* MsgConn.h */,
 			);
 			name = msg_server;
 			sourceTree = "<group>";
@@ -1994,6 +2000,7 @@
 				04A91C7D1D93D6A6005CEDB4 /* RouteServConn.h in Headers */,
 				04E8666A1D93C1AD00C9C903 /* Base64.h in Headers */,
 				04E8666B1D93C1AD00C9C903 /* LoginConn.h in Headers */,
+				04A91C811D93DA72005CEDB4 /* MsgConn.h in Headers */,
 				04E8666C1D93C1AD00C9C903 /* base.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2332,6 +2339,7 @@
 				04C6A6391D93D47D009CA7E7 /* AttachData.cpp in Sources */,
 				04E866751D93C2AB00C9C903 /* msg_server.cpp in Sources */,
 				04C6A6371D93D425009CA7E7 /* DBServConn.cpp in Sources */,
+				04A91C801D93DA72005CEDB4 /* MsgConn.cpp in Sources */,
 				04A91C7C1D93D6A6005CEDB4 /* RouteServConn.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
