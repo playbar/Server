@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "68BB4EA023A18E3CCE8C7A5DBAD6BFD8AC592504",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "68BB4EA023A18E3CCE8C7A5DBAD6BFD8AC592504" : 0,
+    "438AB9C685D2126C067FC6E0A59E9C7C05914A28" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5382CEBC-E0C3-4FE4-A12D-C988EE78371E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "68BB4EA023A18E3CCE8C7A5DBAD6BFD8AC592504" : "TeamTalkSrc\/",
+    "438AB9C685D2126C067FC6E0A59E9C7C05914A28" : "ttopen"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "security",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "server\/src\/libsecurity\/ios\/security.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.mogujie.org:im\/ttopen.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "438AB9C685D2126C067FC6E0A59E9C7C05914A28"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/hgl888\/TeamTalk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "68BB4EA023A18E3CCE8C7A5DBAD6BFD8AC592504"
+    }
+  ]
+}

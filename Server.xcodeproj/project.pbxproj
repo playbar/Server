@@ -92,6 +92,242 @@
 		04C4AAC91D94B78100E4F053 /* PushServConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAB21D94B78100E4F053 /* PushServConn.h */; };
 		04C4AACA1D94B78100E4F053 /* RouteServConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AAB31D94B78100E4F053 /* RouteServConn.cpp */; };
 		04C4AACB1D94B78100E4F053 /* RouteServConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAB41D94B78100E4F053 /* RouteServConn.h */; };
+		04C4AB931D94BA1000E4F053 /* fileappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177361D90C80800D31823 /* fileappender.h */; };
+		04C4AB941D94BA1000E4F053 /* loggingeventpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177BD1D90C80800D31823 /* loggingeventpatternconverter.h */; };
+		04C4AB951D94BA1000E4F053 /* outputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177711D90C80800D31823 /* outputstream.h */; };
+		04C4AB961D94BA1000E4F053 /* rollingfileappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177EA1D90C80800D31823 /* rollingfileappender.h */; };
+		04C4AB971D94BA1000E4F053 /* file.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177351D90C80800D31823 /* file.h */; };
+		04C4AB981D94BA1000E4F053 /* levelpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B81D90C80800D31823 /* levelpatternconverter.h */; };
+		04C4AB991D94BA1000E4F053 /* rollingfileappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E11D90C80800D31823 /* rollingfileappender.h */; };
+		04C4AB9A1D94BA1000E4F053 /* configurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177EE1D90C80800D31823 /* configurator.h */; };
+		04C4AB9B1D94BA1000E4F053 /* date.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177561D90C80800D31823 /* date.h */; };
+		04C4AB9C1D94BA1000E4F053 /* portability.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177CD1D90C80800D31823 /* portability.h */; };
+		04C4AB9D1D94BA1000E4F053 /* socketoutputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1777C1D90C80800D31823 /* socketoutputstream.h */; };
+		04C4AB9E1D94BA1000E4F053 /* systemoutwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177851D90C80800D31823 /* systemoutwriter.h */; };
+		04C4AB9F1D94BA1000E4F053 /* inputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1775F1D90C80800D31823 /* inputstream.h */; };
+		04C4ABA01D94BA1000E4F053 /* IM.File.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC381D797F2E0007D67A /* IM.File.pb.h */; };
+		04C4ABA11D94BA1000E4F053 /* dailyrollingfileappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1772D1D90C80800D31823 /* dailyrollingfileappender.h */; };
+		04C4ABA21D94BA1000E4F053 /* objectoutputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1776D1D90C80800D31823 /* objectoutputstream.h */; };
+		04C4ABA31D94BA1000E4F053 /* charsetencoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1774F1D90C80800D31823 /* charsetencoder.h */; };
+		04C4ABA41D94BA1000E4F053 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319CFE1D5C610A00BBCE26 /* util.h */; };
+		04C4ABA51D94BA1000E4F053 /* level.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177921D90C80800D31823 /* level.h */; };
+		04C4ABA61D94BA1000E4F053 /* datetimedateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177591D90C80800D31823 /* datetimedateformat.h */; };
+		04C4ABA71D94BA1000E4F053 /* manualtriggeringpolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E01D90C80800D31823 /* manualtriggeringpolicy.h */; };
+		04C4ABA81D94BA1000E4F053 /* socketappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177A31D90C80800D31823 /* socketappender.h */; };
+		04C4ABA91D94BA1000E4F053 /* object.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1776B1D90C80800D31823 /* object.h */; };
+		04C4ABAA1D94BA1000E4F053 /* exception.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1775A1D90C80800D31823 /* exception.h */; };
+		04C4ABAB1D94BA1000E4F053 /* slog_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D0A1D5C62CF00BBCE26 /* slog_api.h */; };
+		04C4ABAC1D94BA1000E4F053 /* charsetdecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1774E1D90C80800D31823 /* charsetdecoder.h */; };
+		04C4ABAD1D94BA1000E4F053 /* strictmath.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1777E1D90C80800D31823 /* strictmath.h */; };
+		04C4ABAE1D94BA1000E4F053 /* sockethubappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177A51D90C80800D31823 /* sockethubappender.h */; };
+		04C4ABAF1D94BA1000E4F053 /* filedatepatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B31D90C80800D31823 /* filedatepatternconverter.h */; };
+		04C4ABB01D94BA1000E4F053 /* ostype.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319CFB1D5C60B400BBCE26 /* ostype.h */; };
+		04C4ABB11D94BA1000E4F053 /* propertyfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177421D90C80800D31823 /* propertyfilter.h */; };
+		04C4ABB21D94BA1000E4F053 /* hierarchy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1778F1D90C80800D31823 /* hierarchy.h */; };
+		04C4ABB31D94BA1000E4F053 /* zipcompressaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E91D90C80800D31823 /* zipcompressaction.h */; };
+		04C4ABB41D94BA1000E4F053 /* iso8601dateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177621D90C80800D31823 /* iso8601dateformat.h */; };
+		04C4ABB51D94BA1000E4F053 /* ttcclayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D178031D90C80800D31823 /* ttcclayout.h */; };
+		04C4ABB61D94BA1000E4F053 /* classnamepatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B11D90C80800D31823 /* classnamepatternconverter.h */; };
+		04C4ABB71D94BA1000E4F053 /* mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1776A1D90C80800D31823 /* mutex.h */; };
+		04C4ABB81D94BA1000E4F053 /* rollingpolicybase.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E41D90C80800D31823 /* rollingpolicybase.h */; };
+		04C4ABB91D94BA1000E4F053 /* singleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D5BB91D8E9BD400FA8392 /* singleton.h */; };
+		04C4ABBA1D94BA1000E4F053 /* writer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1778D1D90C80800D31823 /* writer.h */; };
+		04C4ABBB1D94BA1000E4F053 /* locationinfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177F41D90C80800D31823 /* locationinfo.h */; };
+		04C4ABBC1D94BA1000E4F053 /* BaseSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319CF81D5C603600BBCE26 /* BaseSocket.h */; };
+		04C4ABBD1D94BA1000E4F053 /* rootlogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D178001D90C80800D31823 /* rootlogger.h */; };
+		04C4ABBE1D94BA1000E4F053 /* relativetimepatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C91D90C80800D31823 /* relativetimepatternconverter.h */; };
+		04C4ABBF1D94BA1000E4F053 /* loglog.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177651D90C80800D31823 /* loglog.h */; };
+		04C4ABC01D94BA1000E4F053 /* bytebuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1774C1D90C80800D31823 /* bytebuffer.h */; };
+		04C4ABC11D94BA1000E4F053 /* layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177911D90C80800D31823 /* layout.h */; };
+		04C4ABC21D94BA1000E4F053 /* IM.Login.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC3C1D797F2E0007D67A /* IM.Login.pb.h */; };
+		04C4ABC31D94BA1000E4F053 /* autolink.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0151D7CF86200A841ED /* autolink.h */; };
+		04C4ABC41D94BA1000E4F053 /* loggerrepository.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177F91D90C80800D31823 /* loggerrepository.h */; };
+		04C4ABC51D94BA1000E4F053 /* class.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177501D90C80800D31823 /* class.h */; };
+		04C4ABC61D94BA1000E4F053 /* defaultloggerfactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177341D90C80800D31823 /* defaultloggerfactory.h */; };
+		04C4ABC71D94BA1000E4F053 /* writer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C01C1D7CF86200A841ED /* writer.h */; };
+		04C4ABC81D94BA1000E4F053 /* mapfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177411D90C80800D31823 /* mapfilter.h */; };
+		04C4ABC91D94BA1000E4F053 /* propertyresourcebundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177751D90C80800D31823 /* propertyresourcebundle.h */; };
+		04C4ABCA1D94BA1000E4F053 /* absolutetimedateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177451D90C80800D31823 /* absolutetimedateformat.h */; };
+		04C4ABCB1D94BA1000E4F053 /* xmllayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1780F1D90C80800D31823 /* xmllayout.h */; };
+		04C4ABCC1D94BA1000E4F053 /* propertiespatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C81D90C80800D31823 /* propertiespatternconverter.h */; };
+		04C4ABCD1D94BA1000E4F053 /* threadspecificdata.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177891D90C80800D31823 /* threadspecificdata.h */; };
+		04C4ABCE1D94BA1000E4F053 /* loggerpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177BC1D90C80800D31823 /* loggerpatternconverter.h */; };
+		04C4ABCF1D94BA1000E4F053 /* simplelayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177EB1D90C80800D31823 /* simplelayout.h */; };
+		04C4ABD01D94BA1000E4F053 /* pool.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177731D90C80800D31823 /* pool.h */; };
+		04C4ABD11D94BA1000E4F053 /* timebasedrollingpolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E71D90C80800D31823 /* timebasedrollingpolicy.h */; };
+		04C4ABD21D94BA1000E4F053 /* Condition.h in Headers */ = {isa = PBXBuildFile; fileRef = 0400855F1D7517D700FFB559 /* Condition.h */; };
+		04C4ABD31D94BA1000E4F053 /* log4z.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ED17991D8E1A3C00E980F2 /* log4z.h */; };
+		04C4ABD41D94BA1000E4F053 /* inetaddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1775E1D90C80800D31823 /* inetaddress.h */; };
+		04C4ABD51D94BA1000E4F053 /* timezone.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1778A1D90C80800D31823 /* timezone.h */; };
+		04C4ABD61D94BA1000E4F053 /* formattinginfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B51D90C80800D31823 /* formattinginfo.h */; };
+		04C4ABD71D94BA1000E4F053 /* filewatchdog.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1775D1D90C80800D31823 /* filewatchdog.h */; };
+		04C4ABD81D94BA1000E4F053 /* namepatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C41D90C80800D31823 /* namepatternconverter.h */; };
+		04C4ABD91D94BA1000E4F053 /* hierarchyeventlistener.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177F21D90C80800D31823 /* hierarchyeventlistener.h */; };
+		04C4ABDA1D94BA1000E4F053 /* gzcompressaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177DC1D90C80800D31823 /* gzcompressaction.h */; };
+		04C4ABDB1D94BA1000E4F053 /* IM.Server.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC421D797F2E0007D67A /* IM.Server.pb.h */; };
+		04C4ABDC1D94BA1000E4F053 /* filterbasedtriggeringpolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177DA1D90C80800D31823 /* filterbasedtriggeringpolicy.h */; };
+		04C4ABDD1D94BA1000E4F053 /* stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D178021D90C80800D31823 /* stream.h */; };
+		04C4ABDE1D94BA1000E4F053 /* bytearrayoutputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1774B1D90C80800D31823 /* bytearrayoutputstream.h */; };
+		04C4ABDF1D94BA1000E4F053 /* fileinputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1775B1D90C80800D31823 /* fileinputstream.h */; };
+		04C4ABE01D94BA1000E4F053 /* im_conn_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C8CA091D7F9B01005DA7A3 /* im_conn_util.h */; };
+		04C4ABE11D94BA1000E4F053 /* stringmatchfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177431D90C80800D31823 /* stringmatchfilter.h */; };
+		04C4ABE21D94BA1000E4F053 /* appender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177221D90C80800D31823 /* appender.h */; };
+		04C4ABE31D94BA1000E4F053 /* loggerfactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177F81D90C80800D31823 /* loggerfactory.h */; };
+		04C4ABE41D94BA1000E4F053 /* domconfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1780B1D90C80800D31823 /* domconfigurator.h */; };
+		04C4ABE51D94BA1000E4F053 /* inputstreamreader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177601D90C80800D31823 /* inputstreamreader.h */; };
+		04C4ABE61D94BA1000E4F053 /* bufferedoutputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177481D90C80800D31823 /* bufferedoutputstream.h */; };
+		04C4ABE71D94BA1000E4F053 /* integerpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B71D90C80800D31823 /* integerpatternconverter.h */; };
+		04C4ABE81D94BA1000E4F053 /* odbcappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177321D90C80800D31823 /* odbcappender.h */; };
+		04C4ABE91D94BA1000E4F053 /* fileoutputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1775C1D90C80800D31823 /* fileoutputstream.h */; };
+		04C4ABEA1D94BA1000E4F053 /* objectptr.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1776E1D90C80800D31823 /* objectptr.h */; };
+		04C4ABEB1D94BA1000E4F053 /* resourcebundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177781D90C80800D31823 /* resourcebundle.h */; };
+		04C4ABEC1D94BA1000E4F053 /* TokenValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74F41D8F6EC2009F7A93 /* TokenValidator.h */; };
+		04C4ABED1D94BA1000E4F053 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74F71D8F6F60009F7A93 /* version.h */; };
+		04C4ABEE1D94BA1000E4F053 /* appenderskeleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177231D90C80800D31823 /* appenderskeleton.h */; };
+		04C4ABEF1D94BA1000E4F053 /* cyclicbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177531D90C80800D31823 /* cyclicbuffer.h */; };
+		04C4ABF01D94BA1000E4F053 /* stringtokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177801D90C80800D31823 /* stringtokenizer.h */; };
+		04C4ABF11D94BA1000E4F053 /* basicconfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177251D90C80800D31823 /* basicconfigurator.h */; };
+		04C4ABF21D94BA1000E4F053 /* mdc.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1779C1D90C80800D31823 /* mdc.h */; };
+		04C4ABF31D94BA1000E4F053 /* bufferedwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177491D90C80800D31823 /* bufferedwriter.h */; };
+		04C4ABF41D94BA1000E4F053 /* fallbackerrorhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D178051D90C80800D31823 /* fallbackerrorhandler.h */; };
+		04C4ABF51D94BA1000E4F053 /* log4cxx.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177931D90C80800D31823 /* log4cxx.h */; };
+		04C4ABF61D94BA1000E4F053 /* loggingevent.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177FA1D90C80800D31823 /* loggingevent.h */; };
+		04C4ABF71D94BA1000E4F053 /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
+		04C4ABF81D94BA1000E4F053 /* transcoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1778B1D90C80800D31823 /* transcoder.h */; };
+		04C4ABF91D94BA1000E4F053 /* locale.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177641D90C80800D31823 /* locale.h */; };
+		04C4ABFA1D94BA1000E4F053 /* properties.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177741D90C80800D31823 /* properties.h */; };
+		04C4ABFB1D94BA1000E4F053 /* asyncappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177241D90C80800D31823 /* asyncappender.h */; };
+		04C4ABFC1D94BA1000E4F053 /* Thread.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D5BBE1D8E9ECA00FA8392 /* Thread.h */; };
+		04C4ABFD1D94BA1000E4F053 /* triggeringpolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E81D90C80800D31823 /* triggeringpolicy.h */; };
+		04C4ABFE1D94BA1000E4F053 /* defaultconfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177331D90C80800D31823 /* defaultconfigurator.h */; };
+		04C4ABFF1D94BA1000E4F053 /* filter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177F11D90C80800D31823 /* filter.h */; };
+		04C4AC001D94BA1000E4F053 /* levelrangefilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1773C1D90C80800D31823 /* levelrangefilter.h */; };
+		04C4AC011D94BA1000E4F053 /* messagebuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177691D90C80800D31823 /* messagebuffer.h */; };
+		04C4AC021D94BA1000E4F053 /* logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177961D90C80800D31823 /* logger.h */; };
+		04C4AC031D94BA1000E4F053 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
+		04C4AC041D94BA1000E4F053 /* logstring.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177981D90C80800D31823 /* logstring.h */; };
+		04C4AC051D94BA1000E4F053 /* aprinitializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177471D90C80800D31823 /* aprinitializer.h */; };
+		04C4AC061D94BA1000E4F053 /* Task.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D5BBB1D8E9E5D00FA8392 /* Task.h */; };
+		04C4AC071D94BA1000E4F053 /* nameabbreviator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C31D90C80800D31823 /* nameabbreviator.h */; };
+		04C4AC081D94BA1000E4F053 /* synchronized.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177811D90C80800D31823 /* synchronized.h */; };
+		04C4AC091D94BA1000E4F053 /* json_tool.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0211D7CF86200A841ED /* json_tool.h */; };
+		04C4AC0A1D94BA1000E4F053 /* ConfigFileReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D0803D1D765F9900BAC540 /* ConfigFileReader.h */; };
+		04C4AC0B1D94BA1000E4F053 /* thread.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177871D90C80800D31823 /* thread.h */; };
+		04C4AC0C1D94BA1000E4F053 /* sizebasedtriggeringpolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E61D90C80800D31823 /* sizebasedtriggeringpolicy.h */; };
+		04C4AC0D1D94BA1000E4F053 /* syslogappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177A61D90C80800D31823 /* syslogappender.h */; };
+		04C4AC0E1D94BA1000E4F053 /* threadpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177CA1D90C80800D31823 /* threadpatternconverter.h */; };
+		04C4AC0F1D94BA1000E4F053 /* systemerrwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177841D90C80800D31823 /* systemerrwriter.h */; };
+		04C4AC101D94BA1000E4F053 /* bytearrayinputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1774A1D90C80800D31823 /* bytearrayinputstream.h */; };
+		04C4AC111D94BA1000E4F053 /* socketappenderskeleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177A41D90C80800D31823 /* socketappenderskeleton.h */; };
+		04C4AC121D94BA1000E4F053 /* rolloverdescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E51D90C80800D31823 /* rolloverdescription.h */; };
+		04C4AC131D94BA1000E4F053 /* serversocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177791D90C80800D31823 /* serversocket.h */; };
+		04C4AC141D94BA1000E4F053 /* filerenameaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177D91D90C80800D31823 /* filerenameaction.h */; };
+		04C4AC151D94BA1000E4F053 /* patternparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C71D90C80800D31823 /* patternparser.h */; };
+		04C4AC161D94BA1000E4F053 /* throwableinformationpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177CB1D90C80800D31823 /* throwableinformationpatternconverter.h */; };
+		04C4AC171D94BA1000E4F053 /* action.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177D81D90C80800D31823 /* action.h */; };
+		04C4AC181D94BA1000E4F053 /* UtilPdu.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D021D5C61C600BBCE26 /* UtilPdu.h */; };
+		04C4AC191D94BA1000E4F053 /* EncDec.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD89601D7901BB00B523FC /* EncDec.h */; };
+		04C4AC1A1D94BA1000E4F053 /* EventDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D98001D65C02F001BC84D /* EventDispatch.h */; };
+		04C4AC1B1D94BA1000E4F053 /* errorhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177F01D90C80800D31823 /* errorhandler.h */; };
+		04C4AC1C1D94BA1000E4F053 /* andfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177381D90C80800D31823 /* andfilter.h */; };
+		04C4AC1D1D94BA1000E4F053 /* socket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1777B1D90C80800D31823 /* socket.h */; };
+		04C4AC1E1D94BA1000E4F053 /* http_parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC281D797D040007D67A /* http_parser.h */; };
+		04C4AC1F1D94BA1000E4F053 /* HttpParserWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD60591D7E470900566DDD /* HttpParserWrapper.h */; };
+		04C4AC201D94BA1000E4F053 /* onlyonceerrorhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1776F1D90C80800D31823 /* onlyonceerrorhandler.h */; };
+		04C4AC211D94BA1000E4F053 /* IM.SwitchService.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC441D797F2E0007D67A /* IM.SwitchService.pb.h */; };
+		04C4AC221D94BA1000E4F053 /* datagrampacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177541D90C80800D31823 /* datagrampacket.h */; };
+		04C4AC231D94BA1000E4F053 /* system.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177831D90C80800D31823 /* system.h */; };
+		04C4AC241D94BA1000E4F053 /* threadlocal.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177881D90C80800D31823 /* threadlocal.h */; };
+		04C4AC251D94BA1000E4F053 /* loader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177631D90C80800D31823 /* loader.h */; };
+		04C4AC261D94BA1000E4F053 /* telnetappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177A71D90C80800D31823 /* telnetappender.h */; };
+		04C4AC271D94BA1000E4F053 /* reader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C01A1D7CF86200A841ED /* reader.h */; };
+		04C4AC281D94BA1000E4F053 /* outputstreamwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177721D90C80800D31823 /* outputstreamwriter.h */; };
+		04C4AC291D94BA1000E4F053 /* log4cxx_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177CF1D90C80800D31823 /* log4cxx_private.h */; };
+		04C4AC2A1D94BA1000E4F053 /* fulllocationpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B61D90C80800D31823 /* fulllocationpatternconverter.h */; };
+		04C4AC2B1D94BA1000E4F053 /* ImPduBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C8CA0D1D7F9BF3005DA7A3 /* ImPduBase.h */; };
+		04C4AC2C1D94BA1000E4F053 /* consoleappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1772C1D90C80800D31823 /* consoleappender.h */; };
+		04C4AC2D1D94BA1000E4F053 /* HttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC2C1D797D8C0007D67A /* HttpClient.h */; };
+		04C4AC2E1D94BA1000E4F053 /* relativetimedateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177771D90C80800D31823 /* relativetimedateformat.h */; };
+		04C4AC2F1D94BA1000E4F053 /* outputdebugstringappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177AF1D90C80800D31823 /* outputdebugstringappender.h */; };
+		04C4AC301D94BA1000E4F053 /* xml.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1778E1D90C80800D31823 /* xml.h */; };
+		04C4AC311D94BA1000E4F053 /* condition.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177521D90C80800D31823 /* condition.h */; };
+		04C4AC321D94BA1000E4F053 /* datagramsocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177551D90C80800D31823 /* datagramsocket.h */; };
+		04C4AC331D94BA1000E4F053 /* optionhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177FE1D90C80800D31823 /* optionhandler.h */; };
+		04C4AC341D94BA1000E4F053 /* IM.Buddy.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC361D797F2E0007D67A /* IM.Buddy.pb.h */; };
+		04C4AC351D94BA1000E4F053 /* defaultrepositoryselector.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177EF1D90C80800D31823 /* defaultrepositoryselector.h */; };
+		04C4AC361D94BA1000E4F053 /* locationinfofilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1773D1D90C80800D31823 /* locationinfofilter.h */; };
+		04C4AC371D94BA1000E4F053 /* syslogwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177821D90C80800D31823 /* syslogwriter.h */; };
+		04C4AC381D94BA1000E4F053 /* base.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE11D536E0800DAD42F /* base.hpp */; };
+		04C4AC391D94BA1000E4F053 /* denyallfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177391D90C80800D31823 /* denyallfilter.h */; };
+		04C4AC3A1D94BA1000E4F053 /* classregistration.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177511D90C80800D31823 /* classregistration.h */; };
+		04C4AC3B1D94BA1000E4F053 /* levelmatchfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1773B1D90C80800D31823 /* levelmatchfilter.h */; };
+		04C4AC3C1D94BA1000E4F053 /* lineseparatorpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177BA1D90C80800D31823 /* lineseparatorpatternconverter.h */; };
+		04C4AC3D1D94BA1000E4F053 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0161D7CF86200A841ED /* config.h */; };
+		04C4AC3E1D94BA1000E4F053 /* ndcpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C51D90C80800D31823 /* ndcpatternconverter.h */; };
+		04C4AC3F1D94BA1000E4F053 /* linelocationpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B91D90C80800D31823 /* linelocationpatternconverter.h */; };
+		04C4AC401D94BA1000E4F053 /* IM.Group.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC3A1D797F2E0007D67A /* IM.Group.pb.h */; };
+		04C4AC411D94BA1000E4F053 /* netlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 04350DCB1D823F96000E886A /* netlib.h */; };
+		04C4AC421D94BA1000E4F053 /* datelayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177581D90C80800D31823 /* datelayout.h */; };
+		04C4AC431D94BA1000E4F053 /* triggeringeventevaluator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D178011D90C80800D31823 /* triggeringeventevaluator.h */; };
+		04C4AC441D94BA1000E4F053 /* transform.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1778C1D90C80800D31823 /* transform.h */; };
+		04C4AC451D94BA1000E4F053 /* ndc.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1779D1D90C80800D31823 /* ndc.h */; };
+		04C4AC461D94BA1000E4F053 /* logmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177971D90C80800D31823 /* logmanager.h */; };
+		04C4AC471D94BA1000E4F053 /* patternlayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177CC1D90C80800D31823 /* patternlayout.h */; };
+		04C4AC481D94BA1000E4F053 /* ServInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ED179D1D8E1BAE00E980F2 /* ServInfo.h */; };
+		04C4AC491D94BA1000E4F053 /* messagepatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C11D90C80800D31823 /* messagepatternconverter.h */; };
+		04C4AC4A1D94BA1000E4F053 /* appenderattachable.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177ED1D90C80800D31823 /* appenderattachable.h */; };
+		04C4AC4B1D94BA1000E4F053 /* IM.Other.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC401D797F2E0007D67A /* IM.Other.pb.h */; };
+		04C4AC4C1D94BA1000E4F053 /* cacheddateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1774D1D90C80800D31823 /* cacheddateformat.h */; };
+		04C4AC4D1D94BA1000E4F053 /* objectimpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1776C1D90C80800D31823 /* objectimpl.h */; };
+		04C4AC4E1D94BA1000E4F053 /* filelocationpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B41D90C80800D31823 /* filelocationpatternconverter.h */; };
+		04C4AC4F1D94BA1000E4F053 /* value.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C01B1D7CF86200A841ED /* value.h */; };
+		04C4AC501D94BA1000E4F053 /* IM.BaseDefine.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC341D797F2E0007D67A /* IM.BaseDefine.pb.h */; };
+		04C4AC511D94BA1000E4F053 /* public_define.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC2F1D797E440007D67A /* public_define.h */; };
+		04C4AC521D94BA1000E4F053 /* reader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177761D90C80800D31823 /* reader.h */; };
+		04C4AC531D94BA1000E4F053 /* propertyconfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177D51D90C80800D31823 /* propertyconfigurator.h */; };
+		04C4AC541D94BA1000E4F053 /* simpledateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1777A1D90C80800D31823 /* simpledateformat.h */; };
+		04C4AC551D94BA1000E4F053 /* literalpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177BB1D90C80800D31823 /* literalpatternconverter.h */; };
+		04C4AC561D94BA1000E4F053 /* propertysetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1772A1D90C80800D31823 /* propertysetter.h */; };
+		04C4AC571D94BA1000E4F053 /* json.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0191D7CF86200A841ED /* json.h */; };
+		04C4AC581D94BA1000E4F053 /* assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0141D7CF86200A841ED /* assertions.h */; };
+		04C4AC591D94BA1000E4F053 /* smtpappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177A21D90C80800D31823 /* smtpappender.h */; };
+		04C4AC5A1D94BA1000E4F053 /* json_batchallocator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C01D1D7CF86200A841ED /* json_batchallocator.h */; };
+		04C4AC5B1D94BA1000E4F053 /* rollingfileappenderskeleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E21D90C80800D31823 /* rollingfileappenderskeleton.h */; };
+		04C4AC5C1D94BA1000E4F053 /* appenderattachableimpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177461D90C80800D31823 /* appenderattachableimpl.h */; };
+		04C4AC5D1D94BA1000E4F053 /* optionconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177701D90C80800D31823 /* optionconverter.h */; };
+		04C4AC5E1D94BA1000E4F053 /* ThreadPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74F01D8F697D009F7A93 /* ThreadPool.h */; };
+		04C4AC5F1D94BA1000E4F053 /* nteventlogappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177AE1D90C80800D31823 /* nteventlogappender.h */; };
+		04C4AC601D94BA1000E4F053 /* htmllayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177901D90C80800D31823 /* htmllayout.h */; };
+		04C4AC611D94BA1000E4F053 /* repositoryselector.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177FF1D90C80800D31823 /* repositoryselector.h */; };
+		04C4AC621D94BA1000E4F053 /* features.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0171D7CF86200A841ED /* features.h */; };
+		04C4AC631D94BA1000E4F053 /* stringhelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1777F1D90C80800D31823 /* stringhelper.h */; };
+		04C4AC641D94BA1000E4F053 /* dateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177571D90C80800D31823 /* dateformat.h */; };
+		04C4AC651D94BA1000E4F053 /* patternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C61D90C80800D31823 /* patternconverter.h */; };
+		04C4AC661D94BA1000E4F053 /* datepatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B21D90C80800D31823 /* datepatternconverter.h */; };
+		04C4AC671D94BA1000E4F053 /* writerappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D178091D90C80800D31823 /* writerappender.h */; };
+		04C4AC681D94BA1000E4F053 /* imconn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C8CA111D7F9C2B005DA7A3 /* imconn.h */; };
+		04C4AC691D94BA1000E4F053 /* IM.Message.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC3E1D797F2E0007D67A /* IM.Message.pb.h */; };
+		04C4AC6A1D94BA1000E4F053 /* fixedwindowrollingpolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177DB1D90C80800D31823 /* fixedwindowrollingpolicy.h */; };
+		04C4AC6B1D94BA1000E4F053 /* rollingpolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E31D90C80800D31823 /* rollingpolicy.h */; };
+		04C4AC6C1D94BA1000E4F053 /* tchar.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177861D90C80800D31823 /* tchar.h */; };
+		04C4AC6D1D94BA1000E4F053 /* provisionnode.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177D61D90C80800D31823 /* provisionnode.h */; };
+		04C4AC6E1D94BA1000E4F053 /* strftimedateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1777D1D90C80800D31823 /* strftimedateformat.h */; };
+		04C4AC6F1D94BA1000E4F053 /* methodlocationpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C21D90C80800D31823 /* methodlocationpatternconverter.h */; };
+		04C4AC701D94BA1000E4F053 /* forwards.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0181D7CF86200A841ED /* forwards.h */; };
+		04C4AC711D94BA1000E4F053 /* xmlsocketappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177A81D90C80800D31823 /* xmlsocketappender.h */; };
+		04C4AC721D94BA1000E4F053 /* expressionfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1773A1D90C80800D31823 /* expressionfilter.h */; };
+		04C4AC731D94BA1000E4F053 /* Lock.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D061D5C623700BBCE26 /* Lock.h */; };
+		04C4AC741D94BA1000E4F053 /* integer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177611D90C80800D31823 /* integer.h */; };
+		04C4ACE61D94BA3C00E4F053 /* security.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4ACA81D94BA3B00E4F053 /* security.h */; };
+		04C4ACEA1D94BA3C00E4F053 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4ACCF1D94BA3B00E4F053 /* aes.h */; };
+		04C4ACEC1D94BA3C00E4F053 /* aes_locl.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4ACD11D94BA3B00E4F053 /* aes_locl.h */; };
+		04C4ACEE1D94BA3C00E4F053 /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4ACD51D94BA3B00E4F053 /* base64.h */; };
+		04C4ACF01D94BA3C00E4F053 /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4ACD81D94BA3B00E4F053 /* md5.h */; };
+		04C4ACF51D94BA7300E4F053 /* aes_core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4ACD01D94BA3B00E4F053 /* aes_core.cpp */; };
+		04C4ACF61D94BA7300E4F053 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4ACD41D94BA3B00E4F053 /* base64.cpp */; };
+		04C4ACF71D94BA7300E4F053 /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4ACD71D94BA3B00E4F053 /* md5.cpp */; };
+		04C4ACF81D94BA7300E4F053 /* security.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4ACD91D94BA3B00E4F053 /* security.cpp */; };
+		04C4ACF91D94BAF100E4F053 /* libsecurity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C4AC781D94BA1000E4F053 /* libsecurity.a */; };
 		04C8CA0A1D7F9B01005DA7A3 /* im_conn_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C8CA081D7F9B01005DA7A3 /* im_conn_util.cpp */; };
 		04C8CA0B1D7F9B01005DA7A3 /* im_conn_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C8CA091D7F9B01005DA7A3 /* im_conn_util.h */; };
 		04C8CA0E1D7F9BF3005DA7A3 /* ImPduBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C8CA0C1D7F9BF3005DA7A3 /* ImPduBase.cpp */; };
@@ -576,6 +812,19 @@
 		04C4AAB21D94B78100E4F053 /* PushServConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushServConn.h; path = msg_server/PushServConn.h; sourceTree = "<group>"; };
 		04C4AAB31D94B78100E4F053 /* RouteServConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RouteServConn.cpp; path = msg_server/RouteServConn.cpp; sourceTree = "<group>"; };
 		04C4AAB41D94B78100E4F053 /* RouteServConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RouteServConn.h; path = msg_server/RouteServConn.h; sourceTree = "<group>"; };
+		04C4AC781D94BA1000E4F053 /* libsecurity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsecurity.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C4ACA81D94BA3B00E4F053 /* security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = security.h; sourceTree = "<group>"; };
+		04C4ACCF1D94BA3B00E4F053 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		04C4ACD01D94BA3B00E4F053 /* aes_core.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = aes_core.cpp; sourceTree = "<group>"; };
+		04C4ACD11D94BA3B00E4F053 /* aes_locl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes_locl.h; sourceTree = "<group>"; };
+		04C4ACD21D94BA3B00E4F053 /* Android.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Android.mk; sourceTree = "<group>"; };
+		04C4ACD31D94BA3B00E4F053 /* Application.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Application.mk; sourceTree = "<group>"; };
+		04C4ACD41D94BA3B00E4F053 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base64.cpp; sourceTree = "<group>"; };
+		04C4ACD51D94BA3B00E4F053 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		04C4ACD61D94BA3B00E4F053 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		04C4ACD71D94BA3B00E4F053 /* md5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = md5.cpp; sourceTree = "<group>"; };
+		04C4ACD81D94BA3B00E4F053 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		04C4ACD91D94BA3B00E4F053 /* security.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = security.cpp; sourceTree = "<group>"; };
 		04C8CA081D7F9B01005DA7A3 /* im_conn_util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = im_conn_util.cpp; path = base/im_conn_util.cpp; sourceTree = SOURCE_ROOT; };
 		04C8CA091D7F9B01005DA7A3 /* im_conn_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = im_conn_util.h; path = base/im_conn_util.h; sourceTree = SOURCE_ROOT; };
 		04C8CA0C1D7F9BF3005DA7A3 /* ImPduBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImPduBase.cpp; path = base/ImPduBase.cpp; sourceTree = SOURCE_ROOT; };
@@ -1003,6 +1252,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04C4AB911D94BA1000E4F053 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04DF6BAC1D59DDB80096A2AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1025,6 +1281,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C4ACF91D94BAF100E4F053 /* libsecurity.a in Frameworks */,
 				04E866621D93C1AD00C9C903 /* libaprutil-1.a in Frameworks */,
 				04E866631D93C1AD00C9C903 /* libapr-1.a in Frameworks */,
 				04E866641D93C1AD00C9C903 /* libprotobuf.a in Frameworks */,
@@ -1038,6 +1295,7 @@
 		04019CBE1D536C6B00DAD42F = {
 			isa = PBXGroup;
 			children = (
+				04C4AC791D94BA3B00E4F053 /* libsecurity */,
 				04E866711D93C1DC00C9C903 /* msg_server */,
 				04E866581D93B4BF00C9C903 /* test */,
 				046054751D925D7300C84153 /* lib */,
@@ -1055,6 +1313,7 @@
 				04DF6BB41D59DDB80096A2AD /* login_server */,
 				04E866571D93B4AF00C9C903 /* kqueue-example */,
 				04E866701D93C1AD00C9C903 /* msg_server */,
+				04C4AC781D94BA1000E4F053 /* libsecurity.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1172,6 +1431,41 @@
 				0480EC441D797F2E0007D67A /* IM.SwitchService.pb.h */,
 			);
 			path = protocol;
+			sourceTree = "<group>";
+		};
+		04C4AC791D94BA3B00E4F053 /* libsecurity */ = {
+			isa = PBXGroup;
+			children = (
+				04C4ACA71D94BA3B00E4F053 /* include */,
+				04C4ACCE1D94BA3B00E4F053 /* src */,
+			);
+			path = libsecurity;
+			sourceTree = "<group>";
+		};
+		04C4ACA71D94BA3B00E4F053 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				04C4ACA81D94BA3B00E4F053 /* security.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		04C4ACCE1D94BA3B00E4F053 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				04C4ACCF1D94BA3B00E4F053 /* aes.h */,
+				04C4ACD01D94BA3B00E4F053 /* aes_core.cpp */,
+				04C4ACD11D94BA3B00E4F053 /* aes_locl.h */,
+				04C4ACD21D94BA3B00E4F053 /* Android.mk */,
+				04C4ACD31D94BA3B00E4F053 /* Application.mk */,
+				04C4ACD41D94BA3B00E4F053 /* base64.cpp */,
+				04C4ACD51D94BA3B00E4F053 /* base64.h */,
+				04C4ACD61D94BA3B00E4F053 /* CMakeLists.txt */,
+				04C4ACD71D94BA3B00E4F053 /* md5.cpp */,
+				04C4ACD81D94BA3B00E4F053 /* md5.h */,
+				04C4ACD91D94BA3B00E4F053 /* security.cpp */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		04D176871D90C80800D31823 /* log4cxx */ = {
@@ -2012,6 +2306,244 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04C4AB921D94BA1000E4F053 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C4AB931D94BA1000E4F053 /* fileappender.h in Headers */,
+				04C4AB941D94BA1000E4F053 /* loggingeventpatternconverter.h in Headers */,
+				04C4AB951D94BA1000E4F053 /* outputstream.h in Headers */,
+				04C4AB961D94BA1000E4F053 /* rollingfileappender.h in Headers */,
+				04C4AB971D94BA1000E4F053 /* file.h in Headers */,
+				04C4AB981D94BA1000E4F053 /* levelpatternconverter.h in Headers */,
+				04C4AB991D94BA1000E4F053 /* rollingfileappender.h in Headers */,
+				04C4AB9A1D94BA1000E4F053 /* configurator.h in Headers */,
+				04C4AB9B1D94BA1000E4F053 /* date.h in Headers */,
+				04C4AB9C1D94BA1000E4F053 /* portability.h in Headers */,
+				04C4AB9D1D94BA1000E4F053 /* socketoutputstream.h in Headers */,
+				04C4AB9E1D94BA1000E4F053 /* systemoutwriter.h in Headers */,
+				04C4AB9F1D94BA1000E4F053 /* inputstream.h in Headers */,
+				04C4ABA01D94BA1000E4F053 /* IM.File.pb.h in Headers */,
+				04C4ABA11D94BA1000E4F053 /* dailyrollingfileappender.h in Headers */,
+				04C4ABA21D94BA1000E4F053 /* objectoutputstream.h in Headers */,
+				04C4ABA31D94BA1000E4F053 /* charsetencoder.h in Headers */,
+				04C4ABA41D94BA1000E4F053 /* util.h in Headers */,
+				04C4ABA51D94BA1000E4F053 /* level.h in Headers */,
+				04C4ABA61D94BA1000E4F053 /* datetimedateformat.h in Headers */,
+				04C4ABA71D94BA1000E4F053 /* manualtriggeringpolicy.h in Headers */,
+				04C4ABA81D94BA1000E4F053 /* socketappender.h in Headers */,
+				04C4ABA91D94BA1000E4F053 /* object.h in Headers */,
+				04C4ABAA1D94BA1000E4F053 /* exception.h in Headers */,
+				04C4ABAB1D94BA1000E4F053 /* slog_api.h in Headers */,
+				04C4ABAC1D94BA1000E4F053 /* charsetdecoder.h in Headers */,
+				04C4ABAD1D94BA1000E4F053 /* strictmath.h in Headers */,
+				04C4ABAE1D94BA1000E4F053 /* sockethubappender.h in Headers */,
+				04C4ABAF1D94BA1000E4F053 /* filedatepatternconverter.h in Headers */,
+				04C4ABB01D94BA1000E4F053 /* ostype.h in Headers */,
+				04C4ABB11D94BA1000E4F053 /* propertyfilter.h in Headers */,
+				04C4ACE61D94BA3C00E4F053 /* security.h in Headers */,
+				04C4ABB21D94BA1000E4F053 /* hierarchy.h in Headers */,
+				04C4ABB31D94BA1000E4F053 /* zipcompressaction.h in Headers */,
+				04C4ABB41D94BA1000E4F053 /* iso8601dateformat.h in Headers */,
+				04C4ABB51D94BA1000E4F053 /* ttcclayout.h in Headers */,
+				04C4ABB61D94BA1000E4F053 /* classnamepatternconverter.h in Headers */,
+				04C4ABB71D94BA1000E4F053 /* mutex.h in Headers */,
+				04C4ABB81D94BA1000E4F053 /* rollingpolicybase.h in Headers */,
+				04C4ABB91D94BA1000E4F053 /* singleton.h in Headers */,
+				04C4ABBA1D94BA1000E4F053 /* writer.h in Headers */,
+				04C4ABBB1D94BA1000E4F053 /* locationinfo.h in Headers */,
+				04C4ABBC1D94BA1000E4F053 /* BaseSocket.h in Headers */,
+				04C4ABBD1D94BA1000E4F053 /* rootlogger.h in Headers */,
+				04C4ABBE1D94BA1000E4F053 /* relativetimepatternconverter.h in Headers */,
+				04C4ABBF1D94BA1000E4F053 /* loglog.h in Headers */,
+				04C4ABC01D94BA1000E4F053 /* bytebuffer.h in Headers */,
+				04C4ACEE1D94BA3C00E4F053 /* base64.h in Headers */,
+				04C4ABC11D94BA1000E4F053 /* layout.h in Headers */,
+				04C4ABC21D94BA1000E4F053 /* IM.Login.pb.h in Headers */,
+				04C4ABC31D94BA1000E4F053 /* autolink.h in Headers */,
+				04C4ABC41D94BA1000E4F053 /* loggerrepository.h in Headers */,
+				04C4ABC51D94BA1000E4F053 /* class.h in Headers */,
+				04C4ABC61D94BA1000E4F053 /* defaultloggerfactory.h in Headers */,
+				04C4ABC71D94BA1000E4F053 /* writer.h in Headers */,
+				04C4ABC81D94BA1000E4F053 /* mapfilter.h in Headers */,
+				04C4ABC91D94BA1000E4F053 /* propertyresourcebundle.h in Headers */,
+				04C4ABCA1D94BA1000E4F053 /* absolutetimedateformat.h in Headers */,
+				04C4ABCB1D94BA1000E4F053 /* xmllayout.h in Headers */,
+				04C4ABCC1D94BA1000E4F053 /* propertiespatternconverter.h in Headers */,
+				04C4ABCD1D94BA1000E4F053 /* threadspecificdata.h in Headers */,
+				04C4ABCE1D94BA1000E4F053 /* loggerpatternconverter.h in Headers */,
+				04C4ABCF1D94BA1000E4F053 /* simplelayout.h in Headers */,
+				04C4ACEC1D94BA3C00E4F053 /* aes_locl.h in Headers */,
+				04C4ABD01D94BA1000E4F053 /* pool.h in Headers */,
+				04C4ABD11D94BA1000E4F053 /* timebasedrollingpolicy.h in Headers */,
+				04C4ABD21D94BA1000E4F053 /* Condition.h in Headers */,
+				04C4ABD31D94BA1000E4F053 /* log4z.h in Headers */,
+				04C4ABD41D94BA1000E4F053 /* inetaddress.h in Headers */,
+				04C4ABD51D94BA1000E4F053 /* timezone.h in Headers */,
+				04C4ABD61D94BA1000E4F053 /* formattinginfo.h in Headers */,
+				04C4ABD71D94BA1000E4F053 /* filewatchdog.h in Headers */,
+				04C4ABD81D94BA1000E4F053 /* namepatternconverter.h in Headers */,
+				04C4ABD91D94BA1000E4F053 /* hierarchyeventlistener.h in Headers */,
+				04C4ABDA1D94BA1000E4F053 /* gzcompressaction.h in Headers */,
+				04C4ABDB1D94BA1000E4F053 /* IM.Server.pb.h in Headers */,
+				04C4ABDC1D94BA1000E4F053 /* filterbasedtriggeringpolicy.h in Headers */,
+				04C4ABDD1D94BA1000E4F053 /* stream.h in Headers */,
+				04C4ABDE1D94BA1000E4F053 /* bytearrayoutputstream.h in Headers */,
+				04C4ABDF1D94BA1000E4F053 /* fileinputstream.h in Headers */,
+				04C4ABE01D94BA1000E4F053 /* im_conn_util.h in Headers */,
+				04C4ABE11D94BA1000E4F053 /* stringmatchfilter.h in Headers */,
+				04C4ABE21D94BA1000E4F053 /* appender.h in Headers */,
+				04C4ABE31D94BA1000E4F053 /* loggerfactory.h in Headers */,
+				04C4ABE41D94BA1000E4F053 /* domconfigurator.h in Headers */,
+				04C4ABE51D94BA1000E4F053 /* inputstreamreader.h in Headers */,
+				04C4ABE61D94BA1000E4F053 /* bufferedoutputstream.h in Headers */,
+				04C4ABE71D94BA1000E4F053 /* integerpatternconverter.h in Headers */,
+				04C4ABE81D94BA1000E4F053 /* odbcappender.h in Headers */,
+				04C4ABE91D94BA1000E4F053 /* fileoutputstream.h in Headers */,
+				04C4ABEA1D94BA1000E4F053 /* objectptr.h in Headers */,
+				04C4ABEB1D94BA1000E4F053 /* resourcebundle.h in Headers */,
+				04C4ABEC1D94BA1000E4F053 /* TokenValidator.h in Headers */,
+				04C4ABED1D94BA1000E4F053 /* version.h in Headers */,
+				04C4ABEE1D94BA1000E4F053 /* appenderskeleton.h in Headers */,
+				04C4ABEF1D94BA1000E4F053 /* cyclicbuffer.h in Headers */,
+				04C4ABF01D94BA1000E4F053 /* stringtokenizer.h in Headers */,
+				04C4ABF11D94BA1000E4F053 /* basicconfigurator.h in Headers */,
+				04C4ABF21D94BA1000E4F053 /* mdc.h in Headers */,
+				04C4ABF31D94BA1000E4F053 /* bufferedwriter.h in Headers */,
+				04C4ABF41D94BA1000E4F053 /* fallbackerrorhandler.h in Headers */,
+				04C4ABF51D94BA1000E4F053 /* log4cxx.h in Headers */,
+				04C4ABF61D94BA1000E4F053 /* loggingevent.h in Headers */,
+				04C4ABF71D94BA1000E4F053 /* ServerPriv.hpp in Headers */,
+				04C4ABF81D94BA1000E4F053 /* transcoder.h in Headers */,
+				04C4ABF91D94BA1000E4F053 /* locale.h in Headers */,
+				04C4ABFA1D94BA1000E4F053 /* properties.h in Headers */,
+				04C4ABFB1D94BA1000E4F053 /* asyncappender.h in Headers */,
+				04C4ABFC1D94BA1000E4F053 /* Thread.h in Headers */,
+				04C4ABFD1D94BA1000E4F053 /* triggeringpolicy.h in Headers */,
+				04C4ABFE1D94BA1000E4F053 /* defaultconfigurator.h in Headers */,
+				04C4ABFF1D94BA1000E4F053 /* filter.h in Headers */,
+				04C4AC001D94BA1000E4F053 /* levelrangefilter.h in Headers */,
+				04C4AC011D94BA1000E4F053 /* messagebuffer.h in Headers */,
+				04C4AC021D94BA1000E4F053 /* logger.h in Headers */,
+				04C4AC031D94BA1000E4F053 /* Base64.h in Headers */,
+				04C4AC041D94BA1000E4F053 /* logstring.h in Headers */,
+				04C4AC051D94BA1000E4F053 /* aprinitializer.h in Headers */,
+				04C4AC061D94BA1000E4F053 /* Task.h in Headers */,
+				04C4AC071D94BA1000E4F053 /* nameabbreviator.h in Headers */,
+				04C4AC081D94BA1000E4F053 /* synchronized.h in Headers */,
+				04C4AC091D94BA1000E4F053 /* json_tool.h in Headers */,
+				04C4AC0A1D94BA1000E4F053 /* ConfigFileReader.h in Headers */,
+				04C4AC0B1D94BA1000E4F053 /* thread.h in Headers */,
+				04C4AC0C1D94BA1000E4F053 /* sizebasedtriggeringpolicy.h in Headers */,
+				04C4AC0D1D94BA1000E4F053 /* syslogappender.h in Headers */,
+				04C4AC0E1D94BA1000E4F053 /* threadpatternconverter.h in Headers */,
+				04C4AC0F1D94BA1000E4F053 /* systemerrwriter.h in Headers */,
+				04C4AC101D94BA1000E4F053 /* bytearrayinputstream.h in Headers */,
+				04C4AC111D94BA1000E4F053 /* socketappenderskeleton.h in Headers */,
+				04C4AC121D94BA1000E4F053 /* rolloverdescription.h in Headers */,
+				04C4AC131D94BA1000E4F053 /* serversocket.h in Headers */,
+				04C4AC141D94BA1000E4F053 /* filerenameaction.h in Headers */,
+				04C4AC151D94BA1000E4F053 /* patternparser.h in Headers */,
+				04C4AC161D94BA1000E4F053 /* throwableinformationpatternconverter.h in Headers */,
+				04C4AC171D94BA1000E4F053 /* action.h in Headers */,
+				04C4AC181D94BA1000E4F053 /* UtilPdu.h in Headers */,
+				04C4AC191D94BA1000E4F053 /* EncDec.h in Headers */,
+				04C4AC1A1D94BA1000E4F053 /* EventDispatch.h in Headers */,
+				04C4AC1B1D94BA1000E4F053 /* errorhandler.h in Headers */,
+				04C4AC1C1D94BA1000E4F053 /* andfilter.h in Headers */,
+				04C4AC1D1D94BA1000E4F053 /* socket.h in Headers */,
+				04C4AC1E1D94BA1000E4F053 /* http_parser.h in Headers */,
+				04C4AC1F1D94BA1000E4F053 /* HttpParserWrapper.h in Headers */,
+				04C4AC201D94BA1000E4F053 /* onlyonceerrorhandler.h in Headers */,
+				04C4AC211D94BA1000E4F053 /* IM.SwitchService.pb.h in Headers */,
+				04C4AC221D94BA1000E4F053 /* datagrampacket.h in Headers */,
+				04C4AC231D94BA1000E4F053 /* system.h in Headers */,
+				04C4AC241D94BA1000E4F053 /* threadlocal.h in Headers */,
+				04C4AC251D94BA1000E4F053 /* loader.h in Headers */,
+				04C4AC261D94BA1000E4F053 /* telnetappender.h in Headers */,
+				04C4AC271D94BA1000E4F053 /* reader.h in Headers */,
+				04C4AC281D94BA1000E4F053 /* outputstreamwriter.h in Headers */,
+				04C4AC291D94BA1000E4F053 /* log4cxx_private.h in Headers */,
+				04C4AC2A1D94BA1000E4F053 /* fulllocationpatternconverter.h in Headers */,
+				04C4AC2B1D94BA1000E4F053 /* ImPduBase.h in Headers */,
+				04C4AC2C1D94BA1000E4F053 /* consoleappender.h in Headers */,
+				04C4AC2D1D94BA1000E4F053 /* HttpClient.h in Headers */,
+				04C4AC2E1D94BA1000E4F053 /* relativetimedateformat.h in Headers */,
+				04C4AC2F1D94BA1000E4F053 /* outputdebugstringappender.h in Headers */,
+				04C4AC301D94BA1000E4F053 /* xml.h in Headers */,
+				04C4AC311D94BA1000E4F053 /* condition.h in Headers */,
+				04C4AC321D94BA1000E4F053 /* datagramsocket.h in Headers */,
+				04C4AC331D94BA1000E4F053 /* optionhandler.h in Headers */,
+				04C4AC341D94BA1000E4F053 /* IM.Buddy.pb.h in Headers */,
+				04C4AC351D94BA1000E4F053 /* defaultrepositoryselector.h in Headers */,
+				04C4AC361D94BA1000E4F053 /* locationinfofilter.h in Headers */,
+				04C4AC371D94BA1000E4F053 /* syslogwriter.h in Headers */,
+				04C4AC381D94BA1000E4F053 /* base.hpp in Headers */,
+				04C4AC391D94BA1000E4F053 /* denyallfilter.h in Headers */,
+				04C4AC3A1D94BA1000E4F053 /* classregistration.h in Headers */,
+				04C4AC3B1D94BA1000E4F053 /* levelmatchfilter.h in Headers */,
+				04C4AC3C1D94BA1000E4F053 /* lineseparatorpatternconverter.h in Headers */,
+				04C4AC3D1D94BA1000E4F053 /* config.h in Headers */,
+				04C4AC3E1D94BA1000E4F053 /* ndcpatternconverter.h in Headers */,
+				04C4AC3F1D94BA1000E4F053 /* linelocationpatternconverter.h in Headers */,
+				04C4AC401D94BA1000E4F053 /* IM.Group.pb.h in Headers */,
+				04C4AC411D94BA1000E4F053 /* netlib.h in Headers */,
+				04C4AC421D94BA1000E4F053 /* datelayout.h in Headers */,
+				04C4AC431D94BA1000E4F053 /* triggeringeventevaluator.h in Headers */,
+				04C4ACEA1D94BA3C00E4F053 /* aes.h in Headers */,
+				04C4AC441D94BA1000E4F053 /* transform.h in Headers */,
+				04C4AC451D94BA1000E4F053 /* ndc.h in Headers */,
+				04C4AC461D94BA1000E4F053 /* logmanager.h in Headers */,
+				04C4AC471D94BA1000E4F053 /* patternlayout.h in Headers */,
+				04C4AC481D94BA1000E4F053 /* ServInfo.h in Headers */,
+				04C4AC491D94BA1000E4F053 /* messagepatternconverter.h in Headers */,
+				04C4AC4A1D94BA1000E4F053 /* appenderattachable.h in Headers */,
+				04C4AC4B1D94BA1000E4F053 /* IM.Other.pb.h in Headers */,
+				04C4AC4C1D94BA1000E4F053 /* cacheddateformat.h in Headers */,
+				04C4AC4D1D94BA1000E4F053 /* objectimpl.h in Headers */,
+				04C4AC4E1D94BA1000E4F053 /* filelocationpatternconverter.h in Headers */,
+				04C4AC4F1D94BA1000E4F053 /* value.h in Headers */,
+				04C4AC501D94BA1000E4F053 /* IM.BaseDefine.pb.h in Headers */,
+				04C4AC511D94BA1000E4F053 /* public_define.h in Headers */,
+				04C4AC521D94BA1000E4F053 /* reader.h in Headers */,
+				04C4AC531D94BA1000E4F053 /* propertyconfigurator.h in Headers */,
+				04C4AC541D94BA1000E4F053 /* simpledateformat.h in Headers */,
+				04C4AC551D94BA1000E4F053 /* literalpatternconverter.h in Headers */,
+				04C4AC561D94BA1000E4F053 /* propertysetter.h in Headers */,
+				04C4AC571D94BA1000E4F053 /* json.h in Headers */,
+				04C4AC581D94BA1000E4F053 /* assertions.h in Headers */,
+				04C4AC591D94BA1000E4F053 /* smtpappender.h in Headers */,
+				04C4AC5A1D94BA1000E4F053 /* json_batchallocator.h in Headers */,
+				04C4ACF01D94BA3C00E4F053 /* md5.h in Headers */,
+				04C4AC5B1D94BA1000E4F053 /* rollingfileappenderskeleton.h in Headers */,
+				04C4AC5C1D94BA1000E4F053 /* appenderattachableimpl.h in Headers */,
+				04C4AC5D1D94BA1000E4F053 /* optionconverter.h in Headers */,
+				04C4AC5E1D94BA1000E4F053 /* ThreadPool.h in Headers */,
+				04C4AC5F1D94BA1000E4F053 /* nteventlogappender.h in Headers */,
+				04C4AC601D94BA1000E4F053 /* htmllayout.h in Headers */,
+				04C4AC611D94BA1000E4F053 /* repositoryselector.h in Headers */,
+				04C4AC621D94BA1000E4F053 /* features.h in Headers */,
+				04C4AC631D94BA1000E4F053 /* stringhelper.h in Headers */,
+				04C4AC641D94BA1000E4F053 /* dateformat.h in Headers */,
+				04C4AC651D94BA1000E4F053 /* patternconverter.h in Headers */,
+				04C4AC661D94BA1000E4F053 /* datepatternconverter.h in Headers */,
+				04C4AC671D94BA1000E4F053 /* writerappender.h in Headers */,
+				04C4AC681D94BA1000E4F053 /* imconn.h in Headers */,
+				04C4AC691D94BA1000E4F053 /* IM.Message.pb.h in Headers */,
+				04C4AC6A1D94BA1000E4F053 /* fixedwindowrollingpolicy.h in Headers */,
+				04C4AC6B1D94BA1000E4F053 /* rollingpolicy.h in Headers */,
+				04C4AC6C1D94BA1000E4F053 /* tchar.h in Headers */,
+				04C4AC6D1D94BA1000E4F053 /* provisionnode.h in Headers */,
+				04C4AC6E1D94BA1000E4F053 /* strftimedateformat.h in Headers */,
+				04C4AC6F1D94BA1000E4F053 /* methodlocationpatternconverter.h in Headers */,
+				04C4AC701D94BA1000E4F053 /* forwards.h in Headers */,
+				04C4AC711D94BA1000E4F053 /* xmlsocketappender.h in Headers */,
+				04C4AC721D94BA1000E4F053 /* expressionfilter.h in Headers */,
+				04C4AC731D94BA1000E4F053 /* Lock.h in Headers */,
+				04C4AC741D94BA1000E4F053 /* integer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04DF6BAD1D59DDB80096A2AD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2080,6 +2612,23 @@
 			name = base;
 			productName = Server;
 			productReference = 04019CC71D536C6B00DAD42F /* libbase.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		04C4AACC1D94BA1000E4F053 /* security */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04C4AC751D94BA1000E4F053 /* Build configuration list for PBXNativeTarget "security" */;
+			buildPhases = (
+				04C4AACD1D94BA1000E4F053 /* Sources */,
+				04C4AB911D94BA1000E4F053 /* Frameworks */,
+				04C4AB921D94BA1000E4F053 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = security;
+			productName = Server;
+			productReference = 04C4AC781D94BA1000E4F053 /* libsecurity.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		04DF6BA71D59DDB80096A2AD /* login_server */ = {
@@ -2163,6 +2712,7 @@
 				04DF6BA71D59DDB80096A2AD /* login_server */,
 				04E866421D93B4AF00C9C903 /* kqueue-example */,
 				04E8665B1D93C1AD00C9C903 /* msg_server */,
+				04C4AACC1D94BA1000E4F053 /* security */,
 			);
 		};
 /* End PBXProject section */
@@ -2370,6 +2920,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04C4AACD1D94BA1000E4F053 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C4ACF51D94BA7300E4F053 /* aes_core.cpp in Sources */,
+				04C4ACF61D94BA7300E4F053 /* base64.cpp in Sources */,
+				04C4ACF71D94BA7300E4F053 /* md5.cpp in Sources */,
+				04C4ACF81D94BA7300E4F053 /* security.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04DF6BA81D59DDB80096A2AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2524,6 +3085,48 @@
 			};
 			name = Release;
 		};
+		04C4AC761D94BA1000E4F053 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					base/jsoncpp,
+					log4cxx/include,
+					"/usr/local/include/apr-1",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libsecurity/lib/win/debug",
+					"$(PROJECT_DIR)/libsecurity/lib/win/release",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		04C4AC771D94BA1000E4F053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					base/jsoncpp,
+					log4cxx/include,
+					"/usr/local/include/apr-1",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libsecurity/lib/win/debug",
+					"$(PROJECT_DIR)/libsecurity/lib/win/release",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		04DF6BB21D59DDB80096A2AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2668,6 +3271,7 @@
 					base/jsoncpp,
 					/usr/local/include,
 					base/pb/protocol,
+					libsecurity/include,
 				);
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = (
@@ -2700,6 +3304,7 @@
 					base/jsoncpp,
 					/usr/local/include,
 					base/pb/protocol,
+					libsecurity/include,
 				);
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = (
@@ -2733,6 +3338,15 @@
 			buildConfigurations = (
 				04019CD31D536C6B00DAD42F /* Debug */,
 				04019CD41D536C6B00DAD42F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04C4AC751D94BA1000E4F053 /* Build configuration list for PBXNativeTarget "security" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C4AC761D94BA1000E4F053 /* Debug */,
+				04C4AC771D94BA1000E4F053 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
