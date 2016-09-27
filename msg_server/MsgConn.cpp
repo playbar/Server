@@ -1,10 +1,3 @@
-/*
- * MsgConn.cpp
- *
- *  Created on: 2013-7-5
- *      Author: ziteng@mogujie.com
- */
-
 #include "MsgConn.h"
 #include "DBServConn.h"
 #include "LoginServConn.h"
@@ -395,7 +388,8 @@ void CMsgConn::_HandleHeartBeat(CImPdu *pPdu)
 void CMsgConn::_HandleLoginRequest(CImPdu* pPdu)
 {
     // refuse second validate request
-    if (m_login_name.length() != 0) {
+    if (m_login_name.length() != 0)
+    {
         log("duplicate LoginRequest in the same conn ");
         return;
     }
@@ -404,20 +398,24 @@ void CMsgConn::_HandleLoginRequest(CImPdu* pPdu)
     uint32_t result = 0;
     string result_string = "";
     CDBServConn* pDbConn = get_db_serv_conn_for_login();
-    if (!pDbConn) {
+    if (!pDbConn)
+    {
         result = IM::BaseDefine::REFUSE_REASON_NO_DB_SERVER;
         result_string = "服务端异常";
 	}
-    else if (!is_login_server_available()) {
+    else if (!is_login_server_available())
+    {
         result = IM::BaseDefine::REFUSE_REASON_NO_LOGIN_SERVER;
         result_string = "服务端异常";
 	}
-    else if (!is_route_server_available()) {
+    else if (!is_route_server_available())
+    {
         result = IM::BaseDefine::REFUSE_REASON_NO_ROUTE_SERVER;
         result_string = "服务端异常";
+    }
     
-}
-    if (result) {
+    if (result)
+    {
         IM::Login::IMLoginRes msg;
         msg.set_server_time(time(NULL));
         msg.set_result_code((IM::BaseDefine::ResultType)result);
@@ -466,6 +464,7 @@ void CMsgConn::_HandleLoginRequest(CImPdu* pPdu)
     pdu.SetCommandId(CID_OTHER_VALIDATE_REQ);
     pdu.SetSeqNum(pPdu->GetSeqNum());
     pDbConn->SendPdu(&pdu);
+    return;
 }
 
 void CMsgConn::_HandleLoginOutRequest(CImPdu *pPdu)

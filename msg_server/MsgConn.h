@@ -1,10 +1,3 @@
-/*
- * MsgConn.h
- *
- *  Created on: 2013-7-5
- *      Author: ziteng@mogujie.com
- */
-
 #ifndef MSGCONN_H_
 #define MSGCONN_H_
 
@@ -14,7 +7,8 @@
 #define KICK_FROM_ROUTE_SERVER 		1
 #define MAX_ONLINE_FRIEND_CNT		100	//通知好友状态通知的最多个数
 
-typedef struct {
+typedef struct
+{
 	uint32_t msg_id;
 	uint32_t from_id;
 	uint64_t timestamp;
