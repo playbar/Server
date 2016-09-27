@@ -1,11 +1,3 @@
-//
-//  FileServConn.h
-//  public_TTServer
-//
-//  Created by luoning on 14-8-19.
-//  Copyright (c) 2014年 luoning. All rights reserved.
-//
-
 #ifndef __FileServConn__
 #define __FileServConn__
 

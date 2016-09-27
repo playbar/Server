@@ -1,11 +1,3 @@
-//
-//  FileServConn.cpp
-//  public_TTServer
-//
-//  Created by luoning on 14-8-19.
-//  Copyright (c) 2014年 luoning. All rights reserved.
-//
-
 #include "FileServConn.h"
 #include "FileHandler.h"
 #include "util.h"
@@ -29,8 +21,8 @@ void file_server_conn_timer_callback(void* callback_data, uint8_t msg, uint32_t 
 	CFileServConn* pConn = NULL;
 	uint64_t cur_time = get_tick_count();
     
-	for (ConnMap_t::iterator it = g_file_server_conn_map.begin(); it != g_file_server_conn_map.end();
-         )
+	for (ConnMap_t::iterator it = g_file_server_conn_map.begin();
+         it != g_file_server_conn_map.end();)
     {
         it_old = it;
         it++;

@@ -1,10 +1,3 @@
-/*
- * FileHandler.h
- *
- *  Created on: 2013-12-17
- *      Author: ziteng@mogujie.com
- */
-
 #ifndef FILEHANDLER_H_
 #define FILEHANDLER_H_
 

@@ -1,10 +1,3 @@
-/*
- * FileHandler.cpp
- *
- *  Created on: 2013-12-17
- *      Author: ziteng@mogujie.com
- */
-
 #include "FileHandler.h"
 #include "MsgConn.h"
 #include "RouteServConn.h"
