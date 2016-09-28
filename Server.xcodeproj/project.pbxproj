@@ -69,6 +69,13 @@
 		04BD605B1D7E470900566DDD /* HttpParserWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD60591D7E470900566DDD /* HttpParserWrapper.h */; };
 		04BD89611D7901BB00B523FC /* EncDec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BD895F1D7901BB00B523FC /* EncDec.cpp */; };
 		04BD89621D7901BB00B523FC /* EncDec.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD89601D7901BB00B523FC /* EncDec.h */; };
+		04BF0C881D9BB8F500AF04DD /* ipparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864F31D8FD36900A3A3D4 /* ipparser.h */; };
+		04BF0C891D9BB8F500AF04DD /* HttpConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74FA1D8F7010009F7A93 /* HttpConn.h */; };
+		04BF0C8A1D9BB8F500AF04DD /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
+		04BF0C8B1D9BB8F500AF04DD /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
+		04BF0C8C1D9BB8F500AF04DD /* LoginConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864EF1D8FD32100A3A3D4 /* LoginConn.h */; };
+		04BF0C8D1D9BB8F500AF04DD /* base.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE11D536E0800DAD42F /* base.hpp */; };
+		04BF0C931D9BB96000AF04DD /* net_reptile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0C921D9BB96000AF04DD /* net_reptile.cpp */; };
 		04C4AAB51D94B78100E4F053 /* AttachData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AA9A1D94B78100E4F053 /* AttachData.cpp */; };
 		04C4AAB61D94B78100E4F053 /* AttachData.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AA9B1D94B78100E4F053 /* AttachData.h */; };
 		04C4AAB71D94B78100E4F053 /* DBServConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AA9D1D94B78100E4F053 /* DBServConn.cpp */; };
@@ -820,6 +827,8 @@
 		04BD60591D7E470900566DDD /* HttpParserWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpParserWrapper.h; path = base/HttpParserWrapper.h; sourceTree = SOURCE_ROOT; };
 		04BD895F1D7901BB00B523FC /* EncDec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EncDec.cpp; path = base/EncDec.cpp; sourceTree = SOURCE_ROOT; };
 		04BD89601D7901BB00B523FC /* EncDec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EncDec.h; path = base/EncDec.h; sourceTree = SOURCE_ROOT; };
+		04BF0C911D9BB8F500AF04DD /* net_reptile */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = net_reptile; sourceTree = BUILT_PRODUCTS_DIR; };
+		04BF0C921D9BB96000AF04DD /* net_reptile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = net_reptile.cpp; path = test/net_reptile.cpp; sourceTree = "<group>"; };
 		04C4AA9A1D94B78100E4F053 /* AttachData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AttachData.cpp; path = msg_server/AttachData.cpp; sourceTree = "<group>"; };
 		04C4AA9B1D94B78100E4F053 /* AttachData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttachData.h; path = msg_server/AttachData.h; sourceTree = "<group>"; };
 		04C4AA9C1D94B78100E4F053 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = msg_server/CMakeLists.txt; sourceTree = "<group>"; };
@@ -1301,6 +1310,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04BF0C861D9BB8F500AF04DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04C4AB911D94BA1000E4F053 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1377,6 +1393,7 @@
 				04E866701D93C1AD00C9C903 /* msg_server */,
 				04C4AC781D94BA1000E4F053 /* libsecurity.a */,
 				04EC48D51D9A78AF008CEF88 /* http_msg_server */,
+				04BF0C911D9BB8F500AF04DD /* net_reptile */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2062,6 +2079,7 @@
 			isa = PBXGroup;
 			children = (
 				04E866591D93B51400C9C903 /* kqueue-example.cpp */,
+				04BF0C921D9BB96000AF04DD /* net_reptile.cpp */,
 			);
 			name = test;
 			sourceTree = "<group>";
@@ -2386,6 +2404,19 @@
 				04D178B81D90C80800D31823 /* expressionfilter.h in Headers */,
 				04319D081D5C623700BBCE26 /* Lock.h in Headers */,
 				04D178DC1D90C80800D31823 /* integer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BF0C871D9BB8F500AF04DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04BF0C881D9BB8F500AF04DD /* ipparser.h in Headers */,
+				04BF0C891D9BB8F500AF04DD /* HttpConn.h in Headers */,
+				04BF0C8A1D9BB8F500AF04DD /* ServerPriv.hpp in Headers */,
+				04BF0C8B1D9BB8F500AF04DD /* Base64.h in Headers */,
+				04BF0C8C1D9BB8F500AF04DD /* LoginConn.h in Headers */,
+				04BF0C8D1D9BB8F500AF04DD /* base.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2727,6 +2758,23 @@
 			productReference = 04019CC71D536C6B00DAD42F /* libbase.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		04BF0C831D9BB8F500AF04DD /* net_reptile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04BF0C8E1D9BB8F500AF04DD /* Build configuration list for PBXNativeTarget "net_reptile" */;
+			buildPhases = (
+				04BF0C841D9BB8F500AF04DD /* Sources */,
+				04BF0C861D9BB8F500AF04DD /* Frameworks */,
+				04BF0C871D9BB8F500AF04DD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = net_reptile;
+			productName = Server;
+			productReference = 04BF0C911D9BB8F500AF04DD /* net_reptile */;
+			productType = "com.apple.product-type.tool";
+		};
 		04C4AACC1D94BA1000E4F053 /* security */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04C4AC751D94BA1000E4F053 /* Build configuration list for PBXNativeTarget "security" */;
@@ -2844,6 +2892,7 @@
 				04E8665B1D93C1AD00C9C903 /* msg_server */,
 				04C4AACC1D94BA1000E4F053 /* security */,
 				04EC48AC1D9A78AF008CEF88 /* http_msg_server */,
+				04BF0C831D9BB8F500AF04DD /* net_reptile */,
 			);
 		};
 /* End PBXProject section */
@@ -3051,6 +3100,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04BF0C841D9BB8F500AF04DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04BF0C931D9BB96000AF04DD /* net_reptile.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04C4AACD1D94BA1000E4F053 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3227,6 +3284,70 @@
 					"/usr/local/include/apr-1",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		04BF0C8F1D9BB8F500AF04DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = NO;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SEPARATE_STRIP = NO;
+				STRIP_STYLE = all;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		04BF0C901D9BB8F500AF04DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = NO;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SEPARATE_STRIP = NO;
+				STRIP_STYLE = all;
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
@@ -3549,6 +3670,15 @@
 			buildConfigurations = (
 				04019CD31D536C6B00DAD42F /* Debug */,
 				04019CD41D536C6B00DAD42F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04BF0C8E1D9BB8F500AF04DD /* Build configuration list for PBXNativeTarget "net_reptile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04BF0C8F1D9BB8F500AF04DD /* Debug */,
+				04BF0C901D9BB8F500AF04DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

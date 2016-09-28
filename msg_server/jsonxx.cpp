@@ -1,10 +1,3 @@
-// -*- mode: c++; c-basic-offset: 4; -*-
-
-// Author: Hong Jiang <hong@hjiang.net>
-// Contributors:
-//   Sean Middleditch <sean@middleditch.us>
-//   rlyeh <https://github.com/r-lyeh>
-
 #include "jsonxx.h"
 
 #include <cctype>
