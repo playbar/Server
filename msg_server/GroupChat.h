@@ -1,10 +1,3 @@
-/*
- * GroupChat.h
- *
- *  Created on: 2014-1-3
- *      Author: ziteng@mogujie.com
- */
-
 #ifndef GROUPCHAT_H_
 #define GROUPCHAT_H_
 

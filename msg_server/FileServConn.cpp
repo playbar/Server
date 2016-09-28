@@ -49,7 +49,8 @@ bool is_file_server_available()
 {
 	CFileServConn* pConn = NULL;
     
-	for (uint32_t i = 0; i < g_file_server_count; i++) {
+	for (uint32_t i = 0; i < g_file_server_count; i++)
+    {
 		pConn = (CFileServConn*)g_file_server_list[i].serv_conn;
 		if (pConn && pConn->IsOpen()) {
 			return true;
@@ -205,7 +206,8 @@ void CFileServConn::_HandleFileMsgTransRsp(CImPdu* pPdu)
     msg2.set_file_name(file_name);
     msg2.set_task_id(task_id);
     msg2.set_trans_mode((IM::BaseDefine::TransferFileType)trans_mode);
-    for (list<IM::BaseDefine::IpAddr>::const_iterator it = ip_addr_list->begin(); it != ip_addr_list->end(); it++)
+    for (list<IM::BaseDefine::IpAddr>::const_iterator it = ip_addr_list->begin();
+         it != ip_addr_list->end(); it++)
     {
         IM::BaseDefine::IpAddr ip_addr_tmp = *it;
         IM::BaseDefine::IpAddr* ip_addr = msg2.add_ip_addr_list();
@@ -235,7 +237,8 @@ void CFileServConn::_HandleFileMsgTransRsp(CImPdu* pPdu)
         msg3.set_task_id(task_id);
         msg3.set_trans_mode((IM::BaseDefine::TransferFileType)trans_mode);
         msg3.set_offline_ready(0);
-        for (list<IM::BaseDefine::IpAddr>::const_iterator it = ip_addr_list->begin(); it != ip_addr_list->end(); it++)
+        for (list<IM::BaseDefine::IpAddr>::const_iterator it = ip_addr_list->begin();
+             it != ip_addr_list->end(); it++)
         {
             IM::BaseDefine::IpAddr ip_addr_tmp = *it;
             IM::BaseDefine::IpAddr* ip_addr = msg3.add_ip_addr_list();
@@ -260,6 +263,7 @@ void CFileServConn::_HandleFileMsgTransRsp(CImPdu* pPdu)
             pRouteConn->SendPdu(&pdu2);
         }
     }
+    return;
 }
 
 void CFileServConn::_HandleFileServerIPRsp(CImPdu* pPdu)
@@ -274,4 +278,5 @@ void CFileServConn::_HandleFileServerIPRsp(CImPdu* pPdu)
         log("_HandleFileServerIPRsp -> %s : %d ", ip_addr.ip().c_str(), ip_addr.port());
         m_ip_list.push_back(ip_addr);
     }
+    return;
 }

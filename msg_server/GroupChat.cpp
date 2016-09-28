@@ -1,10 +1,3 @@
-/*
- * GroupChat.cpp
- *
- *  Created on: 2014-1-3
- *      Author: ziteng@mogujie.com
- */
-
 #include "GroupChat.h"
 #include "MsgConn.h"
 #include "DBServConn.h"
@@ -270,7 +263,8 @@ void CGroupChat::HandleGroupMessageBroadcast(CImPdu *pPdu)
     
     // 服务器没有群的信息，向DB服务器请求群信息，并带上消息作为附件，返回时在发送该消息给其他群成员
     //IM::BaseDefine::GroupVersionInfo group_version_info;
-    CPduAttachData pduAttachData(ATTACH_TYPE_HANDLE_AND_PDU, 0, pPdu->GetBodyLength(), pPdu->GetBodyData());
+    CPduAttachData pduAttachData(ATTACH_TYPE_HANDLE_AND_PDU, 0,
+                                 pPdu->GetBodyLength(), pPdu->GetBodyData());
     
     IM::Group::IMGroupInfoListReq msg2;
     msg2.set_user_id(from_user_id);
