@@ -1,10 +1,3 @@
-/*
- * HttpConn.h
- *
- *  Created on: 2013-9-29
- *      Author: ziteng
- */
-
 #ifndef __HTTP_CONN_H__
 #define __HTTP_CONN_H__
 

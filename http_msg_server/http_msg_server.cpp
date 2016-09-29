@@ -35,7 +35,8 @@ void http_callback(void* callback_data, uint8_t msg, uint32_t handle, void* pPar
 
 int main(int argc, char* argv[])
 {
-	if ((argc == 2) && (strcmp(argv[1], "-v") == 0)) {
+	if ((argc == 2) && (strcmp(argv[1], "-v") == 0))
+    {
 		printf("Server Version: HttpMsgServer/%s\n", VERSION);
 		printf("Server Build: %s %s\n", __DATE__, __TIME__);
 		return 0;

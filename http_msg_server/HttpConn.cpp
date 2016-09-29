@@ -1,10 +1,3 @@
-/*
- * HttpConn.cpp
- *
- *  Created on: 2013-9-29
- *      Author: ziteng@mogujie.com
- */
-
 #include "HttpConn.h"
 #include "HttpParserWrapper.h"
 #include "HttpQuery.h"
@@ -18,7 +11,8 @@ CHttpConn* FindHttpConnByHandle(uint32_t conn_handle)
 {
     CHttpConn* pConn = NULL;
     HttpConnMap_t::iterator it = g_http_conn_map.find(conn_handle);
-    if (it != g_http_conn_map.end()) {
+    if (it != g_http_conn_map.end())
+    {
         pConn = it->second;
     }
 
@@ -33,7 +27,8 @@ void httpconn_callback(void* callback_data, uint8_t msg, uint32_t handle, uint32
 	// convert void* to uint32_t, oops
 	uint32_t conn_handle = *((uint32_t*)(&callback_data));
     CHttpConn* pConn = FindHttpConnByHandle(conn_handle);
-    if (!pConn) {
+    if (!pConn)
+    {
         return;
     }
 
@@ -60,7 +55,8 @@ void http_conn_timer_callback(void* callback_data, uint8_t msg, uint32_t handle,
 	HttpConnMap_t::iterator it, it_old;
 	uint64_t cur_time = get_tick_count();
 
-	for (it = g_http_conn_map.begin(); it != g_http_conn_map.end(); ) {
+	for (it = g_http_conn_map.begin(); it != g_http_conn_map.end(); )
+    {
 		it_old = it;
 		it++;
 
@@ -83,7 +79,8 @@ CHttpConn::CHttpConn()
     
 	m_last_send_tick = m_last_recv_tick = get_tick_count();
 	m_conn_handle = ++g_conn_handle_generator;
-	if (m_conn_handle == 0) {
+	if (m_conn_handle == 0)
+    {
 		m_conn_handle = ++g_conn_handle_generator;
 	}
 
@@ -125,7 +122,8 @@ int CHttpConn::Send(void* data, int len)
 
 void CHttpConn::Close()
 {
-    if (m_state != CONN_STATE_CLOSED) {
+    if (m_state != CONN_STATE_CLOSED)
+    {
         m_state = CONN_STATE_CLOSED;
         
         g_http_conn_map.erase(m_conn_handle);
@@ -173,13 +171,17 @@ void CHttpConn::OnRead()
 
 	m_HttpParser.ParserHttpContent(in_buf, buf_len);
 
-	if (m_HttpParser.IsReadAll()) {
+	if (m_HttpParser.IsReadAll())
+    {
 		string url =  m_HttpParser.GetUrl();
-		if (strncmp(url.c_str(), "/query/", 7) == 0) {
+		if (strncmp(url.c_str(), "/query/", 7) == 0)
+        {
 			string content = m_HttpParser.GetBodyContent();
 			CHttpQuery* pQueryInstance = CHttpQuery::GetInstance();
 			pQueryInstance->DispatchQuery(url, content, this);
-		} else {
+		}
+        else
+        {
 			log("url unknown, url=%s ", url.c_str());
 			Close();
 		}
@@ -218,7 +220,8 @@ void CHttpConn::OnClose()
 
 void CHttpConn::OnTimer(uint64_t curr_tick)
 {
-	if (curr_tick > m_last_recv_tick + HTTP_CONN_TIMEOUT) {
+	if (curr_tick > m_last_recv_tick + HTTP_CONN_TIMEOUT)
+    {
 		log("HttpConn timeout, handle=%d ", m_conn_handle);
 		Close();
 	}

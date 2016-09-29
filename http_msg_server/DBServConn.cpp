@@ -1,10 +1,3 @@
-/*
- * DBServConn.cpp
- *
- *  Created on: 2013-7-8
- *      Author: ziteng@mogujie.com
- */
-
 #include "DBServConn.h"
 #include "RouteServConn.h"
 #include "public_define.h"
@@ -47,9 +40,10 @@ static void db_server_conn_timer_callback(void* callback_data, uint8_t msg, uint
 	CDBServConn* pConn = NULL;
 	uint64_t cur_time = get_tick_count();
 
-	for (ConnMap_t::iterator it = g_db_server_conn_map.begin(); it != g_db_server_conn_map.end(); ) {
+	for (ConnMap_t::iterator it = g_db_server_conn_map.begin(); it != g_db_server_conn_map.end(); )
+    {
 		it_old = it;
-		it++;
+		++it;
 
 		pConn = (CDBServConn*)it_old->second;
 		if (pConn->IsOpen()) {
