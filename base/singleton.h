@@ -49,7 +49,15 @@ public:
     }
     
     
-public:
+protected:
+    Singleton()
+    {
+        Singleton::s_instance = static_cast<T*>(this);
+    }
+    ~Singleton()
+    {
+        Singleton::s_instance = 0;
+    }
     
 private:
     static T *CreateInstance()
