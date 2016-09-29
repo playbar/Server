@@ -1,10 +1,3 @@
-/*
- * HttpPdu.cpp
- *
- *  Created on: 2013-10-1
- *      Author: ziteng@mogujie.com
- */
-
 #include "util.h"
 #include "HttpPdu.h"
 #include "json/json.h"
@@ -40,12 +33,6 @@ const char* g_error_msg[] = {
 
 // for single thread
 static char g_response_buf[MAX_BUF_SIZE];
-
-//http://www.cnitblog.com/luckydmz/archive/2010/10/12/69959.html
-inline char fromHex(const char &x)
-{
-    return isdigit(x) ? x-'0' : x-'A'+10;
-}
 
 bool CPostDataParser::Parse(const char* content)
 {
@@ -130,7 +117,8 @@ char* PackGetUserIdByNickNameResult(uint32_t result, std::list<IM::BaseDefine::U
     Json::Value user_info_array;
     json_obj["error_code"] = result;
     json_obj["error_msg"] = "成功";
-    if (user_list.size() > 0) {
+    if (user_list.size() > 0)
+    {
         for (auto user_info : user_list)
         {
             Json::Value user_info_obj;

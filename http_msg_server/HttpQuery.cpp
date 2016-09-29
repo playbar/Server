@@ -1,9 +1,3 @@
-/*
- * HttpQuery.cpp
- *
- *  Created on: 2013-10-22
- *      Author: ziteng@mogujie.com
- */
 #include <sstream>
 
 #include "HttpQuery.h"

@@ -1,10 +1,3 @@
-/*
- * HttpQuery.h
- *
- *  Created on: 2013-10-22
- *      Author: ziteng@mogujie.com
- */
-
 #ifndef HTTPQUERY_H_
 #define HTTPQUERY_H_
 #include "json/json.h"
