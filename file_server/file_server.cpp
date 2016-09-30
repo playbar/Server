@@ -42,5 +42,12 @@ int main(int argc, char *argv[])
         ConfigUtil::GetInstance()->AddAddress(client_listen_ip_list.GetItem(i), client_listen_port);
     }
     
+    uint16_t msg_server_listen_port = atoi(str_msg_server_listen_port);
+    uint32_t task_timeout = atoi(str_task_timeout);
+    
+    ConfigUtil::GetInstance()->SetTaskTimeout(task_timeout);
+    
+    InitializeFileMsgServerConn();
+    
     return 0;
 }

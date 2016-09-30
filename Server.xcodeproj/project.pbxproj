@@ -311,6 +311,7 @@
 		047F75841D9CF8620005B49D /* file_client_conn.h in Headers */ = {isa = PBXBuildFile; fileRef = 047F75821D9CF8620005B49D /* file_client_conn.h */; };
 		047F75871D9CF88C0005B49D /* file_msg_server_conn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 047F75851D9CF88C0005B49D /* file_msg_server_conn.cpp */; };
 		047F75881D9CF88C0005B49D /* file_msg_server_conn.h in Headers */ = {isa = PBXBuildFile; fileRef = 047F75861D9CF88C0005B49D /* file_msg_server_conn.h */; };
+		047F758B1D9CFF690005B49D /* file_server_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 047F758A1D9CFF690005B49D /* file_server_util.h */; };
 		0480EC291D797D040007D67A /* http_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC271D797D040007D67A /* http_parser.cpp */; };
 		0480EC2A1D797D040007D67A /* http_parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC281D797D040007D67A /* http_parser.h */; };
 		0480EC2D1D797D8C0007D67A /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC2B1D797D8C0007D67A /* HttpClient.cpp */; };
@@ -1092,6 +1093,7 @@
 		047F75851D9CF88C0005B49D /* file_msg_server_conn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = file_msg_server_conn.cpp; path = file_server/file_msg_server_conn.cpp; sourceTree = "<group>"; };
 		047F75861D9CF88C0005B49D /* file_msg_server_conn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = file_msg_server_conn.h; path = file_server/file_msg_server_conn.h; sourceTree = "<group>"; };
 		047F75891D9CF8FE0005B49D /* fileserver.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fileserver.conf; path = file_server/fileserver.conf; sourceTree = "<group>"; };
+		047F758A1D9CFF690005B49D /* file_server_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = file_server_util.h; path = file_server/file_server_util.h; sourceTree = "<group>"; };
 		0480EC271D797D040007D67A /* http_parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = http_parser.cpp; path = base/http_parser.cpp; sourceTree = SOURCE_ROOT; };
 		0480EC281D797D040007D67A /* http_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = http_parser.h; path = base/http_parser.h; sourceTree = SOURCE_ROOT; };
 		0480EC2B1D797D8C0007D67A /* HttpClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HttpClient.cpp; path = base/HttpClient.cpp; sourceTree = SOURCE_ROOT; };
@@ -1832,6 +1834,7 @@
 				047F75821D9CF8620005B49D /* file_client_conn.h */,
 				047F75851D9CF88C0005B49D /* file_msg_server_conn.cpp */,
 				047F75861D9CF88C0005B49D /* file_msg_server_conn.h */,
+				047F758A1D9CFF690005B49D /* file_server_util.h */,
 			);
 			name = file_server;
 			sourceTree = "<group>";
@@ -3027,6 +3030,7 @@
 				047F75801D9CF8130005B49D /* config_util.h in Headers */,
 				047F75711D9CF3D40005B49D /* ipparser.h in Headers */,
 				047F75721D9CF3D40005B49D /* HttpConn.h in Headers */,
+				047F758B1D9CFF690005B49D /* file_server_util.h in Headers */,
 				047F75731D9CF3D40005B49D /* ServerPriv.hpp in Headers */,
 				047F75741D9CF3D40005B49D /* Base64.h in Headers */,
 				047F75841D9CF8620005B49D /* file_client_conn.h in Headers */,
