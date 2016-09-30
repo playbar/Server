@@ -335,6 +335,10 @@
 		0480EC541D797F2E0007D67A /* IM.Server.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC421D797F2E0007D67A /* IM.Server.pb.h */; };
 		0480EC551D797F2E0007D67A /* IM.SwitchService.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0480EC431D797F2E0007D67A /* IM.SwitchService.pb.cc */; };
 		0480EC561D797F2E0007D67A /* IM.SwitchService.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC441D797F2E0007D67A /* IM.SwitchService.pb.h */; };
+		04B1DDFC1D9E44FD00652ABC /* transfer_task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04B1DDFA1D9E44FD00652ABC /* transfer_task.cpp */; };
+		04B1DDFD1D9E44FD00652ABC /* transfer_task.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B1DDFB1D9E44FD00652ABC /* transfer_task.h */; };
+		04B1DE001D9E453500652ABC /* transfer_task_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04B1DDFE1D9E453500652ABC /* transfer_task_manager.cpp */; };
+		04B1DE011D9E453500652ABC /* transfer_task_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B1DDFF1D9E453500652ABC /* transfer_task_manager.h */; };
 		04B77AB21D9C9E810002BB69 /* AttachData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04B77AB01D9C9E810002BB69 /* AttachData.cpp */; };
 		04B77AB31D9C9E810002BB69 /* AttachData.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B77AB11D9C9E810002BB69 /* AttachData.h */; };
 		04BD605A1D7E470900566DDD /* HttpParserWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BD60581D7E470900566DDD /* HttpParserWrapper.cpp */; };
@@ -1117,6 +1121,10 @@
 		0480EC421D797F2E0007D67A /* IM.Server.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.Server.pb.h; sourceTree = "<group>"; };
 		0480EC431D797F2E0007D67A /* IM.SwitchService.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IM.SwitchService.pb.cc; sourceTree = "<group>"; };
 		0480EC441D797F2E0007D67A /* IM.SwitchService.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IM.SwitchService.pb.h; sourceTree = "<group>"; };
+		04B1DDFA1D9E44FD00652ABC /* transfer_task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = transfer_task.cpp; path = file_server/transfer_task.cpp; sourceTree = "<group>"; };
+		04B1DDFB1D9E44FD00652ABC /* transfer_task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = transfer_task.h; path = file_server/transfer_task.h; sourceTree = "<group>"; };
+		04B1DDFE1D9E453500652ABC /* transfer_task_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = transfer_task_manager.cpp; path = file_server/transfer_task_manager.cpp; sourceTree = "<group>"; };
+		04B1DDFF1D9E453500652ABC /* transfer_task_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = transfer_task_manager.h; path = file_server/transfer_task_manager.h; sourceTree = "<group>"; };
 		04B77AB01D9C9E810002BB69 /* AttachData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AttachData.cpp; path = base/AttachData.cpp; sourceTree = SOURCE_ROOT; };
 		04B77AB11D9C9E810002BB69 /* AttachData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttachData.h; path = base/AttachData.h; sourceTree = SOURCE_ROOT; };
 		04BD60581D7E470900566DDD /* HttpParserWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HttpParserWrapper.cpp; path = base/HttpParserWrapper.cpp; sourceTree = SOURCE_ROOT; };
@@ -1835,6 +1843,10 @@
 				047F75851D9CF88C0005B49D /* file_msg_server_conn.cpp */,
 				047F75861D9CF88C0005B49D /* file_msg_server_conn.h */,
 				047F758A1D9CFF690005B49D /* file_server_util.h */,
+				04B1DDFA1D9E44FD00652ABC /* transfer_task.cpp */,
+				04B1DDFB1D9E44FD00652ABC /* transfer_task.h */,
+				04B1DDFE1D9E453500652ABC /* transfer_task_manager.cpp */,
+				04B1DDFF1D9E453500652ABC /* transfer_task_manager.h */,
 			);
 			name = file_server;
 			sourceTree = "<group>";
@@ -3030,10 +3042,12 @@
 				047F75801D9CF8130005B49D /* config_util.h in Headers */,
 				047F75711D9CF3D40005B49D /* ipparser.h in Headers */,
 				047F75721D9CF3D40005B49D /* HttpConn.h in Headers */,
+				04B1DDFD1D9E44FD00652ABC /* transfer_task.h in Headers */,
 				047F758B1D9CFF690005B49D /* file_server_util.h in Headers */,
 				047F75731D9CF3D40005B49D /* ServerPriv.hpp in Headers */,
 				047F75741D9CF3D40005B49D /* Base64.h in Headers */,
 				047F75841D9CF8620005B49D /* file_client_conn.h in Headers */,
+				04B1DE011D9E453500652ABC /* transfer_task_manager.h in Headers */,
 				047F75751D9CF3D40005B49D /* LoginConn.h in Headers */,
 				047F75761D9CF3D40005B49D /* base.hpp in Headers */,
 				047F75881D9CF88C0005B49D /* file_msg_server_conn.h in Headers */,
@@ -3812,8 +3826,10 @@
 			files = (
 				047F757C1D9CF6960005B49D /* file_server.cpp in Sources */,
 				047F757F1D9CF8130005B49D /* config_util.cpp in Sources */,
+				04B1DDFC1D9E44FD00652ABC /* transfer_task.cpp in Sources */,
 				047F75871D9CF88C0005B49D /* file_msg_server_conn.cpp in Sources */,
 				047F75831D9CF8620005B49D /* file_client_conn.cpp in Sources */,
+				04B1DE001D9E453500652ABC /* transfer_task_manager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
