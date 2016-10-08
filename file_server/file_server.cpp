@@ -48,6 +48,51 @@ int main(int argc, char *argv[])
     ConfigUtil::GetInstance()->SetTaskTimeout(task_timeout);
     
     InitializeFileMsgServerConn();
+    InitializeFileClientConn();
+    
+    int ret = netlib_init();
+    if( NETLIB_ERROR == ret )
+    {
+        return ret;
+    }
+    
+    for( uint32_t i = 0; i < client_listen_ip_list.GetItemCnt(); ++i)
+    {
+        ret = netlib_listen(client_listen_ip_list.GetItem(i), client_listen_port,
+                            FileClientConnCallback, NULL);
+        if (ret == NETLIB_ERROR)
+        {
+            printf("listen %s:%d error!!\n", client_listen_ip_list.GetItem(i), client_listen_port);
+            return ret;
+        }
+        else
+        {
+            printf("server start listen on %s:%d\n", client_listen_ip_list.GetItem(i),
+                   client_listen_port);
+        }
+    }
+    
+    ret = netlib_listen(str_msg_server_listen_ip, msg_server_listen_port,
+                        FileMsgServerConnCallback, NULL);
+    if (ret == NETLIB_ERROR)
+    {
+        printf("listen %s:%d error!!\n", str_msg_server_listen_ip, msg_server_listen_port);
+        return ret;
+    }
+    else
+    {
+        printf("server start listen on %s:%d\n", str_msg_server_listen_ip, msg_server_listen_port);
+    }
+    
+    printf("now enter the event loop...\n");
+    
+    writePid();
+    
+    netlib_eventloop();
+    
+    printf("exiting.......\n");
+    log("exit");
+
     
     return 0;
 }

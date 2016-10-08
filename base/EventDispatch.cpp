@@ -167,7 +167,8 @@ void CEventDispatch::StartDispatch(uint32_t wait_timeout)
     if( running )
         return;
     running = true;
-    while (running) {
+    while (running)
+    {
         nfds = kevent(m_kqfd, NULL, 0, events, 1024, &timeout );
         for( int i = 0; i < nfds; ++i )
         {
