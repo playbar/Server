@@ -1,6 +1,7 @@
 #include <string>
 
-namespace msfs {
+namespace msfs
+{
 	// Replaces all occurrences of "search" with "replace".
 	void replace_substrs(const char *search,
 						 size_t search_len,
