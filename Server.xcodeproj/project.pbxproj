@@ -374,6 +374,36 @@
 		04C3CC551DA8CC6D008512F0 /* RouteConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C3CC4F1DA8CC6D008512F0 /* RouteConn.h */; };
 		04C3CC561DA8CC6D008512F0 /* UserInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CC511DA8CC6D008512F0 /* UserInfo.cpp */; };
 		04C3CC571DA8CC6D008512F0 /* UserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C3CC521DA8CC6D008512F0 /* UserInfo.h */; };
+		04C3CC5F1DA8CFA0008512F0 /* libaprutil-1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 046054731D925BEB00C84153 /* libaprutil-1.a */; };
+		04C3CC601DA8CFA0008512F0 /* libapr-1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 046054711D925BBB00C84153 /* libapr-1.a */; };
+		04C3CC611DA8CFA0008512F0 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0460546F1D925B8200C84153 /* libprotobuf.a */; };
+		04C3CC621DA8CFA0008512F0 /* libbase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04019CC71D536C6B00DAD42F /* libbase.a */; };
+		04C3CC641DA8CFA0008512F0 /* config_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 047F757E1D9CF8130005B49D /* config_util.h */; };
+		04C3CC651DA8CFA0008512F0 /* ipparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864F31D8FD36900A3A3D4 /* ipparser.h */; };
+		04C3CC661DA8CFA0008512F0 /* HttpConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74FA1D8F7010009F7A93 /* HttpConn.h */; };
+		04C3CC671DA8CFA0008512F0 /* UserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C3CC521DA8CC6D008512F0 /* UserInfo.h */; };
+		04C3CC681DA8CFA0008512F0 /* transfer_task.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B1DDFB1D9E44FD00652ABC /* transfer_task.h */; };
+		04C3CC691DA8CFA0008512F0 /* file_server_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 047F758A1D9CFF690005B49D /* file_server_util.h */; };
+		04C3CC6A1DA8CFA0008512F0 /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
+		04C3CC6B1DA8CFA0008512F0 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
+		04C3CC6C1DA8CFA0008512F0 /* file_client_conn.h in Headers */ = {isa = PBXBuildFile; fileRef = 047F75821D9CF8620005B49D /* file_client_conn.h */; };
+		04C3CC6D1DA8CFA0008512F0 /* RouteConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C3CC4F1DA8CC6D008512F0 /* RouteConn.h */; };
+		04C3CC6E1DA8CFA0008512F0 /* offline_file_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FBFD5F1DA87F3600823360 /* offline_file_util.h */; };
+		04C3CC6F1DA8CFA0008512F0 /* transfer_task_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B1DDFF1D9E453500652ABC /* transfer_task_manager.h */; };
+		04C3CC701DA8CFA0008512F0 /* LoginConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864EF1D8FD32100A3A3D4 /* LoginConn.h */; };
+		04C3CC711DA8CFA0008512F0 /* base.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE11D536E0800DAD42F /* base.hpp */; };
+		04C3CC721DA8CFA0008512F0 /* file_msg_server_conn.h in Headers */ = {isa = PBXBuildFile; fileRef = 047F75861D9CF88C0005B49D /* file_msg_server_conn.h */; };
+		04C3CC841DA8D004008512F0 /* CriticalSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C3CC771DA8D004008512F0 /* CriticalSection.h */; };
+		04C3CC851DA8D004008512F0 /* FileLin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CC781DA8D004008512F0 /* FileLin.cpp */; };
+		04C3CC861DA8D004008512F0 /* FileLin.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C3CC791DA8D004008512F0 /* FileLin.h */; };
+		04C3CC871DA8D004008512F0 /* FileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CC7A1DA8D004008512F0 /* FileManager.cpp */; };
+		04C3CC881DA8D004008512F0 /* FileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C3CC7B1DA8D004008512F0 /* FileManager.h */; };
+		04C3CC891DA8D004008512F0 /* HttpConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CC7C1DA8D004008512F0 /* HttpConn.cpp */; };
+		04C3CC8A1DA8D004008512F0 /* HttpConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C3CC7D1DA8D004008512F0 /* HttpConn.h */; };
+		04C3CC8B1DA8D004008512F0 /* msfs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CC7E1DA8D004008512F0 /* msfs.cpp */; };
+		04C3CC8C1DA8D004008512F0 /* Portable.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C3CC811DA8D004008512F0 /* Portable.h */; };
+		04C3CC8D1DA8D004008512F0 /* StringUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C3CC821DA8D004008512F0 /* StringUtils.cpp */; };
+		04C3CC8E1DA8D004008512F0 /* StringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C3CC831DA8D004008512F0 /* StringUtils.h */; };
 		04C4AAB71D94B78100E4F053 /* DBServConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AA9D1D94B78100E4F053 /* DBServConn.cpp */; };
 		04C4AAB81D94B78100E4F053 /* DBServConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AA9E1D94B78100E4F053 /* DBServConn.h */; };
 		04C4AAB91D94B78100E4F053 /* FileHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AA9F1D94B78100E4F053 /* FileHandler.cpp */; };
@@ -1163,6 +1193,19 @@
 		04C3CC501DA8CC6D008512F0 /* routeserver.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = routeserver.conf; path = route_server/routeserver.conf; sourceTree = "<group>"; };
 		04C3CC511DA8CC6D008512F0 /* UserInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UserInfo.cpp; path = route_server/UserInfo.cpp; sourceTree = "<group>"; };
 		04C3CC521DA8CC6D008512F0 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfo.h; path = route_server/UserInfo.h; sourceTree = "<group>"; };
+		04C3CC761DA8CFA0008512F0 /* msfs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = msfs; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C3CC771DA8D004008512F0 /* CriticalSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CriticalSection.h; path = msfs/CriticalSection.h; sourceTree = "<group>"; };
+		04C3CC781DA8D004008512F0 /* FileLin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileLin.cpp; path = msfs/FileLin.cpp; sourceTree = "<group>"; };
+		04C3CC791DA8D004008512F0 /* FileLin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileLin.h; path = msfs/FileLin.h; sourceTree = "<group>"; };
+		04C3CC7A1DA8D004008512F0 /* FileManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileManager.cpp; path = msfs/FileManager.cpp; sourceTree = "<group>"; };
+		04C3CC7B1DA8D004008512F0 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileManager.h; path = msfs/FileManager.h; sourceTree = "<group>"; };
+		04C3CC7C1DA8D004008512F0 /* HttpConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HttpConn.cpp; path = msfs/HttpConn.cpp; sourceTree = "<group>"; };
+		04C3CC7D1DA8D004008512F0 /* HttpConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpConn.h; path = msfs/HttpConn.h; sourceTree = "<group>"; };
+		04C3CC7E1DA8D004008512F0 /* msfs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = msfs.cpp; path = msfs/msfs.cpp; sourceTree = "<group>"; };
+		04C3CC7F1DA8D004008512F0 /* msfs.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = msfs.conf; path = msfs/msfs.conf; sourceTree = "<group>"; };
+		04C3CC811DA8D004008512F0 /* Portable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Portable.h; path = msfs/Portable.h; sourceTree = "<group>"; };
+		04C3CC821DA8D004008512F0 /* StringUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StringUtils.cpp; path = msfs/StringUtils.cpp; sourceTree = "<group>"; };
+		04C3CC831DA8D004008512F0 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringUtils.h; path = msfs/StringUtils.h; sourceTree = "<group>"; };
 		04C4AA9D1D94B78100E4F053 /* DBServConn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DBServConn.cpp; path = msg_server/DBServConn.cpp; sourceTree = "<group>"; };
 		04C4AA9E1D94B78100E4F053 /* DBServConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBServConn.h; path = msg_server/DBServConn.h; sourceTree = "<group>"; };
 		04C4AA9F1D94B78100E4F053 /* FileHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileHandler.cpp; path = msg_server/FileHandler.cpp; sourceTree = "<group>"; };
@@ -1684,6 +1727,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04C3CC5E1DA8CFA0008512F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C3CC5F1DA8CFA0008512F0 /* libaprutil-1.a in Frameworks */,
+				04C3CC601DA8CFA0008512F0 /* libapr-1.a in Frameworks */,
+				04C3CC611DA8CFA0008512F0 /* libprotobuf.a in Frameworks */,
+				04C3CC621DA8CFA0008512F0 /* libbase.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04C4AB911D94BA1000E4F053 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1739,6 +1793,7 @@
 		04019CBE1D536C6B00DAD42F = {
 			isa = PBXGroup;
 			children = (
+				04C3CC581DA8CF7A008512F0 /* msfs */,
 				04C3CC4C1DA8CC19008512F0 /* route_server */,
 				047F75641D9CF3B40005B49D /* file_server */,
 				04414E071D9BCBEE0024D7BF /* hiredis */,
@@ -1768,6 +1823,7 @@
 				04414E301D9BCCCB0024D7BF /* hiredis_test */,
 				047F757A1D9CF3D40005B49D /* file_server */,
 				04C3CC4B1DA8CBF0008512F0 /* route_server */,
+				04C3CC761DA8CFA0008512F0 /* msfs */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1941,6 +1997,25 @@
 				04C3CC521DA8CC6D008512F0 /* UserInfo.h */,
 			);
 			name = route_server;
+			sourceTree = "<group>";
+		};
+		04C3CC581DA8CF7A008512F0 /* msfs */ = {
+			isa = PBXGroup;
+			children = (
+				04C3CC771DA8D004008512F0 /* CriticalSection.h */,
+				04C3CC781DA8D004008512F0 /* FileLin.cpp */,
+				04C3CC791DA8D004008512F0 /* FileLin.h */,
+				04C3CC7A1DA8D004008512F0 /* FileManager.cpp */,
+				04C3CC7B1DA8D004008512F0 /* FileManager.h */,
+				04C3CC7C1DA8D004008512F0 /* HttpConn.cpp */,
+				04C3CC7D1DA8D004008512F0 /* HttpConn.h */,
+				04C3CC7E1DA8D004008512F0 /* msfs.cpp */,
+				04C3CC7F1DA8D004008512F0 /* msfs.conf */,
+				04C3CC811DA8D004008512F0 /* Portable.h */,
+				04C3CC821DA8D004008512F0 /* StringUtils.cpp */,
+				04C3CC831DA8D004008512F0 /* StringUtils.h */,
+			);
+			name = msfs;
 			sourceTree = "<group>";
 		};
 		04C4AC791D94BA3B00E4F053 /* libsecurity */ = {
@@ -3148,6 +3223,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04C3CC631DA8CFA0008512F0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C3CC641DA8CFA0008512F0 /* config_util.h in Headers */,
+				04C3CC651DA8CFA0008512F0 /* ipparser.h in Headers */,
+				04C3CC881DA8D004008512F0 /* FileManager.h in Headers */,
+				04C3CC861DA8D004008512F0 /* FileLin.h in Headers */,
+				04C3CC661DA8CFA0008512F0 /* HttpConn.h in Headers */,
+				04C3CC671DA8CFA0008512F0 /* UserInfo.h in Headers */,
+				04C3CC681DA8CFA0008512F0 /* transfer_task.h in Headers */,
+				04C3CC691DA8CFA0008512F0 /* file_server_util.h in Headers */,
+				04C3CC6A1DA8CFA0008512F0 /* ServerPriv.hpp in Headers */,
+				04C3CC8C1DA8D004008512F0 /* Portable.h in Headers */,
+				04C3CC841DA8D004008512F0 /* CriticalSection.h in Headers */,
+				04C3CC6B1DA8CFA0008512F0 /* Base64.h in Headers */,
+				04C3CC6C1DA8CFA0008512F0 /* file_client_conn.h in Headers */,
+				04C3CC8E1DA8D004008512F0 /* StringUtils.h in Headers */,
+				04C3CC8A1DA8D004008512F0 /* HttpConn.h in Headers */,
+				04C3CC6D1DA8CFA0008512F0 /* RouteConn.h in Headers */,
+				04C3CC6E1DA8CFA0008512F0 /* offline_file_util.h in Headers */,
+				04C3CC6F1DA8CFA0008512F0 /* transfer_task_manager.h in Headers */,
+				04C3CC701DA8CFA0008512F0 /* LoginConn.h in Headers */,
+				04C3CC711DA8CFA0008512F0 /* base.hpp in Headers */,
+				04C3CC721DA8CFA0008512F0 /* file_msg_server_conn.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04C4AB921D94BA1000E4F053 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -3568,6 +3671,23 @@
 			productReference = 04C3CC4B1DA8CBF0008512F0 /* route_server */;
 			productType = "com.apple.product-type.tool";
 		};
+		04C3CC591DA8CFA0008512F0 /* msfs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04C3CC731DA8CFA0008512F0 /* Build configuration list for PBXNativeTarget "msfs" */;
+			buildPhases = (
+				04C3CC5A1DA8CFA0008512F0 /* Sources */,
+				04C3CC5E1DA8CFA0008512F0 /* Frameworks */,
+				04C3CC631DA8CFA0008512F0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = msfs;
+			productName = Server;
+			productReference = 04C3CC761DA8CFA0008512F0 /* msfs */;
+			productType = "com.apple.product-type.tool";
+		};
 		04C4AACC1D94BA1000E4F053 /* security */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04C4AC751D94BA1000E4F053 /* Build configuration list for PBXNativeTarget "security" */;
@@ -3690,6 +3810,7 @@
 				04414E221D9BCCCB0024D7BF /* hiredis_test */,
 				047F75651D9CF3D40005B49D /* file_server */,
 				04C3CC2D1DA8CBF0008512F0 /* route_server */,
+				04C3CC591DA8CFA0008512F0 /* msfs */,
 			);
 		};
 /* End PBXProject section */
@@ -3947,6 +4068,18 @@
 				04C3CC531DA8CC6D008512F0 /* route_server.cpp in Sources */,
 				04C3CC541DA8CC6D008512F0 /* RouteConn.cpp in Sources */,
 				04C3CC561DA8CC6D008512F0 /* UserInfo.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C3CC5A1DA8CFA0008512F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C3CC8D1DA8D004008512F0 /* StringUtils.cpp in Sources */,
+				04C3CC851DA8D004008512F0 /* FileLin.cpp in Sources */,
+				04C3CC891DA8D004008512F0 /* HttpConn.cpp in Sources */,
+				04C3CC8B1DA8D004008512F0 /* msfs.cpp in Sources */,
+				04C3CC871DA8D004008512F0 /* FileManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4431,6 +4564,72 @@
 			};
 			name = Release;
 		};
+		04C3CC741DA8CFA0008512F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = NO;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
+					.,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SEPARATE_STRIP = NO;
+				STRIP_STYLE = all;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		04C3CC751DA8CFA0008512F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = NO;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
+					.,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SEPARATE_STRIP = NO;
+				STRIP_STYLE = all;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
 		04C4AC761D94BA1000E4F053 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -4795,6 +4994,15 @@
 			buildConfigurations = (
 				04C3CC491DA8CBF0008512F0 /* Debug */,
 				04C3CC4A1DA8CBF0008512F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04C3CC731DA8CFA0008512F0 /* Build configuration list for PBXNativeTarget "msfs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C3CC741DA8CFA0008512F0 /* Debug */,
+				04C3CC751DA8CFA0008512F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
