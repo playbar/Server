@@ -57,7 +57,8 @@ int main(int argc, char* argv[])
 		log("DBManager init failed");
 		return -1;
 	}
-puts("db init success");
+
+    puts("db init success");
 	// 主线程初始化单例，不然在工作线程可能会出现多次初始化
 	if (!CAudioModel::getInstance())
     {
@@ -142,10 +143,8 @@ puts("db init success");
 	if (ret == NETLIB_ERROR)
 		return ret;
     
-    /// yunfan add 2014.9.28
     // for 603 push
     curl_global_init(CURL_GLOBAL_ALL);
-    /// yunfan add end
 
 	init_proxy_conn(thread_num);
     CSyncCenter::getInstance()->init();
