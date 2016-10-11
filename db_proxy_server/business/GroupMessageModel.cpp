@@ -1,14 +1,3 @@
-/*================================================================
- *   Copyright (C) 2014 All rights reserved.
- *
- *   文件名称：GroupMessageModel.cpp
- *   创 建 者：Zhang Yuanhao
- *   邮    箱：bluefoxah@gmail.com
- *   创建日期：2014年12月15日
- *   描    述：
- *
- ================================================================*/
-
 #include <map>
 #include <set>
 
@@ -50,7 +39,8 @@ CGroupMessageModel::~CGroupMessageModel()
  */
 CGroupMessageModel* CGroupMessageModel::getInstance()
 {
-	if (!m_pInstance) {
+	if (!m_pInstance)
+    {
 		m_pInstance = new CGroupMessageModel();
 	}
 
@@ -70,7 +60,8 @@ CGroupMessageModel* CGroupMessageModel::getInstance()
  *
  *  @return 成功返回true 失败返回false
  */
-bool CGroupMessageModel::sendMessage(uint32_t nFromId, uint32_t nGroupId, IM::BaseDefine::MsgType nMsgType, uint32_t nCreateTime,uint32_t nMsgId, const string& strMsgContent)
+bool CGroupMessageModel::sendMessage(uint32_t nFromId, uint32_t nGroupId,
+    IM::BaseDefine::MsgType nMsgType, uint32_t nCreateTime,uint32_t nMsgId, const string& strMsgContent)
 {
     bool bRet = false;
     if(CGroupModel::getInstance()->isInGroup(nFromId, nGroupId))
@@ -138,9 +129,12 @@ bool CGroupMessageModel::sendMessage(uint32_t nFromId, uint32_t nGroupId, IM::Ba
  *
  *  @return 成功返回true，失败返回false
  */
-bool CGroupMessageModel::sendAudioMessage(uint32_t nFromId, uint32_t nGroupId, IM::BaseDefine::MsgType nMsgType, uint32_t nCreateTime, uint32_t nMsgId, const char* pMsgContent, uint32_t nMsgLen)
+bool CGroupMessageModel::sendAudioMessage(uint32_t nFromId, uint32_t nGroupId,
+    IM::BaseDefine::MsgType nMsgType, uint32_t nCreateTime, uint32_t nMsgId,
+    const char* pMsgContent, uint32_t nMsgLen)
 {
-	if (nMsgLen <= 4) {
+	if (nMsgLen <= 4)
+    {
 		return false;
 	}
 
@@ -154,10 +148,13 @@ bool CGroupMessageModel::sendAudioMessage(uint32_t nFromId, uint32_t nGroupId, I
 	int nAudioId = pAudioModel->saveAudioInfo(nFromId, nGroupId, nCreateTime, pMsgContent, nMsgLen);
 
 	bool bRet = true;
-	if (nAudioId != -1) {
+	if (nAudioId != -1)
+    {
 		string strMsg = int2string(nAudioId);
         bRet = sendMessage(nFromId, nGroupId, nMsgType, nCreateTime, nMsgId, strMsg);
-	} else {
+	}
+    else
+    {
 		bRet = false;
 	}
 
@@ -262,7 +259,8 @@ bool CGroupMessageModel::incMessageCount(uint32_t nUserId, uint32_t nGroupId)
  *  @param nMsgCnt  获取的长度
  *  @param lsMsg    消息列表
  */
-void CGroupMessageModel::getMessage(uint32_t nUserId, uint32_t nGroupId, uint32_t nMsgId, uint32_t nMsgCnt, list<IM::BaseDefine::MsgInfo>& lsMsg)
+void CGroupMessageModel::getMessage(uint32_t nUserId, uint32_t nGroupId, uint32_t nMsgId,
+                                    uint32_t nMsgCnt, list<IM::BaseDefine::MsgInfo>& lsMsg)
 {
     //根据 count 和 lastId 获取信息
     string strTableName = "IMGroupMessage_" + int2string(nGroupId % 8);
@@ -327,7 +325,8 @@ void CGroupMessageModel::getMessage(uint32_t nUserId, uint32_t nGroupId, uint32_
  *  @param nTotalCnt     总条数
  *  @param lsUnreadCount 每个会话的未读信息包含了条数，最后一个消息的Id，最后一个消息的类型，最后一个消息的类容
  */
-void CGroupMessageModel::getUnreadMsgCount(uint32_t nUserId, uint32_t &nTotalCnt, list<IM::BaseDefine::UnreadInfo>& lsUnreadCount)
+void CGroupMessageModel::getUnreadMsgCount(uint32_t nUserId, uint32_t &nTotalCnt,
+    list<IM::BaseDefine::UnreadInfo>& lsUnreadCount)
 {
     list<uint32_t> lsGroupId;
     CGroupModel::getInstance()->getUserGroupIds(nUserId, lsGroupId, 0);
@@ -424,7 +423,8 @@ uint32_t CGroupMessageModel::getMsgId(uint32_t nGroupId)
  *  @param strMsgData 最后一条消息的内容,引用
  *  @param nMsgType   最后一条消息的类型,引用
  */
-void CGroupMessageModel::getLastMsg(uint32_t nGroupId, uint32_t &nMsgId, string &strMsgData, IM::BaseDefine::MsgType &nMsgType, uint32_t& nFromId)
+void CGroupMessageModel::getLastMsg(uint32_t nGroupId, uint32_t &nMsgId, string &strMsgData,
+    IM::BaseDefine::MsgType &nMsgType, uint32_t& nFromId)
 {
     string strTableName = "IMGroupMessage_" + int2string(nGroupId % 8);
     
@@ -437,7 +437,8 @@ void CGroupMessageModel::getLastMsg(uint32_t nGroupId, uint32_t &nMsgId, string 
         CResultSet* pResultSet = pDBConn->ExecuteQuery(strSql.c_str());
         if (pResultSet)
         {
-            while(pResultSet->Next()) {
+            while(pResultSet->Next())
+            {
                 nMsgId = pResultSet->GetInt("msgId");
                 nMsgType = IM::BaseDefine::MsgType(pResultSet->GetInt("type"));
                 nFromId = pResultSet->GetInt("userId");
@@ -497,7 +498,8 @@ void CGroupMessageModel::getUnReadCntAll(uint32_t nUserId, uint32_t &nTotalCnt)
             string strUserCnt = pCacheConn->hget(strUserKey, GROUP_COUNTER_SUBKEY_COUNTER_FIELD);
             
             uint32_t nUserCnt = ( strUserCnt.empty() ? 0 : ((uint32_t)atoi(strUserCnt.c_str())) );
-            if(nGroupCnt >= nUserCnt) {
+            if(nGroupCnt >= nUserCnt)
+            {
                 nCount = nGroupCnt - nUserCnt;
             }
             if(nCount > 0)
@@ -513,7 +515,8 @@ void CGroupMessageModel::getUnReadCntAll(uint32_t nUserId, uint32_t &nTotalCnt)
     }
 }
 
-void CGroupMessageModel::getMsgByMsgId(uint32_t nUserId, uint32_t nGroupId, const list<uint32_t> &lsMsgId, list<IM::BaseDefine::MsgInfo> &lsMsg)
+void CGroupMessageModel::getMsgByMsgId(uint32_t nUserId, uint32_t nGroupId, const list<uint32_t> &lsMsgId,
+    list<IM::BaseDefine::MsgInfo> &lsMsg)
 {
     if(!lsMsgId.empty())
     {
@@ -529,7 +532,8 @@ void CGroupMessageModel::getMsgByMsgId(uint32_t nUserId, uint32_t nGroupId, cons
                 bool bFirst = true;
                 for(auto it= lsMsgId.begin(); it!=lsMsgId.end();++it)
                 {
-                    if (bFirst) {
+                    if (bFirst)
+                    {
                         bFirst = false;
                         strClause = int2string(*it);
                     }
@@ -607,3 +611,4 @@ bool CGroupMessageModel::resetMsgId(uint32_t nGroupId)
     }
     return bRet;
 }
+

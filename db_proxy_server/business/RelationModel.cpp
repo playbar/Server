@@ -1,14 +1,3 @@
-/*================================================================
- *   Copyright (C) 2014 All rights reserved.
- *
- *   文件名称：RelationModel.cpp
- *   创 建 者：Zhang Yuanhao
- *   邮    箱：bluefoxah@gmail.com
- *   创建日期：2014年12月15日
- *   描    述：
- *
- ================================================================*/
-
 #include <vector>
 
 #include "../DBPool.h"
@@ -31,7 +20,8 @@ CRelationModel::~CRelationModel()
 
 CRelationModel* CRelationModel::getInstance()
 {
-	if (!m_pInstance) {
+	if (!m_pInstance)
+    {
 		m_pInstance = new CRelationModel();
 	}
 
@@ -50,7 +40,8 @@ CRelationModel* CRelationModel::getInstance()
 uint32_t CRelationModel::getRelationId(uint32_t nUserAId, uint32_t nUserBId, bool bAdd)
 {
     uint32_t nRelationId = INVALID_VALUE;
-    if (nUserAId == 0 || nUserBId == 0) {
+    if (nUserAId == 0 || nUserBId == 0)
+    {
         log("invalied user id:%u->%u", nUserAId, nUserBId);
         return nRelationId;
     }
@@ -189,3 +180,4 @@ bool CRelationModel::removeRelation(uint32_t nRelationId)
     }
     return bRet;
 }
+

@@ -1,14 +1,3 @@
-/*================================================================
- *   Copyright (C) 2014 All rights reserved.
- *
- *   文件名称：RelationModel.h
- *   创 建 者：Zhang Yuanhao
- *   邮    箱：bluefoxah@gmail.com
- *   创建日期：2014年12月15日
- *   描    述：
- *
- ================================================================*/
-
 #ifndef RELATION_SHIP_H_
 #define RELATION_SHIP_H_
 
@@ -21,7 +10,8 @@
 using namespace std;
 
 
-class CRelationModel {
+class CRelationModel
+{
 public:
 	virtual ~CRelationModel();
 
