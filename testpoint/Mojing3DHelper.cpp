@@ -55,6 +55,7 @@ bool Plane::Intersection(Vector3f light, Point2f &position)
 
 	Vector3f vecInPlane = light * t - m_topLeft;
 
+    float val = dot_product(m_xAxis, m_yAxis);
 	if (fabs(dot_product(m_xAxis, m_yAxis)) < 1e-6)
 	{
 		//rectangle

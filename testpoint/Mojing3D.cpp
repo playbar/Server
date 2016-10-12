@@ -21,7 +21,17 @@ struct TestItem
 
 TestItem tests[] =
 {
-	// 垂直x轴平面
+    //test
+    {
+        { -2.4002545f, 0.8000848f, -3.7f },
+        { 0.0f,        0.8000848f, -3.3f },
+        { -2.4002545f, -0.0f, -3.7f },
+        { -0.17050685f, -0.18699859f, -0.9674465f },
+        false,
+        { 0.5f, 0.5f },
+        "test"
+    },
+    // 垂直x轴平面
 	// Z轴负方向
 	{
 		{ 5.0f, 1.0f, -1.0f },
@@ -192,13 +202,20 @@ int main(int argc, char* argv[])
 		{
 			if (tests[i].hasIntersection)
 			{
-				if ((fabsf(tests[i].intersection[0] - position.x) < 1e-5) && (fabsf(tests[i].intersection[1] - position.y) < 1e-5))
+				if ((fabsf(tests[i].intersection[0] - position.x) < 1e-5) &&
+                    (fabsf(tests[i].intersection[1] - position.y) < 1e-5))
+                {
 					printf("Test %02d [%s] passed\r\n", i, tests[i].name);
+                }
 				else
+                {
 					printf("Test %02d [%s] failed. Result is: (%f, %f) <> (%f, %f)\r\n", i, tests[i].name, position.x, position.y, tests[i].intersection[0], tests[i].intersection[1]);
+                }
 			}
 			else
+            {
 				printf("Test %02d [%s] passed\r\n", i, tests[i].name);
+            }
 		}
 		else
 		{
