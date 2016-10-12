@@ -190,6 +190,8 @@ int main(int argc, char* argv[])
 {
 	srand(time(NULL));
 
+    float fval = -1e-6;
+    
 	Point2f position;
 	for (int i = 0; i < sizeof(tests) / sizeof(TestItem); i++)
 	{

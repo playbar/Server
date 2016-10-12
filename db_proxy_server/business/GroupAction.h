@@ -1,20 +1,10 @@
-/*================================================================
- *   Copyright (C) 2014 All rights reserved.
- *
- *   文件名称：GroupAction.h
- *   创 建 者：Zhang Yuanhao
- *   邮    箱：bluefoxah@gmail.com
- *   创建日期：2014年12月15日
- *   描    述：
- *
- ================================================================*/
-
-#ifndef GROUPACTION_H_
-#define GROUPACTION_H_
+#ifndef __GROUPACTION_H__
+#define __GROUPACTION_H__
 
 #include "ImPduBase.h"
 
-namespace DB_PROXY {
+namespace DB_PROXY
+{
 
     void createGroup(CImPdu* pPdu, uint32_t conn_uuid);
     
@@ -32,4 +22,4 @@ namespace DB_PROXY {
 
 
 
-#endif /* GROUPACTION_H_ */
+#endif /* __GROUPACTION_H__ */

@@ -1,14 +1,3 @@
-/*================================================================
- *   Copyright (C) 2014 All rights reserved.
- *
- *   文件名称：GroupAction.cpp
- *   创 建 者：Zhang Yuanhao
- *   邮    箱：bluefoxah@gmail.com
- *   创建日期：2014年12月15日
- *   描    述：
- *
- ================================================================*/
-
 #include "../ProxyConn.h"
 #include "GroupAction.h"
 #include "GroupModel.h"
@@ -17,7 +6,8 @@
 #include "public_define.h"
 #include "IM.Server.pb.h"
 
-namespace DB_PROXY {
+namespace DB_PROXY
+{
     
     /**
      *  创建群组
@@ -168,7 +158,8 @@ namespace DB_PROXY {
                 pGroupInfo->set_group_type(it->group_type());
                 pGroupInfo->set_shield_status(it->shield_status());
                 uint32_t nGroupMemberCnt = it->group_member_list_size();
-                for (uint32_t i=0; i<nGroupMemberCnt; ++i) {
+                for (uint32_t i=0; i<nGroupMemberCnt; ++i)
+                {
                     uint32_t userId = it->group_member_list(i);
                     pGroupInfo->add_group_member_list(userId);
                 }

@@ -14,6 +14,10 @@
 		04019CE51D536E0800DAD42F /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
 		04019CE81D536F0500DAD42F /* Base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04019CE61D536F0500DAD42F /* Base64.cpp */; };
 		04019CE91D536F0500DAD42F /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
+		0404910E1DAE3D4500738274 /* GroupAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0404910C1DAE3D4500738274 /* GroupAction.cpp */; };
+		0404910F1DAE3D4500738274 /* GroupAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0404910D1DAE3D4500738274 /* GroupAction.h */; };
+		040491121DAE3E6200738274 /* UserAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 040491101DAE3E6200738274 /* UserAction.cpp */; };
+		040491131DAE3E6200738274 /* UserAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 040491111DAE3E6200738274 /* UserAction.h */; };
 		040D5BBA1D8E9BD400FA8392 /* singleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D5BB91D8E9BD400FA8392 /* singleton.h */; };
 		040D5BBC1D8E9E5D00FA8392 /* Task.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D5BBB1D8E9E5D00FA8392 /* Task.h */; };
 		040D5BBF1D8E9ECA00FA8392 /* Thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 040D5BBD1D8E9ECA00FA8392 /* Thread.cpp */; };
@@ -1268,6 +1272,10 @@
 		04019CE21D536E0800DAD42F /* ServerPriv.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ServerPriv.hpp; path = base/ServerPriv.hpp; sourceTree = SOURCE_ROOT; };
 		04019CE61D536F0500DAD42F /* Base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Base64.cpp; path = base/Base64.cpp; sourceTree = SOURCE_ROOT; };
 		04019CE71D536F0500DAD42F /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = base/Base64.h; sourceTree = SOURCE_ROOT; };
+		0404910C1DAE3D4500738274 /* GroupAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GroupAction.cpp; path = db_proxy_server/business/GroupAction.cpp; sourceTree = "<group>"; };
+		0404910D1DAE3D4500738274 /* GroupAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupAction.h; path = db_proxy_server/business/GroupAction.h; sourceTree = "<group>"; };
+		040491101DAE3E6200738274 /* UserAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UserAction.cpp; path = db_proxy_server/business/UserAction.cpp; sourceTree = "<group>"; };
+		040491111DAE3E6200738274 /* UserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserAction.h; path = db_proxy_server/business/UserAction.h; sourceTree = "<group>"; };
 		040D5BB91D8E9BD400FA8392 /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = singleton.h; path = base/singleton.h; sourceTree = SOURCE_ROOT; };
 		040D5BBB1D8E9E5D00FA8392 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = base/Task.h; sourceTree = SOURCE_ROOT; };
 		040D5BBD1D8E9ECA00FA8392 /* Thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Thread.cpp; path = base/Thread.cpp; sourceTree = SOURCE_ROOT; };
@@ -2222,6 +2230,10 @@
 				04C421721DAC747F0062D427 /* RelationModel.h */,
 				04377AF91DAB9DD900BDD2AF /* GroupModel.cpp */,
 				04377AFA1DAB9DD900BDD2AF /* GroupModel.h */,
+				040491101DAE3E6200738274 /* UserAction.cpp */,
+				040491111DAE3E6200738274 /* UserAction.h */,
+				0404910C1DAE3D4500738274 /* GroupAction.cpp */,
+				0404910D1DAE3D4500738274 /* GroupAction.h */,
 				04C421771DAC75E80062D427 /* GroupMessageModel.cpp */,
 				04C421781DAC75E80062D427 /* GroupMessageModel.h */,
 			);
@@ -3710,11 +3722,13 @@
 				04C259431DAB1A8400D2AB15 /* jsonxx.h in Headers */,
 				04C259441DAB1A8400D2AB15 /* CriticalSection.h in Headers */,
 				04C259451DAB1A8400D2AB15 /* base_io_stream.h in Headers */,
+				040491131DAE3E6200738274 /* UserAction.h in Headers */,
 				04377AFC1DAB9DD900BDD2AF /* GroupModel.h in Headers */,
 				04C259461DAB1A8400D2AB15 /* push_session.h in Headers */,
 				04C259471DAB1A8400D2AB15 /* Base64.h in Headers */,
 				04C259481DAB1A8400D2AB15 /* tcp_server.h in Headers */,
 				04377AF01DAB988900BDD2AF /* UserModel.h in Headers */,
+				0404910F1DAE3D4500738274 /* GroupAction.h in Headers */,
 				04C259491DAB1A8400D2AB15 /* file_client_conn.h in Headers */,
 				04377AE31DAB948D00BDD2AF /* DBPool.h in Headers */,
 				04C2594A1DAB1A8400D2AB15 /* tcp_client_async.h in Headers */,
@@ -4737,6 +4751,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04377AEF1DAB988900BDD2AF /* UserModel.cpp in Sources */,
+				040491121DAE3E6200738274 /* UserAction.cpp in Sources */,
 				04377AFF1DABB30200BDD2AF /* HandlerMap.cpp in Sources */,
 				04C421791DAC75E80062D427 /* GroupMessageModel.cpp in Sources */,
 				04377B071DABB94800BDD2AF /* SessionModel.cpp in Sources */,
@@ -4747,6 +4762,7 @@
 				04C421731DAC747F0062D427 /* MessageModel.cpp in Sources */,
 				04377AFB1DAB9DD900BDD2AF /* GroupModel.cpp in Sources */,
 				04377AE21DAB948D00BDD2AF /* DBPool.cpp in Sources */,
+				0404910E1DAE3D4500738274 /* GroupAction.cpp in Sources */,
 				04377AE71DAB96C700BDD2AF /* FileModel.cpp in Sources */,
 				04377AEB1DAB97B000BDD2AF /* ProxyTask.cpp in Sources */,
 				04377B031DABB44E00BDD2AF /* CachePool.cpp in Sources */,
