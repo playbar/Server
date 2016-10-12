@@ -1,13 +1,3 @@
-/*================================================================
-*     Copyright (c) 2015年 lanhu. All rights reserved.
-*   
-*   文件名称：DepartModel.cpp
-*   创 建 者：Zhang Yuanhao
-*   邮    箱：bluefoxah@gmail.com
-*   创建日期：2015年03月12日
-*   描    述：
-*
-================================================================*/
 #include "DepartModel.h"
 #include "../DBPool.h"
 
@@ -32,7 +22,8 @@ void CDepartModel::getChgedDeptId(uint32_t& nLastTime, list<uint32_t>& lsChanged
         CResultSet* pResultSet = pDBConn->ExecuteQuery(strSql.c_str());
         if(pResultSet)
         {
-            while (pResultSet->Next()) {
+            while (pResultSet->Next())
+            {
                 uint32_t id = pResultSet->GetInt("id");
                 uint32_t nUpdated = pResultSet->GetInt("updated");
                 if(nLastTime < nUpdated)
@@ -64,7 +55,8 @@ void CDepartModel::getDepts(list<uint32_t>& lsDeptIds, list<IM::BaseDefine::Depa
     {
         string strClause;
         bool bFirst = true;
-        for (auto it=lsDeptIds.begin(); it!=lsDeptIds.end(); ++it) {
+        for (auto it=lsDeptIds.begin(); it!=lsDeptIds.end(); ++it)
+        {
             if(bFirst)
             {
                 bFirst = false;
@@ -79,7 +71,8 @@ void CDepartModel::getDepts(list<uint32_t>& lsDeptIds, list<IM::BaseDefine::Depa
         CResultSet* pResultSet = pDBConn->ExecuteQuery(strSql.c_str());
         if(pResultSet)
         {
-            while (pResultSet->Next()) {
+            while (pResultSet->Next())
+            {
                 IM::BaseDefine::DepartInfo cDept;
                 uint32_t nId = pResultSet->GetInt("id");
                 uint32_t nParentId = pResultSet->GetInt("parentId");
@@ -104,6 +97,7 @@ void CDepartModel::getDepts(list<uint32_t>& lsDeptIds, list<IM::BaseDefine::Depa
     {
         log("no db connection for teamtalk_slave");
     }
+    return;
 }
 
 void CDepartModel::getDept(uint32_t nDeptId, IM::BaseDefine::DepartInfo& cDept)
@@ -116,7 +110,8 @@ void CDepartModel::getDept(uint32_t nDeptId, IM::BaseDefine::DepartInfo& cDept)
         CResultSet* pResultSet = pDBConn->ExecuteQuery(strSql.c_str());
         if(pResultSet)
         {
-            while (pResultSet->Next()) {
+            while (pResultSet->Next())
+            {
                 uint32_t nId = pResultSet->GetInt("id");
                 uint32_t nParentId = pResultSet->GetInt("parentId");
                 string strDeptName = pResultSet->GetString("departName");
@@ -139,4 +134,6 @@ void CDepartModel::getDept(uint32_t nDeptId, IM::BaseDefine::DepartInfo& cDept)
     {
         log("no db connection for teamtalk_slave");
     }
+    return;
 }
+

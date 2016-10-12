@@ -1,15 +1,3 @@
-/*================================================================
- *   Copyright (C) 2014 All rights reserved.
- *
- *   文件名称：FriendShip.cpp
- *   创 建 者：Zhang Yuanhao
- *   邮    箱：bluefoxah@gmail.com
- *   创建日期：2014年12月15日
- *   描    述：
- *
- ================================================================*/
-
-
 #include <list>
 #include <vector>
 
@@ -24,10 +12,10 @@
 
 using namespace std;
 
-namespace DB_PROXY {
+namespace DB_PROXY
+{
     /**
      *  获取最近会话接口
-     *
      *  @param pPdu      收到的packet包指针
      *  @param conn_uuid 该包过来的socket 描述符
      */
@@ -39,7 +27,7 @@ namespace DB_PROXY {
         if(msg.ParseFromArray(pPdu->GetBodyData(), pPdu->GetBodyLength()))
         {
             CImPdu* pPduResp = new CImPdu;
-        
+            
             uint32_t nUserId = msg.user_id();
             uint32_t nLastTime = msg.latest_update_time();
             
@@ -50,7 +38,7 @@ namespace DB_PROXY {
             for(auto it=lsContactList.begin(); it!=lsContactList.end(); ++it)
             {
                 IM::BaseDefine::ContactSessionInfo* pContact = msgResp.add_contact_session_list();
-    //            *pContact = *it;
+                //            *pContact = *it;
                 pContact->set_session_id(it->session_id());
                 pContact->set_session_type(it->session_type());
                 pContact->set_session_status(it->session_status());
@@ -74,6 +62,7 @@ namespace DB_PROXY {
         {
             log("parse pb failed");
         }
+        return;
     }
     
     /**
@@ -98,7 +87,8 @@ namespace DB_PROXY {
             {
                 bool bRet = false;
                 uint32_t nSessionId = CSessionModel::getInstance()->getSessionId(nUserId, nPeerId, nType, false);
-                if (nSessionId != INVALID_VALUE) {
+                if (nSessionId != INVALID_VALUE)
+                {
                     bRet = CSessionModel::getInstance()->removeSession(nSessionId);
                     // if remove session success, we need to clear the unread msg count
                     if (bRet)
@@ -124,9 +114,11 @@ namespace DB_PROXY {
                 log("invalied session_type. userId=%u, peerId=%u, seseionType=%u", nUserId, nPeerId, nType);
             }
         }
-        else{
+        else
+        {
             log("parse pb failed");
         }
+        return;
     }
     
 };

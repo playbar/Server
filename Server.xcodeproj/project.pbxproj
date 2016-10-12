@@ -24,6 +24,13 @@
 		0404911B1DAE402800738274 /* MessageContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 040491191DAE402800738274 /* MessageContent.h */; };
 		0404911E1DAE417C00738274 /* FileAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0404911C1DAE417C00738274 /* FileAction.cpp */; };
 		0404911F1DAE417C00738274 /* FileAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0404911D1DAE417C00738274 /* FileAction.h */; };
+		040491231DAE42FB00738274 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 040491201DAE42FB00738274 /* Common.h */; };
+		040491241DAE42FB00738274 /* DepartAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 040491211DAE42FB00738274 /* DepartAction.cpp */; };
+		040491251DAE42FB00738274 /* DepartAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 040491221DAE42FB00738274 /* DepartAction.h */; };
+		040491281DAE435800738274 /* DepartModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 040491261DAE435800738274 /* DepartModel.cpp */; };
+		040491291DAE435800738274 /* DepartModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 040491271DAE435800738274 /* DepartModel.h */; };
+		0404912C1DAE43C500738274 /* RecentSession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0404912A1DAE43C500738274 /* RecentSession.cpp */; };
+		0404912D1DAE43C500738274 /* RecentSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 0404912B1DAE43C500738274 /* RecentSession.h */; };
 		040D5BBA1D8E9BD400FA8392 /* singleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D5BB91D8E9BD400FA8392 /* singleton.h */; };
 		040D5BBC1D8E9E5D00FA8392 /* Task.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D5BBB1D8E9E5D00FA8392 /* Task.h */; };
 		040D5BBF1D8E9ECA00FA8392 /* Thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 040D5BBD1D8E9ECA00FA8392 /* Thread.cpp */; };
@@ -1288,6 +1295,13 @@
 		040491191DAE402800738274 /* MessageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageContent.h; path = db_proxy_server/business/MessageContent.h; sourceTree = "<group>"; };
 		0404911C1DAE417C00738274 /* FileAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileAction.cpp; path = db_proxy_server/business/FileAction.cpp; sourceTree = "<group>"; };
 		0404911D1DAE417C00738274 /* FileAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileAction.h; path = db_proxy_server/business/FileAction.h; sourceTree = "<group>"; };
+		040491201DAE42FB00738274 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Common.h; path = db_proxy_server/business/Common.h; sourceTree = "<group>"; };
+		040491211DAE42FB00738274 /* DepartAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DepartAction.cpp; path = db_proxy_server/business/DepartAction.cpp; sourceTree = "<group>"; };
+		040491221DAE42FB00738274 /* DepartAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DepartAction.h; path = db_proxy_server/business/DepartAction.h; sourceTree = "<group>"; };
+		040491261DAE435800738274 /* DepartModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DepartModel.cpp; path = db_proxy_server/business/DepartModel.cpp; sourceTree = "<group>"; };
+		040491271DAE435800738274 /* DepartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DepartModel.h; path = db_proxy_server/business/DepartModel.h; sourceTree = "<group>"; };
+		0404912A1DAE43C500738274 /* RecentSession.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RecentSession.cpp; path = db_proxy_server/business/RecentSession.cpp; sourceTree = "<group>"; };
+		0404912B1DAE43C500738274 /* RecentSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecentSession.h; path = db_proxy_server/business/RecentSession.h; sourceTree = "<group>"; };
 		040D5BB91D8E9BD400FA8392 /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = singleton.h; path = base/singleton.h; sourceTree = SOURCE_ROOT; };
 		040D5BBB1D8E9E5D00FA8392 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = base/Task.h; sourceTree = SOURCE_ROOT; };
 		040D5BBD1D8E9ECA00FA8392 /* Thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Thread.cpp; path = base/Thread.cpp; sourceTree = SOURCE_ROOT; };
@@ -2228,6 +2242,11 @@
 		04377AE41DAB96B500BDD2AF /* business */ = {
 			isa = PBXGroup;
 			children = (
+				040491201DAE42FB00738274 /* Common.h */,
+				040491211DAE42FB00738274 /* DepartAction.cpp */,
+				040491221DAE42FB00738274 /* DepartAction.h */,
+				040491261DAE435800738274 /* DepartModel.cpp */,
+				040491271DAE435800738274 /* DepartModel.h */,
 				04377AED1DAB988900BDD2AF /* UserModel.cpp */,
 				04377AEE1DAB988900BDD2AF /* UserModel.h */,
 				04377AE51DAB96C700BDD2AF /* FileModel.cpp */,
@@ -2242,6 +2261,8 @@
 				04C421721DAC747F0062D427 /* RelationModel.h */,
 				04377AF91DAB9DD900BDD2AF /* GroupModel.cpp */,
 				04377AFA1DAB9DD900BDD2AF /* GroupModel.h */,
+				0404912A1DAE43C500738274 /* RecentSession.cpp */,
+				0404912B1DAE43C500738274 /* RecentSession.h */,
 				0404911C1DAE417C00738274 /* FileAction.cpp */,
 				0404911D1DAE417C00738274 /* FileAction.h */,
 				040491101DAE3E6200738274 /* UserAction.cpp */,
@@ -3725,6 +3746,7 @@
 				04C259361DAB1A8400D2AB15 /* HttpConn.h in Headers */,
 				04C259371DAB1A8400D2AB15 /* UserInfo.h in Headers */,
 				04C259381DAB1A8400D2AB15 /* transfer_task.h in Headers */,
+				0404912D1DAE43C500738274 /* RecentSession.h in Headers */,
 				04C259391DAB1A8400D2AB15 /* pdu_msg.h in Headers */,
 				04C2593A1DAB1A8400D2AB15 /* file_server_util.h in Headers */,
 				04C2593B1DAB1A8400D2AB15 /* push_app.h in Headers */,
@@ -3733,6 +3755,7 @@
 				04C2593D1DAB1A8400D2AB15 /* ServerPriv.hpp in Headers */,
 				04377AF81DAB9BC900BDD2AF /* AudioModel.h in Headers */,
 				04C2593E1DAB1A8400D2AB15 /* base_type.h in Headers */,
+				040491251DAE42FB00738274 /* DepartAction.h in Headers */,
 				04C2593F1DAB1A8400D2AB15 /* Timer.hpp in Headers */,
 				04377ADF1DAB92ED00BDD2AF /* ProxyConn.h in Headers */,
 				04C259401DAB1A8400D2AB15 /* base_handler.hpp in Headers */,
@@ -3759,8 +3782,10 @@
 				04C2594E1DAB1A8400D2AB15 /* HttpConn.h in Headers */,
 				04C2594F1DAB1A8400D2AB15 /* base_thread.hpp in Headers */,
 				04C259501DAB1A8400D2AB15 /* base_msg.h in Headers */,
+				040491231DAE42FB00738274 /* Common.h in Headers */,
 				04C259511DAB1A8400D2AB15 /* RouteConn.h in Headers */,
 				04377AF41DAB9A4200BDD2AF /* SyncCenter.h in Headers */,
+				040491291DAE435800738274 /* DepartModel.h in Headers */,
 				04C259521DAB1A8400D2AB15 /* push_session_handler.h in Headers */,
 				04C259531DAB1A8400D2AB15 /* apns_client_handler.h in Headers */,
 				04C259541DAB1A8400D2AB15 /* socket_io.h in Headers */,
@@ -4784,10 +4809,13 @@
 				04C259641DAB1AF700D2AB15 /* db_proxy_server.cpp in Sources */,
 				04C421731DAC747F0062D427 /* MessageModel.cpp in Sources */,
 				0404911A1DAE402800738274 /* MessageContent.cpp in Sources */,
+				0404912C1DAE43C500738274 /* RecentSession.cpp in Sources */,
+				040491281DAE435800738274 /* DepartModel.cpp in Sources */,
 				04377AFB1DAB9DD900BDD2AF /* GroupModel.cpp in Sources */,
 				04377AE21DAB948D00BDD2AF /* DBPool.cpp in Sources */,
 				0404910E1DAE3D4500738274 /* GroupAction.cpp in Sources */,
 				04377AE71DAB96C700BDD2AF /* FileModel.cpp in Sources */,
+				040491241DAE42FB00738274 /* DepartAction.cpp in Sources */,
 				04377AEB1DAB97B000BDD2AF /* ProxyTask.cpp in Sources */,
 				04377B031DABB44E00BDD2AF /* CachePool.cpp in Sources */,
 				04C421751DAC747F0062D427 /* RelationModel.cpp in Sources */,
