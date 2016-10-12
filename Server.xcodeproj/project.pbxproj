@@ -18,6 +18,12 @@
 		0404910F1DAE3D4500738274 /* GroupAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0404910D1DAE3D4500738274 /* GroupAction.h */; };
 		040491121DAE3E6200738274 /* UserAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 040491101DAE3E6200738274 /* UserAction.cpp */; };
 		040491131DAE3E6200738274 /* UserAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 040491111DAE3E6200738274 /* UserAction.h */; };
+		040491161DAE3FD000738274 /* MessageCounter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 040491141DAE3FD000738274 /* MessageCounter.cpp */; };
+		040491171DAE3FD000738274 /* MessageCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = 040491151DAE3FD000738274 /* MessageCounter.h */; };
+		0404911A1DAE402800738274 /* MessageContent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 040491181DAE402800738274 /* MessageContent.cpp */; };
+		0404911B1DAE402800738274 /* MessageContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 040491191DAE402800738274 /* MessageContent.h */; };
+		0404911E1DAE417C00738274 /* FileAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0404911C1DAE417C00738274 /* FileAction.cpp */; };
+		0404911F1DAE417C00738274 /* FileAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0404911D1DAE417C00738274 /* FileAction.h */; };
 		040D5BBA1D8E9BD400FA8392 /* singleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D5BB91D8E9BD400FA8392 /* singleton.h */; };
 		040D5BBC1D8E9E5D00FA8392 /* Task.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D5BBB1D8E9E5D00FA8392 /* Task.h */; };
 		040D5BBF1D8E9ECA00FA8392 /* Thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 040D5BBD1D8E9ECA00FA8392 /* Thread.cpp */; };
@@ -1276,6 +1282,12 @@
 		0404910D1DAE3D4500738274 /* GroupAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupAction.h; path = db_proxy_server/business/GroupAction.h; sourceTree = "<group>"; };
 		040491101DAE3E6200738274 /* UserAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UserAction.cpp; path = db_proxy_server/business/UserAction.cpp; sourceTree = "<group>"; };
 		040491111DAE3E6200738274 /* UserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserAction.h; path = db_proxy_server/business/UserAction.h; sourceTree = "<group>"; };
+		040491141DAE3FD000738274 /* MessageCounter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MessageCounter.cpp; path = db_proxy_server/business/MessageCounter.cpp; sourceTree = "<group>"; };
+		040491151DAE3FD000738274 /* MessageCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageCounter.h; path = db_proxy_server/business/MessageCounter.h; sourceTree = "<group>"; };
+		040491181DAE402800738274 /* MessageContent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MessageContent.cpp; path = db_proxy_server/business/MessageContent.cpp; sourceTree = "<group>"; };
+		040491191DAE402800738274 /* MessageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageContent.h; path = db_proxy_server/business/MessageContent.h; sourceTree = "<group>"; };
+		0404911C1DAE417C00738274 /* FileAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileAction.cpp; path = db_proxy_server/business/FileAction.cpp; sourceTree = "<group>"; };
+		0404911D1DAE417C00738274 /* FileAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileAction.h; path = db_proxy_server/business/FileAction.h; sourceTree = "<group>"; };
 		040D5BB91D8E9BD400FA8392 /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = singleton.h; path = base/singleton.h; sourceTree = SOURCE_ROOT; };
 		040D5BBB1D8E9E5D00FA8392 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = base/Task.h; sourceTree = SOURCE_ROOT; };
 		040D5BBD1D8E9ECA00FA8392 /* Thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Thread.cpp; path = base/Thread.cpp; sourceTree = SOURCE_ROOT; };
@@ -2230,8 +2242,14 @@
 				04C421721DAC747F0062D427 /* RelationModel.h */,
 				04377AF91DAB9DD900BDD2AF /* GroupModel.cpp */,
 				04377AFA1DAB9DD900BDD2AF /* GroupModel.h */,
+				0404911C1DAE417C00738274 /* FileAction.cpp */,
+				0404911D1DAE417C00738274 /* FileAction.h */,
 				040491101DAE3E6200738274 /* UserAction.cpp */,
 				040491111DAE3E6200738274 /* UserAction.h */,
+				040491181DAE402800738274 /* MessageContent.cpp */,
+				040491191DAE402800738274 /* MessageContent.h */,
+				040491141DAE3FD000738274 /* MessageCounter.cpp */,
+				040491151DAE3FD000738274 /* MessageCounter.h */,
 				0404910C1DAE3D4500738274 /* GroupAction.cpp */,
 				0404910D1DAE3D4500738274 /* GroupAction.h */,
 				04C421771DAC75E80062D427 /* GroupMessageModel.cpp */,
@@ -3689,6 +3707,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0404911F1DAE417C00738274 /* FileAction.h in Headers */,
 				04C2592B1DAB1A8400D2AB15 /* tcp_session_async.h in Headers */,
 				04C2592C1DAB1A8400D2AB15 /* config_util.h in Headers */,
 				04C4217A1DAC75E80062D427 /* GroupMessageModel.h in Headers */,
@@ -3732,6 +3751,7 @@
 				04C259491DAB1A8400D2AB15 /* file_client_conn.h in Headers */,
 				04377AE31DAB948D00BDD2AF /* DBPool.h in Headers */,
 				04C2594A1DAB1A8400D2AB15 /* tcp_client_async.h in Headers */,
+				0404911B1DAE402800738274 /* MessageContent.h in Headers */,
 				04C2594B1DAB1A8400D2AB15 /* StringUtils.h in Headers */,
 				04377B041DABB44E00BDD2AF /* CachePool.h in Headers */,
 				04C2594C1DAB1A8400D2AB15 /* epoll_io_loop.h in Headers */,
@@ -3748,6 +3768,7 @@
 				04C259561DAB1A8400D2AB15 /* transfer_task_manager.h in Headers */,
 				04377B081DABB94800BDD2AF /* SessionModel.h in Headers */,
 				04C259571DAB1A8400D2AB15 /* socket_io_define.h in Headers */,
+				040491171DAE3FD000738274 /* MessageCounter.h in Headers */,
 				04C259581DAB1A8400D2AB15 /* base_socket.hpp in Headers */,
 				04C259591DAB1A8400D2AB15 /* io_loop.h in Headers */,
 				04C2595A1DAB1A8400D2AB15 /* LoginConn.h in Headers */,
@@ -4750,6 +4771,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040491161DAE3FD000738274 /* MessageCounter.cpp in Sources */,
 				04377AEF1DAB988900BDD2AF /* UserModel.cpp in Sources */,
 				040491121DAE3E6200738274 /* UserAction.cpp in Sources */,
 				04377AFF1DABB30200BDD2AF /* HandlerMap.cpp in Sources */,
@@ -4758,8 +4780,10 @@
 				04377AF31DAB9A4200BDD2AF /* SyncCenter.cpp in Sources */,
 				04377AF71DAB9BC900BDD2AF /* AudioModel.cpp in Sources */,
 				04377ADE1DAB92ED00BDD2AF /* ProxyConn.cpp in Sources */,
+				0404911E1DAE417C00738274 /* FileAction.cpp in Sources */,
 				04C259641DAB1AF700D2AB15 /* db_proxy_server.cpp in Sources */,
 				04C421731DAC747F0062D427 /* MessageModel.cpp in Sources */,
+				0404911A1DAE402800738274 /* MessageContent.cpp in Sources */,
 				04377AFB1DAB9DD900BDD2AF /* GroupModel.cpp in Sources */,
 				04377AE21DAB948D00BDD2AF /* DBPool.cpp in Sources */,
 				0404910E1DAE3D4500738274 /* GroupAction.cpp in Sources */,

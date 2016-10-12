@@ -1,14 +1,3 @@
-/*================================================================
- *   Copyright (C) 2014 All rights reserved.
- *
- *   文件名称：MessageCounter.cpp
- *   创 建 者：Zhang Yuanhao
- *   邮    箱：bluefoxah@gmail.com
- *   创建日期：2014年12月15日
- *   描    述：
- *
- ================================================================*/
-
 #include "../ProxyConn.h"
 #include "../CachePool.h"
 #include "MessageCounter.h"
@@ -21,8 +10,9 @@
 #include "UserModel.h"
 #include<time.h>
 
-namespace DB_PROXY {
-
+namespace DB_PROXY
+{
+    
     void getUnreadMsgCounter(CImPdu* pPdu, uint32_t conn_uuid)
     {
         IM::Message::IMUnreadMsgCntReq msg;
@@ -30,9 +20,9 @@ namespace DB_PROXY {
         if(msg.ParseFromArray(pPdu->GetBodyData(), pPdu->GetBodyLength()))
         {
             CImPdu* pPduResp = new CImPdu;
-
+            
             uint32_t nUserId = msg.user_id();
-
+            
             list<IM::BaseDefine::UnreadInfo> lsUnreadCount;
             uint32_t nTotalCnt = 0;
             
@@ -43,7 +33,7 @@ namespace DB_PROXY {
             for(auto it= lsUnreadCount.begin(); it!=lsUnreadCount.end(); ++it)
             {
                 IM::BaseDefine::UnreadInfo* pInfo = msgResp.add_unreadinfo_list();
-    //            *pInfo = *it;
+                //*pInfo = *it;
                 pInfo->set_session_id(it->session_id());
                 pInfo->set_session_type(it->session_type());
                 pInfo->set_unread_cnt(it->unread_cnt());
@@ -67,7 +57,7 @@ namespace DB_PROXY {
             log("parse pb failed");
         }
     }
-
+    
     void clearUnreadMsgCounter(CImPdu* pPdu, uint32_t conn_uuid)
     {
         IM::Message::IMMsgDataReadAck msg;
@@ -84,7 +74,7 @@ namespace DB_PROXY {
             log("parse pb failed");
         }
     }
-        
+    
     void setDevicesToken(CImPdu* pPdu, uint32_t conn_uuid)
     {
         IM::Login::IMDeviceTokenReq msg;
@@ -122,7 +112,8 @@ namespace DB_PROXY {
                     {
                         string strOldToken = strOldValue.substr(nPos + 1);
                         string strReply = pCacheConn->get("device_"+strOldToken);
-                        if (!strReply.empty()) {
+                        if (!strReply.empty())
+                        {
                             string strNewValue("");
                             pCacheConn->set("device_"+strOldToken, strNewValue);
                         }
@@ -132,7 +123,7 @@ namespace DB_PROXY {
                 pCacheConn->set("device_"+int2string(nUserId), strValue);
                 string strNewValue = int2string(nUserId);
                 pCacheConn->set("device_"+strToken, strNewValue);
-            
+                
                 log("setDeviceToken. userId=%u, deviceToken=%s", nUserId, strToken.c_str());
                 pCacheManager->RelCacheConn(pCacheConn);
             }
@@ -155,8 +146,8 @@ namespace DB_PROXY {
             log("parse pb failed");
         }
     }
-
-
+    
+    
     void getDevicesToken(CImPdu* pPdu, uint32_t conn_uuid)
     {
         IM::Server::IMGetDeviceTokenReq msg;
@@ -173,13 +164,15 @@ namespace DB_PROXY {
             bool is_check_shield_status = false;
             time_t now = time(NULL);
             struct tm* _tm = localtime(&now);
-            if (_tm->tm_hour >= 22 || _tm->tm_hour <=7 ) {
-                    is_check_shield_status = true;
-                }
+            if (_tm->tm_hour >= 22 || _tm->tm_hour <=7 )
+            {
+                is_check_shield_status = true;
+            }
             if (pCacheConn)
             {
                 vector<string> vecTokens;
-                for (uint32_t i=0; i<nCnt; ++i) {
+                for (uint32_t i=0; i<nCnt; ++i)
+                {
                     string strKey = "device_"+int2string(msg.user_id(i));
                     vecTokens.push_back(strKey);
                 }
@@ -189,7 +182,8 @@ namespace DB_PROXY {
                 
                 if(bRet)
                 {
-                    for (auto it=mapTokens.begin(); it!=mapTokens.end(); ++it) {
+                    for (auto it=mapTokens.begin(); it!=mapTokens.end(); ++it)
+                    {
                         string strKey = it->first;
                         size_t nPos = strKey.find("device_");
                         if( nPos != string::npos)
@@ -207,14 +201,18 @@ namespace DB_PROXY {
                                 {
                                     // 过滤出已经设置勿打扰并且为晚上22：00～07：00
                                     uint32_t shield_status = 0;
-                                    if (is_check_shield_status) {
+                                    if (is_check_shield_status)
+                                    {
                                         CUserModel::getInstance()->getPushShield(nUserId, &shield_status);
                                     }
                                     
-                                    if (shield_status == 1) {
+                                    if (shield_status == 1)
+                                    {
                                         // 对IOS处理
                                         continue;
-                                    } else {
+                                    }
+                                    else
+                                    {
                                         nClientType = IM::BaseDefine::CLIENT_TYPE_IOS;
                                     }
                                     

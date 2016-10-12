@@ -218,7 +218,6 @@ namespace DB_PROXY
                 log("doQueryPushShield false, user_id=%u", user_id);
             }
             
-            
             CImPdu* pdu_resp = new CImPdu();
             resp.set_attach_data(req.attach_data());
             pdu_resp->SetPBMsg(&resp);

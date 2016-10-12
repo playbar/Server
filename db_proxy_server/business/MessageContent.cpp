@@ -1,14 +1,3 @@
-/*================================================================
- *   Copyright (C) 2014 All rights reserved.
- *
- *   文件名称：MessageContent.cpp
- *   创 建 者：Zhang Yuanhao
- *   邮    箱：bluefoxah@gmail.com
- *   创建日期：2014年12月15日
- *   描    述：
- *
- ================================================================*/
-
 #include "../ProxyConn.h"
 #include "../CachePool.h"
 #include "../DBPool.h"
@@ -22,12 +11,13 @@
 #include "SessionModel.h"
 #include "RelationModel.h"
 
-namespace DB_PROXY {
-
+namespace DB_PROXY
+{
+    
     void getMessage(CImPdu* pPdu, uint32_t conn_uuid)
     {
         IM::Message::IMGetMsgListReq msg;
-  if(msg.ParseFromArray(pPdu->GetBodyData(), pPdu->GetBodyLength()))
+        if(msg.ParseFromArray(pPdu->GetBodyData(), pPdu->GetBodyLength()))
         {
             uint32_t nUserId = msg.user_id();
             uint32_t nPeerId = msg.session_id();
@@ -38,9 +28,9 @@ namespace DB_PROXY {
             {
                 CImPdu* pPduResp = new CImPdu;
                 IM::Message::IMGetMsgListRsp msgResp;
-
+                
                 list<IM::BaseDefine::MsgInfo> lsMsg;
-
+                
                 if(nSessionType == IM::BaseDefine::SESSION_TYPE_SINGLE)//获取个人消息
                 {
                     CMessageModel::getInstance()->getMessage(nUserId, nPeerId, nMsgId, nMsgCnt, lsMsg);
@@ -52,7 +42,7 @@ namespace DB_PROXY {
                         CGroupMessageModel::getInstance()->getMessage(nUserId, nPeerId, nMsgId, nMsgCnt, lsMsg);
                     }
                 }
-
+                
                 msgResp.set_user_id(nUserId);
                 msgResp.set_session_id(nPeerId);
                 msgResp.set_msg_id_begin(nMsgId);
@@ -60,15 +50,15 @@ namespace DB_PROXY {
                 for(auto it=lsMsg.begin(); it!=lsMsg.end();++it)
                 {
                     IM::BaseDefine::MsgInfo* pMsg = msgResp.add_msg_list();
-        //            *pMsg = *it;
+                    //*pMsg = *it;
                     pMsg->set_msg_id(it->msg_id());
                     pMsg->set_from_session_id(it->from_session_id());
                     pMsg->set_create_time(it->create_time());
                     pMsg->set_msg_type(it->msg_type());
                     pMsg->set_msg_data(it->msg_data());
-//                    log("userId=%u, peerId=%u, msgId=%u", nUserId, nPeerId, it->msg_id());
+                    //log("userId=%u, peerId=%u, msgId=%u", nUserId, nPeerId, it->msg_id());
                 }
-
+                
                 log("userId=%u, peerId=%u, msgId=%u, msgCnt=%u, count=%u", nUserId, nPeerId, nMsgId, nMsgCnt, msgResp.msg_list_size());
                 msgResp.set_attach_data(msg.attach_data());
                 pPduResp->SetPBMsg(&msgResp);
@@ -88,7 +78,7 @@ namespace DB_PROXY {
             log("parse pb failed");
         }
     }
-
+    
     void sendMessage(CImPdu* pPdu, uint32_t conn_uuid)
     {
         IM::Message::IMMsgData msg;
@@ -106,25 +96,28 @@ namespace DB_PROXY {
                 if(nMsgLen != 0)
                 {
                     CImPdu* pPduResp = new CImPdu;
-
+                    
                     uint32_t nMsgId = INVALID_VALUE;
                     uint32_t nSessionId = INVALID_VALUE;
                     uint32_t nPeerSessionId = INVALID_VALUE;
-
+                    
                     CMessageModel* pMsgModel = CMessageModel::getInstance();
                     CGroupMessageModel* pGroupMsgModel = CGroupMessageModel::getInstance();
-                    if(nMsgType == IM::BaseDefine::MSG_TYPE_GROUP_TEXT) {
+                    if(nMsgType == IM::BaseDefine::MSG_TYPE_GROUP_TEXT)
+                    {
                         CGroupModel* pGroupModel = CGroupModel::getInstance();
                         if (pGroupModel->isValidateGroupId(nToId) && pGroupModel->isInGroup(nFromId, nToId))
                         {
                             nSessionId = CSessionModel::getInstance()->getSessionId(nFromId, nToId, IM::BaseDefine::SESSION_TYPE_GROUP, false);
-                            if (INVALID_VALUE == nSessionId) {
+                            if (INVALID_VALUE == nSessionId)
+                            {
                                 nSessionId = CSessionModel::getInstance()->addSession(nFromId, nToId, IM::BaseDefine::SESSION_TYPE_GROUP);
                             }
                             if(nSessionId != INVALID_VALUE)
                             {
                                 nMsgId = pGroupMsgModel->getMsgId(nToId);
-                                if (nMsgId != INVALID_VALUE) {
+                                if (nMsgId != INVALID_VALUE)
+                                {
                                     pGroupMsgModel->sendMessage(nFromId, nToId, nMsgType, nCreateTime, nMsgId, (string&)msg.msg_data());
                                     CSessionModel::getInstance()->updateSession(nSessionId, nNow);
                                 }
@@ -136,12 +129,15 @@ namespace DB_PROXY {
                             delete pPduResp;
                             return;
                         }
-                    } else if (nMsgType == IM::BaseDefine::MSG_TYPE_GROUP_AUDIO) {
+                    }
+                    else if (nMsgType == IM::BaseDefine::MSG_TYPE_GROUP_AUDIO)
+                    {
                         CGroupModel* pGroupModel = CGroupModel::getInstance();
                         if (pGroupModel->isValidateGroupId(nToId)&& pGroupModel->isInGroup(nFromId, nToId))
                         {
                             nSessionId = CSessionModel::getInstance()->getSessionId(nFromId, nToId, IM::BaseDefine::SESSION_TYPE_GROUP, false);
-                            if (INVALID_VALUE == nSessionId) {
+                            if (INVALID_VALUE == nSessionId)
+                            {
                                 nSessionId = CSessionModel::getInstance()->addSession(nFromId, nToId, IM::BaseDefine::SESSION_TYPE_GROUP);
                             }
                             if(nSessionId != INVALID_VALUE)
@@ -160,10 +156,14 @@ namespace DB_PROXY {
                             delete pPduResp;
                             return;
                         }
-                    } else if(nMsgType== IM::BaseDefine::MSG_TYPE_SINGLE_TEXT) {
-                        if (nFromId != nToId) {
+                    }
+                    else if(nMsgType== IM::BaseDefine::MSG_TYPE_SINGLE_TEXT)
+                    {
+                        if (nFromId != nToId)
+                        {
                             nSessionId = CSessionModel::getInstance()->getSessionId(nFromId, nToId, IM::BaseDefine::SESSION_TYPE_SINGLE, false);
-                            if (INVALID_VALUE == nSessionId) {
+                            if (INVALID_VALUE == nSessionId)
+                            {
                                 nSessionId = CSessionModel::getInstance()->addSession(nFromId, nToId, IM::BaseDefine::SESSION_TYPE_SINGLE);
                             }
                             nPeerSessionId = CSessionModel::getInstance()->getSessionId(nToId, nFromId, IM::BaseDefine::SESSION_TYPE_SINGLE, false);
@@ -195,12 +195,15 @@ namespace DB_PROXY {
                             log("send msg to self. fromId=%u, toId=%u, msgType=%u", nFromId, nToId, nMsgType);
                         }
                         
-                    } else if(nMsgType == IM::BaseDefine::MSG_TYPE_SINGLE_AUDIO) {
+                    }
+                    else if(nMsgType == IM::BaseDefine::MSG_TYPE_SINGLE_AUDIO)
+                    {
                         
                         if(nFromId != nToId)
                         {
                             nSessionId = CSessionModel::getInstance()->getSessionId(nFromId, nToId, IM::BaseDefine::SESSION_TYPE_SINGLE, false);
-                            if (INVALID_VALUE == nSessionId) {
+                            if (INVALID_VALUE == nSessionId)
+                            {
                                 nSessionId = CSessionModel::getInstance()->addSession(nFromId, nToId, IM::BaseDefine::SESSION_TYPE_SINGLE);
                             }
                             nPeerSessionId = CSessionModel::getInstance()->getSessionId(nToId, nFromId, IM::BaseDefine::SESSION_TYPE_SINGLE, false);
@@ -212,16 +215,19 @@ namespace DB_PROXY {
                             if(nSessionId != INVALID_VALUE && nRelateId != INVALID_VALUE)
                             {
                                 nMsgId = pMsgModel->getMsgId(nRelateId);
-                                if(nMsgId != INVALID_VALUE) {
+                                if(nMsgId != INVALID_VALUE)
+                                {
                                     pMsgModel->sendAudioMessage(nRelateId, nFromId, nToId, nMsgType, nCreateTime, nMsgId, msg.msg_data().c_str(), nMsgLen);
                                     CSessionModel::getInstance()->updateSession(nSessionId, nNow);
                                     CSessionModel::getInstance()->updateSession(nPeerSessionId, nNow);
                                 }
-                                else {
+                                else
+                                {
                                     log("msgId is invalid. fromId=%u, toId=%u, nRelateId=%u, nSessionId=%u, nMsgType=%u", nFromId, nToId, nRelateId, nSessionId, nMsgType);
                                 }
                             }
-                            else {
+                            else
+                            {
                                 log("sessionId or relateId is invalid. fromId=%u, toId=%u, nRelateId=%u, nSessionId=%u, nMsgType=%u", nFromId, nToId, nRelateId, nSessionId, nMsgType);
                             }
                         }
@@ -230,9 +236,9 @@ namespace DB_PROXY {
                             log("send msg to self. fromId=%u, toId=%u, msgType=%u", nFromId, nToId, nMsgType);
                         }
                     }
-
+                    
                     log("fromId=%u, toId=%u, type=%u, msgId=%u, sessionId=%u", nFromId, nToId, nMsgType, nMsgId, nSessionId);
-
+                    
                     msg.set_msg_id(nMsgId);
                     pPduResp->SetPBMsg(&msg);
                     pPduResp->SetSeqNum(pPdu->GetSeqNum());
@@ -254,8 +260,9 @@ namespace DB_PROXY {
         {
             log("parse pb failed");
         }
+        return;
     }
-
+    
     void getMessageById(CImPdu* pPdu, uint32_t conn_uuid)
     {
         IM::Message::IMGetMsgByIdReq msg;
@@ -274,7 +281,7 @@ namespace DB_PROXY {
             {
                 CImPdu* pPduResp = new CImPdu;
                 IM::Message::IMGetMsgByIdRsp msgResp;
-
+                
                 list<IM::BaseDefine::MsgInfo> lsMsg;
                 if(IM::BaseDefine::SESSION_TYPE_SINGLE == nType)
                 {
@@ -314,7 +321,7 @@ namespace DB_PROXY {
             log("parse pb failed");
         }
     }
-
+    
     void getLatestMsgId(CImPdu* pPdu, uint32_t conn_uuid)
     {
         IM::Message::IMGetLatestMsgIdReq msg;
@@ -323,7 +330,8 @@ namespace DB_PROXY {
             uint32_t nUserId = msg.user_id();
             IM::BaseDefine::SessionType nType = msg.session_type();
             uint32_t nPeerId = msg.session_id();
-            if (IM::BaseDefine::SessionType_IsValid(nType)) {
+            if (IM::BaseDefine::SessionType_IsValid(nType))
+            {
                 CImPdu* pPduResp = new CImPdu;
                 IM::Message::IMGetLatestMsgIdRsp msgResp;
                 msgResp.set_user_id(nUserId);
@@ -351,7 +359,7 @@ namespace DB_PROXY {
                 pPduResp->SetServiceId(IM::BaseDefine::SID_MSG);
                 pPduResp->SetCommandId(IM::BaseDefine::CID_MSG_GET_LATEST_MSG_ID_RSP);
                 CProxyConn::AddResponsePdu(conn_uuid, pPduResp);
-
+                
             }
             else
             {
