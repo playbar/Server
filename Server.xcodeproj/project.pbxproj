@@ -384,6 +384,14 @@
 		04BD605B1D7E470900566DDD /* HttpParserWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD60591D7E470900566DDD /* HttpParserWrapper.h */; };
 		04BD89611D7901BB00B523FC /* EncDec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BD895F1D7901BB00B523FC /* EncDec.cpp */; };
 		04BD89621D7901BB00B523FC /* EncDec.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD89601D7901BB00B523FC /* EncDec.h */; };
+		04BEE8D31DAF0DEE006E0A80 /* Login.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BEE8D11DAF0DEE006E0A80 /* Login.cpp */; };
+		04BEE8D41DAF0DEE006E0A80 /* Login.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BEE8D21DAF0DEE006E0A80 /* Login.h */; };
+		04BEE8D71DAF0F24006E0A80 /* InterLogin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04BEE8D51DAF0F24006E0A80 /* InterLogin.cpp */; };
+		04BEE8D81DAF0F24006E0A80 /* InterLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BEE8D61DAF0F24006E0A80 /* InterLogin.h */; };
+		04BEE8DA1DAF0F54006E0A80 /* LoginStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BEE8D91DAF0F54006E0A80 /* LoginStrategy.h */; };
+		04BEE8E11DAF175C006E0A80 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BEE8DF1DAF1737006E0A80 /* libcurl.a */; };
+		04BEE8E21DAF175C006E0A80 /* libmysqld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BEE8E01DAF1737006E0A80 /* libmysqld.a */; };
+		04BEE8E31DAF17DF006E0A80 /* libhiredis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04414E061D9BCBD10024D7BF /* libhiredis.a */; };
 		04BF0C881D9BB8F500AF04DD /* ipparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864F31D8FD36900A3A3D4 /* ipparser.h */; };
 		04BF0C891D9BB8F500AF04DD /* HttpConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74FA1D8F7010009F7A93 /* HttpConn.h */; };
 		04BF0C8A1D9BB8F500AF04DD /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
@@ -1413,6 +1421,13 @@
 		04BD60591D7E470900566DDD /* HttpParserWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpParserWrapper.h; path = base/HttpParserWrapper.h; sourceTree = SOURCE_ROOT; };
 		04BD895F1D7901BB00B523FC /* EncDec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EncDec.cpp; path = base/EncDec.cpp; sourceTree = SOURCE_ROOT; };
 		04BD89601D7901BB00B523FC /* EncDec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EncDec.h; path = base/EncDec.h; sourceTree = SOURCE_ROOT; };
+		04BEE8D11DAF0DEE006E0A80 /* Login.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Login.cpp; path = db_proxy_server/business/Login.cpp; sourceTree = "<group>"; };
+		04BEE8D21DAF0DEE006E0A80 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Login.h; path = db_proxy_server/business/Login.h; sourceTree = "<group>"; };
+		04BEE8D51DAF0F24006E0A80 /* InterLogin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InterLogin.cpp; path = db_proxy_server/business/InterLogin.cpp; sourceTree = "<group>"; };
+		04BEE8D61DAF0F24006E0A80 /* InterLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterLogin.h; path = db_proxy_server/business/InterLogin.h; sourceTree = "<group>"; };
+		04BEE8D91DAF0F54006E0A80 /* LoginStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginStrategy.h; path = db_proxy_server/business/LoginStrategy.h; sourceTree = "<group>"; };
+		04BEE8DF1DAF1737006E0A80 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = lib/libcurl.a; sourceTree = "<group>"; };
+		04BEE8E01DAF1737006E0A80 /* libmysqld.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmysqld.a; path = lib/libmysqld.a; sourceTree = "<group>"; };
 		04BF0C911D9BB8F500AF04DD /* net_reptile */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = net_reptile; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BF0C921D9BB96000AF04DD /* net_reptile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = net_reptile.cpp; path = test/net_reptile.cpp; sourceTree = "<group>"; };
 		04C259611DAB1A8400D2AB15 /* db_proxy_server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = db_proxy_server; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2016,6 +2031,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BEE8E31DAF17DF006E0A80 /* libhiredis.a in Frameworks */,
+				04BEE8E11DAF175C006E0A80 /* libcurl.a in Frameworks */,
+				04BEE8E21DAF175C006E0A80 /* libmysqld.a in Frameworks */,
 				04C259241DAB1A8400D2AB15 /* libcrypto.a in Frameworks */,
 				04C259251DAB1A8400D2AB15 /* libssl.a in Frameworks */,
 				04C259261DAB1A8400D2AB15 /* libaprutil-1.a in Frameworks */,
@@ -2251,6 +2269,11 @@
 				04377AEE1DAB988900BDD2AF /* UserModel.h */,
 				04377AE51DAB96C700BDD2AF /* FileModel.cpp */,
 				04377AE61DAB96C700BDD2AF /* FileModel.h */,
+				04BEE8D51DAF0F24006E0A80 /* InterLogin.cpp */,
+				04BEE8D61DAF0F24006E0A80 /* InterLogin.h */,
+				04BEE8D91DAF0F54006E0A80 /* LoginStrategy.h */,
+				04BEE8D11DAF0DEE006E0A80 /* Login.cpp */,
+				04BEE8D21DAF0DEE006E0A80 /* Login.h */,
 				04377AF51DAB9BC900BDD2AF /* AudioModel.cpp */,
 				04377AF61DAB9BC900BDD2AF /* AudioModel.h */,
 				04377B051DABB94800BDD2AF /* SessionModel.cpp */,
@@ -2302,6 +2325,8 @@
 		046054751D925D7300C84153 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				04BEE8DF1DAF1737006E0A80 /* libcurl.a */,
+				04BEE8E01DAF1737006E0A80 /* libmysqld.a */,
 				04D0F9FC1DA9D0CF0096C1FC /* libcrypto.a */,
 				04D0F9FD1DA9D0CF0096C1FC /* libssl.a */,
 				046054731D925BEB00C84153 /* libaprutil-1.a */,
@@ -3745,6 +3770,7 @@
 				04C259351DAB1A8400D2AB15 /* apns_feedback_handler.h in Headers */,
 				04C259361DAB1A8400D2AB15 /* HttpConn.h in Headers */,
 				04C259371DAB1A8400D2AB15 /* UserInfo.h in Headers */,
+				04BEE8DA1DAF0F54006E0A80 /* LoginStrategy.h in Headers */,
 				04C259381DAB1A8400D2AB15 /* transfer_task.h in Headers */,
 				0404912D1DAE43C500738274 /* RecentSession.h in Headers */,
 				04C259391DAB1A8400D2AB15 /* pdu_msg.h in Headers */,
@@ -3757,6 +3783,7 @@
 				04C2593E1DAB1A8400D2AB15 /* base_type.h in Headers */,
 				040491251DAE42FB00738274 /* DepartAction.h in Headers */,
 				04C2593F1DAB1A8400D2AB15 /* Timer.hpp in Headers */,
+				04BEE8D81DAF0F24006E0A80 /* InterLogin.h in Headers */,
 				04377ADF1DAB92ED00BDD2AF /* ProxyConn.h in Headers */,
 				04C259401DAB1A8400D2AB15 /* base_handler.hpp in Headers */,
 				04C259411DAB1A8400D2AB15 /* Portable.h in Headers */,
@@ -3788,6 +3815,7 @@
 				040491291DAE435800738274 /* DepartModel.h in Headers */,
 				04C259521DAB1A8400D2AB15 /* push_session_handler.h in Headers */,
 				04C259531DAB1A8400D2AB15 /* apns_client_handler.h in Headers */,
+				04BEE8D41DAF0DEE006E0A80 /* Login.h in Headers */,
 				04C259541DAB1A8400D2AB15 /* socket_io.h in Headers */,
 				04C259551DAB1A8400D2AB15 /* offline_file_util.h in Headers */,
 				04C259561DAB1A8400D2AB15 /* transfer_task_manager.h in Headers */,
@@ -4803,10 +4831,12 @@
 				04C421791DAC75E80062D427 /* GroupMessageModel.cpp in Sources */,
 				04377B071DABB94800BDD2AF /* SessionModel.cpp in Sources */,
 				04377AF31DAB9A4200BDD2AF /* SyncCenter.cpp in Sources */,
+				04BEE8D71DAF0F24006E0A80 /* InterLogin.cpp in Sources */,
 				04377AF71DAB9BC900BDD2AF /* AudioModel.cpp in Sources */,
 				04377ADE1DAB92ED00BDD2AF /* ProxyConn.cpp in Sources */,
 				0404911E1DAE417C00738274 /* FileAction.cpp in Sources */,
 				04C259641DAB1AF700D2AB15 /* db_proxy_server.cpp in Sources */,
+				04BEE8D31DAF0DEE006E0A80 /* Login.cpp in Sources */,
 				04C421731DAC747F0062D427 /* MessageModel.cpp in Sources */,
 				0404911A1DAE402800738274 /* MessageContent.cpp in Sources */,
 				0404912C1DAE43C500738274 /* RecentSession.cpp in Sources */,

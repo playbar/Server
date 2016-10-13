@@ -1,23 +1,15 @@
-/*================================================================
-*     Copyright (c) 2015年 lanhu. All rights reserved.
-*   
-*   文件名称：InterLogin.cpp
-*   创 建 者：Zhang Yuanhao
-*   邮    箱：bluefoxah@gmail.com
-*   创建日期：2015年03月09日
-*   描    述：
-*
-================================================================*/
 #include "InterLogin.h"
 #include "../DBPool.h"
 #include "EncDec.h"
 
-bool CInterLoginStrategy::doLogin(const std::string &strName, const std::string &strPass, IM::BaseDefine::UserInfo& user)
+bool CInterLoginStrategy::doLogin(const std::string &strName, const std::string &strPass,
+                                  IM::BaseDefine::UserInfo& user)
 {
     bool bRet = false;
     CDBManager* pDBManger = CDBManager::getInstance();
     CDBConn* pDBConn = pDBManger->GetDBConn("teamtalk_slave");
-    if (pDBConn) {
+    if (pDBConn)
+    {
         string strSql = "select * from IMUser where name='" + strName + "' and status=0";
         CResultSet* pResultSet = pDBConn->ExecuteQuery(strSql.c_str());
         if(pResultSet)
@@ -25,7 +17,8 @@ bool CInterLoginStrategy::doLogin(const std::string &strName, const std::string 
             string strResult, strSalt;
             uint32_t nId, nGender, nDeptId, nStatus;
             string strNick, strAvatar, strEmail, strRealName, strTel, strDomain,strSignInfo;
-            while (pResultSet->Next()) {
+            while (pResultSet->Next())
+            {
                 nId = pResultSet->GetInt("id");
                 strResult = pResultSet->GetString("password");
                 strSalt = pResultSet->GetString("salt");
@@ -60,7 +53,7 @@ bool CInterLoginStrategy::doLogin(const std::string &strName, const std::string 
                 user.set_avatar_url(strAvatar);
                 user.set_department_id(nDeptId);
                 user.set_status(nStatus);
-  	        user.set_sign_info(strSignInfo);
+                user.set_sign_info(strSignInfo);
 
             }
             delete  pResultSet;
