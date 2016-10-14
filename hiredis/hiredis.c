@@ -641,7 +641,8 @@ redisContext *redisConnect(const char *ip, int port) {
     return c;
 }
 
-redisContext *redisConnectWithTimeout(const char *ip, int port, const struct timeval tv) {
+redisContext *redisConnectWithTimeout(const char *ip, int port, const struct timeval tv)
+{
     redisContext *c;
 
     c = redisContextInit();
@@ -653,7 +654,8 @@ redisContext *redisConnectWithTimeout(const char *ip, int port, const struct tim
     return c;
 }
 
-redisContext *redisConnectNonBlock(const char *ip, int port) {
+redisContext *redisConnectNonBlock(const char *ip, int port)
+{
     redisContext *c;
 
     c = redisContextInit();

@@ -1273,6 +1273,374 @@
 		04EC48E81D9A7AFF008CEF88 /* HttpQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EC48E61D9A7AFF008CEF88 /* HttpQuery.h */; };
 		04EC48EF1D9A7CEE008CEF88 /* HttpPdu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04EC48ED1D9A7CEE008CEF88 /* HttpPdu.cpp */; };
 		04EC48F01D9A7CEE008CEF88 /* HttpPdu.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EC48EE1D9A7CEE008CEF88 /* HttpPdu.h */; };
+		04ECF66F1DB079400057CEF5 /* ipparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864F31D8FD36900A3A3D4 /* ipparser.h */; };
+		04ECF6701DB079400057CEF5 /* vec.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CA69261DAC88C000E5A43C /* vec.h */; };
+		04ECF6711DB079400057CEF5 /* HttpConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74FA1D8F7010009F7A93 /* HttpConn.h */; };
+		04ECF6721DB079400057CEF5 /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
+		04ECF6731DB079400057CEF5 /* Mojing3DHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CA69231DAC886400E5A43C /* Mojing3DHelper.h */; };
+		04ECF6741DB079400057CEF5 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
+		04ECF6751DB079400057CEF5 /* LoginConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864EF1D8FD32100A3A3D4 /* LoginConn.h */; };
+		04ECF6761DB079400057CEF5 /* traits.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CA69281DAC88D900E5A43C /* traits.h */; };
+		04ECF6771DB079400057CEF5 /* base.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE11D536E0800DAD42F /* base.hpp */; };
+		04ECF67D1DB0796A0057CEF5 /* redis-benchmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF67C1DB0796A0057CEF5 /* redis-benchmark.c */; };
+		04ECF6881DB079FD0057CEF5 /* hiredis.h in Headers */ = {isa = PBXBuildFile; fileRef = 04414E0E1D9BCC920024D7BF /* hiredis.h */; };
+		04ECF6891DB079FD0057CEF5 /* fileappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177361D90C80800D31823 /* fileappender.h */; };
+		04ECF68A1DB079FD0057CEF5 /* loggingeventpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177BD1D90C80800D31823 /* loggingeventpatternconverter.h */; };
+		04ECF68B1DB079FD0057CEF5 /* outputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177711D90C80800D31823 /* outputstream.h */; };
+		04ECF68C1DB079FD0057CEF5 /* rollingfileappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177EA1D90C80800D31823 /* rollingfileappender.h */; };
+		04ECF68D1DB079FD0057CEF5 /* file.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177351D90C80800D31823 /* file.h */; };
+		04ECF68E1DB079FD0057CEF5 /* levelpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B81D90C80800D31823 /* levelpatternconverter.h */; };
+		04ECF68F1DB079FD0057CEF5 /* rollingfileappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E11D90C80800D31823 /* rollingfileappender.h */; };
+		04ECF6901DB079FD0057CEF5 /* configurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177EE1D90C80800D31823 /* configurator.h */; };
+		04ECF6911DB079FD0057CEF5 /* read.h in Headers */ = {isa = PBXBuildFile; fileRef = 04414E121D9BCC920024D7BF /* read.h */; };
+		04ECF6921DB079FD0057CEF5 /* date.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177561D90C80800D31823 /* date.h */; };
+		04ECF6931DB079FD0057CEF5 /* portability.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177CD1D90C80800D31823 /* portability.h */; };
+		04ECF6941DB079FD0057CEF5 /* socketoutputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1777C1D90C80800D31823 /* socketoutputstream.h */; };
+		04ECF6951DB079FD0057CEF5 /* systemoutwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177851D90C80800D31823 /* systemoutwriter.h */; };
+		04ECF6961DB079FD0057CEF5 /* inputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1775F1D90C80800D31823 /* inputstream.h */; };
+		04ECF6971DB079FD0057CEF5 /* IM.File.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC381D797F2E0007D67A /* IM.File.pb.h */; };
+		04ECF6981DB079FD0057CEF5 /* dailyrollingfileappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1772D1D90C80800D31823 /* dailyrollingfileappender.h */; };
+		04ECF6991DB079FD0057CEF5 /* objectoutputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1776D1D90C80800D31823 /* objectoutputstream.h */; };
+		04ECF69A1DB079FD0057CEF5 /* charsetencoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1774F1D90C80800D31823 /* charsetencoder.h */; };
+		04ECF69B1DB079FD0057CEF5 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319CFE1D5C610A00BBCE26 /* util.h */; };
+		04ECF69C1DB079FD0057CEF5 /* level.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177921D90C80800D31823 /* level.h */; };
+		04ECF69D1DB079FD0057CEF5 /* datetimedateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177591D90C80800D31823 /* datetimedateformat.h */; };
+		04ECF69E1DB079FD0057CEF5 /* manualtriggeringpolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E01D90C80800D31823 /* manualtriggeringpolicy.h */; };
+		04ECF69F1DB079FD0057CEF5 /* socketappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177A31D90C80800D31823 /* socketappender.h */; };
+		04ECF6A01DB079FD0057CEF5 /* object.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1776B1D90C80800D31823 /* object.h */; };
+		04ECF6A11DB079FD0057CEF5 /* exception.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1775A1D90C80800D31823 /* exception.h */; };
+		04ECF6A21DB079FD0057CEF5 /* slog_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D0A1D5C62CF00BBCE26 /* slog_api.h */; };
+		04ECF6A31DB079FD0057CEF5 /* charsetdecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1774E1D90C80800D31823 /* charsetdecoder.h */; };
+		04ECF6A41DB079FD0057CEF5 /* strictmath.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1777E1D90C80800D31823 /* strictmath.h */; };
+		04ECF6A51DB079FD0057CEF5 /* async.h in Headers */ = {isa = PBXBuildFile; fileRef = 04414E091D9BCC920024D7BF /* async.h */; };
+		04ECF6A61DB079FD0057CEF5 /* sockethubappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177A51D90C80800D31823 /* sockethubappender.h */; };
+		04ECF6A71DB079FD0057CEF5 /* filedatepatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B31D90C80800D31823 /* filedatepatternconverter.h */; };
+		04ECF6A81DB079FD0057CEF5 /* ostype.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319CFB1D5C60B400BBCE26 /* ostype.h */; };
+		04ECF6A91DB079FD0057CEF5 /* propertyfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177421D90C80800D31823 /* propertyfilter.h */; };
+		04ECF6AA1DB079FD0057CEF5 /* security.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4ACA81D94BA3B00E4F053 /* security.h */; };
+		04ECF6AB1DB079FD0057CEF5 /* hierarchy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1778F1D90C80800D31823 /* hierarchy.h */; };
+		04ECF6AC1DB079FD0057CEF5 /* zipcompressaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E91D90C80800D31823 /* zipcompressaction.h */; };
+		04ECF6AD1DB079FD0057CEF5 /* iso8601dateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177621D90C80800D31823 /* iso8601dateformat.h */; };
+		04ECF6AE1DB079FD0057CEF5 /* ttcclayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D178031D90C80800D31823 /* ttcclayout.h */; };
+		04ECF6AF1DB079FD0057CEF5 /* classnamepatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B11D90C80800D31823 /* classnamepatternconverter.h */; };
+		04ECF6B01DB079FD0057CEF5 /* mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1776A1D90C80800D31823 /* mutex.h */; };
+		04ECF6B11DB079FD0057CEF5 /* rollingpolicybase.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E41D90C80800D31823 /* rollingpolicybase.h */; };
+		04ECF6B21DB079FD0057CEF5 /* singleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D5BB91D8E9BD400FA8392 /* singleton.h */; };
+		04ECF6B31DB079FD0057CEF5 /* writer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1778D1D90C80800D31823 /* writer.h */; };
+		04ECF6B41DB079FD0057CEF5 /* locationinfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177F41D90C80800D31823 /* locationinfo.h */; };
+		04ECF6B51DB079FD0057CEF5 /* BaseSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319CF81D5C603600BBCE26 /* BaseSocket.h */; };
+		04ECF6B61DB079FD0057CEF5 /* rootlogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D178001D90C80800D31823 /* rootlogger.h */; };
+		04ECF6B71DB079FD0057CEF5 /* relativetimepatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C91D90C80800D31823 /* relativetimepatternconverter.h */; };
+		04ECF6B81DB079FD0057CEF5 /* loglog.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177651D90C80800D31823 /* loglog.h */; };
+		04ECF6B91DB079FD0057CEF5 /* bytebuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1774C1D90C80800D31823 /* bytebuffer.h */; };
+		04ECF6BA1DB079FD0057CEF5 /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4ACD51D94BA3B00E4F053 /* base64.h */; };
+		04ECF6BB1DB079FD0057CEF5 /* layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177911D90C80800D31823 /* layout.h */; };
+		04ECF6BC1DB079FD0057CEF5 /* IM.Login.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC3C1D797F2E0007D67A /* IM.Login.pb.h */; };
+		04ECF6BD1DB079FD0057CEF5 /* autolink.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0151D7CF86200A841ED /* autolink.h */; };
+		04ECF6BE1DB079FD0057CEF5 /* loggerrepository.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177F91D90C80800D31823 /* loggerrepository.h */; };
+		04ECF6BF1DB079FD0057CEF5 /* class.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177501D90C80800D31823 /* class.h */; };
+		04ECF6C01DB079FD0057CEF5 /* defaultloggerfactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177341D90C80800D31823 /* defaultloggerfactory.h */; };
+		04ECF6C11DB079FD0057CEF5 /* writer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C01C1D7CF86200A841ED /* writer.h */; };
+		04ECF6C21DB079FD0057CEF5 /* dict.h in Headers */ = {isa = PBXBuildFile; fileRef = 04414E0B1D9BCC920024D7BF /* dict.h */; };
+		04ECF6C31DB079FD0057CEF5 /* mapfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177411D90C80800D31823 /* mapfilter.h */; };
+		04ECF6C41DB079FD0057CEF5 /* propertyresourcebundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177751D90C80800D31823 /* propertyresourcebundle.h */; };
+		04ECF6C51DB079FD0057CEF5 /* absolutetimedateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177451D90C80800D31823 /* absolutetimedateformat.h */; };
+		04ECF6C61DB079FD0057CEF5 /* xmllayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1780F1D90C80800D31823 /* xmllayout.h */; };
+		04ECF6C71DB079FD0057CEF5 /* propertiespatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C81D90C80800D31823 /* propertiespatternconverter.h */; };
+		04ECF6C81DB079FD0057CEF5 /* threadspecificdata.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177891D90C80800D31823 /* threadspecificdata.h */; };
+		04ECF6C91DB079FD0057CEF5 /* loggerpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177BC1D90C80800D31823 /* loggerpatternconverter.h */; };
+		04ECF6CA1DB079FD0057CEF5 /* simplelayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177EB1D90C80800D31823 /* simplelayout.h */; };
+		04ECF6CB1DB079FD0057CEF5 /* aes_locl.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4ACD11D94BA3B00E4F053 /* aes_locl.h */; };
+		04ECF6CC1DB079FD0057CEF5 /* pool.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177731D90C80800D31823 /* pool.h */; };
+		04ECF6CD1DB079FD0057CEF5 /* timebasedrollingpolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E71D90C80800D31823 /* timebasedrollingpolicy.h */; };
+		04ECF6CE1DB079FD0057CEF5 /* Condition.h in Headers */ = {isa = PBXBuildFile; fileRef = 0400855F1D7517D700FFB559 /* Condition.h */; };
+		04ECF6CF1DB079FD0057CEF5 /* log4z.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ED17991D8E1A3C00E980F2 /* log4z.h */; };
+		04ECF6D01DB079FD0057CEF5 /* inetaddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1775E1D90C80800D31823 /* inetaddress.h */; };
+		04ECF6D11DB079FD0057CEF5 /* timezone.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1778A1D90C80800D31823 /* timezone.h */; };
+		04ECF6D21DB079FD0057CEF5 /* formattinginfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B51D90C80800D31823 /* formattinginfo.h */; };
+		04ECF6D31DB079FD0057CEF5 /* filewatchdog.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1775D1D90C80800D31823 /* filewatchdog.h */; };
+		04ECF6D41DB079FD0057CEF5 /* namepatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C41D90C80800D31823 /* namepatternconverter.h */; };
+		04ECF6D51DB079FD0057CEF5 /* hierarchyeventlistener.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177F21D90C80800D31823 /* hierarchyeventlistener.h */; };
+		04ECF6D61DB079FD0057CEF5 /* gzcompressaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177DC1D90C80800D31823 /* gzcompressaction.h */; };
+		04ECF6D71DB079FD0057CEF5 /* net.h in Headers */ = {isa = PBXBuildFile; fileRef = 04414E101D9BCC920024D7BF /* net.h */; };
+		04ECF6D81DB079FD0057CEF5 /* IM.Server.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC421D797F2E0007D67A /* IM.Server.pb.h */; };
+		04ECF6D91DB079FD0057CEF5 /* filterbasedtriggeringpolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177DA1D90C80800D31823 /* filterbasedtriggeringpolicy.h */; };
+		04ECF6DA1DB079FD0057CEF5 /* stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D178021D90C80800D31823 /* stream.h */; };
+		04ECF6DB1DB079FD0057CEF5 /* bytearrayoutputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1774B1D90C80800D31823 /* bytearrayoutputstream.h */; };
+		04ECF6DC1DB079FD0057CEF5 /* fileinputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1775B1D90C80800D31823 /* fileinputstream.h */; };
+		04ECF6DD1DB079FD0057CEF5 /* im_conn_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C8CA091D7F9B01005DA7A3 /* im_conn_util.h */; };
+		04ECF6DE1DB079FD0057CEF5 /* stringmatchfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177431D90C80800D31823 /* stringmatchfilter.h */; };
+		04ECF6DF1DB079FD0057CEF5 /* appender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177221D90C80800D31823 /* appender.h */; };
+		04ECF6E01DB079FD0057CEF5 /* loggerfactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177F81D90C80800D31823 /* loggerfactory.h */; };
+		04ECF6E11DB079FD0057CEF5 /* domconfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1780B1D90C80800D31823 /* domconfigurator.h */; };
+		04ECF6E21DB079FD0057CEF5 /* inputstreamreader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177601D90C80800D31823 /* inputstreamreader.h */; };
+		04ECF6E31DB079FD0057CEF5 /* bufferedoutputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177481D90C80800D31823 /* bufferedoutputstream.h */; };
+		04ECF6E41DB079FD0057CEF5 /* integerpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B71D90C80800D31823 /* integerpatternconverter.h */; };
+		04ECF6E51DB079FD0057CEF5 /* odbcappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177321D90C80800D31823 /* odbcappender.h */; };
+		04ECF6E61DB079FD0057CEF5 /* fileoutputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1775C1D90C80800D31823 /* fileoutputstream.h */; };
+		04ECF6E71DB079FD0057CEF5 /* objectptr.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1776E1D90C80800D31823 /* objectptr.h */; };
+		04ECF6E81DB079FD0057CEF5 /* resourcebundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177781D90C80800D31823 /* resourcebundle.h */; };
+		04ECF6E91DB079FD0057CEF5 /* TokenValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74F41D8F6EC2009F7A93 /* TokenValidator.h */; };
+		04ECF6EA1DB079FD0057CEF5 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74F71D8F6F60009F7A93 /* version.h */; };
+		04ECF6EB1DB079FD0057CEF5 /* appenderskeleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177231D90C80800D31823 /* appenderskeleton.h */; };
+		04ECF6EC1DB079FD0057CEF5 /* cyclicbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177531D90C80800D31823 /* cyclicbuffer.h */; };
+		04ECF6ED1DB079FD0057CEF5 /* stringtokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177801D90C80800D31823 /* stringtokenizer.h */; };
+		04ECF6EE1DB079FD0057CEF5 /* basicconfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177251D90C80800D31823 /* basicconfigurator.h */; };
+		04ECF6EF1DB079FD0057CEF5 /* mdc.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1779C1D90C80800D31823 /* mdc.h */; };
+		04ECF6F01DB079FD0057CEF5 /* bufferedwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177491D90C80800D31823 /* bufferedwriter.h */; };
+		04ECF6F11DB079FD0057CEF5 /* fallbackerrorhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D178051D90C80800D31823 /* fallbackerrorhandler.h */; };
+		04ECF6F21DB079FD0057CEF5 /* log4cxx.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177931D90C80800D31823 /* log4cxx.h */; };
+		04ECF6F31DB079FD0057CEF5 /* sds.h in Headers */ = {isa = PBXBuildFile; fileRef = 04414E141D9BCC920024D7BF /* sds.h */; };
+		04ECF6F41DB079FD0057CEF5 /* loggingevent.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177FA1D90C80800D31823 /* loggingevent.h */; };
+		04ECF6F51DB079FD0057CEF5 /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
+		04ECF6F61DB079FD0057CEF5 /* transcoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1778B1D90C80800D31823 /* transcoder.h */; };
+		04ECF6F71DB079FD0057CEF5 /* locale.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177641D90C80800D31823 /* locale.h */; };
+		04ECF6F81DB079FD0057CEF5 /* properties.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177741D90C80800D31823 /* properties.h */; };
+		04ECF6F91DB079FD0057CEF5 /* asyncappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177241D90C80800D31823 /* asyncappender.h */; };
+		04ECF6FA1DB079FD0057CEF5 /* Thread.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D5BBE1D8E9ECA00FA8392 /* Thread.h */; };
+		04ECF6FB1DB079FD0057CEF5 /* triggeringpolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E81D90C80800D31823 /* triggeringpolicy.h */; };
+		04ECF6FC1DB079FD0057CEF5 /* defaultconfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177331D90C80800D31823 /* defaultconfigurator.h */; };
+		04ECF6FD1DB079FD0057CEF5 /* filter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177F11D90C80800D31823 /* filter.h */; };
+		04ECF6FE1DB079FD0057CEF5 /* levelrangefilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1773C1D90C80800D31823 /* levelrangefilter.h */; };
+		04ECF6FF1DB079FD0057CEF5 /* messagebuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177691D90C80800D31823 /* messagebuffer.h */; };
+		04ECF7001DB079FD0057CEF5 /* logger.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177961D90C80800D31823 /* logger.h */; };
+		04ECF7011DB079FD0057CEF5 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
+		04ECF7021DB079FD0057CEF5 /* logstring.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177981D90C80800D31823 /* logstring.h */; };
+		04ECF7031DB079FD0057CEF5 /* aprinitializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177471D90C80800D31823 /* aprinitializer.h */; };
+		04ECF7041DB079FD0057CEF5 /* Task.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D5BBB1D8E9E5D00FA8392 /* Task.h */; };
+		04ECF7051DB079FD0057CEF5 /* nameabbreviator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C31D90C80800D31823 /* nameabbreviator.h */; };
+		04ECF7061DB079FD0057CEF5 /* synchronized.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177811D90C80800D31823 /* synchronized.h */; };
+		04ECF7071DB079FD0057CEF5 /* json_tool.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0211D7CF86200A841ED /* json_tool.h */; };
+		04ECF7081DB079FD0057CEF5 /* ConfigFileReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D0803D1D765F9900BAC540 /* ConfigFileReader.h */; };
+		04ECF7091DB079FD0057CEF5 /* thread.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177871D90C80800D31823 /* thread.h */; };
+		04ECF70A1DB079FD0057CEF5 /* sizebasedtriggeringpolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E61D90C80800D31823 /* sizebasedtriggeringpolicy.h */; };
+		04ECF70B1DB079FD0057CEF5 /* syslogappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177A61D90C80800D31823 /* syslogappender.h */; };
+		04ECF70C1DB079FD0057CEF5 /* threadpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177CA1D90C80800D31823 /* threadpatternconverter.h */; };
+		04ECF70D1DB079FD0057CEF5 /* systemerrwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177841D90C80800D31823 /* systemerrwriter.h */; };
+		04ECF70E1DB079FD0057CEF5 /* bytearrayinputstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1774A1D90C80800D31823 /* bytearrayinputstream.h */; };
+		04ECF70F1DB079FD0057CEF5 /* socketappenderskeleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177A41D90C80800D31823 /* socketappenderskeleton.h */; };
+		04ECF7101DB079FD0057CEF5 /* rolloverdescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E51D90C80800D31823 /* rolloverdescription.h */; };
+		04ECF7111DB079FD0057CEF5 /* serversocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177791D90C80800D31823 /* serversocket.h */; };
+		04ECF7121DB079FD0057CEF5 /* filerenameaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177D91D90C80800D31823 /* filerenameaction.h */; };
+		04ECF7131DB079FD0057CEF5 /* patternparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C71D90C80800D31823 /* patternparser.h */; };
+		04ECF7141DB079FD0057CEF5 /* throwableinformationpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177CB1D90C80800D31823 /* throwableinformationpatternconverter.h */; };
+		04ECF7151DB079FD0057CEF5 /* action.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177D81D90C80800D31823 /* action.h */; };
+		04ECF7161DB079FD0057CEF5 /* UtilPdu.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D021D5C61C600BBCE26 /* UtilPdu.h */; };
+		04ECF7171DB079FD0057CEF5 /* EncDec.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD89601D7901BB00B523FC /* EncDec.h */; };
+		04ECF7181DB079FD0057CEF5 /* EventDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D98001D65C02F001BC84D /* EventDispatch.h */; };
+		04ECF7191DB079FD0057CEF5 /* errorhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177F01D90C80800D31823 /* errorhandler.h */; };
+		04ECF71A1DB079FD0057CEF5 /* andfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177381D90C80800D31823 /* andfilter.h */; };
+		04ECF71B1DB079FD0057CEF5 /* socket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1777B1D90C80800D31823 /* socket.h */; };
+		04ECF71C1DB079FD0057CEF5 /* http_parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC281D797D040007D67A /* http_parser.h */; };
+		04ECF71D1DB079FD0057CEF5 /* HttpParserWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BD60591D7E470900566DDD /* HttpParserWrapper.h */; };
+		04ECF71E1DB079FD0057CEF5 /* onlyonceerrorhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1776F1D90C80800D31823 /* onlyonceerrorhandler.h */; };
+		04ECF71F1DB079FD0057CEF5 /* IM.SwitchService.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC441D797F2E0007D67A /* IM.SwitchService.pb.h */; };
+		04ECF7201DB079FD0057CEF5 /* datagrampacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177541D90C80800D31823 /* datagrampacket.h */; };
+		04ECF7211DB079FD0057CEF5 /* system.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177831D90C80800D31823 /* system.h */; };
+		04ECF7221DB079FD0057CEF5 /* threadlocal.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177881D90C80800D31823 /* threadlocal.h */; };
+		04ECF7231DB079FD0057CEF5 /* loader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177631D90C80800D31823 /* loader.h */; };
+		04ECF7241DB079FD0057CEF5 /* telnetappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177A71D90C80800D31823 /* telnetappender.h */; };
+		04ECF7251DB079FD0057CEF5 /* reader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C01A1D7CF86200A841ED /* reader.h */; };
+		04ECF7261DB079FD0057CEF5 /* outputstreamwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177721D90C80800D31823 /* outputstreamwriter.h */; };
+		04ECF7271DB079FD0057CEF5 /* log4cxx_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177CF1D90C80800D31823 /* log4cxx_private.h */; };
+		04ECF7281DB079FD0057CEF5 /* fulllocationpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B61D90C80800D31823 /* fulllocationpatternconverter.h */; };
+		04ECF7291DB079FD0057CEF5 /* ImPduBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C8CA0D1D7F9BF3005DA7A3 /* ImPduBase.h */; };
+		04ECF72A1DB079FD0057CEF5 /* consoleappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1772C1D90C80800D31823 /* consoleappender.h */; };
+		04ECF72B1DB079FD0057CEF5 /* HttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC2C1D797D8C0007D67A /* HttpClient.h */; };
+		04ECF72C1DB079FD0057CEF5 /* relativetimedateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177771D90C80800D31823 /* relativetimedateformat.h */; };
+		04ECF72D1DB079FD0057CEF5 /* outputdebugstringappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177AF1D90C80800D31823 /* outputdebugstringappender.h */; };
+		04ECF72E1DB079FD0057CEF5 /* xml.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1778E1D90C80800D31823 /* xml.h */; };
+		04ECF72F1DB079FD0057CEF5 /* condition.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177521D90C80800D31823 /* condition.h */; };
+		04ECF7301DB079FD0057CEF5 /* datagramsocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177551D90C80800D31823 /* datagramsocket.h */; };
+		04ECF7311DB079FD0057CEF5 /* optionhandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177FE1D90C80800D31823 /* optionhandler.h */; };
+		04ECF7321DB079FD0057CEF5 /* IM.Buddy.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC361D797F2E0007D67A /* IM.Buddy.pb.h */; };
+		04ECF7331DB079FD0057CEF5 /* defaultrepositoryselector.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177EF1D90C80800D31823 /* defaultrepositoryselector.h */; };
+		04ECF7341DB079FD0057CEF5 /* locationinfofilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1773D1D90C80800D31823 /* locationinfofilter.h */; };
+		04ECF7351DB079FD0057CEF5 /* syslogwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177821D90C80800D31823 /* syslogwriter.h */; };
+		04ECF7361DB079FD0057CEF5 /* base.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE11D536E0800DAD42F /* base.hpp */; };
+		04ECF7371DB079FD0057CEF5 /* denyallfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177391D90C80800D31823 /* denyallfilter.h */; };
+		04ECF7381DB079FD0057CEF5 /* classregistration.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177511D90C80800D31823 /* classregistration.h */; };
+		04ECF7391DB079FD0057CEF5 /* levelmatchfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1773B1D90C80800D31823 /* levelmatchfilter.h */; };
+		04ECF73A1DB079FD0057CEF5 /* fmacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 04414E0C1D9BCC920024D7BF /* fmacros.h */; };
+		04ECF73B1DB079FD0057CEF5 /* lineseparatorpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177BA1D90C80800D31823 /* lineseparatorpatternconverter.h */; };
+		04ECF73C1DB079FD0057CEF5 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0161D7CF86200A841ED /* config.h */; };
+		04ECF73D1DB079FD0057CEF5 /* ndcpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C51D90C80800D31823 /* ndcpatternconverter.h */; };
+		04ECF73E1DB079FD0057CEF5 /* linelocationpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B91D90C80800D31823 /* linelocationpatternconverter.h */; };
+		04ECF73F1DB079FD0057CEF5 /* IM.Group.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC3A1D797F2E0007D67A /* IM.Group.pb.h */; };
+		04ECF7401DB079FD0057CEF5 /* netlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 04350DCB1D823F96000E886A /* netlib.h */; };
+		04ECF7411DB079FD0057CEF5 /* datelayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177581D90C80800D31823 /* datelayout.h */; };
+		04ECF7421DB079FD0057CEF5 /* triggeringeventevaluator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D178011D90C80800D31823 /* triggeringeventevaluator.h */; };
+		04ECF7431DB079FD0057CEF5 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4ACCF1D94BA3B00E4F053 /* aes.h */; };
+		04ECF7441DB079FD0057CEF5 /* transform.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1778C1D90C80800D31823 /* transform.h */; };
+		04ECF7451DB079FD0057CEF5 /* ndc.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1779D1D90C80800D31823 /* ndc.h */; };
+		04ECF7461DB079FD0057CEF5 /* logmanager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177971D90C80800D31823 /* logmanager.h */; };
+		04ECF7471DB079FD0057CEF5 /* patternlayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177CC1D90C80800D31823 /* patternlayout.h */; };
+		04ECF7481DB079FD0057CEF5 /* ServInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ED179D1D8E1BAE00E980F2 /* ServInfo.h */; };
+		04ECF7491DB079FD0057CEF5 /* messagepatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C11D90C80800D31823 /* messagepatternconverter.h */; };
+		04ECF74A1DB079FD0057CEF5 /* appenderattachable.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177ED1D90C80800D31823 /* appenderattachable.h */; };
+		04ECF74B1DB079FD0057CEF5 /* IM.Other.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC401D797F2E0007D67A /* IM.Other.pb.h */; };
+		04ECF74C1DB079FD0057CEF5 /* cacheddateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1774D1D90C80800D31823 /* cacheddateformat.h */; };
+		04ECF74D1DB079FD0057CEF5 /* objectimpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1776C1D90C80800D31823 /* objectimpl.h */; };
+		04ECF74E1DB079FD0057CEF5 /* filelocationpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B41D90C80800D31823 /* filelocationpatternconverter.h */; };
+		04ECF74F1DB079FD0057CEF5 /* value.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C01B1D7CF86200A841ED /* value.h */; };
+		04ECF7501DB079FD0057CEF5 /* IM.BaseDefine.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC341D797F2E0007D67A /* IM.BaseDefine.pb.h */; };
+		04ECF7511DB079FD0057CEF5 /* public_define.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC2F1D797E440007D67A /* public_define.h */; };
+		04ECF7521DB079FD0057CEF5 /* reader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177761D90C80800D31823 /* reader.h */; };
+		04ECF7531DB079FD0057CEF5 /* propertyconfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177D51D90C80800D31823 /* propertyconfigurator.h */; };
+		04ECF7541DB079FD0057CEF5 /* simpledateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1777A1D90C80800D31823 /* simpledateformat.h */; };
+		04ECF7551DB079FD0057CEF5 /* literalpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177BB1D90C80800D31823 /* literalpatternconverter.h */; };
+		04ECF7561DB079FD0057CEF5 /* propertysetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1772A1D90C80800D31823 /* propertysetter.h */; };
+		04ECF7571DB079FD0057CEF5 /* json.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0191D7CF86200A841ED /* json.h */; };
+		04ECF7581DB079FD0057CEF5 /* assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0141D7CF86200A841ED /* assertions.h */; };
+		04ECF7591DB079FD0057CEF5 /* smtpappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177A21D90C80800D31823 /* smtpappender.h */; };
+		04ECF75A1DB079FD0057CEF5 /* json_batchallocator.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C01D1D7CF86200A841ED /* json_batchallocator.h */; };
+		04ECF75B1DB079FD0057CEF5 /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4ACD81D94BA3B00E4F053 /* md5.h */; };
+		04ECF75C1DB079FD0057CEF5 /* rollingfileappenderskeleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E21D90C80800D31823 /* rollingfileappenderskeleton.h */; };
+		04ECF75D1DB079FD0057CEF5 /* appenderattachableimpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177461D90C80800D31823 /* appenderattachableimpl.h */; };
+		04ECF75E1DB079FD0057CEF5 /* optionconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177701D90C80800D31823 /* optionconverter.h */; };
+		04ECF75F1DB079FD0057CEF5 /* ThreadPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74F01D8F697D009F7A93 /* ThreadPool.h */; };
+		04ECF7601DB079FD0057CEF5 /* nteventlogappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177AE1D90C80800D31823 /* nteventlogappender.h */; };
+		04ECF7611DB079FD0057CEF5 /* htmllayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177901D90C80800D31823 /* htmllayout.h */; };
+		04ECF7621DB079FD0057CEF5 /* repositoryselector.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177FF1D90C80800D31823 /* repositoryselector.h */; };
+		04ECF7631DB079FD0057CEF5 /* features.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0171D7CF86200A841ED /* features.h */; };
+		04ECF7641DB079FD0057CEF5 /* stringhelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1777F1D90C80800D31823 /* stringhelper.h */; };
+		04ECF7651DB079FD0057CEF5 /* dateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177571D90C80800D31823 /* dateformat.h */; };
+		04ECF7661DB079FD0057CEF5 /* patternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C61D90C80800D31823 /* patternconverter.h */; };
+		04ECF7671DB079FD0057CEF5 /* datepatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177B21D90C80800D31823 /* datepatternconverter.h */; };
+		04ECF7681DB079FD0057CEF5 /* writerappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D178091D90C80800D31823 /* writerappender.h */; };
+		04ECF7691DB079FD0057CEF5 /* imconn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C8CA111D7F9C2B005DA7A3 /* imconn.h */; };
+		04ECF76A1DB079FD0057CEF5 /* IM.Message.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480EC3E1D797F2E0007D67A /* IM.Message.pb.h */; };
+		04ECF76B1DB079FD0057CEF5 /* fixedwindowrollingpolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177DB1D90C80800D31823 /* fixedwindowrollingpolicy.h */; };
+		04ECF76C1DB079FD0057CEF5 /* rollingpolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177E31D90C80800D31823 /* rollingpolicy.h */; };
+		04ECF76D1DB079FD0057CEF5 /* tchar.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177861D90C80800D31823 /* tchar.h */; };
+		04ECF76E1DB079FD0057CEF5 /* provisionnode.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177D61D90C80800D31823 /* provisionnode.h */; };
+		04ECF76F1DB079FD0057CEF5 /* strftimedateformat.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1777D1D90C80800D31823 /* strftimedateformat.h */; };
+		04ECF7701DB079FD0057CEF5 /* methodlocationpatternconverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177C21D90C80800D31823 /* methodlocationpatternconverter.h */; };
+		04ECF7711DB079FD0057CEF5 /* forwards.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E9C0181D7CF86200A841ED /* forwards.h */; };
+		04ECF7721DB079FD0057CEF5 /* xmlsocketappender.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177A81D90C80800D31823 /* xmlsocketappender.h */; };
+		04ECF7731DB079FD0057CEF5 /* expressionfilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D1773A1D90C80800D31823 /* expressionfilter.h */; };
+		04ECF7741DB079FD0057CEF5 /* Lock.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D061D5C623700BBCE26 /* Lock.h */; };
+		04ECF7751DB079FD0057CEF5 /* integer.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D177611D90C80800D31823 /* integer.h */; };
+		04ECF77C1DB07A1E0057CEF5 /* ae.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF77A1DB07A1E0057CEF5 /* ae.c */; };
+		04ECF77D1DB07A1E0057CEF5 /* ae.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF77B1DB07A1E0057CEF5 /* ae.h */; };
+		04ECF77E1DB07A4D0057CEF5 /* libredislib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECF7791DB079FD0057CEF5 /* libredislib.a */; };
+		04ECF77F1DB07BA20057CEF5 /* libhiredis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04414E061D9BCBD10024D7BF /* libhiredis.a */; };
+		04ECF7821DB07BD60057CEF5 /* adlist.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF7801DB07BD60057CEF5 /* adlist.c */; };
+		04ECF7831DB07BD60057CEF5 /* adlist.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF7811DB07BD60057CEF5 /* adlist.h */; };
+		04ECF7861DB07C100057CEF5 /* zmalloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF7841DB07C100057CEF5 /* zmalloc.c */; };
+		04ECF7871DB07C100057CEF5 /* zmalloc.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF7851DB07C100057CEF5 /* zmalloc.h */; };
+		04ECF78C1DB07C7A0057CEF5 /* libhiredis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04414E061D9BCBD10024D7BF /* libhiredis.a */; };
+		04ECF78D1DB07C7A0057CEF5 /* libredislib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECF7791DB079FD0057CEF5 /* libredislib.a */; };
+		04ECF78F1DB07C7A0057CEF5 /* ipparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864F31D8FD36900A3A3D4 /* ipparser.h */; };
+		04ECF7901DB07C7A0057CEF5 /* vec.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CA69261DAC88C000E5A43C /* vec.h */; };
+		04ECF7911DB07C7A0057CEF5 /* HttpConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74FA1D8F7010009F7A93 /* HttpConn.h */; };
+		04ECF7921DB07C7A0057CEF5 /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
+		04ECF7931DB07C7A0057CEF5 /* Mojing3DHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CA69231DAC886400E5A43C /* Mojing3DHelper.h */; };
+		04ECF7941DB07C7A0057CEF5 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
+		04ECF7951DB07C7A0057CEF5 /* LoginConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864EF1D8FD32100A3A3D4 /* LoginConn.h */; };
+		04ECF7961DB07C7A0057CEF5 /* traits.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CA69281DAC88D900E5A43C /* traits.h */; };
+		04ECF7971DB07C7A0057CEF5 /* base.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE11D536E0800DAD42F /* base.hpp */; };
+		04ECF79D1DB07CAB0057CEF5 /* redis-check-aof.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF79C1DB07CAB0057CEF5 /* redis-check-aof.c */; };
+		04ECF7A21DB07CC70057CEF5 /* libhiredis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04414E061D9BCBD10024D7BF /* libhiredis.a */; };
+		04ECF7A31DB07CC70057CEF5 /* libredislib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECF7791DB079FD0057CEF5 /* libredislib.a */; };
+		04ECF7A51DB07CC70057CEF5 /* ipparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864F31D8FD36900A3A3D4 /* ipparser.h */; };
+		04ECF7A61DB07CC70057CEF5 /* vec.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CA69261DAC88C000E5A43C /* vec.h */; };
+		04ECF7A71DB07CC70057CEF5 /* HttpConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74FA1D8F7010009F7A93 /* HttpConn.h */; };
+		04ECF7A81DB07CC70057CEF5 /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
+		04ECF7A91DB07CC70057CEF5 /* Mojing3DHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CA69231DAC886400E5A43C /* Mojing3DHelper.h */; };
+		04ECF7AA1DB07CC70057CEF5 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
+		04ECF7AB1DB07CC70057CEF5 /* LoginConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864EF1D8FD32100A3A3D4 /* LoginConn.h */; };
+		04ECF7AC1DB07CC70057CEF5 /* traits.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CA69281DAC88D900E5A43C /* traits.h */; };
+		04ECF7AD1DB07CC70057CEF5 /* base.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE11D536E0800DAD42F /* base.hpp */; };
+		04ECF7B31DB07CE40057CEF5 /* redis-check-dump.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF7B21DB07CE40057CEF5 /* redis-check-dump.c */; };
+		04ECF7B61DB07D090057CEF5 /* crc64.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF7B41DB07D090057CEF5 /* crc64.c */; };
+		04ECF7B71DB07D090057CEF5 /* crc64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF7B51DB07D090057CEF5 /* crc64.h */; };
+		04ECF7BB1DB07D430057CEF5 /* lzf_c.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF7B81DB07D430057CEF5 /* lzf_c.c */; };
+		04ECF7BC1DB07D430057CEF5 /* lzf_d.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF7B91DB07D430057CEF5 /* lzf_d.c */; };
+		04ECF7BD1DB07D430057CEF5 /* lzf.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF7BA1DB07D430057CEF5 /* lzf.h */; };
+		04ECF7C21DB0801F0057CEF5 /* libhiredis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04414E061D9BCBD10024D7BF /* libhiredis.a */; };
+		04ECF7C31DB0801F0057CEF5 /* libredislib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECF7791DB079FD0057CEF5 /* libredislib.a */; };
+		04ECF7C51DB0801F0057CEF5 /* ipparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864F31D8FD36900A3A3D4 /* ipparser.h */; };
+		04ECF7C61DB0801F0057CEF5 /* vec.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CA69261DAC88C000E5A43C /* vec.h */; };
+		04ECF7C71DB0801F0057CEF5 /* HttpConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 047C74FA1D8F7010009F7A93 /* HttpConn.h */; };
+		04ECF7C81DB0801F0057CEF5 /* ServerPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE21D536E0800DAD42F /* ServerPriv.hpp */; };
+		04ECF7C91DB0801F0057CEF5 /* Mojing3DHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CA69231DAC886400E5A43C /* Mojing3DHelper.h */; };
+		04ECF7CA1DB0801F0057CEF5 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE71D536F0500DAD42F /* Base64.h */; };
+		04ECF7CB1DB0801F0057CEF5 /* LoginConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F864EF1D8FD32100A3A3D4 /* LoginConn.h */; };
+		04ECF7CC1DB0801F0057CEF5 /* traits.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CA69281DAC88D900E5A43C /* traits.h */; };
+		04ECF7CD1DB0801F0057CEF5 /* base.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04019CE11D536E0800DAD42F /* base.hpp */; };
+		04ECF7D31DB0804B0057CEF5 /* redis-cli.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF7D21DB0804B0057CEF5 /* redis-cli.c */; };
+		04ECF7D61DB080850057CEF5 /* linenoise.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF7D41DB080850057CEF5 /* linenoise.c */; };
+		04ECF7D71DB080850057CEF5 /* linenoise.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF7D51DB080850057CEF5 /* linenoise.h */; };
+		04ECF7DA1DB080C80057CEF5 /* anet.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF7D81DB080C80057CEF5 /* anet.c */; };
+		04ECF7DB1DB080C80057CEF5 /* anet.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF7D91DB080C80057CEF5 /* anet.h */; };
+		04ECF7DE1DB0811F0057CEF5 /* release.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF7DC1DB0811F0057CEF5 /* release.c */; };
+		04ECF7DF1DB0811F0057CEF5 /* release.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF7DD1DB0811F0057CEF5 /* release.h */; };
+		04ECF7E41DB083CC0057CEF5 /* libhiredis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04414E061D9BCBD10024D7BF /* libhiredis.a */; };
+		04ECF7E51DB083CC0057CEF5 /* libredislib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECF7791DB079FD0057CEF5 /* libredislib.a */; };
+		04ECF7F61DB084030057CEF5 /* redis.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF7F41DB084030057CEF5 /* redis.c */; };
+		04ECF7FB1DB085630057CEF5 /* debug.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF7F91DB0852E0057CEF5 /* debug.c */; };
+		04ECF7FE1DB085980057CEF5 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF7FC1DB085980057CEF5 /* sha1.c */; };
+		04ECF7FF1DB085980057CEF5 /* sha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF7FD1DB085980057CEF5 /* sha1.h */; };
+		04ECF8011DB085E90057CEF5 /* networking.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8001DB085E90057CEF5 /* networking.c */; };
+		04ECF8031DB086330057CEF5 /* aof.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8021DB086330057CEF5 /* aof.c */; };
+		04ECF8051DB086E80057CEF5 /* t_string.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8041DB086E80057CEF5 /* t_string.c */; };
+		04ECF8081DB087150057CEF5 /* config.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8061DB087150057CEF5 /* config.c */; };
+		04ECF80C1DB087750057CEF5 /* rdb.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF80A1DB087750057CEF5 /* rdb.c */; };
+		04ECF8101DB087D30057CEF5 /* bio.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF80E1DB087D30057CEF5 /* bio.c */; };
+		04ECF8131DB087FF0057CEF5 /* bitops.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8121DB087FF0057CEF5 /* bitops.c */; };
+		04ECF8151DB088C80057CEF5 /* t_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8141DB088C80057CEF5 /* t_list.c */; };
+		04ECF8191DB088DA0057CEF5 /* t_hash.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8161DB088DA0057CEF5 /* t_hash.c */; };
+		04ECF81A1DB088DA0057CEF5 /* t_set.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8171DB088DA0057CEF5 /* t_set.c */; };
+		04ECF81B1DB088DA0057CEF5 /* t_zset.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8181DB088DA0057CEF5 /* t_zset.c */; };
+		04ECF81D1DB0892B0057CEF5 /* object.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF81C1DB0892B0057CEF5 /* object.c */; };
+		04ECF8201DB0895D0057CEF5 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF81E1DB0895D0057CEF5 /* util.c */; };
+		04ECF8231DB089AD0057CEF5 /* db.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8221DB089AD0057CEF5 /* db.c */; };
+		04ECF8261DB08A200057CEF5 /* dict.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8241DB08A200057CEF5 /* dict.c */; };
+		04ECF8291DB08A5C0057CEF5 /* multi.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8281DB08A5C0057CEF5 /* multi.c */; };
+		04ECF82B1DB08AB30057CEF5 /* migrate.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF82A1DB08AB30057CEF5 /* migrate.c */; };
+		04ECF82D1DB08AE50057CEF5 /* scripting.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF82C1DB08AE50057CEF5 /* scripting.c */; };
+		04ECF82F1DB08B160057CEF5 /* pubsub.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF82E1DB08B160057CEF5 /* pubsub.c */; };
+		04ECF8311DB08B420057CEF5 /* sentinel.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8301DB08B420057CEF5 /* sentinel.c */; };
+		04ECF8341DB08B7A0057CEF5 /* intset.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8321DB08B7A0057CEF5 /* intset.c */; };
+		04ECF8371DB08BA70057CEF5 /* notify.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8361DB08BA70057CEF5 /* notify.c */; };
+		04ECF83A1DB08BD10057CEF5 /* latency.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8381DB08BD10057CEF5 /* latency.c */; };
+		04ECF83E1DB08C090057CEF5 /* sparkline.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF83C1DB08C090057CEF5 /* sparkline.c */; };
+		04ECF9721DB08CF50057CEF5 /* fpconv.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9491DB08CF50057CEF5 /* fpconv.c */; };
+		04ECF9741DB08CF50057CEF5 /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF94B1DB08CF50057CEF5 /* lapi.c */; };
+		04ECF9761DB08CF50057CEF5 /* lcode.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF94D1DB08CF50057CEF5 /* lcode.c */; };
+		04ECF9781DB08CF50057CEF5 /* ldebug.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF94F1DB08CF50057CEF5 /* ldebug.c */; };
+		04ECF97A1DB08CF50057CEF5 /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9511DB08CF50057CEF5 /* ldo.c */; };
+		04ECF97C1DB08CF50057CEF5 /* ldump.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9531DB08CF50057CEF5 /* ldump.c */; };
+		04ECF97D1DB08CF50057CEF5 /* lfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9541DB08CF50057CEF5 /* lfunc.c */; };
+		04ECF97F1DB08CF50057CEF5 /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9561DB08CF50057CEF5 /* lgc.c */; };
+		04ECF9811DB08CF50057CEF5 /* llex.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9581DB08CF50057CEF5 /* llex.c */; };
+		04ECF9831DB08CF50057CEF5 /* lmem.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF95A1DB08CF50057CEF5 /* lmem.c */; };
+		04ECF9851DB08CF50057CEF5 /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF95C1DB08CF50057CEF5 /* lobject.c */; };
+		04ECF9871DB08CF50057CEF5 /* lopcodes.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF95E1DB08CF50057CEF5 /* lopcodes.c */; };
+		04ECF9891DB08CF50057CEF5 /* lparser.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9601DB08CF50057CEF5 /* lparser.c */; };
+		04ECF98B1DB08CF50057CEF5 /* lstate.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9621DB08CF50057CEF5 /* lstate.c */; };
+		04ECF98D1DB08CF50057CEF5 /* lstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9641DB08CF50057CEF5 /* lstring.c */; };
+		04ECF98F1DB08CF50057CEF5 /* ltable.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9661DB08CF50057CEF5 /* ltable.c */; };
+		04ECF9911DB08CF50057CEF5 /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9681DB08CF50057CEF5 /* ltm.c */; };
+		04ECF9931DB08CF50057CEF5 /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF96A1DB08CF50057CEF5 /* lundump.c */; };
+		04ECF9951DB08CF50057CEF5 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF96C1DB08CF50057CEF5 /* lvm.c */; };
+		04ECF9971DB08CF50057CEF5 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF96E1DB08CF50057CEF5 /* lzio.c */; };
+		04ECF9991DB08CF50057CEF5 /* strbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9701DB08CF50057CEF5 /* strbuf.c */; };
+		04ECF9A91DB08DDA0057CEF5 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF99B1DB08DDA0057CEF5 /* lauxlib.c */; };
+		04ECF9AB1DB08DDA0057CEF5 /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF99D1DB08DDA0057CEF5 /* lbaselib.c */; };
+		04ECF9AC1DB08DDA0057CEF5 /* ldblib.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF99E1DB08DDA0057CEF5 /* ldblib.c */; };
+		04ECF9AD1DB08DDA0057CEF5 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF99F1DB08DDA0057CEF5 /* linit.c */; };
+		04ECF9AE1DB08DDA0057CEF5 /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9A01DB08DDA0057CEF5 /* liolib.c */; };
+		04ECF9AF1DB08DDA0057CEF5 /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9A11DB08DDA0057CEF5 /* lmathlib.c */; };
+		04ECF9B01DB08DDA0057CEF5 /* loadlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9A21DB08DDA0057CEF5 /* loadlib.c */; };
+		04ECF9B11DB08DDA0057CEF5 /* loslib.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9A31DB08DDA0057CEF5 /* loslib.c */; };
+		04ECF9B21DB08DDA0057CEF5 /* lstrlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9A41DB08DDA0057CEF5 /* lstrlib.c */; };
+		04ECF9B31DB08DDA0057CEF5 /* ltablib.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9A51DB08DDA0057CEF5 /* ltablib.c */; };
+		04ECF9B51DB08DDA0057CEF5 /* lua_cmsgpack.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9A71DB08DDA0057CEF5 /* lua_cmsgpack.c */; };
+		04ECF9B61DB08DDA0057CEF5 /* lua_struct.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9A81DB08DDA0057CEF5 /* lua_struct.c */; };
+		04ECF9B91DB08FE40057CEF5 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECF9B81DB08FE40057CEF5 /* liblua.a */; };
+		04ECF9BB1DB0905E0057CEF5 /* memtest.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9BA1DB0905E0057CEF5 /* memtest.c */; };
 		04ED179A1D8E1A3C00E980F2 /* log4z.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04ED17981D8E1A3C00E980F2 /* log4z.cpp */; };
 		04ED179B1D8E1A3C00E980F2 /* log4z.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ED17991D8E1A3C00E980F2 /* log4z.h */; };
 		04ED179E1D8E1BAE00E980F2 /* ServInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04ED179C1D8E1BAE00E980F2 /* ServInfo.cpp */; };
@@ -1975,6 +2343,127 @@
 		04EC48E61D9A7AFF008CEF88 /* HttpQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpQuery.h; path = http_msg_server/HttpQuery.h; sourceTree = "<group>"; };
 		04EC48ED1D9A7CEE008CEF88 /* HttpPdu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HttpPdu.cpp; path = http_msg_server/HttpPdu.cpp; sourceTree = "<group>"; };
 		04EC48EE1D9A7CEE008CEF88 /* HttpPdu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpPdu.h; path = http_msg_server/HttpPdu.h; sourceTree = "<group>"; };
+		04ECF67B1DB079400057CEF5 /* redis-benchmark */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "redis-benchmark"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04ECF67C1DB0796A0057CEF5 /* redis-benchmark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "redis-benchmark.c"; path = "redis/redis-benchmark.c"; sourceTree = "<group>"; };
+		04ECF7791DB079FD0057CEF5 /* libredislib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libredislib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		04ECF77A1DB07A1E0057CEF5 /* ae.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ae.c; path = redis/ae.c; sourceTree = "<group>"; };
+		04ECF77B1DB07A1E0057CEF5 /* ae.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ae.h; path = redis/ae.h; sourceTree = "<group>"; };
+		04ECF7801DB07BD60057CEF5 /* adlist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = adlist.c; path = redis/adlist.c; sourceTree = "<group>"; };
+		04ECF7811DB07BD60057CEF5 /* adlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = adlist.h; path = redis/adlist.h; sourceTree = "<group>"; };
+		04ECF7841DB07C100057CEF5 /* zmalloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zmalloc.c; path = redis/zmalloc.c; sourceTree = "<group>"; };
+		04ECF7851DB07C100057CEF5 /* zmalloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zmalloc.h; path = redis/zmalloc.h; sourceTree = "<group>"; };
+		04ECF79B1DB07C7A0057CEF5 /* redis-check-aof */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "redis-check-aof"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04ECF79C1DB07CAB0057CEF5 /* redis-check-aof.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "redis-check-aof.c"; path = "redis/redis-check-aof.c"; sourceTree = "<group>"; };
+		04ECF7B11DB07CC70057CEF5 /* redis-check-dump */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "redis-check-dump"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04ECF7B21DB07CE40057CEF5 /* redis-check-dump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "redis-check-dump.c"; path = "redis/redis-check-dump.c"; sourceTree = "<group>"; };
+		04ECF7B41DB07D090057CEF5 /* crc64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = crc64.c; path = redis/crc64.c; sourceTree = "<group>"; };
+		04ECF7B51DB07D090057CEF5 /* crc64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crc64.h; path = redis/crc64.h; sourceTree = "<group>"; };
+		04ECF7B81DB07D430057CEF5 /* lzf_c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lzf_c.c; path = redis/lzf_c.c; sourceTree = "<group>"; };
+		04ECF7B91DB07D430057CEF5 /* lzf_d.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lzf_d.c; path = redis/lzf_d.c; sourceTree = "<group>"; };
+		04ECF7BA1DB07D430057CEF5 /* lzf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lzf.h; path = redis/lzf.h; sourceTree = "<group>"; };
+		04ECF7D11DB0801F0057CEF5 /* redis-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "redis-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04ECF7D21DB0804B0057CEF5 /* redis-cli.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "redis-cli.c"; path = "redis/redis-cli.c"; sourceTree = "<group>"; };
+		04ECF7D41DB080850057CEF5 /* linenoise.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = linenoise.c; path = redis/linenoise.c; sourceTree = "<group>"; };
+		04ECF7D51DB080850057CEF5 /* linenoise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = linenoise.h; path = redis/linenoise.h; sourceTree = "<group>"; };
+		04ECF7D81DB080C80057CEF5 /* anet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = anet.c; path = redis/anet.c; sourceTree = "<group>"; };
+		04ECF7D91DB080C80057CEF5 /* anet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = anet.h; path = redis/anet.h; sourceTree = "<group>"; };
+		04ECF7DC1DB0811F0057CEF5 /* release.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = release.c; path = redis/release.c; sourceTree = "<group>"; };
+		04ECF7DD1DB0811F0057CEF5 /* release.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = release.h; path = redis/release.h; sourceTree = "<group>"; };
+		04ECF7F31DB083CC0057CEF5 /* redis-server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "redis-server"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04ECF7F41DB084030057CEF5 /* redis.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = redis.c; path = redis/redis.c; sourceTree = "<group>"; };
+		04ECF7F51DB084030057CEF5 /* redis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = redis.h; path = redis/redis.h; sourceTree = "<group>"; };
+		04ECF7F91DB0852E0057CEF5 /* debug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = debug.c; path = redis/debug.c; sourceTree = "<group>"; };
+		04ECF7FC1DB085980057CEF5 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sha1.c; path = redis/sha1.c; sourceTree = "<group>"; };
+		04ECF7FD1DB085980057CEF5 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = redis/sha1.h; sourceTree = "<group>"; };
+		04ECF8001DB085E90057CEF5 /* networking.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = networking.c; path = redis/networking.c; sourceTree = "<group>"; };
+		04ECF8021DB086330057CEF5 /* aof.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = aof.c; path = redis/aof.c; sourceTree = "<group>"; };
+		04ECF8041DB086E80057CEF5 /* t_string.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = t_string.c; path = redis/t_string.c; sourceTree = "<group>"; };
+		04ECF8061DB087150057CEF5 /* config.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = config.c; path = redis/config.c; sourceTree = "<group>"; };
+		04ECF8071DB087150057CEF5 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = redis/config.h; sourceTree = "<group>"; };
+		04ECF80A1DB087750057CEF5 /* rdb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rdb.c; path = redis/rdb.c; sourceTree = "<group>"; };
+		04ECF80B1DB087750057CEF5 /* rdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rdb.h; path = redis/rdb.h; sourceTree = "<group>"; };
+		04ECF80E1DB087D30057CEF5 /* bio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bio.c; path = redis/bio.c; sourceTree = "<group>"; };
+		04ECF80F1DB087D30057CEF5 /* bio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bio.h; path = redis/bio.h; sourceTree = "<group>"; };
+		04ECF8121DB087FF0057CEF5 /* bitops.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bitops.c; path = redis/bitops.c; sourceTree = "<group>"; };
+		04ECF8141DB088C80057CEF5 /* t_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = t_list.c; path = redis/t_list.c; sourceTree = "<group>"; };
+		04ECF8161DB088DA0057CEF5 /* t_hash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = t_hash.c; path = redis/t_hash.c; sourceTree = "<group>"; };
+		04ECF8171DB088DA0057CEF5 /* t_set.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = t_set.c; path = redis/t_set.c; sourceTree = "<group>"; };
+		04ECF8181DB088DA0057CEF5 /* t_zset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = t_zset.c; path = redis/t_zset.c; sourceTree = "<group>"; };
+		04ECF81C1DB0892B0057CEF5 /* object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = object.c; path = redis/object.c; sourceTree = "<group>"; };
+		04ECF81E1DB0895D0057CEF5 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = util.c; path = redis/util.c; sourceTree = "<group>"; };
+		04ECF81F1DB0895D0057CEF5 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = util.h; path = redis/util.h; sourceTree = "<group>"; };
+		04ECF8221DB089AD0057CEF5 /* db.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = db.c; path = redis/db.c; sourceTree = "<group>"; };
+		04ECF8241DB08A200057CEF5 /* dict.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dict.c; path = redis/dict.c; sourceTree = "<group>"; };
+		04ECF8251DB08A200057CEF5 /* dict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dict.h; path = redis/dict.h; sourceTree = "<group>"; };
+		04ECF8281DB08A5C0057CEF5 /* multi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = multi.c; path = redis/multi.c; sourceTree = "<group>"; };
+		04ECF82A1DB08AB30057CEF5 /* migrate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = migrate.c; path = redis/migrate.c; sourceTree = "<group>"; };
+		04ECF82C1DB08AE50057CEF5 /* scripting.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = scripting.c; path = redis/scripting.c; sourceTree = "<group>"; };
+		04ECF82E1DB08B160057CEF5 /* pubsub.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pubsub.c; path = redis/pubsub.c; sourceTree = "<group>"; };
+		04ECF8301DB08B420057CEF5 /* sentinel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sentinel.c; path = redis/sentinel.c; sourceTree = "<group>"; };
+		04ECF8321DB08B7A0057CEF5 /* intset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = intset.c; path = redis/intset.c; sourceTree = "<group>"; };
+		04ECF8331DB08B7A0057CEF5 /* intset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = intset.h; path = redis/intset.h; sourceTree = "<group>"; };
+		04ECF8361DB08BA70057CEF5 /* notify.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = notify.c; path = redis/notify.c; sourceTree = "<group>"; };
+		04ECF8381DB08BD10057CEF5 /* latency.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = latency.c; path = redis/latency.c; sourceTree = "<group>"; };
+		04ECF8391DB08BD10057CEF5 /* latency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = latency.h; path = redis/latency.h; sourceTree = "<group>"; };
+		04ECF83C1DB08C090057CEF5 /* sparkline.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sparkline.c; path = redis/sparkline.c; sourceTree = "<group>"; };
+		04ECF83D1DB08C090057CEF5 /* sparkline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sparkline.h; path = redis/sparkline.h; sourceTree = "<group>"; };
+		04ECF9481DB08C320057CEF5 /* liblua.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblua.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		04ECF9491DB08CF50057CEF5 /* fpconv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fpconv.c; path = lua/fpconv.c; sourceTree = "<group>"; };
+		04ECF94A1DB08CF50057CEF5 /* fpconv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fpconv.h; path = lua/fpconv.h; sourceTree = "<group>"; };
+		04ECF94B1DB08CF50057CEF5 /* lapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lapi.c; path = lua/lapi.c; sourceTree = "<group>"; };
+		04ECF94C1DB08CF50057CEF5 /* lapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lapi.h; path = lua/lapi.h; sourceTree = "<group>"; };
+		04ECF94D1DB08CF50057CEF5 /* lcode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lcode.c; path = lua/lcode.c; sourceTree = "<group>"; };
+		04ECF94E1DB08CF50057CEF5 /* lcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lcode.h; path = lua/lcode.h; sourceTree = "<group>"; };
+		04ECF94F1DB08CF50057CEF5 /* ldebug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ldebug.c; path = lua/ldebug.c; sourceTree = "<group>"; };
+		04ECF9501DB08CF50057CEF5 /* ldebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ldebug.h; path = lua/ldebug.h; sourceTree = "<group>"; };
+		04ECF9511DB08CF50057CEF5 /* ldo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ldo.c; path = lua/ldo.c; sourceTree = "<group>"; };
+		04ECF9521DB08CF50057CEF5 /* ldo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ldo.h; path = lua/ldo.h; sourceTree = "<group>"; };
+		04ECF9531DB08CF50057CEF5 /* ldump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ldump.c; path = lua/ldump.c; sourceTree = "<group>"; };
+		04ECF9541DB08CF50057CEF5 /* lfunc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lfunc.c; path = lua/lfunc.c; sourceTree = "<group>"; };
+		04ECF9551DB08CF50057CEF5 /* lfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lfunc.h; path = lua/lfunc.h; sourceTree = "<group>"; };
+		04ECF9561DB08CF50057CEF5 /* lgc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lgc.c; path = lua/lgc.c; sourceTree = "<group>"; };
+		04ECF9571DB08CF50057CEF5 /* lgc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lgc.h; path = lua/lgc.h; sourceTree = "<group>"; };
+		04ECF9581DB08CF50057CEF5 /* llex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = llex.c; path = lua/llex.c; sourceTree = "<group>"; };
+		04ECF9591DB08CF50057CEF5 /* llex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = llex.h; path = lua/llex.h; sourceTree = "<group>"; };
+		04ECF95A1DB08CF50057CEF5 /* lmem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lmem.c; path = lua/lmem.c; sourceTree = "<group>"; };
+		04ECF95B1DB08CF50057CEF5 /* lmem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lmem.h; path = lua/lmem.h; sourceTree = "<group>"; };
+		04ECF95C1DB08CF50057CEF5 /* lobject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lobject.c; path = lua/lobject.c; sourceTree = "<group>"; };
+		04ECF95D1DB08CF50057CEF5 /* lobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lobject.h; path = lua/lobject.h; sourceTree = "<group>"; };
+		04ECF95E1DB08CF50057CEF5 /* lopcodes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lopcodes.c; path = lua/lopcodes.c; sourceTree = "<group>"; };
+		04ECF95F1DB08CF50057CEF5 /* lopcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lopcodes.h; path = lua/lopcodes.h; sourceTree = "<group>"; };
+		04ECF9601DB08CF50057CEF5 /* lparser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lparser.c; path = lua/lparser.c; sourceTree = "<group>"; };
+		04ECF9611DB08CF50057CEF5 /* lparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lparser.h; path = lua/lparser.h; sourceTree = "<group>"; };
+		04ECF9621DB08CF50057CEF5 /* lstate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lstate.c; path = lua/lstate.c; sourceTree = "<group>"; };
+		04ECF9631DB08CF50057CEF5 /* lstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lstate.h; path = lua/lstate.h; sourceTree = "<group>"; };
+		04ECF9641DB08CF50057CEF5 /* lstring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lstring.c; path = lua/lstring.c; sourceTree = "<group>"; };
+		04ECF9651DB08CF50057CEF5 /* lstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lstring.h; path = lua/lstring.h; sourceTree = "<group>"; };
+		04ECF9661DB08CF50057CEF5 /* ltable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ltable.c; path = lua/ltable.c; sourceTree = "<group>"; };
+		04ECF9671DB08CF50057CEF5 /* ltable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ltable.h; path = lua/ltable.h; sourceTree = "<group>"; };
+		04ECF9681DB08CF50057CEF5 /* ltm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ltm.c; path = lua/ltm.c; sourceTree = "<group>"; };
+		04ECF9691DB08CF50057CEF5 /* ltm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ltm.h; path = lua/ltm.h; sourceTree = "<group>"; };
+		04ECF96A1DB08CF50057CEF5 /* lundump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lundump.c; path = lua/lundump.c; sourceTree = "<group>"; };
+		04ECF96B1DB08CF50057CEF5 /* lundump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lundump.h; path = lua/lundump.h; sourceTree = "<group>"; };
+		04ECF96C1DB08CF50057CEF5 /* lvm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lvm.c; path = lua/lvm.c; sourceTree = "<group>"; };
+		04ECF96D1DB08CF50057CEF5 /* lvm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lvm.h; path = lua/lvm.h; sourceTree = "<group>"; };
+		04ECF96E1DB08CF50057CEF5 /* lzio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lzio.c; path = lua/lzio.c; sourceTree = "<group>"; };
+		04ECF96F1DB08CF50057CEF5 /* lzio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lzio.h; path = lua/lzio.h; sourceTree = "<group>"; };
+		04ECF9701DB08CF50057CEF5 /* strbuf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strbuf.c; path = lua/strbuf.c; sourceTree = "<group>"; };
+		04ECF9711DB08CF50057CEF5 /* strbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = strbuf.h; path = lua/strbuf.h; sourceTree = "<group>"; };
+		04ECF99B1DB08DDA0057CEF5 /* lauxlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lauxlib.c; path = lua/lauxlib.c; sourceTree = "<group>"; };
+		04ECF99C1DB08DDA0057CEF5 /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lauxlib.h; path = lua/lauxlib.h; sourceTree = "<group>"; };
+		04ECF99D1DB08DDA0057CEF5 /* lbaselib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lbaselib.c; path = lua/lbaselib.c; sourceTree = "<group>"; };
+		04ECF99E1DB08DDA0057CEF5 /* ldblib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ldblib.c; path = lua/ldblib.c; sourceTree = "<group>"; };
+		04ECF99F1DB08DDA0057CEF5 /* linit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = linit.c; path = lua/linit.c; sourceTree = "<group>"; };
+		04ECF9A01DB08DDA0057CEF5 /* liolib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = liolib.c; path = lua/liolib.c; sourceTree = "<group>"; };
+		04ECF9A11DB08DDA0057CEF5 /* lmathlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lmathlib.c; path = lua/lmathlib.c; sourceTree = "<group>"; };
+		04ECF9A21DB08DDA0057CEF5 /* loadlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = loadlib.c; path = lua/loadlib.c; sourceTree = "<group>"; };
+		04ECF9A31DB08DDA0057CEF5 /* loslib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = loslib.c; path = lua/loslib.c; sourceTree = "<group>"; };
+		04ECF9A41DB08DDA0057CEF5 /* lstrlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lstrlib.c; path = lua/lstrlib.c; sourceTree = "<group>"; };
+		04ECF9A51DB08DDA0057CEF5 /* ltablib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ltablib.c; path = lua/ltablib.c; sourceTree = "<group>"; };
+		04ECF9A71DB08DDA0057CEF5 /* lua_cmsgpack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lua_cmsgpack.c; path = lua/lua_cmsgpack.c; sourceTree = "<group>"; };
+		04ECF9A81DB08DDA0057CEF5 /* lua_struct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lua_struct.c; path = lua/lua_struct.c; sourceTree = "<group>"; };
+		04ECF9B81DB08FE40057CEF5 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = lib/liblua.a; sourceTree = "<group>"; };
+		04ECF9BA1DB0905E0057CEF5 /* memtest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = memtest.c; path = redis/memtest.c; sourceTree = "<group>"; };
 		04ED17981D8E1A3C00E980F2 /* log4z.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = log4z.cpp; path = base/log4z.cpp; sourceTree = SOURCE_ROOT; };
 		04ED17991D8E1A3C00E980F2 /* log4z.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = log4z.h; path = base/log4z.h; sourceTree = SOURCE_ROOT; };
 		04ED179C1D8E1BAE00E980F2 /* ServInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ServInfo.cpp; path = base/ServInfo.cpp; sourceTree = SOURCE_ROOT; };
@@ -2135,12 +2624,75 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04ECF66C1DB079400057CEF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF77F1DB07BA20057CEF5 /* libhiredis.a in Frameworks */,
+				04ECF77E1DB07A4D0057CEF5 /* libredislib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF6861DB079FD0057CEF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF78B1DB07C7A0057CEF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF78C1DB07C7A0057CEF5 /* libhiredis.a in Frameworks */,
+				04ECF78D1DB07C7A0057CEF5 /* libredislib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF7A11DB07CC70057CEF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF7A21DB07CC70057CEF5 /* libhiredis.a in Frameworks */,
+				04ECF7A31DB07CC70057CEF5 /* libredislib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF7C11DB0801F0057CEF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF7C21DB0801F0057CEF5 /* libhiredis.a in Frameworks */,
+				04ECF7C31DB0801F0057CEF5 /* libredislib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF7E31DB083CC0057CEF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF9B91DB08FE40057CEF5 /* liblua.a in Frameworks */,
+				04ECF7E41DB083CC0057CEF5 /* libhiredis.a in Frameworks */,
+				04ECF7E51DB083CC0057CEF5 /* libredislib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF84C1DB08C320057CEF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		04019CBE1D536C6B00DAD42F = {
 			isa = PBXGroup;
 			children = (
+				04ECF9B81DB08FE40057CEF5 /* liblua.a */,
+				04ECF7F81DB084A40057CEF5 /* lua */,
+				04ECF6671DB078B70057CEF5 /* redis */,
 				04CA690F1DAC860700E5A43C /* testpoint */,
 				04C259621DAB1AB000D2AB15 /* db_proxy_server */,
 				04D0F9931DA9CCC20096C1FC /* push_server */,
@@ -2178,6 +2730,13 @@
 				04D0F9B91DA9CCDF0096C1FC /* push_server */,
 				04C259611DAB1A8400D2AB15 /* db_proxy_server */,
 				04CA691F1DAC863E00E5A43C /* testpoint */,
+				04ECF67B1DB079400057CEF5 /* redis-benchmark */,
+				04ECF7791DB079FD0057CEF5 /* libredislib.a */,
+				04ECF79B1DB07C7A0057CEF5 /* redis-check-aof */,
+				04ECF7B11DB07CC70057CEF5 /* redis-check-dump */,
+				04ECF7D11DB0801F0057CEF5 /* redis-cli */,
+				04ECF7F31DB083CC0057CEF5 /* redis-server */,
+				04ECF9481DB08C320057CEF5 /* liblua.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3218,6 +3777,133 @@
 				04EC48E61D9A7AFF008CEF88 /* HttpQuery.h */,
 			);
 			name = http_msg_server;
+			sourceTree = "<group>";
+		};
+		04ECF6671DB078B70057CEF5 /* redis */ = {
+			isa = PBXGroup;
+			children = (
+				04ECF77A1DB07A1E0057CEF5 /* ae.c */,
+				04ECF77B1DB07A1E0057CEF5 /* ae.h */,
+				04ECF7D81DB080C80057CEF5 /* anet.c */,
+				04ECF7D91DB080C80057CEF5 /* anet.h */,
+				04ECF8061DB087150057CEF5 /* config.c */,
+				04ECF8071DB087150057CEF5 /* config.h */,
+				04ECF7801DB07BD60057CEF5 /* adlist.c */,
+				04ECF7811DB07BD60057CEF5 /* adlist.h */,
+				04ECF7B81DB07D430057CEF5 /* lzf_c.c */,
+				04ECF7B91DB07D430057CEF5 /* lzf_d.c */,
+				04ECF7BA1DB07D430057CEF5 /* lzf.h */,
+				04ECF8241DB08A200057CEF5 /* dict.c */,
+				04ECF8251DB08A200057CEF5 /* dict.h */,
+				04ECF8321DB08B7A0057CEF5 /* intset.c */,
+				04ECF8331DB08B7A0057CEF5 /* intset.h */,
+				04ECF7F91DB0852E0057CEF5 /* debug.c */,
+				04ECF8001DB085E90057CEF5 /* networking.c */,
+				04ECF82A1DB08AB30057CEF5 /* migrate.c */,
+				04ECF9BA1DB0905E0057CEF5 /* memtest.c */,
+				04ECF82E1DB08B160057CEF5 /* pubsub.c */,
+				04ECF8021DB086330057CEF5 /* aof.c */,
+				04ECF8361DB08BA70057CEF5 /* notify.c */,
+				04ECF8121DB087FF0057CEF5 /* bitops.c */,
+				04ECF7841DB07C100057CEF5 /* zmalloc.c */,
+				04ECF7851DB07C100057CEF5 /* zmalloc.h */,
+				04ECF8381DB08BD10057CEF5 /* latency.c */,
+				04ECF8391DB08BD10057CEF5 /* latency.h */,
+				04ECF80E1DB087D30057CEF5 /* bio.c */,
+				04ECF80F1DB087D30057CEF5 /* bio.h */,
+				04ECF8281DB08A5C0057CEF5 /* multi.c */,
+				04ECF7B41DB07D090057CEF5 /* crc64.c */,
+				04ECF7B51DB07D090057CEF5 /* crc64.h */,
+				04ECF7DC1DB0811F0057CEF5 /* release.c */,
+				04ECF7DD1DB0811F0057CEF5 /* release.h */,
+				04ECF7D41DB080850057CEF5 /* linenoise.c */,
+				04ECF7D51DB080850057CEF5 /* linenoise.h */,
+				04ECF81C1DB0892B0057CEF5 /* object.c */,
+				04ECF8221DB089AD0057CEF5 /* db.c */,
+				04ECF83C1DB08C090057CEF5 /* sparkline.c */,
+				04ECF83D1DB08C090057CEF5 /* sparkline.h */,
+				04ECF8301DB08B420057CEF5 /* sentinel.c */,
+				04ECF82C1DB08AE50057CEF5 /* scripting.c */,
+				04ECF8041DB086E80057CEF5 /* t_string.c */,
+				04ECF8141DB088C80057CEF5 /* t_list.c */,
+				04ECF8161DB088DA0057CEF5 /* t_hash.c */,
+				04ECF8171DB088DA0057CEF5 /* t_set.c */,
+				04ECF8181DB088DA0057CEF5 /* t_zset.c */,
+				04ECF7FC1DB085980057CEF5 /* sha1.c */,
+				04ECF7FD1DB085980057CEF5 /* sha1.h */,
+				04ECF81E1DB0895D0057CEF5 /* util.c */,
+				04ECF81F1DB0895D0057CEF5 /* util.h */,
+				04ECF80A1DB087750057CEF5 /* rdb.c */,
+				04ECF80B1DB087750057CEF5 /* rdb.h */,
+				04ECF79C1DB07CAB0057CEF5 /* redis-check-aof.c */,
+				04ECF67C1DB0796A0057CEF5 /* redis-benchmark.c */,
+				04ECF7B21DB07CE40057CEF5 /* redis-check-dump.c */,
+				04ECF7D21DB0804B0057CEF5 /* redis-cli.c */,
+				04ECF7F41DB084030057CEF5 /* redis.c */,
+				04ECF7F51DB084030057CEF5 /* redis.h */,
+			);
+			name = redis;
+			sourceTree = "<group>";
+		};
+		04ECF7F81DB084A40057CEF5 /* lua */ = {
+			isa = PBXGroup;
+			children = (
+				04ECF9491DB08CF50057CEF5 /* fpconv.c */,
+				04ECF94A1DB08CF50057CEF5 /* fpconv.h */,
+				04ECF94B1DB08CF50057CEF5 /* lapi.c */,
+				04ECF94C1DB08CF50057CEF5 /* lapi.h */,
+				04ECF94D1DB08CF50057CEF5 /* lcode.c */,
+				04ECF94E1DB08CF50057CEF5 /* lcode.h */,
+				04ECF94F1DB08CF50057CEF5 /* ldebug.c */,
+				04ECF9501DB08CF50057CEF5 /* ldebug.h */,
+				04ECF9511DB08CF50057CEF5 /* ldo.c */,
+				04ECF9521DB08CF50057CEF5 /* ldo.h */,
+				04ECF9531DB08CF50057CEF5 /* ldump.c */,
+				04ECF9541DB08CF50057CEF5 /* lfunc.c */,
+				04ECF9551DB08CF50057CEF5 /* lfunc.h */,
+				04ECF9561DB08CF50057CEF5 /* lgc.c */,
+				04ECF9571DB08CF50057CEF5 /* lgc.h */,
+				04ECF9581DB08CF50057CEF5 /* llex.c */,
+				04ECF9591DB08CF50057CEF5 /* llex.h */,
+				04ECF95A1DB08CF50057CEF5 /* lmem.c */,
+				04ECF95B1DB08CF50057CEF5 /* lmem.h */,
+				04ECF95C1DB08CF50057CEF5 /* lobject.c */,
+				04ECF95D1DB08CF50057CEF5 /* lobject.h */,
+				04ECF95E1DB08CF50057CEF5 /* lopcodes.c */,
+				04ECF95F1DB08CF50057CEF5 /* lopcodes.h */,
+				04ECF9601DB08CF50057CEF5 /* lparser.c */,
+				04ECF9611DB08CF50057CEF5 /* lparser.h */,
+				04ECF9621DB08CF50057CEF5 /* lstate.c */,
+				04ECF9631DB08CF50057CEF5 /* lstate.h */,
+				04ECF9641DB08CF50057CEF5 /* lstring.c */,
+				04ECF9651DB08CF50057CEF5 /* lstring.h */,
+				04ECF9661DB08CF50057CEF5 /* ltable.c */,
+				04ECF9671DB08CF50057CEF5 /* ltable.h */,
+				04ECF9681DB08CF50057CEF5 /* ltm.c */,
+				04ECF9691DB08CF50057CEF5 /* ltm.h */,
+				04ECF96A1DB08CF50057CEF5 /* lundump.c */,
+				04ECF96B1DB08CF50057CEF5 /* lundump.h */,
+				04ECF96C1DB08CF50057CEF5 /* lvm.c */,
+				04ECF96D1DB08CF50057CEF5 /* lvm.h */,
+				04ECF96E1DB08CF50057CEF5 /* lzio.c */,
+				04ECF96F1DB08CF50057CEF5 /* lzio.h */,
+				04ECF9701DB08CF50057CEF5 /* strbuf.c */,
+				04ECF9711DB08CF50057CEF5 /* strbuf.h */,
+				04ECF99B1DB08DDA0057CEF5 /* lauxlib.c */,
+				04ECF99C1DB08DDA0057CEF5 /* lauxlib.h */,
+				04ECF99D1DB08DDA0057CEF5 /* lbaselib.c */,
+				04ECF99E1DB08DDA0057CEF5 /* ldblib.c */,
+				04ECF99F1DB08DDA0057CEF5 /* linit.c */,
+				04ECF9A01DB08DDA0057CEF5 /* liolib.c */,
+				04ECF9A11DB08DDA0057CEF5 /* lmathlib.c */,
+				04ECF9A21DB08DDA0057CEF5 /* loadlib.c */,
+				04ECF9A31DB08DDA0057CEF5 /* loslib.c */,
+				04ECF9A41DB08DDA0057CEF5 /* lstrlib.c */,
+				04ECF9A51DB08DDA0057CEF5 /* ltablib.c */,
+				04ECF9A71DB08DDA0057CEF5 /* lua_cmsgpack.c */,
+				04ECF9A81DB08DDA0057CEF5 /* lua_struct.c */,
+			);
+			name = lua;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -4270,6 +4956,338 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04ECF66E1DB079400057CEF5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF66F1DB079400057CEF5 /* ipparser.h in Headers */,
+				04ECF6701DB079400057CEF5 /* vec.h in Headers */,
+				04ECF6711DB079400057CEF5 /* HttpConn.h in Headers */,
+				04ECF6721DB079400057CEF5 /* ServerPriv.hpp in Headers */,
+				04ECF6731DB079400057CEF5 /* Mojing3DHelper.h in Headers */,
+				04ECF6741DB079400057CEF5 /* Base64.h in Headers */,
+				04ECF6751DB079400057CEF5 /* LoginConn.h in Headers */,
+				04ECF6761DB079400057CEF5 /* traits.h in Headers */,
+				04ECF6771DB079400057CEF5 /* base.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF6871DB079FD0057CEF5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF6881DB079FD0057CEF5 /* hiredis.h in Headers */,
+				04ECF6891DB079FD0057CEF5 /* fileappender.h in Headers */,
+				04ECF68A1DB079FD0057CEF5 /* loggingeventpatternconverter.h in Headers */,
+				04ECF68B1DB079FD0057CEF5 /* outputstream.h in Headers */,
+				04ECF68C1DB079FD0057CEF5 /* rollingfileappender.h in Headers */,
+				04ECF68D1DB079FD0057CEF5 /* file.h in Headers */,
+				04ECF68E1DB079FD0057CEF5 /* levelpatternconverter.h in Headers */,
+				04ECF68F1DB079FD0057CEF5 /* rollingfileappender.h in Headers */,
+				04ECF6901DB079FD0057CEF5 /* configurator.h in Headers */,
+				04ECF6911DB079FD0057CEF5 /* read.h in Headers */,
+				04ECF6921DB079FD0057CEF5 /* date.h in Headers */,
+				04ECF6931DB079FD0057CEF5 /* portability.h in Headers */,
+				04ECF6941DB079FD0057CEF5 /* socketoutputstream.h in Headers */,
+				04ECF6951DB079FD0057CEF5 /* systemoutwriter.h in Headers */,
+				04ECF6961DB079FD0057CEF5 /* inputstream.h in Headers */,
+				04ECF6971DB079FD0057CEF5 /* IM.File.pb.h in Headers */,
+				04ECF6981DB079FD0057CEF5 /* dailyrollingfileappender.h in Headers */,
+				04ECF6991DB079FD0057CEF5 /* objectoutputstream.h in Headers */,
+				04ECF69A1DB079FD0057CEF5 /* charsetencoder.h in Headers */,
+				04ECF69B1DB079FD0057CEF5 /* util.h in Headers */,
+				04ECF69C1DB079FD0057CEF5 /* level.h in Headers */,
+				04ECF69D1DB079FD0057CEF5 /* datetimedateformat.h in Headers */,
+				04ECF7DF1DB0811F0057CEF5 /* release.h in Headers */,
+				04ECF69E1DB079FD0057CEF5 /* manualtriggeringpolicy.h in Headers */,
+				04ECF69F1DB079FD0057CEF5 /* socketappender.h in Headers */,
+				04ECF6A01DB079FD0057CEF5 /* object.h in Headers */,
+				04ECF6A11DB079FD0057CEF5 /* exception.h in Headers */,
+				04ECF6A21DB079FD0057CEF5 /* slog_api.h in Headers */,
+				04ECF6A31DB079FD0057CEF5 /* charsetdecoder.h in Headers */,
+				04ECF6A41DB079FD0057CEF5 /* strictmath.h in Headers */,
+				04ECF6A51DB079FD0057CEF5 /* async.h in Headers */,
+				04ECF6A61DB079FD0057CEF5 /* sockethubappender.h in Headers */,
+				04ECF6A71DB079FD0057CEF5 /* filedatepatternconverter.h in Headers */,
+				04ECF6A81DB079FD0057CEF5 /* ostype.h in Headers */,
+				04ECF6A91DB079FD0057CEF5 /* propertyfilter.h in Headers */,
+				04ECF6AA1DB079FD0057CEF5 /* security.h in Headers */,
+				04ECF6AB1DB079FD0057CEF5 /* hierarchy.h in Headers */,
+				04ECF6AC1DB079FD0057CEF5 /* zipcompressaction.h in Headers */,
+				04ECF6AD1DB079FD0057CEF5 /* iso8601dateformat.h in Headers */,
+				04ECF6AE1DB079FD0057CEF5 /* ttcclayout.h in Headers */,
+				04ECF6AF1DB079FD0057CEF5 /* classnamepatternconverter.h in Headers */,
+				04ECF6B01DB079FD0057CEF5 /* mutex.h in Headers */,
+				04ECF6B11DB079FD0057CEF5 /* rollingpolicybase.h in Headers */,
+				04ECF6B21DB079FD0057CEF5 /* singleton.h in Headers */,
+				04ECF6B31DB079FD0057CEF5 /* writer.h in Headers */,
+				04ECF6B41DB079FD0057CEF5 /* locationinfo.h in Headers */,
+				04ECF7B71DB07D090057CEF5 /* crc64.h in Headers */,
+				04ECF6B51DB079FD0057CEF5 /* BaseSocket.h in Headers */,
+				04ECF6B61DB079FD0057CEF5 /* rootlogger.h in Headers */,
+				04ECF6B71DB079FD0057CEF5 /* relativetimepatternconverter.h in Headers */,
+				04ECF6B81DB079FD0057CEF5 /* loglog.h in Headers */,
+				04ECF6B91DB079FD0057CEF5 /* bytebuffer.h in Headers */,
+				04ECF7FF1DB085980057CEF5 /* sha1.h in Headers */,
+				04ECF6BA1DB079FD0057CEF5 /* base64.h in Headers */,
+				04ECF6BB1DB079FD0057CEF5 /* layout.h in Headers */,
+				04ECF6BC1DB079FD0057CEF5 /* IM.Login.pb.h in Headers */,
+				04ECF6BD1DB079FD0057CEF5 /* autolink.h in Headers */,
+				04ECF6BE1DB079FD0057CEF5 /* loggerrepository.h in Headers */,
+				04ECF6BF1DB079FD0057CEF5 /* class.h in Headers */,
+				04ECF6C01DB079FD0057CEF5 /* defaultloggerfactory.h in Headers */,
+				04ECF6C11DB079FD0057CEF5 /* writer.h in Headers */,
+				04ECF6C21DB079FD0057CEF5 /* dict.h in Headers */,
+				04ECF6C31DB079FD0057CEF5 /* mapfilter.h in Headers */,
+				04ECF6C41DB079FD0057CEF5 /* propertyresourcebundle.h in Headers */,
+				04ECF6C51DB079FD0057CEF5 /* absolutetimedateformat.h in Headers */,
+				04ECF6C61DB079FD0057CEF5 /* xmllayout.h in Headers */,
+				04ECF6C71DB079FD0057CEF5 /* propertiespatternconverter.h in Headers */,
+				04ECF6C81DB079FD0057CEF5 /* threadspecificdata.h in Headers */,
+				04ECF6C91DB079FD0057CEF5 /* loggerpatternconverter.h in Headers */,
+				04ECF6CA1DB079FD0057CEF5 /* simplelayout.h in Headers */,
+				04ECF6CB1DB079FD0057CEF5 /* aes_locl.h in Headers */,
+				04ECF6CC1DB079FD0057CEF5 /* pool.h in Headers */,
+				04ECF6CD1DB079FD0057CEF5 /* timebasedrollingpolicy.h in Headers */,
+				04ECF6CE1DB079FD0057CEF5 /* Condition.h in Headers */,
+				04ECF6CF1DB079FD0057CEF5 /* log4z.h in Headers */,
+				04ECF6D01DB079FD0057CEF5 /* inetaddress.h in Headers */,
+				04ECF6D11DB079FD0057CEF5 /* timezone.h in Headers */,
+				04ECF6D21DB079FD0057CEF5 /* formattinginfo.h in Headers */,
+				04ECF6D31DB079FD0057CEF5 /* filewatchdog.h in Headers */,
+				04ECF6D41DB079FD0057CEF5 /* namepatternconverter.h in Headers */,
+				04ECF6D51DB079FD0057CEF5 /* hierarchyeventlistener.h in Headers */,
+				04ECF6D61DB079FD0057CEF5 /* gzcompressaction.h in Headers */,
+				04ECF7DB1DB080C80057CEF5 /* anet.h in Headers */,
+				04ECF6D71DB079FD0057CEF5 /* net.h in Headers */,
+				04ECF6D81DB079FD0057CEF5 /* IM.Server.pb.h in Headers */,
+				04ECF6D91DB079FD0057CEF5 /* filterbasedtriggeringpolicy.h in Headers */,
+				04ECF6DA1DB079FD0057CEF5 /* stream.h in Headers */,
+				04ECF6DB1DB079FD0057CEF5 /* bytearrayoutputstream.h in Headers */,
+				04ECF6DC1DB079FD0057CEF5 /* fileinputstream.h in Headers */,
+				04ECF6DD1DB079FD0057CEF5 /* im_conn_util.h in Headers */,
+				04ECF6DE1DB079FD0057CEF5 /* stringmatchfilter.h in Headers */,
+				04ECF6DF1DB079FD0057CEF5 /* appender.h in Headers */,
+				04ECF6E01DB079FD0057CEF5 /* loggerfactory.h in Headers */,
+				04ECF6E11DB079FD0057CEF5 /* domconfigurator.h in Headers */,
+				04ECF6E21DB079FD0057CEF5 /* inputstreamreader.h in Headers */,
+				04ECF6E31DB079FD0057CEF5 /* bufferedoutputstream.h in Headers */,
+				04ECF6E41DB079FD0057CEF5 /* integerpatternconverter.h in Headers */,
+				04ECF6E51DB079FD0057CEF5 /* odbcappender.h in Headers */,
+				04ECF6E61DB079FD0057CEF5 /* fileoutputstream.h in Headers */,
+				04ECF6E71DB079FD0057CEF5 /* objectptr.h in Headers */,
+				04ECF6E81DB079FD0057CEF5 /* resourcebundle.h in Headers */,
+				04ECF6E91DB079FD0057CEF5 /* TokenValidator.h in Headers */,
+				04ECF6EA1DB079FD0057CEF5 /* version.h in Headers */,
+				04ECF6EB1DB079FD0057CEF5 /* appenderskeleton.h in Headers */,
+				04ECF6EC1DB079FD0057CEF5 /* cyclicbuffer.h in Headers */,
+				04ECF6ED1DB079FD0057CEF5 /* stringtokenizer.h in Headers */,
+				04ECF6EE1DB079FD0057CEF5 /* basicconfigurator.h in Headers */,
+				04ECF6EF1DB079FD0057CEF5 /* mdc.h in Headers */,
+				04ECF6F01DB079FD0057CEF5 /* bufferedwriter.h in Headers */,
+				04ECF6F11DB079FD0057CEF5 /* fallbackerrorhandler.h in Headers */,
+				04ECF6F21DB079FD0057CEF5 /* log4cxx.h in Headers */,
+				04ECF6F31DB079FD0057CEF5 /* sds.h in Headers */,
+				04ECF6F41DB079FD0057CEF5 /* loggingevent.h in Headers */,
+				04ECF6F51DB079FD0057CEF5 /* ServerPriv.hpp in Headers */,
+				04ECF6F61DB079FD0057CEF5 /* transcoder.h in Headers */,
+				04ECF6F71DB079FD0057CEF5 /* locale.h in Headers */,
+				04ECF6F81DB079FD0057CEF5 /* properties.h in Headers */,
+				04ECF6F91DB079FD0057CEF5 /* asyncappender.h in Headers */,
+				04ECF6FA1DB079FD0057CEF5 /* Thread.h in Headers */,
+				04ECF6FB1DB079FD0057CEF5 /* triggeringpolicy.h in Headers */,
+				04ECF6FC1DB079FD0057CEF5 /* defaultconfigurator.h in Headers */,
+				04ECF6FD1DB079FD0057CEF5 /* filter.h in Headers */,
+				04ECF6FE1DB079FD0057CEF5 /* levelrangefilter.h in Headers */,
+				04ECF6FF1DB079FD0057CEF5 /* messagebuffer.h in Headers */,
+				04ECF7001DB079FD0057CEF5 /* logger.h in Headers */,
+				04ECF7011DB079FD0057CEF5 /* Base64.h in Headers */,
+				04ECF7021DB079FD0057CEF5 /* logstring.h in Headers */,
+				04ECF7031DB079FD0057CEF5 /* aprinitializer.h in Headers */,
+				04ECF7041DB079FD0057CEF5 /* Task.h in Headers */,
+				04ECF7051DB079FD0057CEF5 /* nameabbreviator.h in Headers */,
+				04ECF7061DB079FD0057CEF5 /* synchronized.h in Headers */,
+				04ECF7071DB079FD0057CEF5 /* json_tool.h in Headers */,
+				04ECF7081DB079FD0057CEF5 /* ConfigFileReader.h in Headers */,
+				04ECF7091DB079FD0057CEF5 /* thread.h in Headers */,
+				04ECF70A1DB079FD0057CEF5 /* sizebasedtriggeringpolicy.h in Headers */,
+				04ECF70B1DB079FD0057CEF5 /* syslogappender.h in Headers */,
+				04ECF70C1DB079FD0057CEF5 /* threadpatternconverter.h in Headers */,
+				04ECF70D1DB079FD0057CEF5 /* systemerrwriter.h in Headers */,
+				04ECF70E1DB079FD0057CEF5 /* bytearrayinputstream.h in Headers */,
+				04ECF70F1DB079FD0057CEF5 /* socketappenderskeleton.h in Headers */,
+				04ECF7101DB079FD0057CEF5 /* rolloverdescription.h in Headers */,
+				04ECF7111DB079FD0057CEF5 /* serversocket.h in Headers */,
+				04ECF7121DB079FD0057CEF5 /* filerenameaction.h in Headers */,
+				04ECF7131DB079FD0057CEF5 /* patternparser.h in Headers */,
+				04ECF7141DB079FD0057CEF5 /* throwableinformationpatternconverter.h in Headers */,
+				04ECF7151DB079FD0057CEF5 /* action.h in Headers */,
+				04ECF7161DB079FD0057CEF5 /* UtilPdu.h in Headers */,
+				04ECF7831DB07BD60057CEF5 /* adlist.h in Headers */,
+				04ECF7171DB079FD0057CEF5 /* EncDec.h in Headers */,
+				04ECF7181DB079FD0057CEF5 /* EventDispatch.h in Headers */,
+				04ECF7D71DB080850057CEF5 /* linenoise.h in Headers */,
+				04ECF7191DB079FD0057CEF5 /* errorhandler.h in Headers */,
+				04ECF71A1DB079FD0057CEF5 /* andfilter.h in Headers */,
+				04ECF71B1DB079FD0057CEF5 /* socket.h in Headers */,
+				04ECF71C1DB079FD0057CEF5 /* http_parser.h in Headers */,
+				04ECF71D1DB079FD0057CEF5 /* HttpParserWrapper.h in Headers */,
+				04ECF71E1DB079FD0057CEF5 /* onlyonceerrorhandler.h in Headers */,
+				04ECF71F1DB079FD0057CEF5 /* IM.SwitchService.pb.h in Headers */,
+				04ECF7201DB079FD0057CEF5 /* datagrampacket.h in Headers */,
+				04ECF7211DB079FD0057CEF5 /* system.h in Headers */,
+				04ECF7221DB079FD0057CEF5 /* threadlocal.h in Headers */,
+				04ECF7231DB079FD0057CEF5 /* loader.h in Headers */,
+				04ECF77D1DB07A1E0057CEF5 /* ae.h in Headers */,
+				04ECF7241DB079FD0057CEF5 /* telnetappender.h in Headers */,
+				04ECF7251DB079FD0057CEF5 /* reader.h in Headers */,
+				04ECF7261DB079FD0057CEF5 /* outputstreamwriter.h in Headers */,
+				04ECF7271DB079FD0057CEF5 /* log4cxx_private.h in Headers */,
+				04ECF7281DB079FD0057CEF5 /* fulllocationpatternconverter.h in Headers */,
+				04ECF7291DB079FD0057CEF5 /* ImPduBase.h in Headers */,
+				04ECF72A1DB079FD0057CEF5 /* consoleappender.h in Headers */,
+				04ECF72B1DB079FD0057CEF5 /* HttpClient.h in Headers */,
+				04ECF72C1DB079FD0057CEF5 /* relativetimedateformat.h in Headers */,
+				04ECF72D1DB079FD0057CEF5 /* outputdebugstringappender.h in Headers */,
+				04ECF72E1DB079FD0057CEF5 /* xml.h in Headers */,
+				04ECF72F1DB079FD0057CEF5 /* condition.h in Headers */,
+				04ECF7301DB079FD0057CEF5 /* datagramsocket.h in Headers */,
+				04ECF7311DB079FD0057CEF5 /* optionhandler.h in Headers */,
+				04ECF7321DB079FD0057CEF5 /* IM.Buddy.pb.h in Headers */,
+				04ECF7331DB079FD0057CEF5 /* defaultrepositoryselector.h in Headers */,
+				04ECF7341DB079FD0057CEF5 /* locationinfofilter.h in Headers */,
+				04ECF7351DB079FD0057CEF5 /* syslogwriter.h in Headers */,
+				04ECF7361DB079FD0057CEF5 /* base.hpp in Headers */,
+				04ECF7371DB079FD0057CEF5 /* denyallfilter.h in Headers */,
+				04ECF7381DB079FD0057CEF5 /* classregistration.h in Headers */,
+				04ECF7391DB079FD0057CEF5 /* levelmatchfilter.h in Headers */,
+				04ECF73A1DB079FD0057CEF5 /* fmacros.h in Headers */,
+				04ECF73B1DB079FD0057CEF5 /* lineseparatorpatternconverter.h in Headers */,
+				04ECF73C1DB079FD0057CEF5 /* config.h in Headers */,
+				04ECF73D1DB079FD0057CEF5 /* ndcpatternconverter.h in Headers */,
+				04ECF73E1DB079FD0057CEF5 /* linelocationpatternconverter.h in Headers */,
+				04ECF73F1DB079FD0057CEF5 /* IM.Group.pb.h in Headers */,
+				04ECF7401DB079FD0057CEF5 /* netlib.h in Headers */,
+				04ECF7411DB079FD0057CEF5 /* datelayout.h in Headers */,
+				04ECF7421DB079FD0057CEF5 /* triggeringeventevaluator.h in Headers */,
+				04ECF7431DB079FD0057CEF5 /* aes.h in Headers */,
+				04ECF7441DB079FD0057CEF5 /* transform.h in Headers */,
+				04ECF7451DB079FD0057CEF5 /* ndc.h in Headers */,
+				04ECF7461DB079FD0057CEF5 /* logmanager.h in Headers */,
+				04ECF7471DB079FD0057CEF5 /* patternlayout.h in Headers */,
+				04ECF7481DB079FD0057CEF5 /* ServInfo.h in Headers */,
+				04ECF7491DB079FD0057CEF5 /* messagepatternconverter.h in Headers */,
+				04ECF74A1DB079FD0057CEF5 /* appenderattachable.h in Headers */,
+				04ECF74B1DB079FD0057CEF5 /* IM.Other.pb.h in Headers */,
+				04ECF74C1DB079FD0057CEF5 /* cacheddateformat.h in Headers */,
+				04ECF74D1DB079FD0057CEF5 /* objectimpl.h in Headers */,
+				04ECF74E1DB079FD0057CEF5 /* filelocationpatternconverter.h in Headers */,
+				04ECF74F1DB079FD0057CEF5 /* value.h in Headers */,
+				04ECF7501DB079FD0057CEF5 /* IM.BaseDefine.pb.h in Headers */,
+				04ECF7511DB079FD0057CEF5 /* public_define.h in Headers */,
+				04ECF7521DB079FD0057CEF5 /* reader.h in Headers */,
+				04ECF7531DB079FD0057CEF5 /* propertyconfigurator.h in Headers */,
+				04ECF7541DB079FD0057CEF5 /* simpledateformat.h in Headers */,
+				04ECF7551DB079FD0057CEF5 /* literalpatternconverter.h in Headers */,
+				04ECF7561DB079FD0057CEF5 /* propertysetter.h in Headers */,
+				04ECF7BD1DB07D430057CEF5 /* lzf.h in Headers */,
+				04ECF7571DB079FD0057CEF5 /* json.h in Headers */,
+				04ECF7581DB079FD0057CEF5 /* assertions.h in Headers */,
+				04ECF7591DB079FD0057CEF5 /* smtpappender.h in Headers */,
+				04ECF75A1DB079FD0057CEF5 /* json_batchallocator.h in Headers */,
+				04ECF75B1DB079FD0057CEF5 /* md5.h in Headers */,
+				04ECF7871DB07C100057CEF5 /* zmalloc.h in Headers */,
+				04ECF75C1DB079FD0057CEF5 /* rollingfileappenderskeleton.h in Headers */,
+				04ECF75D1DB079FD0057CEF5 /* appenderattachableimpl.h in Headers */,
+				04ECF75E1DB079FD0057CEF5 /* optionconverter.h in Headers */,
+				04ECF75F1DB079FD0057CEF5 /* ThreadPool.h in Headers */,
+				04ECF7601DB079FD0057CEF5 /* nteventlogappender.h in Headers */,
+				04ECF7611DB079FD0057CEF5 /* htmllayout.h in Headers */,
+				04ECF7621DB079FD0057CEF5 /* repositoryselector.h in Headers */,
+				04ECF7631DB079FD0057CEF5 /* features.h in Headers */,
+				04ECF7641DB079FD0057CEF5 /* stringhelper.h in Headers */,
+				04ECF7651DB079FD0057CEF5 /* dateformat.h in Headers */,
+				04ECF7661DB079FD0057CEF5 /* patternconverter.h in Headers */,
+				04ECF7671DB079FD0057CEF5 /* datepatternconverter.h in Headers */,
+				04ECF7681DB079FD0057CEF5 /* writerappender.h in Headers */,
+				04ECF7691DB079FD0057CEF5 /* imconn.h in Headers */,
+				04ECF76A1DB079FD0057CEF5 /* IM.Message.pb.h in Headers */,
+				04ECF76B1DB079FD0057CEF5 /* fixedwindowrollingpolicy.h in Headers */,
+				04ECF76C1DB079FD0057CEF5 /* rollingpolicy.h in Headers */,
+				04ECF76D1DB079FD0057CEF5 /* tchar.h in Headers */,
+				04ECF76E1DB079FD0057CEF5 /* provisionnode.h in Headers */,
+				04ECF76F1DB079FD0057CEF5 /* strftimedateformat.h in Headers */,
+				04ECF7701DB079FD0057CEF5 /* methodlocationpatternconverter.h in Headers */,
+				04ECF7711DB079FD0057CEF5 /* forwards.h in Headers */,
+				04ECF7721DB079FD0057CEF5 /* xmlsocketappender.h in Headers */,
+				04ECF7731DB079FD0057CEF5 /* expressionfilter.h in Headers */,
+				04ECF7741DB079FD0057CEF5 /* Lock.h in Headers */,
+				04ECF7751DB079FD0057CEF5 /* integer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF78E1DB07C7A0057CEF5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF78F1DB07C7A0057CEF5 /* ipparser.h in Headers */,
+				04ECF7901DB07C7A0057CEF5 /* vec.h in Headers */,
+				04ECF7911DB07C7A0057CEF5 /* HttpConn.h in Headers */,
+				04ECF7921DB07C7A0057CEF5 /* ServerPriv.hpp in Headers */,
+				04ECF7931DB07C7A0057CEF5 /* Mojing3DHelper.h in Headers */,
+				04ECF7941DB07C7A0057CEF5 /* Base64.h in Headers */,
+				04ECF7951DB07C7A0057CEF5 /* LoginConn.h in Headers */,
+				04ECF7961DB07C7A0057CEF5 /* traits.h in Headers */,
+				04ECF7971DB07C7A0057CEF5 /* base.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF7A41DB07CC70057CEF5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF7A51DB07CC70057CEF5 /* ipparser.h in Headers */,
+				04ECF7A61DB07CC70057CEF5 /* vec.h in Headers */,
+				04ECF7A71DB07CC70057CEF5 /* HttpConn.h in Headers */,
+				04ECF7A81DB07CC70057CEF5 /* ServerPriv.hpp in Headers */,
+				04ECF7A91DB07CC70057CEF5 /* Mojing3DHelper.h in Headers */,
+				04ECF7AA1DB07CC70057CEF5 /* Base64.h in Headers */,
+				04ECF7AB1DB07CC70057CEF5 /* LoginConn.h in Headers */,
+				04ECF7AC1DB07CC70057CEF5 /* traits.h in Headers */,
+				04ECF7AD1DB07CC70057CEF5 /* base.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF7C41DB0801F0057CEF5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF7C51DB0801F0057CEF5 /* ipparser.h in Headers */,
+				04ECF7C61DB0801F0057CEF5 /* vec.h in Headers */,
+				04ECF7C71DB0801F0057CEF5 /* HttpConn.h in Headers */,
+				04ECF7C81DB0801F0057CEF5 /* ServerPriv.hpp in Headers */,
+				04ECF7C91DB0801F0057CEF5 /* Mojing3DHelper.h in Headers */,
+				04ECF7CA1DB0801F0057CEF5 /* Base64.h in Headers */,
+				04ECF7CB1DB0801F0057CEF5 /* LoginConn.h in Headers */,
+				04ECF7CC1DB0801F0057CEF5 /* traits.h in Headers */,
+				04ECF7CD1DB0801F0057CEF5 /* base.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF7E61DB083CC0057CEF5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF84D1DB08C320057CEF5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -4528,6 +5546,125 @@
 			productReference = 04EC48D51D9A78AF008CEF88 /* http_msg_server */;
 			productType = "com.apple.product-type.tool";
 		};
+		04ECF6681DB079400057CEF5 /* redis-benchmark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04ECF6781DB079400057CEF5 /* Build configuration list for PBXNativeTarget "redis-benchmark" */;
+			buildPhases = (
+				04ECF6691DB079400057CEF5 /* Sources */,
+				04ECF66C1DB079400057CEF5 /* Frameworks */,
+				04ECF66E1DB079400057CEF5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "redis-benchmark";
+			productName = Server;
+			productReference = 04ECF67B1DB079400057CEF5 /* redis-benchmark */;
+			productType = "com.apple.product-type.tool";
+		};
+		04ECF67E1DB079FD0057CEF5 /* redislib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04ECF7761DB079FD0057CEF5 /* Build configuration list for PBXNativeTarget "redislib" */;
+			buildPhases = (
+				04ECF67F1DB079FD0057CEF5 /* Sources */,
+				04ECF6861DB079FD0057CEF5 /* Frameworks */,
+				04ECF6871DB079FD0057CEF5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = redislib;
+			productName = Server;
+			productReference = 04ECF7791DB079FD0057CEF5 /* libredislib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		04ECF7881DB07C7A0057CEF5 /* redis-check-aof */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04ECF7981DB07C7A0057CEF5 /* Build configuration list for PBXNativeTarget "redis-check-aof" */;
+			buildPhases = (
+				04ECF7891DB07C7A0057CEF5 /* Sources */,
+				04ECF78B1DB07C7A0057CEF5 /* Frameworks */,
+				04ECF78E1DB07C7A0057CEF5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "redis-check-aof";
+			productName = Server;
+			productReference = 04ECF79B1DB07C7A0057CEF5 /* redis-check-aof */;
+			productType = "com.apple.product-type.tool";
+		};
+		04ECF79E1DB07CC70057CEF5 /* redis-check-dump */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04ECF7AE1DB07CC70057CEF5 /* Build configuration list for PBXNativeTarget "redis-check-dump" */;
+			buildPhases = (
+				04ECF79F1DB07CC70057CEF5 /* Sources */,
+				04ECF7A11DB07CC70057CEF5 /* Frameworks */,
+				04ECF7A41DB07CC70057CEF5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "redis-check-dump";
+			productName = Server;
+			productReference = 04ECF7B11DB07CC70057CEF5 /* redis-check-dump */;
+			productType = "com.apple.product-type.tool";
+		};
+		04ECF7BE1DB0801F0057CEF5 /* redis-cli */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04ECF7CE1DB0801F0057CEF5 /* Build configuration list for PBXNativeTarget "redis-cli" */;
+			buildPhases = (
+				04ECF7BF1DB0801F0057CEF5 /* Sources */,
+				04ECF7C11DB0801F0057CEF5 /* Frameworks */,
+				04ECF7C41DB0801F0057CEF5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "redis-cli";
+			productName = Server;
+			productReference = 04ECF7D11DB0801F0057CEF5 /* redis-cli */;
+			productType = "com.apple.product-type.tool";
+		};
+		04ECF7E01DB083CC0057CEF5 /* redis-server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04ECF7F01DB083CC0057CEF5 /* Build configuration list for PBXNativeTarget "redis-server" */;
+			buildPhases = (
+				04ECF7E11DB083CC0057CEF5 /* Sources */,
+				04ECF7E31DB083CC0057CEF5 /* Frameworks */,
+				04ECF7E61DB083CC0057CEF5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "redis-server";
+			productName = Server;
+			productReference = 04ECF7F31DB083CC0057CEF5 /* redis-server */;
+			productType = "com.apple.product-type.tool";
+		};
+		04ECF8401DB08C320057CEF5 /* lua */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04ECF9451DB08C320057CEF5 /* Build configuration list for PBXNativeTarget "lua" */;
+			buildPhases = (
+				04ECF8411DB08C320057CEF5 /* Sources */,
+				04ECF84C1DB08C320057CEF5 /* Frameworks */,
+				04ECF84D1DB08C320057CEF5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lua;
+			productName = Server;
+			productReference = 04ECF9481DB08C320057CEF5 /* liblua.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -4569,6 +5706,13 @@
 				04D0F9941DA9CCDF0096C1FC /* push_server */,
 				04C2590E1DAB1A8400D2AB15 /* db_proxy_server */,
 				04CA69101DAC863E00E5A43C /* testpoint */,
+				04ECF6681DB079400057CEF5 /* redis-benchmark */,
+				04ECF67E1DB079FD0057CEF5 /* redislib */,
+				04ECF7881DB07C7A0057CEF5 /* redis-check-aof */,
+				04ECF79E1DB07CC70057CEF5 /* redis-check-dump */,
+				04ECF7BE1DB0801F0057CEF5 /* redis-cli */,
+				04ECF7E01DB083CC0057CEF5 /* redis-server */,
+				04ECF8401DB08C320057CEF5 /* lua */,
 			);
 		};
 /* End PBXProject section */
@@ -4966,6 +6110,129 @@
 				04EC48DF1D9A7A25008CEF88 /* DBServConn.cpp in Sources */,
 				04EC48DB1D9A79A7008CEF88 /* RouteServConn.cpp in Sources */,
 				04EC48E31D9A7AA7008CEF88 /* HttpConn.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF6691DB079400057CEF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF67D1DB0796A0057CEF5 /* redis-benchmark.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF67F1DB079FD0057CEF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF7FE1DB085980057CEF5 /* sha1.c in Sources */,
+				04ECF7BB1DB07D430057CEF5 /* lzf_c.c in Sources */,
+				04ECF7DE1DB0811F0057CEF5 /* release.c in Sources */,
+				04ECF7821DB07BD60057CEF5 /* adlist.c in Sources */,
+				04ECF7861DB07C100057CEF5 /* zmalloc.c in Sources */,
+				04ECF7BC1DB07D430057CEF5 /* lzf_d.c in Sources */,
+				04ECF7B61DB07D090057CEF5 /* crc64.c in Sources */,
+				04ECF7D61DB080850057CEF5 /* linenoise.c in Sources */,
+				04ECF77C1DB07A1E0057CEF5 /* ae.c in Sources */,
+				04ECF7DA1DB080C80057CEF5 /* anet.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF7891DB07C7A0057CEF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF79D1DB07CAB0057CEF5 /* redis-check-aof.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF79F1DB07CC70057CEF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF7B31DB07CE40057CEF5 /* redis-check-dump.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF7BF1DB0801F0057CEF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF7D31DB0804B0057CEF5 /* redis-cli.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF7E11DB083CC0057CEF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF9BB1DB0905E0057CEF5 /* memtest.c in Sources */,
+				04ECF8101DB087D30057CEF5 /* bio.c in Sources */,
+				04ECF8341DB08B7A0057CEF5 /* intset.c in Sources */,
+				04ECF8031DB086330057CEF5 /* aof.c in Sources */,
+				04ECF83E1DB08C090057CEF5 /* sparkline.c in Sources */,
+				04ECF81B1DB088DA0057CEF5 /* t_zset.c in Sources */,
+				04ECF82B1DB08AB30057CEF5 /* migrate.c in Sources */,
+				04ECF8291DB08A5C0057CEF5 /* multi.c in Sources */,
+				04ECF8131DB087FF0057CEF5 /* bitops.c in Sources */,
+				04ECF82F1DB08B160057CEF5 /* pubsub.c in Sources */,
+				04ECF81A1DB088DA0057CEF5 /* t_set.c in Sources */,
+				04ECF8201DB0895D0057CEF5 /* util.c in Sources */,
+				04ECF8371DB08BA70057CEF5 /* notify.c in Sources */,
+				04ECF8081DB087150057CEF5 /* config.c in Sources */,
+				04ECF8051DB086E80057CEF5 /* t_string.c in Sources */,
+				04ECF8191DB088DA0057CEF5 /* t_hash.c in Sources */,
+				04ECF82D1DB08AE50057CEF5 /* scripting.c in Sources */,
+				04ECF81D1DB0892B0057CEF5 /* object.c in Sources */,
+				04ECF83A1DB08BD10057CEF5 /* latency.c in Sources */,
+				04ECF8011DB085E90057CEF5 /* networking.c in Sources */,
+				04ECF8231DB089AD0057CEF5 /* db.c in Sources */,
+				04ECF7FB1DB085630057CEF5 /* debug.c in Sources */,
+				04ECF8311DB08B420057CEF5 /* sentinel.c in Sources */,
+				04ECF80C1DB087750057CEF5 /* rdb.c in Sources */,
+				04ECF8151DB088C80057CEF5 /* t_list.c in Sources */,
+				04ECF7F61DB084030057CEF5 /* redis.c in Sources */,
+				04ECF8261DB08A200057CEF5 /* dict.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04ECF8411DB08C320057CEF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ECF98B1DB08CF50057CEF5 /* lstate.c in Sources */,
+				04ECF9911DB08CF50057CEF5 /* ltm.c in Sources */,
+				04ECF9AE1DB08DDA0057CEF5 /* liolib.c in Sources */,
+				04ECF9991DB08CF50057CEF5 /* strbuf.c in Sources */,
+				04ECF9831DB08CF50057CEF5 /* lmem.c in Sources */,
+				04ECF97C1DB08CF50057CEF5 /* ldump.c in Sources */,
+				04ECF9781DB08CF50057CEF5 /* ldebug.c in Sources */,
+				04ECF9971DB08CF50057CEF5 /* lzio.c in Sources */,
+				04ECF97D1DB08CF50057CEF5 /* lfunc.c in Sources */,
+				04ECF9B61DB08DDA0057CEF5 /* lua_struct.c in Sources */,
+				04ECF9B01DB08DDA0057CEF5 /* loadlib.c in Sources */,
+				04ECF9951DB08CF50057CEF5 /* lvm.c in Sources */,
+				04ECF9871DB08CF50057CEF5 /* lopcodes.c in Sources */,
+				04ECF9811DB08CF50057CEF5 /* llex.c in Sources */,
+				04ECF9891DB08CF50057CEF5 /* lparser.c in Sources */,
+				04ECF9761DB08CF50057CEF5 /* lcode.c in Sources */,
+				04ECF9851DB08CF50057CEF5 /* lobject.c in Sources */,
+				04ECF97F1DB08CF50057CEF5 /* lgc.c in Sources */,
+				04ECF9721DB08CF50057CEF5 /* fpconv.c in Sources */,
+				04ECF9AB1DB08DDA0057CEF5 /* lbaselib.c in Sources */,
+				04ECF9931DB08CF50057CEF5 /* lundump.c in Sources */,
+				04ECF9AC1DB08DDA0057CEF5 /* ldblib.c in Sources */,
+				04ECF9AF1DB08DDA0057CEF5 /* lmathlib.c in Sources */,
+				04ECF9B21DB08DDA0057CEF5 /* lstrlib.c in Sources */,
+				04ECF9A91DB08DDA0057CEF5 /* lauxlib.c in Sources */,
+				04ECF9B11DB08DDA0057CEF5 /* loslib.c in Sources */,
+				04ECF9741DB08CF50057CEF5 /* lapi.c in Sources */,
+				04ECF98F1DB08CF50057CEF5 /* ltable.c in Sources */,
+				04ECF9B31DB08DDA0057CEF5 /* ltablib.c in Sources */,
+				04ECF98D1DB08CF50057CEF5 /* lstring.c in Sources */,
+				04ECF9B51DB08DDA0057CEF5 /* lua_cmsgpack.c in Sources */,
+				04ECF9AD1DB08DDA0057CEF5 /* linit.c in Sources */,
+				04ECF97A1DB08CF50057CEF5 /* ldo.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5961,6 +7228,422 @@
 			};
 			name = Release;
 		};
+		04ECF6791DB079400057CEF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = NO;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
+					hiredis,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SEPARATE_STRIP = NO;
+				STRIP_STYLE = all;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		04ECF67A1DB079400057CEF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = NO;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
+					hiredis,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SEPARATE_STRIP = NO;
+				STRIP_STYLE = all;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		04ECF7771DB079FD0057CEF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					base/jsoncpp,
+					log4cxx/include,
+					"/usr/local/include/apr-1",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libsecurity/lib/win/debug",
+					"$(PROJECT_DIR)/libsecurity/lib/win/release",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		04ECF7781DB079FD0057CEF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					base/jsoncpp,
+					log4cxx/include,
+					"/usr/local/include/apr-1",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libsecurity/lib/win/debug",
+					"$(PROJECT_DIR)/libsecurity/lib/win/release",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		04ECF7991DB07C7A0057CEF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = NO;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
+					hiredis,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SEPARATE_STRIP = NO;
+				STRIP_STYLE = all;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		04ECF79A1DB07C7A0057CEF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = NO;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
+					hiredis,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SEPARATE_STRIP = NO;
+				STRIP_STYLE = all;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		04ECF7AF1DB07CC70057CEF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = NO;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
+					hiredis,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SEPARATE_STRIP = NO;
+				STRIP_STYLE = all;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		04ECF7B01DB07CC70057CEF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = NO;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
+					hiredis,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SEPARATE_STRIP = NO;
+				STRIP_STYLE = all;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		04ECF7CF1DB0801F0057CEF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = NO;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
+					hiredis,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SEPARATE_STRIP = NO;
+				STRIP_STYLE = all;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		04ECF7D01DB0801F0057CEF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = NO;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
+					hiredis,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SEPARATE_STRIP = NO;
+				STRIP_STYLE = all;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		04ECF7F11DB083CC0057CEF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = NO;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
+					hiredis,
+					lua,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SEPARATE_STRIP = NO;
+				STRIP_STYLE = all;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		04ECF7F21DB083CC0057CEF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = NO;
+				EXECUTABLE_EXTENSION = "";
+				EXECUTABLE_PREFIX = "";
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					base,
+					base/jsoncpp,
+					/usr/local/include,
+					base/pb/protocol,
+					hiredis,
+					lua,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SEPARATE_STRIP = NO;
+				STRIP_STYLE = all;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		04ECF9461DB08C320057CEF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					base/jsoncpp,
+					log4cxx/include,
+					"/usr/local/include/apr-1",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libsecurity/lib/win/debug",
+					"$(PROJECT_DIR)/libsecurity/lib/win/release",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		04ECF9471DB08C320057CEF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					base/jsoncpp,
+					log4cxx/include,
+					"/usr/local/include/apr-1",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libsecurity/lib/win/debug",
+					"$(PROJECT_DIR)/libsecurity/lib/win/release",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -6104,6 +7787,69 @@
 			buildConfigurations = (
 				04EC48D31D9A78AF008CEF88 /* Debug */,
 				04EC48D41D9A78AF008CEF88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04ECF6781DB079400057CEF5 /* Build configuration list for PBXNativeTarget "redis-benchmark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04ECF6791DB079400057CEF5 /* Debug */,
+				04ECF67A1DB079400057CEF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04ECF7761DB079FD0057CEF5 /* Build configuration list for PBXNativeTarget "redislib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04ECF7771DB079FD0057CEF5 /* Debug */,
+				04ECF7781DB079FD0057CEF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04ECF7981DB07C7A0057CEF5 /* Build configuration list for PBXNativeTarget "redis-check-aof" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04ECF7991DB07C7A0057CEF5 /* Debug */,
+				04ECF79A1DB07C7A0057CEF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04ECF7AE1DB07CC70057CEF5 /* Build configuration list for PBXNativeTarget "redis-check-dump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04ECF7AF1DB07CC70057CEF5 /* Debug */,
+				04ECF7B01DB07CC70057CEF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04ECF7CE1DB0801F0057CEF5 /* Build configuration list for PBXNativeTarget "redis-cli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04ECF7CF1DB0801F0057CEF5 /* Debug */,
+				04ECF7D01DB0801F0057CEF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04ECF7F01DB083CC0057CEF5 /* Build configuration list for PBXNativeTarget "redis-server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04ECF7F11DB083CC0057CEF5 /* Debug */,
+				04ECF7F21DB083CC0057CEF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04ECF9451DB08C320057CEF5 /* Build configuration list for PBXNativeTarget "lua" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04ECF9461DB08C320057CEF5 /* Debug */,
+				04ECF9471DB08C320057CEF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

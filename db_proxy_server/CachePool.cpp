@@ -348,7 +348,7 @@ string CacheConn::hmset(string key, map<string, string>& hash)
 		return ret_value;
 	}
 
-	int argc = hash.size() * 2 + 2;
+	int argc = (int)hash.size() * 2 + 2;
 	const char** argv = new const char* [argc];
 	if (!argv) {
 		return ret_value;
@@ -648,9 +648,11 @@ CacheManager::~CacheManager()
 
 CacheManager* CacheManager::getInstance()
 {
-	if (!s_cache_manager) {
+	if (!s_cache_manager)
+    {
 		s_cache_manager = new CacheManager();
-		if (s_cache_manager->Init()) {
+		if (s_cache_manager->Init())
+        {
 			delete s_cache_manager;
 			s_cache_manager = NULL;
 		}
@@ -664,7 +666,8 @@ int CacheManager::Init()
 	CConfigFileReader config_file("dbproxyserver.conf");
 
 	char* cache_instances = config_file.GetConfigName("CacheInstances");
-	if (!cache_instances) {
+	if (!cache_instances)
+    {
 		log("not configure CacheIntance");
 		return 1;
 	}
@@ -674,7 +677,8 @@ int CacheManager::Init()
 	char db[64];
     char maxconncnt[64];
 	CStrExplode instances_name(cache_instances, ',');
-	for (uint32_t i = 0; i < instances_name.GetItemCnt(); i++) {
+	for (uint32_t i = 0; i < instances_name.GetItemCnt(); i++)
+    {
 		char* pool_name = instances_name.GetItem(i);
 		//printf("%s", pool_name);
 		snprintf(host, 64, "%s_host", pool_name);
@@ -686,14 +690,16 @@ int CacheManager::Init()
 		char* str_cache_port = config_file.GetConfigName(port);
 		char* str_cache_db = config_file.GetConfigName(db);
         char* str_max_conn_cnt = config_file.GetConfigName(maxconncnt);
-		if (!cache_host || !str_cache_port || !str_cache_db || !str_max_conn_cnt) {
+		if (!cache_host || !str_cache_port || !str_cache_db || !str_max_conn_cnt)
+        {
 			log("not configure cache instance: %s", pool_name);
 			return 2;
 		}
 
 		CachePool* pCachePool = new CachePool(pool_name, cache_host, atoi(str_cache_port),
 				atoi(str_cache_db), atoi(str_max_conn_cnt));
-		if (pCachePool->Init()) {
+		if (pCachePool->Init())
+        {
 			log("Init cache pool failed");
 			return 3;
 		}
@@ -707,21 +713,28 @@ int CacheManager::Init()
 CacheConn* CacheManager::GetCacheConn(const char* pool_name)
 {
 	map<string, CachePool*>::iterator it = m_cache_pool_map.find(pool_name);
-	if (it != m_cache_pool_map.end()) {
+	if (it != m_cache_pool_map.end())
+    {
 		return it->second->GetCacheConn();
-	} else {
+	}
+    else
+    {
 		return NULL;
 	}
 }
 
 void CacheManager::RelCacheConn(CacheConn* pCacheConn)
 {
-	if (!pCacheConn) {
+	if (!pCacheConn)
+    {
 		return;
 	}
 
 	map<string, CachePool*>::iterator it = m_cache_pool_map.find(pCacheConn->GetPoolName());
-	if (it != m_cache_pool_map.end()) {
+	if (it != m_cache_pool_map.end())
+    {
 		return it->second->RelCacheConn(pCacheConn);
 	}
 }
+
+
