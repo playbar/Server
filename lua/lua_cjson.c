@@ -46,7 +46,7 @@
 #include "strbuf.h"
 #include "fpconv.h"
 
-#include "../../../src/solarisfixes.h"
+#include "../redis/solarisfixes.h"
 
 #ifndef CJSON_MODNAME
 #define CJSON_MODNAME   "cjson"

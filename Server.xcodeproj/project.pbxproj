@@ -1598,7 +1598,6 @@
 		04ECF8231DB089AD0057CEF5 /* db.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8221DB089AD0057CEF5 /* db.c */; };
 		04ECF8261DB08A200057CEF5 /* dict.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8241DB08A200057CEF5 /* dict.c */; };
 		04ECF8291DB08A5C0057CEF5 /* multi.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8281DB08A5C0057CEF5 /* multi.c */; };
-		04ECF82B1DB08AB30057CEF5 /* migrate.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF82A1DB08AB30057CEF5 /* migrate.c */; };
 		04ECF82D1DB08AE50057CEF5 /* scripting.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF82C1DB08AE50057CEF5 /* scripting.c */; };
 		04ECF82F1DB08B160057CEF5 /* pubsub.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF82E1DB08B160057CEF5 /* pubsub.c */; };
 		04ECF8311DB08B420057CEF5 /* sentinel.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF8301DB08B420057CEF5 /* sentinel.c */; };
@@ -1639,8 +1638,30 @@
 		04ECF9B31DB08DDA0057CEF5 /* ltablib.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9A51DB08DDA0057CEF5 /* ltablib.c */; };
 		04ECF9B51DB08DDA0057CEF5 /* lua_cmsgpack.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9A71DB08DDA0057CEF5 /* lua_cmsgpack.c */; };
 		04ECF9B61DB08DDA0057CEF5 /* lua_struct.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9A81DB08DDA0057CEF5 /* lua_struct.c */; };
-		04ECF9B91DB08FE40057CEF5 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECF9B81DB08FE40057CEF5 /* liblua.a */; };
 		04ECF9BB1DB0905E0057CEF5 /* memtest.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9BA1DB0905E0057CEF5 /* memtest.c */; };
+		04ECF9BD1DB0A6B00057CEF5 /* hyperloglog.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9BC1DB0A6B00057CEF5 /* hyperloglog.c */; };
+		04ECF9C11DB0A7210057CEF5 /* replication.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9C01DB0A7210057CEF5 /* replication.c */; };
+		04ECF9C81DB0A7560057CEF5 /* ziplist.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9C21DB0A7560057CEF5 /* ziplist.c */; };
+		04ECF9C91DB0A7560057CEF5 /* ziplist.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF9C31DB0A7560057CEF5 /* ziplist.h */; };
+		04ECF9CA1DB0A7560057CEF5 /* zipmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9C41DB0A7560057CEF5 /* zipmap.c */; };
+		04ECF9CB1DB0A7560057CEF5 /* zipmap.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF9C51DB0A7560057CEF5 /* zipmap.h */; };
+		04ECF9CC1DB0A7560057CEF5 /* zmalloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9C61DB0A7560057CEF5 /* zmalloc.c */; };
+		04ECF9CD1DB0A7560057CEF5 /* zmalloc.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF9C71DB0A7560057CEF5 /* zmalloc.h */; };
+		04ECF9CF1DB0A7870057CEF5 /* migrate.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9CE1DB0A7870057CEF5 /* migrate.c */; };
+		04ECF9D21DB0A7FC0057CEF5 /* rio.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9D01DB0A7FC0057CEF5 /* rio.c */; };
+		04ECF9D31DB0A7FC0057CEF5 /* rio.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF9D11DB0A7FC0057CEF5 /* rio.h */; };
+		04ECF9D61DB0A8260057CEF5 /* slowlog.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9D41DB0A8260057CEF5 /* slowlog.c */; };
+		04ECF9D71DB0A8260057CEF5 /* slowlog.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF9D51DB0A8260057CEF5 /* slowlog.h */; };
+		04ECF9D91DB0A8590057CEF5 /* syncio.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9D81DB0A8590057CEF5 /* syncio.c */; };
+		04ECF9DB1DB0A8820057CEF5 /* setproctitle.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9DA1DB0A8820057CEF5 /* setproctitle.c */; };
+		04ECF9DD1DB0A8B20057CEF5 /* sort.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9DC1DB0A8B20057CEF5 /* sort.c */; };
+		04ECF9E01DB0A8D60057CEF5 /* pqsort.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9DE1DB0A8D60057CEF5 /* pqsort.c */; };
+		04ECF9E11DB0A8D60057CEF5 /* pqsort.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF9DF1DB0A8D60057CEF5 /* pqsort.h */; };
+		04ECF9E41DB0A90E0057CEF5 /* rand.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9E21DB0A90E0057CEF5 /* rand.c */; };
+		04ECF9E51DB0A90E0057CEF5 /* rand.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ECF9E31DB0A90E0057CEF5 /* rand.h */; };
+		04ECF9E61DB0AA120057CEF5 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ECF9481DB08C320057CEF5 /* liblua.a */; };
+		04ECF9E81DB0AA4E0057CEF5 /* lua_bit.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9E71DB0AA4E0057CEF5 /* lua_bit.c */; };
+		04ECF9EA1DB0AA890057CEF5 /* lua_cjson.c in Sources */ = {isa = PBXBuildFile; fileRef = 04ECF9E91DB0AA890057CEF5 /* lua_cjson.c */; };
 		04ED179A1D8E1A3C00E980F2 /* log4z.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04ED17981D8E1A3C00E980F2 /* log4z.cpp */; };
 		04ED179B1D8E1A3C00E980F2 /* log4z.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ED17991D8E1A3C00E980F2 /* log4z.h */; };
 		04ED179E1D8E1BAE00E980F2 /* ServInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04ED179C1D8E1BAE00E980F2 /* ServInfo.cpp */; };
@@ -2396,7 +2417,6 @@
 		04ECF8241DB08A200057CEF5 /* dict.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dict.c; path = redis/dict.c; sourceTree = "<group>"; };
 		04ECF8251DB08A200057CEF5 /* dict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dict.h; path = redis/dict.h; sourceTree = "<group>"; };
 		04ECF8281DB08A5C0057CEF5 /* multi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = multi.c; path = redis/multi.c; sourceTree = "<group>"; };
-		04ECF82A1DB08AB30057CEF5 /* migrate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = migrate.c; path = redis/migrate.c; sourceTree = "<group>"; };
 		04ECF82C1DB08AE50057CEF5 /* scripting.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = scripting.c; path = redis/scripting.c; sourceTree = "<group>"; };
 		04ECF82E1DB08B160057CEF5 /* pubsub.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pubsub.c; path = redis/pubsub.c; sourceTree = "<group>"; };
 		04ECF8301DB08B420057CEF5 /* sentinel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sentinel.c; path = redis/sentinel.c; sourceTree = "<group>"; };
@@ -2464,6 +2484,28 @@
 		04ECF9A81DB08DDA0057CEF5 /* lua_struct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lua_struct.c; path = lua/lua_struct.c; sourceTree = "<group>"; };
 		04ECF9B81DB08FE40057CEF5 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = lib/liblua.a; sourceTree = "<group>"; };
 		04ECF9BA1DB0905E0057CEF5 /* memtest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = memtest.c; path = redis/memtest.c; sourceTree = "<group>"; };
+		04ECF9BC1DB0A6B00057CEF5 /* hyperloglog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hyperloglog.c; path = redis/hyperloglog.c; sourceTree = "<group>"; };
+		04ECF9C01DB0A7210057CEF5 /* replication.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = replication.c; path = redis/replication.c; sourceTree = "<group>"; };
+		04ECF9C21DB0A7560057CEF5 /* ziplist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ziplist.c; path = redis/ziplist.c; sourceTree = "<group>"; };
+		04ECF9C31DB0A7560057CEF5 /* ziplist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ziplist.h; path = redis/ziplist.h; sourceTree = "<group>"; };
+		04ECF9C41DB0A7560057CEF5 /* zipmap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zipmap.c; path = redis/zipmap.c; sourceTree = "<group>"; };
+		04ECF9C51DB0A7560057CEF5 /* zipmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zipmap.h; path = redis/zipmap.h; sourceTree = "<group>"; };
+		04ECF9C61DB0A7560057CEF5 /* zmalloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zmalloc.c; path = redis/zmalloc.c; sourceTree = "<group>"; };
+		04ECF9C71DB0A7560057CEF5 /* zmalloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zmalloc.h; path = redis/zmalloc.h; sourceTree = "<group>"; };
+		04ECF9CE1DB0A7870057CEF5 /* migrate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = migrate.c; path = redis/migrate.c; sourceTree = "<group>"; };
+		04ECF9D01DB0A7FC0057CEF5 /* rio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rio.c; path = redis/rio.c; sourceTree = "<group>"; };
+		04ECF9D11DB0A7FC0057CEF5 /* rio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rio.h; path = redis/rio.h; sourceTree = "<group>"; };
+		04ECF9D41DB0A8260057CEF5 /* slowlog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = slowlog.c; path = redis/slowlog.c; sourceTree = "<group>"; };
+		04ECF9D51DB0A8260057CEF5 /* slowlog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = slowlog.h; path = redis/slowlog.h; sourceTree = "<group>"; };
+		04ECF9D81DB0A8590057CEF5 /* syncio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = syncio.c; path = redis/syncio.c; sourceTree = "<group>"; };
+		04ECF9DA1DB0A8820057CEF5 /* setproctitle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = setproctitle.c; path = redis/setproctitle.c; sourceTree = "<group>"; };
+		04ECF9DC1DB0A8B20057CEF5 /* sort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sort.c; path = redis/sort.c; sourceTree = "<group>"; };
+		04ECF9DE1DB0A8D60057CEF5 /* pqsort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pqsort.c; path = redis/pqsort.c; sourceTree = "<group>"; };
+		04ECF9DF1DB0A8D60057CEF5 /* pqsort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pqsort.h; path = redis/pqsort.h; sourceTree = "<group>"; };
+		04ECF9E21DB0A90E0057CEF5 /* rand.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rand.c; path = redis/rand.c; sourceTree = "<group>"; };
+		04ECF9E31DB0A90E0057CEF5 /* rand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rand.h; path = redis/rand.h; sourceTree = "<group>"; };
+		04ECF9E71DB0AA4E0057CEF5 /* lua_bit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lua_bit.c; path = lua/lua_bit.c; sourceTree = "<group>"; };
+		04ECF9E91DB0AA890057CEF5 /* lua_cjson.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lua_cjson.c; path = lua/lua_cjson.c; sourceTree = "<group>"; };
 		04ED17981D8E1A3C00E980F2 /* log4z.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = log4z.cpp; path = base/log4z.cpp; sourceTree = SOURCE_ROOT; };
 		04ED17991D8E1A3C00E980F2 /* log4z.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = log4z.h; path = base/log4z.h; sourceTree = SOURCE_ROOT; };
 		04ED179C1D8E1BAE00E980F2 /* ServInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ServInfo.cpp; path = base/ServInfo.cpp; sourceTree = SOURCE_ROOT; };
@@ -2671,7 +2713,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04ECF9B91DB08FE40057CEF5 /* liblua.a in Frameworks */,
+				04ECF9E61DB0AA120057CEF5 /* liblua.a in Frameworks */,
 				04ECF7E41DB083CC0057CEF5 /* libhiredis.a in Frameworks */,
 				04ECF7E51DB083CC0057CEF5 /* libredislib.a in Frameworks */,
 			);
@@ -2690,7 +2732,6 @@
 		04019CBE1D536C6B00DAD42F = {
 			isa = PBXGroup;
 			children = (
-				04ECF9B81DB08FE40057CEF5 /* liblua.a */,
 				04ECF7F81DB084A40057CEF5 /* lua */,
 				04ECF6671DB078B70057CEF5 /* redis */,
 				04CA690F1DAC860700E5A43C /* testpoint */,
@@ -2884,6 +2925,7 @@
 		046054751D925D7300C84153 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				04ECF9B81DB08FE40057CEF5 /* liblua.a */,
 				04BEE8DF1DAF1737006E0A80 /* libcurl.a */,
 				04BEE8E01DAF1737006E0A80 /* libmysqld.a */,
 				04D0F9FC1DA9D0CF0096C1FC /* libcrypto.a */,
@@ -3797,10 +3839,11 @@
 				04ECF8251DB08A200057CEF5 /* dict.h */,
 				04ECF8321DB08B7A0057CEF5 /* intset.c */,
 				04ECF8331DB08B7A0057CEF5 /* intset.h */,
+				04ECF9BC1DB0A6B00057CEF5 /* hyperloglog.c */,
 				04ECF7F91DB0852E0057CEF5 /* debug.c */,
 				04ECF8001DB085E90057CEF5 /* networking.c */,
-				04ECF82A1DB08AB30057CEF5 /* migrate.c */,
 				04ECF9BA1DB0905E0057CEF5 /* memtest.c */,
+				04ECF9CE1DB0A7870057CEF5 /* migrate.c */,
 				04ECF82E1DB08B160057CEF5 /* pubsub.c */,
 				04ECF8021DB086330057CEF5 /* aof.c */,
 				04ECF8361DB08BA70057CEF5 /* notify.c */,
@@ -3814,6 +3857,8 @@
 				04ECF8281DB08A5C0057CEF5 /* multi.c */,
 				04ECF7B41DB07D090057CEF5 /* crc64.c */,
 				04ECF7B51DB07D090057CEF5 /* crc64.h */,
+				04ECF9E21DB0A90E0057CEF5 /* rand.c */,
+				04ECF9E31DB0A90E0057CEF5 /* rand.h */,
 				04ECF7DC1DB0811F0057CEF5 /* release.c */,
 				04ECF7DD1DB0811F0057CEF5 /* release.h */,
 				04ECF7D41DB080850057CEF5 /* linenoise.c */,
@@ -3824,6 +3869,7 @@
 				04ECF83D1DB08C090057CEF5 /* sparkline.h */,
 				04ECF8301DB08B420057CEF5 /* sentinel.c */,
 				04ECF82C1DB08AE50057CEF5 /* scripting.c */,
+				04ECF9C01DB0A7210057CEF5 /* replication.c */,
 				04ECF8041DB086E80057CEF5 /* t_string.c */,
 				04ECF8141DB088C80057CEF5 /* t_list.c */,
 				04ECF8161DB088DA0057CEF5 /* t_hash.c */,
@@ -3831,16 +3877,31 @@
 				04ECF8181DB088DA0057CEF5 /* t_zset.c */,
 				04ECF7FC1DB085980057CEF5 /* sha1.c */,
 				04ECF7FD1DB085980057CEF5 /* sha1.h */,
+				04ECF9D41DB0A8260057CEF5 /* slowlog.c */,
+				04ECF9D51DB0A8260057CEF5 /* slowlog.h */,
+				04ECF9D81DB0A8590057CEF5 /* syncio.c */,
+				04ECF9DA1DB0A8820057CEF5 /* setproctitle.c */,
+				04ECF9DE1DB0A8D60057CEF5 /* pqsort.c */,
+				04ECF9DF1DB0A8D60057CEF5 /* pqsort.h */,
+				04ECF9DC1DB0A8B20057CEF5 /* sort.c */,
 				04ECF81E1DB0895D0057CEF5 /* util.c */,
 				04ECF81F1DB0895D0057CEF5 /* util.h */,
 				04ECF80A1DB087750057CEF5 /* rdb.c */,
 				04ECF80B1DB087750057CEF5 /* rdb.h */,
+				04ECF9D01DB0A7FC0057CEF5 /* rio.c */,
+				04ECF9D11DB0A7FC0057CEF5 /* rio.h */,
 				04ECF79C1DB07CAB0057CEF5 /* redis-check-aof.c */,
 				04ECF67C1DB0796A0057CEF5 /* redis-benchmark.c */,
 				04ECF7B21DB07CE40057CEF5 /* redis-check-dump.c */,
 				04ECF7D21DB0804B0057CEF5 /* redis-cli.c */,
 				04ECF7F41DB084030057CEF5 /* redis.c */,
 				04ECF7F51DB084030057CEF5 /* redis.h */,
+				04ECF9C21DB0A7560057CEF5 /* ziplist.c */,
+				04ECF9C31DB0A7560057CEF5 /* ziplist.h */,
+				04ECF9C41DB0A7560057CEF5 /* zipmap.c */,
+				04ECF9C51DB0A7560057CEF5 /* zipmap.h */,
+				04ECF9C61DB0A7560057CEF5 /* zmalloc.c */,
+				04ECF9C71DB0A7560057CEF5 /* zmalloc.h */,
 			);
 			name = redis;
 			sourceTree = "<group>";
@@ -3900,6 +3961,8 @@
 				04ECF9A31DB08DDA0057CEF5 /* loslib.c */,
 				04ECF9A41DB08DDA0057CEF5 /* lstrlib.c */,
 				04ECF9A51DB08DDA0057CEF5 /* ltablib.c */,
+				04ECF9E71DB0AA4E0057CEF5 /* lua_bit.c */,
+				04ECF9E91DB0AA890057CEF5 /* lua_cjson.c */,
 				04ECF9A71DB08DDA0057CEF5 /* lua_cmsgpack.c */,
 				04ECF9A81DB08DDA0057CEF5 /* lua_struct.c */,
 			);
@@ -5278,6 +5341,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04ECF9C91DB0A7560057CEF5 /* ziplist.h in Headers */,
+				04ECF9E11DB0A8D60057CEF5 /* pqsort.h in Headers */,
+				04ECF9D31DB0A7FC0057CEF5 /* rio.h in Headers */,
+				04ECF9CD1DB0A7560057CEF5 /* zmalloc.h in Headers */,
+				04ECF9CB1DB0A7560057CEF5 /* zipmap.h in Headers */,
+				04ECF9E51DB0A90E0057CEF5 /* rand.h in Headers */,
+				04ECF9D71DB0A8260057CEF5 /* slowlog.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6168,16 +6238,24 @@
 			files = (
 				04ECF9BB1DB0905E0057CEF5 /* memtest.c in Sources */,
 				04ECF8101DB087D30057CEF5 /* bio.c in Sources */,
+				04ECF9D21DB0A7FC0057CEF5 /* rio.c in Sources */,
 				04ECF8341DB08B7A0057CEF5 /* intset.c in Sources */,
 				04ECF8031DB086330057CEF5 /* aof.c in Sources */,
+				04ECF9DD1DB0A8B20057CEF5 /* sort.c in Sources */,
 				04ECF83E1DB08C090057CEF5 /* sparkline.c in Sources */,
+				04ECF9C11DB0A7210057CEF5 /* replication.c in Sources */,
 				04ECF81B1DB088DA0057CEF5 /* t_zset.c in Sources */,
-				04ECF82B1DB08AB30057CEF5 /* migrate.c in Sources */,
+				04ECF9BD1DB0A6B00057CEF5 /* hyperloglog.c in Sources */,
 				04ECF8291DB08A5C0057CEF5 /* multi.c in Sources */,
 				04ECF8131DB087FF0057CEF5 /* bitops.c in Sources */,
 				04ECF82F1DB08B160057CEF5 /* pubsub.c in Sources */,
+				04ECF9CC1DB0A7560057CEF5 /* zmalloc.c in Sources */,
+				04ECF9D91DB0A8590057CEF5 /* syncio.c in Sources */,
+				04ECF9DB1DB0A8820057CEF5 /* setproctitle.c in Sources */,
+				04ECF9D61DB0A8260057CEF5 /* slowlog.c in Sources */,
 				04ECF81A1DB088DA0057CEF5 /* t_set.c in Sources */,
 				04ECF8201DB0895D0057CEF5 /* util.c in Sources */,
+				04ECF9E41DB0A90E0057CEF5 /* rand.c in Sources */,
 				04ECF8371DB08BA70057CEF5 /* notify.c in Sources */,
 				04ECF8081DB087150057CEF5 /* config.c in Sources */,
 				04ECF8051DB086E80057CEF5 /* t_string.c in Sources */,
@@ -6186,13 +6264,17 @@
 				04ECF81D1DB0892B0057CEF5 /* object.c in Sources */,
 				04ECF83A1DB08BD10057CEF5 /* latency.c in Sources */,
 				04ECF8011DB085E90057CEF5 /* networking.c in Sources */,
+				04ECF9CF1DB0A7870057CEF5 /* migrate.c in Sources */,
 				04ECF8231DB089AD0057CEF5 /* db.c in Sources */,
 				04ECF7FB1DB085630057CEF5 /* debug.c in Sources */,
 				04ECF8311DB08B420057CEF5 /* sentinel.c in Sources */,
+				04ECF9C81DB0A7560057CEF5 /* ziplist.c in Sources */,
+				04ECF9E01DB0A8D60057CEF5 /* pqsort.c in Sources */,
 				04ECF80C1DB087750057CEF5 /* rdb.c in Sources */,
 				04ECF8151DB088C80057CEF5 /* t_list.c in Sources */,
 				04ECF7F61DB084030057CEF5 /* redis.c in Sources */,
 				04ECF8261DB08A200057CEF5 /* dict.c in Sources */,
+				04ECF9CA1DB0A7560057CEF5 /* zipmap.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6226,6 +6308,8 @@
 				04ECF9B21DB08DDA0057CEF5 /* lstrlib.c in Sources */,
 				04ECF9A91DB08DDA0057CEF5 /* lauxlib.c in Sources */,
 				04ECF9B11DB08DDA0057CEF5 /* loslib.c in Sources */,
+				04ECF9E81DB0AA4E0057CEF5 /* lua_bit.c in Sources */,
+				04ECF9EA1DB0AA890057CEF5 /* lua_cjson.c in Sources */,
 				04ECF9741DB08CF50057CEF5 /* lapi.c in Sources */,
 				04ECF98F1DB08CF50057CEF5 /* ltable.c in Sources */,
 				04ECF9B31DB08DDA0057CEF5 /* ltablib.c in Sources */,
