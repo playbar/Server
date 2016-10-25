@@ -193,14 +193,17 @@ int main(int argc, char* argv[])
     float fval = -1e-6;
     
 	Point2f position;
-	for (int i = 0; i < sizeof(tests) / sizeof(TestItem); i++)
+	for (int i = 2; i < sizeof(tests) / sizeof(TestItem); i++)
 	{
 		//Baofeng::Mojing::Matrix4f m = Baofeng::Mojing::Matrix4f::RotationX(rand()) * Baofeng::Mojing::Matrix4f::RotationY(rand()) * Baofeng::Mojing::Matrix4f::RotationZ(rand());
 		//Baofeng::Mojing::Vector3f topLeft(tests[i].topLeft);
 		//topLeft = m.Transform(topLeft);
 
 		Plane plane(Point3f(tests[i].topLeft), Point3f(tests[i].topRight), Point3f(tests[i].bottomLeft));
-		if (tests[i].hasIntersection == plane.Intersection(Vector3f(tests[i].light), position))
+//		if (tests[i].hasIntersection == plane.Intersection(Vector3f(tests[i].light), position))
+        float t, u, v;
+        float origin[3] = {0.0f, 0.0f, 0.0f};
+        if( plane.IntersectTriangle(Vector3f(origin), Vector3f(tests[i].light), Vector3f(tests[i].topLeft), Vector3f(tests[i].topRight), Vector3f(tests[i].bottomLeft), &t, &u, &v))
 		{
 			if (tests[i].hasIntersection)
 			{

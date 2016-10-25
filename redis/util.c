@@ -516,6 +516,7 @@ sds getAbsolutePath(char *filename) {
     }
 
     /* Finally glue the two parts together. */
+//    sdsfree(relpath);
     abspath = sdscatsds(abspath,relpath);
     sdsfree(relpath);
     return abspath;

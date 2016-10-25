@@ -124,3 +124,67 @@ bool Plane::Intersection(Vector3f light, Point2f &position)
 		return true;
 	}
 }
+
+
+bool Plane::IntersectTriangle(const Vector3f orig, const Vector3f dir,
+                       Vector3f v0, Vector3f v1, Vector3f v2,
+                       float* t, float* u, float* v)
+{
+    // E1
+    Vector3f E1 = v1 - v0;
+    
+    // E2
+    Vector3f E2 = v2 - v0;
+    
+    // P
+//    Vector3f P = dir.Cross(E2);
+    Vector3f p = cross_product( dir, E2);
+    
+    // determinant
+//    float det = E1.Dot(P);
+    float det = dot_product( E1, p);
+    
+    // keep det > 0, modify T accordingly
+    Vector3f T;
+    if( det >0 )
+    {
+        T = orig - v0;
+    }
+    else
+    {
+        T = v0 - orig;
+        det = -det;
+    }
+    
+    // If determinant is near zero, ray lies in plane of triangle
+    if( det < 0.0001f )
+        return false;
+    
+    // Calculate u and make sure u <= 1
+//    *u = T.Dot(P);
+    *u = dot_product( T, p);
+    if( *u < 0.0f || *u > det )
+        return false;
+    
+    // Q
+//    Vector3f Q = T.Cross(E1);
+    Vector3f Q = cross_product(T, E1);
+    
+    // Calculate v and make sure u + v <= 1
+//    *v = dir.Dot(Q);
+    *v = dot_product(dir, Q);
+    if( *v < 0.0f || *u + *v > det )
+        return false;
+    
+    // Calculate t, scale parameters, ray intersects triangle
+//    *t = E2.Dot(Q);
+    *t = dot_product(E2, Q);
+    
+    float fInvDet = 1.0f / det;
+    *t *= fInvDet;
+    *u *= fInvDet;
+    *v *= fInvDet;
+    
+    return true;
+}
+

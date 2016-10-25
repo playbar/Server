@@ -3344,7 +3344,8 @@ int main(int argc, char **argv) {
                 "Sentinel needs config file on disk to save state.  Exiting...");
             exit(1);
         }
-        if (configfile) server.configfile = getAbsolutePath(configfile);
+        if (configfile)
+            server.configfile = getAbsolutePath(configfile);
         resetServerSaveParams();
         loadServerConfig(configfile,options);
         sdsfree(options);

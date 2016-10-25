@@ -2506,6 +2506,7 @@
 		04ECF9E31DB0A90E0057CEF5 /* rand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rand.h; path = redis/rand.h; sourceTree = "<group>"; };
 		04ECF9E71DB0AA4E0057CEF5 /* lua_bit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lua_bit.c; path = lua/lua_bit.c; sourceTree = "<group>"; };
 		04ECF9E91DB0AA890057CEF5 /* lua_cjson.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lua_cjson.c; path = lua/lua_cjson.c; sourceTree = "<group>"; };
+		04ECF9EB1DB0C5930057CEF5 /* redis.conf */ = {isa = PBXFileReference; lastKnownFileType = text; name = redis.conf; path = redis/redis.conf; sourceTree = "<group>"; };
 		04ED17981D8E1A3C00E980F2 /* log4z.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = log4z.cpp; path = base/log4z.cpp; sourceTree = SOURCE_ROOT; };
 		04ED17991D8E1A3C00E980F2 /* log4z.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = log4z.h; path = base/log4z.h; sourceTree = SOURCE_ROOT; };
 		04ED179C1D8E1BAE00E980F2 /* ServInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ServInfo.cpp; path = base/ServInfo.cpp; sourceTree = SOURCE_ROOT; };
@@ -3894,6 +3895,7 @@
 				04ECF67C1DB0796A0057CEF5 /* redis-benchmark.c */,
 				04ECF7B21DB07CE40057CEF5 /* redis-check-dump.c */,
 				04ECF7D21DB0804B0057CEF5 /* redis-cli.c */,
+				04ECF9EB1DB0C5930057CEF5 /* redis.conf */,
 				04ECF7F41DB084030057CEF5 /* redis.c */,
 				04ECF7F51DB084030057CEF5 /* redis.h */,
 				04ECF9C21DB0A7560057CEF5 /* ziplist.c */,

@@ -27,4 +27,8 @@ public:
 	Plane(Point3f topLeft, Point3f topRight, Point3f bottomLeft);
 	float Distance(Point3f pt);
 	bool Intersection(Vector3f light, Point2f &position);
+    
+    bool IntersectTriangle(const Vector3f orig, const Vector3f dir,
+                                  Vector3f v0, Vector3f v1, Vector3f v2,
+                                  float* t, float* u, float* v);
 };
