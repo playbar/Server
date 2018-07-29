@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.1)
+PROJECT(server)
+
+add_subdirectory(base)
+add_subdirectory(hiredis)
+add_subdirectory(libsecurity)
+add_subdirectory(lua)
+add_subdirectory(db_proxy_server)
+add_subdirectory(login_server)
+add_subdirectory(file_server)
+add_subdirectory(http_msg_server)
