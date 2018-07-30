@@ -49,6 +49,7 @@
 		04319D0B1D5C62CF00BBCE26 /* slog_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 04319D0A1D5C62CF00BBCE26 /* slog_api.h */; };
 		04350DCC1D823F96000E886A /* netlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04350DCA1D823F96000E886A /* netlib.cpp */; };
 		04350DCD1D823F96000E886A /* netlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 04350DCB1D823F96000E886A /* netlib.h */; };
+		043712B0210DB98A0043CE5A /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D0F9FD1DA9D0CF0096C1FC /* libssl.a */; };
 		04377ADE1DAB92ED00BDD2AF /* ProxyConn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04377ADC1DAB92ED00BDD2AF /* ProxyConn.cpp */; };
 		04377ADF1DAB92ED00BDD2AF /* ProxyConn.h in Headers */ = {isa = PBXBuildFile; fileRef = 04377ADD1DAB92ED00BDD2AF /* ProxyConn.h */; };
 		04377AE21DAB948D00BDD2AF /* DBPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04377AE01DAB948D00BDD2AF /* DBPool.cpp */; };
@@ -845,8 +846,6 @@
 		04D0F9F71DA9CFBB0096C1FC /* tcp_session_async.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D0F9E31DA9CFBB0096C1FC /* tcp_session_async.h */; };
 		04D0FA021DA9D11A0096C1FC /* apns_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D0FA001DA9D11A0096C1FC /* apns_client.cpp */; };
 		04D0FA031DA9D11A0096C1FC /* apns_client.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D0FA011DA9D11A0096C1FC /* apns_client.h */; };
-		04D0FA041DA9D1430096C1FC /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D0F9FC1DA9D0CF0096C1FC /* libcrypto.a */; };
-		04D0FA051DA9D1430096C1FC /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D0F9FD1DA9D0CF0096C1FC /* libssl.a */; };
 		04D0FA081DA9D1710096C1FC /* push_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D0FA061DA9D1710096C1FC /* push_server.cpp */; };
 		04D0FA091DA9D1710096C1FC /* push_server.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D0FA071DA9D1710096C1FC /* push_server.h */; };
 		04D0FA0C1DA9D29F0096C1FC /* session_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D0FA0A1DA9D29F0096C1FC /* session_manager.cpp */; };
@@ -2616,8 +2615,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04D0FA041DA9D1430096C1FC /* libcrypto.a in Frameworks */,
-				04D0FA051DA9D1430096C1FC /* libssl.a in Frameworks */,
+				043712B0210DB98A0043CE5A /* libssl.a in Frameworks */,
 				04D0F99C1DA9CCDF0096C1FC /* libaprutil-1.a in Frameworks */,
 				04D0F99D1DA9CCDF0096C1FC /* libapr-1.a in Frameworks */,
 				04D0F99E1DA9CCDF0096C1FC /* libprotobuf.a in Frameworks */,

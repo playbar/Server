@@ -31,7 +31,7 @@ BOOL CSSLClientAsync::InitSSL(const char* cert_file, const char* key_file, const
     m_strKeyFile = key_file;
     m_strKeyPassword = key_password;
     
-    m_ctx = SSL_CTX_new(SSLv23_client_method());
+    m_ctx = SSL_CTX_new(TLS_client_method());
     if (m_ctx)
     {
         if (cert_file)
