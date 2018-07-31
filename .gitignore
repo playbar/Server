@@ -1,0 +1,5 @@
+.idea
+cmake-build-debug
+Server.xcodeproj/project.xcworkspace/xcshareddata
+Server.xcodeproj/project.xcworkspace/xcuserdata
+Server.xcodeproj/xcuserdata

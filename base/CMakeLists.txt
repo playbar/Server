@@ -23,6 +23,7 @@ ADD_DEFINITIONS( -g -W -Wall -D_REENTRANT -D_FILE_OFFSET_BITS=64 -DAC_HAS_INFO
 INCLUDE_DIRECTORIES(./
         /usr/local/include/apr-1
         /usr/local/include
+        /usr/local/openssl/include
         ../
         ./jsoncpp
         ./pb

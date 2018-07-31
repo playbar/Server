@@ -19,6 +19,7 @@ endif()
 #-DAC_HAS_DEBUG -DLINUX_DAEMON -std=c++11)
 
 INCLUDE_DIRECTORIES(./
+        /usr/local/openssl/include
         ../base/pb/protocol
         ../base/pb
         ../base/slog
@@ -34,17 +35,21 @@ add_library(crypto_lib STATIC IMPORTED)
 set_target_properties(crypto_lib PROPERTIES IMPORTED_LOCATION
         ${CMAKE_CURRENT_SOURCE_DIR}/../lib/libcrypto.a)
 
+add_library(protobuf_lib STATIC IMPORTED)
+set_target_properties(protobuf_lib PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_CURRENT_SOURCE_DIR}/../lib/libprotobuf.a)
+
 #ADD_XXXX必须在TARGET_LINK_LIBRARIES前面，否则会报错
 #ADD_LIBRARY(${PROJECTNAME} SHARED/STATIC ${SRC_LIST})
 ADD_EXECUTABLE(push_server ${SRC_LIST1} ${SRC_LIST2} ${SRC_LIST3})
 
 TARGET_LINK_LIBRARIES(push_server
         pthread
-        protobuf-lite
+        protobuf_lib
         base
         aprutil-1
         apr-1
-        crypto
-        ssl
+        ssl_lib
+        crypto_lib
 
         )

@@ -29,5 +29,5 @@ TARGET_LINK_LIBRARIES(file_server
         base
         aprutil-1
         apr-1
-        protobuf-lite )
+        protobuf )
  
